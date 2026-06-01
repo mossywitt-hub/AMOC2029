@@ -2,16 +2,16 @@ window.WTSS = {
 
 introTop: [
   "In 2029 politics caught up with the weather.",
-  "It came down to early warning systems in the far North Atlantic. Floods, wildfires, heatwave mortality spikes rarely got much attention beyond the people directly affected. But this was on a different scale. AMOC regulates the conditions for the food and water that keep nearly half the planet alive, and it was slowing down faster than all but the most fringe voices had thought possible.",
-  "Experts were debating the details. Some put the probability of complete collapse at over fifty percent, others pointed to uncertainty in error margins in the models. But they agreed that on the current trajectory, the chances were somewhere between a dice roll and a coin flip on the habitability of large parts of the Northern Hemisphere. And it was happening fast—visible impacts soon, and very severe ones within the lifetime of a majority of people.",
+  "It came down to early warning systems in the far North Atlantic. Flooding, wildfires, stifling heatwaves rarely held people’s attention for long. But this was on a different scale. AMOC regulates the conditions for the food and water that keep nearly half the planet alive, and it was slowing down faster than all but the most fringe voices had predicted.",
+  "Experts were debating the details. Some put the probability of complete collapse at over fifty percent, others pointed to uncertainty in the models. Precise timeframes were contentious. But most agreed that on the current trajectory, early impacts of the slowdown would strike soon. And longer term, the chances were somewhere between a dice roll and a coin flip on large parts of the Northern Hemisphere becoming uninhabitable.",
   "Governments found themselves facing something none had seriously planned for: an active and accelerating risk to the entire national infrastructure.",
-  "For years politics had treated climate like a storm on the horizon, debating its severity and how or if to steer round it. Suddenly it looked like the storm here and the debate was how not to sink."
+  "For years politics had treated climate like a storm on the horizon, arguing about its severity and how (or if) to steer round it. Suddenly it looked like the storm here and the argument was how not to sink."
 ],
 
 introBelow: [
   "We predict that in the near future, escalating climate shocks and looming tipping points will change the politics of climate change from mitigation (curing the disease) to adaptation (dealing with the symptoms).",
-  "The mitigation debate is familiar to most people. It mostly boils down to energy choices: clean versus fossil fuels. The adaptation debate is less familiar, and much, much broader. It touches almost everything: food, water, flood defences, housing, transport, infrastructure, even defence.",
-  "Active crisis fuels attention more than long term avoidance, so the debate will become louder and more contentious at exactly the same time as the stakes rise and tradeoffs become more difficult. Crisis also limits attention, diverts strategy, and constrains resources: as the storm becomes more severe, the path through it narrows.",
+  "The mitigation debate is familiar to most people. It mostly comes down to energy: clean versus fossil fuels. The adaptation debate is less familiar, and much broader in scope. It touches almost everything: food, water, flood defences, housing, transport, infrastructure, defense.",
+  "Crises always get more attention than long term strategy. So the debate will become louder and more contentious at the same time as the stakes rise and tradeoffs become more difficult. Crisis also limits attention, diverts strategy, and constrains resources, so as the storm becomes more severe, the path through it narrows.",
   "We are a team of climate risk and policy experts. With the support of an award winning storyteller, we have mapped the actions of a government that chooses to meet the new reality with a new department: the Department of Climate Resilience. We depict the political battles a Minister of Climate Resilience would have to win to fight a war with the weather."
 ],
 
