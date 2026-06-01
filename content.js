@@ -5,7 +5,7 @@ introTop: [
   "It came down to early warning systems in the far North Atlantic. Flooding, wildfires, stifling heatwaves rarely held people’s attention for long. But this was on a different scale. AMOC regulates the conditions for the food and water that keep nearly half the planet alive, and it was slowing down faster than all but the most fringe voices had predicted.",
   "Experts were debating the details. Some put the probability of complete collapse at over fifty percent, others pointed to uncertainty in the models. Precise timeframes were contentious. But most agreed that on the current trajectory, early impacts of the slowdown would strike soon. And longer term, the chances were somewhere between a dice roll and a coin flip on large parts of the Northern Hemisphere becoming uninhabitable.",
   "Governments found themselves facing something none had seriously planned for: an active and accelerating risk to the entire national infrastructure.",
-  "For years politics had treated climate like a storm on the horizon, arguing about its severity and how (or if) to steer round it. Suddenly it looked like the storm here and the argument was how not to sink."
+  "For years politics had treated climate like a storm on the horizon, arguing about its severity and how (or if) to steer round it. Suddenly it looked like the storm was here and the argument was how not to sink."
 ],
 
 introBelow: [
@@ -16,10 +16,10 @@ introBelow: [
 ],
 
 whyWeWrote: [
-  "We create this resource for three reasons:",
+  "We created this resource for three reasons:",
   {bullets:[
     "To help people understand and engage with a new era of politics around climate change.",
-    "To raise awareness of AMOC slowdown in particular, and climate risks in general.",
+    "To raise awareness of AMOC slowdown in particular, and severe climate risks in general.",
     "To highlight the opportunities and positive outcomes that are achievable, and how individuals can contribute."
   ]},
   "We believe the climate debate is entering a new phase, fuelled by changes in the weather right now and a long term risk picture that is even harder to downplay.",
