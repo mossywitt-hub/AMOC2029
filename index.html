@@ -371,6 +371,9 @@ button{font-family:inherit;}
 .eswitch-btn.restart{border-top:2px solid var(--muted);background:var(--paper-deep);}
 .eswitch-btn .es-cond{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--faint);}
 .eswitch-btn .es-name{font-family:var(--serif);font-size:16px;color:var(--ink);margin-top:3px;}
+.outcome-choose{margin-top:2.5rem;border-top:0.5px solid var(--line);padding-top:1.6rem;}
+.oc-k{font-family:var(--mono);font-size:10px;letter-spacing:0.13em;color:var(--muted);margin-bottom:1rem;}
+.oc-row{display:flex;gap:12px;flex-wrap:wrap;}
 
 @media(max-width:880px){
   .read-wrap{flex-direction:column;}
@@ -758,13 +761,13 @@ function renderMemo(){
 /* ---- ledger ---- */
 const POLL_SCALE=45, LOSS_MAX=58;
 const PARTIES=[["gov","GOVERNMENT"],["opp","MAINSTREAM OPPOSITION"],["far","FAR RIGHT"],["left","FAR LEFT"]];
-function deltaHTML(n,dec,id){
+function deltaHTML(n,dec,id,invert){
   const v=Math.abs(n).toFixed(dec);
   let cls="fl",ar="&ndash;";
-  if(n>0){cls="up";ar="&#9650;";} else if(n<0){cls="dn";ar="&#9660;";}
+  if(n>0){cls=invert?"dn":"up";ar="&#9650;";} else if(n<0){cls=invert?"up":"dn";ar="&#9660;";}
   return `<span class="ld ${cls}"${id?` id="${id}"`:""}>${ar} ${v}</span>`;
 }
-function setDelta(id,n,dec){const el=document.getElementById(id);if(el)el.outerHTML=deltaHTML(n,dec,id);}
+function setDelta(id,n,dec,invert){const el=document.getElementById(id);if(el)el.outerHTML=deltaHTML(n,dec,id,invert);}
 function infraHTML(n){
   return INFRA.map((word,idx)=>{
     let cls="infra-step";const step=idx+1;
@@ -781,10 +784,10 @@ function tickerTrack(list){
   return half+half; /* duplicated so the -50% keyframe loops seamlessly */
 }
 function pollRow(d,key,label,wi){
-  const pct=d.poll[key][0],dl=d.poll[key][1];
+  const pct=d.poll[key][0],dl=d.poll[key][1],inv=(key==="gov");
   const fig = wi
-    ? `<b id="poll_${key}">${pct}</b>% ${deltaHTML(dl,0,"poll_"+key+"_d")}`
-    : `<b>${pct}</b>% ${deltaHTML(dl,0)}`;
+    ? `<b id="poll_${key}">${pct}</b>% ${deltaHTML(dl,0,"poll_"+key+"_d",inv)}`
+    : `<b>${pct}</b>% ${deltaHTML(dl,0,null,inv)}`;
   return `<div class="poll-row"><div class="poll-top"><span class="poll-name">${label}</span><span class="poll-fig">${fig}</span></div>`+
     `<div class="poll-bar"><span class="pb ${key}"${wi?` id="poll_${key}_bar"`:""} style="width:${pollW(pct)}%"></span></div></div>`;
 }
@@ -818,7 +821,7 @@ function paintLedger(i){
   PARTIES.forEach(p=>{const k=p[0],a=Lg.poll[k];
     $("#poll_"+k).textContent=a[0];
     $("#poll_"+k+"_bar").style.width=pollW(a[0])+"%";
-    setDelta("poll_"+k+"_d",a[1],0);
+    setDelta("poll_"+k+"_d",a[1],0,k==="gov");
   });
   $("#L_infra").innerHTML=infraHTML(Lg.infra);
   $("#L_insbar").style.width=lossW(Lg.ins)+"%";
@@ -838,7 +841,7 @@ function paintLedger(i){
 }
 
 /* ---- scene ---- */
-function openScene(i){
+function openScene(i,atBottom){
   current=i;const sc=D.scenes[i];
   $("#resources").classList.remove("active");
   $("#landing").classList.add("hidden");
@@ -865,11 +868,21 @@ function openScene(i){
     body.appendChild(wrap);
     wrap.querySelector(".technote-head").addEventListener("click",()=>wrap.classList.toggle("open"));
   }
+  if(i===D.scenes.length-1){
+    const oc=document.createElement("div");oc.className="outcome-choose";
+    oc.innerHTML=`<div class="oc-k">HOW DOES IT PLAY OUT? &mdash; CHOOSE AN OUTCOME</div><div class="oc-row">`+
+      `<button class="eswitch-btn good" data-ending="good"><div class="es-cond">IF IT COMPOUNDS</div><div class="es-name">${D.endings.good.label}</div></button>`+
+      `<button class="eswitch-btn bad" data-ending="bad"><div class="es-cond">IF IT UNRAVELS</div><div class="es-name">${D.endings.bad.label}</div></button>`+
+      `</div>`;
+    body.appendChild(oc);
+    oc.querySelectorAll("[data-ending]").forEach(b=>b.addEventListener("click",()=>openEnding(b.dataset.ending)));
+  }
   const prev=$("#prevBtn"),next=$("#nextBtn");
   if(i>0){prev.disabled=false;$("#prevLabel").textContent=D.scenes[i-1].title;}else{prev.disabled=true;$("#prevLabel").textContent="\u2014";}
   if(i<D.scenes.length-1){$("#nextLabel").textContent=D.scenes[i+1].title;}else{$("#nextLabel").textContent="The outcomes";}
   paintLedger(i);
-  window.scrollTo({top:0,behavior:"instant"});
+  if(atBottom){window.scrollTo({top:document.documentElement.scrollHeight,behavior:"instant"});}
+  else{window.scrollTo({top:0,behavior:"instant"});}
   const rc=document.querySelector(".read-col");
   if(rc){rc.classList.remove("scene-enter");void rc.offsetWidth;rc.classList.add("scene-enter");}
   updateCue(i);
@@ -889,38 +902,54 @@ function showCue(){const c=cueEl();if(c)c.classList.add("show");}
 function hideCue(){const c=cueEl();if(c)c.classList.remove("show");}
 function advanceScene(){
   if(scrollAdvancing)return;
+  if(current>=D.scenes.length-1)return; // last scene: never auto-advance into an ending
   scrollAdvancing=true;hideCue();
-  if(current<D.scenes.length-1){openScene(current+1);}
-  else{openEnding("good");}
+  openScene(current+1);
   setTimeout(()=>{scrollAdvancing=false;},150);
 }
-let atBottomSince=0;
+function retreatScene(){
+  if(scrollAdvancing)return;
+  scrollAdvancing=true;hideCue();
+  if(current>0){openScene(current-1,true);}else{goHome();}
+  setTimeout(()=>{scrollAdvancing=false;},150);
+}
+let atBottomSince=0, atTopSince=0;
 function onReaderScroll(){
   if(!$("#reader").classList.contains("active")){hideCue();return;}
   if(scrollAdvancing||!scrollArmed)return;
+  if(current>=D.scenes.length-1){hideCue();return;} // no auto-cue into the endings
   const reader=$("#reader");
   const rect=reader.getBoundingClientRect();
   const remaining=rect.bottom-window.innerHeight;
   if(remaining<150){showCue();}else{hideCue();atBottomSince=0;}
 }
-// deliberate downward scroll while already at the bottom advances (overscroll intent)
+// deliberate overscroll intent: down at the bottom -> next scene; up at the top -> previous scene / home
 function onWheelIntent(e){
   if(!$("#reader").classList.contains("active"))return;
   if(scrollAdvancing||!scrollArmed)return;
-  if(e.deltaY<=0)return; // only downward
   const reader=$("#reader");
-  const remaining=reader.getBoundingClientRect().bottom-window.innerHeight;
-  if(remaining<4){
-    const now=Date.now();
-    if(atBottomSince===0){atBottomSince=now;return;}
-    if(now-atBottomSince>120){advanceScene();atBottomSince=0;}
+  if(e.deltaY>0){
+    atTopSince=0;
+    const remaining=reader.getBoundingClientRect().bottom-window.innerHeight;
+    if(remaining<4){
+      const now=Date.now();
+      if(atBottomSince===0){atBottomSince=now;return;}
+      if(now-atBottomSince>120){advanceScene();atBottomSince=0;}
+    }else{atBottomSince=0;}
+  }else if(e.deltaY<0){
+    atBottomSince=0;
+    if((window.scrollY||document.documentElement.scrollTop||0)<4){
+      const now=Date.now();
+      if(atTopSince===0){atTopSince=now;return;}
+      if(now-atTopSince>120){retreatScene();atTopSince=0;}
+    }else{atTopSince=0;}
   }
 }
 window.addEventListener("scroll",onReaderScroll,{passive:true});
 window.addEventListener("wheel",onWheelIntent,{passive:true});
 document.getElementById("scrollCue").addEventListener("click",advanceScene);
 $("#prevBtn").addEventListener("click",()=>{if(current>0)openScene(current-1);});
-$("#nextBtn").addEventListener("click",()=>{if(current<D.scenes.length-1)openScene(current+1);else openEnding("good");});
+$("#nextBtn").addEventListener("click",()=>{if(current<D.scenes.length-1){openScene(current+1);}else{const oc=document.querySelector(".outcome-choose");if(oc)oc.scrollIntoView({behavior:"smooth",block:"center"});}});
 
 /* ---- ending ---- */
 function openEnding(which){
