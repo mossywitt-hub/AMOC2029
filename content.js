@@ -2,15 +2,15 @@ window.WTSS = {
 
 introTop: [
   "In 2029 politics caught up with the weather.",
-  "It came down to early warning systems in the far North Atlantic. Flooding, wildfires, stifling heatwaves rarely held people’s attention for long. But this was on a different scale. AMOC regulates the conditions for the food and water that keep nearly half the planet alive, and it was slowing down faster than all but the most fringe voices had predicted.",
-  "Experts were debating the details. Some put the probability of complete collapse at over fifty percent, others pointed to uncertainty in the models. Precise timeframes were contentious. But most agreed that on the current trajectory, early impacts of the slowdown would strike soon. And longer term, the chances were somewhere between a dice roll and a coin flip on large parts of the Northern Hemisphere becoming uninhabitable.",
+  "It came down to early warning systems in the North Atlantic. Floods, wildfire, deadly heatwaves rarely held people’s attention for long. But this was on a different scale. AMOC, which regulates the climate and rainfall that keep nearly half the planet alive, was slowing down faster than anyone had predicted.",
+  "Experts debated the details. Some put the probability of collapse at over fifty percent, others pointed to uncertainty in the models. Exact timeframes were contentious. But most agreed that the early impacts of a slowdown would come soon. Longer term, the chances were somewhere between a dice roll and a coin flip on large parts of the Northern Hemisphere being uninhabitable.",
   "Governments found themselves facing something none had seriously planned for: an active and accelerating risk to the entire national infrastructure.",
-  "For years politics had treated climate like a storm on the horizon, arguing about its severity and how (or if) to steer round it. Suddenly it looked like the storm was here and the argument was how not to sink."
+  "For years politics had treated climate like a storm on the horizon, arguing about its severity and how (or if) to steer round it. Suddenly the storm was here and the argument was how not to sink."
 ],
 
 introBelow: [
   "We predict that in the near future, escalating climate shocks and looming tipping points will change the politics of climate change from mitigation (curing the disease) to adaptation (dealing with the symptoms).",
-  "The mitigation debate is familiar to most people. It mostly comes down to energy: clean versus fossil fuels. The adaptation debate is less familiar, and much broader in scope. It touches almost everything: food, water, flood defences, housing, transport, infrastructure, defense.",
+  "The mitigation debate is familiar to most people. It mostly comes down to energy: clean versus fossil fuels. The adaptation debate is less familiar and much broader in scope. It touches almost everything: food, water, flood defences, housing, transport, infrastructure, defense.",
   "Crises always get more attention than long term strategy. So the debate will become louder and more contentious at the same time as the stakes rise and tradeoffs become more difficult. Crisis also limits attention, diverts strategy, and constrains resources, so as the storm becomes more severe, the path through it narrows.",
   "We are a team of climate risk and policy experts. With the support of an award winning storyteller, we have mapped the actions of a government that chooses to meet the new reality with a new department: the Department of Climate Resilience. We depict the political battles a Minister of Climate Resilience would have to win to fight a war with the weather."
 ],
@@ -19,17 +19,17 @@ whyWeWrote: [
   "We created this resource for three reasons:",
   {bullets:[
     "To help people understand and engage with a new era of politics around climate change.",
-    "To raise awareness of AMOC slowdown in particular, and severe climate risks in general.",
+    "To raise awareness of AMOC slowdown in particular, and climate risks in general.",
     "To highlight the opportunities and positive outcomes that are achievable, and how individuals can contribute."
   ]},
-  "We believe the climate debate is entering a new phase, fuelled by changes in the weather right now and a long term risk picture that is even harder to downplay.",
-  "There is a sense that people have stopped caring about climate change. A lot of evidence suggests that this is not the case. In fact, in many countries, more people than ever are worried about the changing climate and what it implies for their future. Many report a sense of despair, and this is telling: it implies that the challenge is not a denial of the problem, but a lack of belief that it can be solved.",
-  "This might seem strange at a point when the clean energy technology needed to mitigate climate change is widely available, cheap, being rolled out faster than anyone anticipated, and popular. Intentional deny/delay tactics overstating clean energy costs and difficulties are a part of the story. But so are the four decades in which the climate has been a headline issue again and again all round the world, but limited progress has been made towards a collective solution.",
+  "We believe climate politics is entering a new phase around the globe, fuelled by changes in the weather right now and a long term risk picture that is increasingly hard to ignore.",
+  "There is a sense that people have stopped caring about climate change. A lot of evidence suggests that this is not the case. In fact, in many countries, more people report more worry than ever. Many describe foreboding or even despair about the future. This is telling: it implies that we aren't facing a denial of the problem any more, but instead, a lack of belief that it can be solved.",
+  "This might seem strange at a point when a lot of the technology we need to mitigate climate change is widely available, cheap, being rolled out faster than anyone anticipated, and broadly popular. Intentional deny/delay tactics overstating clean energy costs and downsides are a part of the story. But so are the four decades in which the climate has been a headline issue again and again, yet limited progress has been made towards a solution.",
   "The politics of climate change are extremely difficult. There is no precedent for solving a collective action problem (or “tragedy of the horizon”) of such complexity. The inertia of our current energy system, which keeps almost all of us alive, is vast. Painstaking multilateral decision making processes like COP give way to localisation: claims that “our country is only y% of global emissions, so it doesn’t matter” on the one side, repositioning renewables as energy resilience on the other.",
-  "The politics of resilience are different because resilience is local from the start. It is about individual countries, regions, individual communities: local farms and infrastructure, reservoirs, sea defences, food supply chains. The trade offs are more complex, with mitigation and resilience sometimes directly at odds: should a gas plant be retired, for example, or retained for capacity in extreme heat and cold waves? Mitigation is intangible and long term; resilience is all about crisis.",
+  "The politics of resilience are different because resilience is local from the start. It is about individual countries, regions, individual communities: local farms and infrastructure, reservoirs, sea defences, food supply chains. The trade offs are more complex, with mitigation and resilience sometimes directly at odds: should a gas plant be retired, for example, or retained for capacity in extreme heat and cold waves? Mitigation is intangible and long term; resilience is about the crisis in front of us.",
   "This resource looks at how this will be likely to play out, once an extreme risk profile forces a democratic government to react. AMOC is central to the story and a very real threat, about which we want readers to be informed. But even if we collectively get lucky in relation to AMOC, severe climate risks are already here and it is simply a matter of time before more governments are forced to respond in coordinated ways.",
-  "Critically, as we depict in the “Good Ending”, the outcomes that remain achievable are not just not bad, but highly positive. They may not be as dramatic as AI sci-fi futures but they are more substantive and more definite: cleaner, quieter towns and cities; politics free from energy crises and price shocks; generations that don’t have to live out fundamental anxiety about the future (or at least, not because of climate change).",
-  "Everything we depict is grounded in climate science—we provide technical explainers throughout—and informed by decades of experience at the front line of climate politics. That experience has taught us to be careful with predictions; which this is not. It’s a guide to understanding the reality we’re likely to live through and the choices we get to make."
+  "Critically, as we depict in the “Good Ending”, the outcomes that remain achievable are not just not bad, but better than the present. They may not be as dramatic as AI sci-fi futures but they are more substantive and more definite: cleaner, quieter towns and cities; politics free from energy crises and price shocks; generations that don’t have to live out fundamental anxiety about the future (or at least, not because of climate change).",
+  "Everything we depict is grounded in climate science—we provide technical explainers throughout—and informed by decades of experience at the front line of climate politics. That experience has taught us to be careful with predictions; this is not one. It’s a framework for thinking about a reality we’re likely to live through and the choices we get to make."
 ],
 
 amoc101: [
@@ -68,11 +68,19 @@ team: [
   {name:"Nadia Mikail", bio:"Nadia Mikail is the lead author of [When the Sea Stops]. Her skill, creativity, and deep research transformed technical scenarios into an engaging and anchored resource. Nadia is a lawyer and award winning novelist whose work centres on family, myth, and climate breakdown.", lead:true}
 ],
 
+baseline:{year:"2029", sub:"The beginning",
+  deficit:3.8, deficitD:0.4, inflation:3.2, inflationD:0.3, yield10:4.2, yield10D:0.2,
+  poll:{gov:[41,-1], opp:[32,1], far:[12,2], left:[7,1]},
+  infra:1, ins:null, unins:null},
+
 scenes: [
   {
     id:"department",
     title:"The Department of Climate Resilience",
-    ledger:{year:"2029", ins:0.4, insBar:3, unins:0.9, uninsBar:5, infra:1},
+    ledger:{year:"2029",
+      deficit:4.1, deficitD:0.3, inflation:3.6, inflationD:0.4, yield10:4.4, yield10D:0.2,
+      poll:{gov:[40,-1], opp:[33,1], far:[13,1], left:[7,0]},
+      infra:1, ins:0.4, unins:0.9},
     body:[
       "Miriam’s chief of staff, Tom Fender, stood in the doorway of her new office with two coffees and the expression of a man who had already watched his schedule collapse before nine.",
       "“Cabinet Office wants you first,” he said. “Treasury after. But there’s a scientist in the outer office who’s saying if you don’t see him immediately he’ll end up briefing the prime minister instead, which sounds like a threat.”",
@@ -109,7 +117,10 @@ scenes: [
   {
     id:"jobs",
     title:"The Price of Jobs",
-    ledger:{year:"2030", ins:1.8, insBar:12, unins:3.4, uninsBar:18, infra:1},
+    ledger:{year:"2030",
+      deficit:4.9, deficitD:0.8, inflation:4.8, inflationD:1.2, yield10:4.7, yield10D:0.3,
+      poll:{gov:[37,-3], opp:[34,1], far:[16,3], left:[8,1]},
+      infra:1, ins:1.8, unins:3.4},
     body:[
       "The first real fight Miriam took on, a few months in, was about gas and jobs. It was really about what counted as realism. The science said colder and more volatile winters were coming before the grid could catch up to them. That left some brutal tradeoffs: how much fossil capacity do we keep online? Which communities will be expected to pay the price?",
       "If she got this wrong, Miriam could lose her government essential support from urban climate-concerned voters and key industrial communities in one muddled policy proposal.",
@@ -159,7 +170,10 @@ scenes: [
   {
     id:"sunshade",
     title:"The Sunshade",
-    ledger:{year:"2031", ins:3.1, insBar:20, unins:6.2, uninsBar:32, infra:2},
+    ledger:{year:"2031",
+      deficit:5.6, deficitD:0.7, inflation:4.4, inflationD:-0.4, yield10:5.0, yield10D:0.3,
+      poll:{gov:[34,-3], opp:[33,-1], far:[20,4], left:[9,1]},
+      infra:2, ins:3.1, unins:6.2},
     body:[
       "If the AMOC memo forced the government to think about energy, flood, and food together, it also forced a question most people still preferred not to think about: what happened when adaptation and emissions cuts looked too slow, and somebody offered to buy time by altering the sky?",
       "The invitation came on thick creamy paper, the wording precise and tasteful. A private roundtable on climate intervention research and governance. The sponsors were the defense investment organisation, a large venture capital fund, and of course the Voss Foundation—the main philanthropic vehicle for billionaire Philip Voss.",
@@ -211,7 +225,10 @@ scenes: [
   {
     id:"seam",
     title:"The Seam Between the Systems",
-    ledger:{year:"2032", ins:8.4, insBar:46, unins:19.1, uninsBar:72, infra:2},
+    ledger:{year:"2032",
+      deficit:6.8, deficitD:1.2, inflation:5.1, inflationD:0.7, yield10:5.6, yield10D:0.6,
+      poll:{gov:[31,-3], opp:[32,-1], far:[24,4], left:[10,1]},
+      infra:2, ins:8.4, unins:19.1},
     body:[
       "The first major flood did not settle any scientific argument. It did something simpler: it drowned the ground floor of a hospital, knocked out power to a pumping station, and trapped two hundred families in homes they could no longer insure or refinance; it did all this before lunch.",
       "For two days the weather had been described on television as erratic, which secretly meant very bad and yet too compound to fit inside a single warning colour.",
@@ -252,7 +269,10 @@ scenes: [
   {
     id:"grid",
     title:"The New Owners of the Grid",
-    ledger:{year:"2033", ins:11.6, insBar:58, unins:24.8, uninsBar:84, infra:3},
+    ledger:{year:"2033",
+      deficit:7.4, deficitD:0.6, inflation:4.7, inflationD:-0.4, yield10:5.9, yield10D:0.3,
+      poll:{gov:[30,-1], opp:[30,-2], far:[26,2], left:[11,1]},
+      infra:3, ins:11.6, unins:24.8},
     body:[
       "If the country was going to need more resilience, it wasn’t just going to be big utilities that mattered. Cooperatives that owned panels, batteries and chargers were turning into a bloc, and the bloc was voting.",
       "For years governments had spoken about distributed energy as a small-scale technical feature of the transition: the rooftop solar, the home batteries, the electric vehicles. Then Hormuz happened. And enough people bought the kit, or joined a local scheme, or put money into a community energy share offer, and ownership created political identity very quickly.",
@@ -295,7 +315,10 @@ scenes: [
   {
     id:"ground",
     title:"The Ground Gives",
-    ledger:{year:"2034", ins:14.2, insBar:68, unins:31.5, uninsBar:92, infra:3},
+    ledger:{year:"2034",
+      deficit:8.1, deficitD:0.7, inflation:5.9, inflationD:1.2, yield10:6.4, yield10D:0.5,
+      poll:{gov:[28,-2], opp:[29,-1], far:[29,3], left:[12,1]},
+      infra:3, ins:14.2, unins:31.5},
     body:[
       "By the fourth year, the government were polling poorly and fighting on both flanks. Miriam knew she\u2019d held onto her Ministry less for her successes than because no one else wanted the job. It was conventional wisdom in political circles that the Department was the worst kind of poisoned chalice: unpopular for every measure it passed, yet criticised for doing too little when every crisis hit.",
       "And suddenly there were empty supermarket shelves. For weeks the news had been filled with South Asian flood losses and droughts across the Americas, and now local production was threatened too. It all came back to the same problem: how do you manage food production when assumptions about planting barely held steady for a single cycle?",
@@ -332,7 +355,10 @@ scenes: [
   {
     id:"vote",
     title:"The Vote",
-    ledger:{year:"2035", ins:16.9, insBar:78, unins:38.0, uninsBar:97, infra:3},
+    ledger:{year:"2035",
+      deficit:8.6, deficitD:0.5, inflation:5.5, inflationD:-0.4, yield10:6.8, yield10D:0.4,
+      poll:{gov:[29,1], opp:[27,-2], far:[30,1], left:[12,0]},
+      infra:3, ins:16.9, unins:38.0},
     body:[
       "By the final fortnight the campaign had simplified itself as they tend to do, the same lines repeated until they no longer sounded like arguments or even words to Miriam’s ears. The whole argument now came down to whether the country paid early for resilience or later for breakdown. By this point the election was also, plainly, a vote on whether the Department of Climate Resilience had any right to exist.",
       "The opposition said the government had made daily life more expensive in order to flatter models and conferences. They talked about competence too, the thing her party had come into power on, but in their telling, competence just meant the current government had just kicked the can further down the road. Do the easy bit now. Leave the hard choices for the next crisis. Then call the emergency a mandate.",
@@ -365,6 +391,72 @@ scenes: [
     ]}
   }
 ],
+
+/* ---- news ticker: one list of rolling headlines per scene (+ home) ---- */
+tickers:{
+  home:[
+    "AMOC slowdown moves from the journals into cabinet briefings",
+    "New government promises “competence, not slogans”",
+    "Treasury warns fiscal headroom is “evaporating”",
+    "Insurers quietly redraw their North Atlantic risk maps",
+    "PM: “We will explain the trade-offs before the weather does”"
+  ],
+  department:[
+    "Cabinet Office confirms new Department of Climate Resilience",
+    "Scientists hand ministers a “planning paper” on AMOC collapse",
+    "Markets shrug — one analyst calls it “weather astrology”",
+    "Opposition: “a ministry for problems we can’t afford”",
+    "Leaked annex flags coastal hospitals at risk within years"
+  ],
+  jobs:[
+    "Gas-plant standby deal splits the cabinet",
+    "Unions warn against “transition by contempt”",
+    "Sloane: “You can’t decarbonise on an empty stomach”",
+    "Reserve-margin fears grow as cold-snap forecasts worsen",
+    "Tabloids christen the ministry “the Department of Constant Cost”",
+    "Winter heating bills tick up again"
+  ],
+  sunshade:[
+    "SECRET SUN-DIMMING TALKS, claim the morning papers",
+    "Minister attended Voss Foundation roundtable on geoengineering",
+    "Backbencher demands resignation “before breakfast”",
+    "Make Sunsets sells more “cooling credits” without oversight",
+    "Stardust raises fresh funds for a proprietary aerosol",
+    "Government line: “research is not deployment”"
+  ],
+  seam:[
+    "BREAKING: coastal hospital ground floor underwater",
+    "Two confirmed dead in a basement flat off the harbour road",
+    "Barrier closes — the river keeps arriving",
+    "Insurers pause approvals in flood-hit postcodes",
+    "“Climate mortgage prisoners” enters the headlines",
+    "Cabinet split over deferring the adaptation budget"
+  ],
+  grid:[
+    "Grid Commons Act scrapes through its final reading",
+    "Co-op energy bloc flexes its weight at the ballot box",
+    "Big six lobby to strip co-op connection rights",
+    "Renters’ provisions cut to a three-city pilot",
+    "Sloane: “a subsidy architecture for homeowners with apps”",
+    "Locational-pricing row threatens to split the party"
+  ],
+  ground:[
+    "Empty shelves as breadbasket failures stack up",
+    "Agricultural Resilience Plan draws farmer fury",
+    "TAXES FOR TADPOLES, screams the front page",
+    "Subsidy logic shifts from acreage to resilience metrics",
+    "South Asian floods and American droughts hit imports",
+    "Emergency grain reserve announced"
+  ],
+  vote:[
+    "Election day: a referendum on resilience",
+    "Polls put the far right neck-and-neck with the government",
+    "“Pay early or pay later” dominates the doorstep",
+    "Flood-hit wards split street by street",
+    "Turnout reported strong in the co-op wards",
+    "Counts begin amid a record postal vote"
+  ]
+},
 
 memo:{
   title:"The Memo",
