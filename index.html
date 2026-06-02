@@ -841,7 +841,7 @@ function paintLedger(i){
 }
 
 /* ---- scene ---- */
-function openScene(i){
+function openScene(i,atBottom){
   current=i;const sc=D.scenes[i];
   $("#resources").classList.remove("active");
   $("#landing").classList.add("hidden");
@@ -881,7 +881,8 @@ function openScene(i){
   if(i>0){prev.disabled=false;$("#prevLabel").textContent=D.scenes[i-1].title;}else{prev.disabled=true;$("#prevLabel").textContent="\u2014";}
   if(i<D.scenes.length-1){$("#nextLabel").textContent=D.scenes[i+1].title;}else{$("#nextLabel").textContent="The outcomes";}
   paintLedger(i);
-  window.scrollTo({top:0,behavior:"instant"});
+  if(atBottom){window.scrollTo({top:document.documentElement.scrollHeight,behavior:"instant"});}
+  else{window.scrollTo({top:0,behavior:"instant"});}
   const rc=document.querySelector(".read-col");
   if(rc){rc.classList.remove("scene-enter");void rc.offsetWidth;rc.classList.add("scene-enter");}
   updateCue(i);
@@ -909,7 +910,7 @@ function advanceScene(){
 function retreatScene(){
   if(scrollAdvancing)return;
   scrollAdvancing=true;hideCue();
-  if(current>0){openScene(current-1);}else{goHome();}
+  if(current>0){openScene(current-1,true);}else{goHome();}
   setTimeout(()=>{scrollAdvancing=false;},150);
 }
 let atBottomSince=0, atTopSince=0;
