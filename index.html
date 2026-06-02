@@ -53,7 +53,8 @@ button{font-family:inherit;}
 /* landing */
 .landing{background:var(--paper);padding:3rem 2.5rem 2.75rem;}
 .landing-inner{max-width:960px;margin:0 auto;}
-.title{font-family:var(--serif);font-size:clamp(40px,6vw,58px);line-height:1.05;color:var(--ink);letter-spacing:-0.015em;margin:1.1rem 0 1.6rem;}
+.title{font-family:var(--serif);font-size:clamp(40px,6vw,58px);line-height:1.05;color:var(--ink);letter-spacing:-0.015em;margin:1.1rem 0 0.5rem;}
+.subtitle{font-family:var(--serif);font-style:italic;font-size:clamp(16px,2vw,20px);color:var(--muted);margin:0 0 1.6rem;}
 .title-row{position:relative;}
 .todo-note{position:absolute;top:-14px;right:240px;width:178px;background:linear-gradient(170deg,#ffe14d 0%,#ffd83a 55%,#fbcf2e 100%);padding:16px 16px 18px;transform:rotate(2.4deg);box-shadow:0 1px 1px rgba(0,0,0,0.04),0 10px 22px rgba(80,66,20,0.18),0 18px 40px rgba(80,66,20,0.10);z-index:30;}
 .todo-note::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.35),rgba(255,255,255,0) 40%);pointer-events:none;}
@@ -294,11 +295,11 @@ button{font-family:inherit;}
 /* ledger */
 .ledger{width:236px;flex-shrink:0;background:var(--paper-deep);border-left:0.5px solid var(--line);}
 .ledger-pin{position:sticky;top:90px;padding:1.6rem 1.4rem;}
-.ledger-head{display:flex;align-items:center;gap:7px;margin-bottom:1.3rem;}
+.ledger-head{display:flex;align-items:center;gap:7px;margin-bottom:1rem;}
 .ledger-head i{width:5px;height:5px;background:var(--steel);display:block;font-style:normal;}
 .ledger-head .lk{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;color:var(--muted);}
 .ledger-head .lpin{margin-left:auto;font-family:var(--mono);font-size:9px;color:#b6ad96;letter-spacing:0.05em;}
-.lrow{margin-bottom:1.15rem;}
+.lrow{margin-bottom:0.9rem;}
 .lrow .ll{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--muted);margin-bottom:4px;}
 .lrow .lsub{font-size:9px;color:#a89a7a;margin-bottom:5px;line-height:1.3;}
 .lrow .lv{font-family:var(--serif);font-size:24px;color:var(--ink);line-height:1;transition:color .4s;}
@@ -321,6 +322,38 @@ button{font-family:inherit;}
 .spark-bars{display:flex;align-items:flex-end;gap:3px;height:36px;}
 .spark-bars .sb{flex:1;background:#d8cdb0;transition:height .4s,background .4s,opacity .4s;}
 .spark-here{font-family:var(--mono);font-size:9px;color:#b6ad96;margin-top:5px;}
+/* ledger — economic indicators, polling, combined losses, news ticker */
+.lrow.econ .lfig{display:flex;align-items:baseline;gap:6px;}
+.lrow.econ .lv{font-size:20px;}
+.lfig .u{font-family:var(--mono);font-size:11px;color:var(--faint);}
+.ld{font-family:var(--mono);font-size:9.5px;letter-spacing:0.02em;white-space:nowrap;}
+.ld.up{color:var(--alarm);} .ld.dn{color:var(--sage);} .ld.fl{color:var(--faint);}
+.lrow.poll .ll{margin-bottom:9px;}
+.poll-row{margin-bottom:8px;} .poll-row:last-child{margin-bottom:0;}
+.poll-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:3px;}
+.poll-name{font-family:var(--mono);font-size:8.5px;letter-spacing:0.06em;color:var(--ink-4);}
+.poll-fig{font-family:var(--mono);font-size:10px;color:var(--faint);white-space:nowrap;}
+.poll-fig b{font-family:var(--serif);font-size:14px;font-weight:500;color:var(--ink);margin-right:1px;}
+.poll-bar{height:5px;background:var(--line-2);}
+.poll-bar .pb{display:block;height:5px;transition:width .6s ease;}
+.pb.gov{background:var(--steel);} .pb.opp{background:var(--clay);}
+.pb.far{background:var(--alarm);} .pb.left{background:#7a6cae;}
+.lrow.loss .lossbar{display:flex;height:9px;background:var(--line-2);margin-top:2px;overflow:hidden;}
+.lossbar span{display:block;height:9px;transition:width .6s ease;}
+.lossbar .ls-ins{background:var(--steel);} .lossbar .ls-unins{background:var(--clay);}
+.loss-legend{display:flex;justify-content:space-between;gap:8px;margin-top:6px;}
+.loss-legend .lg{font-family:var(--mono);font-size:8.5px;letter-spacing:0.04em;color:var(--ink-4);display:flex;align-items:center;gap:4px;}
+.loss-legend .lg i{width:8px;height:8px;display:block;flex-shrink:0;}
+.loss-legend .lg.ins i{background:var(--steel);} .loss-legend .lg.unins i{background:var(--clay);}
+.loss-legend .lg b{font-family:var(--serif);font-size:12px;color:var(--ink);margin:0 1px;}
+.ticker{display:flex;align-items:stretch;margin-top:1.1rem;border-top:0.5px solid var(--line);padding-top:0.9rem;}
+.ticker-tag{font-family:var(--mono);font-size:8px;letter-spacing:0.14em;color:#faf7f0;background:var(--alarm);padding:4px 6px;display:flex;align-items:center;flex-shrink:0;}
+.ticker-win{overflow:hidden;flex:1;min-width:0;display:flex;align-items:center;background:var(--paper-card);border:0.5px solid var(--line-2);border-left:none;}
+.ticker-track{display:inline-flex;align-items:center;flex:none;white-space:nowrap;will-change:transform;animation:tickscroll 38s linear infinite;}
+.ticker:hover .ticker-track{animation-play-state:paused;}
+.ticker-track .thl{font-family:var(--mono);font-size:9.5px;color:var(--ink-3);padding:5px 0;}
+.ticker-track .sep{color:var(--alarm);margin:0 9px;font-size:7px;}
+@keyframes tickscroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
 /* ending */
 .ending{display:none;background:var(--paper);padding:3rem 2.5rem 3.5rem;} .ending.active{display:block;}
@@ -344,6 +377,7 @@ button{font-family:inherit;}
   .ledger{width:100%;border-left:none;border-top:0.5px solid var(--line);order:-1;}
   .ledger-pin{position:static;display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem;padding:1.3rem 2.5rem;}
   .ledger-head{grid-column:1/-1;margin-bottom:0;} .ledger-spark{grid-column:1/-1;}
+  .lrow.lyear,.lrow.poll,.lrow.infra,.lrow.loss,.ticker{grid-column:1/-1;}
   .read-col{max-width:none;}
   .rail{top:44px;}
 }
@@ -408,13 +442,7 @@ button{font-family:inherit;}
         </div>
       </div>
       <aside class="ledger">
-        <div class="ledger-pin">
-          <div class="ledger-head"><i></i><span class="lk">THE LEDGER</span></div>
-          <div class="lrow lyear"><div class="ll">YEAR</div><div class="lv" id="ledYear">2029</div></div>
-          <div class="lrow insured"><div class="ll">INSURED LOSSES</div><div class="lv" id="ledIns">0<span class="u">bn</span></div><div class="lbar"><span id="ledInsBar" style="width:2%"></span></div></div>
-          <div class="lrow uninsured"><div class="ll">UNINSURED</div><div class="lsub">borne by households &amp; the state</div><div class="lv" id="ledUnins">0<span class="u">bn</span></div><div class="lbar"><span id="ledUninsBar" style="width:2%"></span></div></div>
-          <div class="lrow infra"><div class="ll">CRITICAL INFRASTRUCTURE</div><div class="infra-track" id="ledInfra"></div></div>
-        </div>
+        <div class="ledger-pin" id="ledgerPin"></div>
       </aside>
     </div>
   </div>
@@ -448,6 +476,7 @@ function buildLanding(){
   let h=`<div class="landing"><div class="landing-inner">
     <div class="title-row">
       <h1 class="title">When The Sea Slows</h1>
+      <p class="subtitle">Predicting a new era of climate politics</p>
       <div class="todo-note" role="note" aria-label="Work in progress to-do list">
         <div class="todo-tape"></div>
         <div class="todo-title">To do</div>
@@ -475,7 +504,6 @@ function buildLanding(){
   h+=`</div>
         <div class="mapband">
           <div class="mapwrap">
-            <div class="map-kicker">STORY MAP</div>
             <div class="flow" id="flow">
               <svg class="links" id="flowLinks" preserveAspectRatio="none"></svg>
               <div class="tier">
@@ -502,14 +530,7 @@ function buildLanding(){
         </div>
       </div>
       <aside class="ledger">
-        <div class="ledger-pin">
-          <div class="ledger-head"><i></i><span class="lk">THE LEDGER</span><span class="lpin">BASELINE</span></div>
-          <div class="lrow lyear"><div class="ll">YEAR</div><div class="lv">2029</div><div class="lsub">before the first shock</div></div>
-          <div class="lrow insured"><div class="ll">INSURED LOSSES</div><div class="lv">&mdash;</div><div class="lbar"><span style="width:3%"></span></div></div>
-          <div class="lrow uninsured"><div class="ll">UNINSURED</div><div class="lsub">borne by households &amp; the state</div><div class="lv">&mdash;</div><div class="lbar"><span style="width:2%"></span></div></div>
-          <div class="lrow infra"><div class="ll">CRITICAL INFRASTRUCTURE</div><div class="lstate"><span class="lchip">NOMINAL</span></div></div>
-          <div class="ledger-foot">FILE AMOC-29 &middot; CLIMBS AS YOU READ</div>
-        </div>
+        <div class="ledger-pin">${ledgerMarkup(D.baseline,false,D.tickers.home)}</div>
       </aside>
     </div>
   </div></div>
@@ -735,27 +756,80 @@ function renderMemo(){
 }
 
 /* ---- ledger ---- */
-function fmtMoney(v){return v.toFixed(1)+'<span class="u">bn</span>';}
+const POLL_SCALE=45, LOSS_MAX=58;
+const PARTIES=[["gov","GOVERNMENT"],["opp","MAINSTREAM OPPOSITION"],["far","FAR RIGHT"],["left","FAR LEFT"]];
+function deltaHTML(n,dec,id){
+  const v=Math.abs(n).toFixed(dec);
+  let cls="fl",ar="&ndash;";
+  if(n>0){cls="up";ar="&#9650;";} else if(n<0){cls="dn";ar="&#9660;";}
+  return `<span class="ld ${cls}"${id?` id="${id}"`:""}>${ar} ${v}</span>`;
+}
+function setDelta(id,n,dec){const el=document.getElementById(id);if(el)el.outerHTML=deltaHTML(n,dec,id);}
+function infraHTML(n){
+  return INFRA.map((word,idx)=>{
+    let cls="infra-step";const step=idx+1;
+    if(step<n)cls="infra-step passed"; else if(step===n)cls="infra-step current "+word;
+    const arrow=idx<INFRA.length-1?'<span class="infra-arrow">&rarr;</span>':"";
+    return `<span class="${cls}">${word}</span>${arrow}`;
+  }).join("");
+}
+function pollW(pct){return Math.min(100,pct/POLL_SCALE*100);}
+function lossW(v){return v?Math.min(100,v/LOSS_MAX*100):0;}
+function tickerTrack(list){
+  if(!list||!list.length)return "";
+  const half=list.map(t=>`<span class="thl">${t}</span><span class="sep">&#9670;</span>`).join("");
+  return half+half; /* duplicated so the -50% keyframe loops seamlessly */
+}
+function pollRow(d,key,label,wi){
+  const pct=d.poll[key][0],dl=d.poll[key][1];
+  const fig = wi
+    ? `<b id="poll_${key}">${pct}</b>% ${deltaHTML(dl,0,"poll_"+key+"_d")}`
+    : `<b>${pct}</b>% ${deltaHTML(dl,0)}`;
+  return `<div class="poll-row"><div class="poll-top"><span class="poll-name">${label}</span><span class="poll-fig">${fig}</span></div>`+
+    `<div class="poll-bar"><span class="pb ${key}"${wi?` id="poll_${key}_bar"`:""} style="width:${pollW(pct)}%"></span></div></div>`;
+}
+function lossFig(v){return v!=null?v.toFixed(1)+"bn":"&mdash;";}
+function ledgerMarkup(d,wi,ticker){
+  function econ(label,unit,valId,val,dId,dv){
+    return `<div class="lrow econ"><div class="ll">${label}</div>`+
+      `<div class="lfig"><span class="lv"${wi?` id="${valId}"`:""}>${val}</span><span class="u">${unit}</span>${deltaHTML(dv,1,wi?dId:null)}</div></div>`;
+  }
+  let h=`<div class="ledger-head"><i></i><span class="lk">THE LEDGER</span>${wi?"":'<span class="lpin">BASELINE</span>'}</div>`;
+  h+=`<div class="lrow lyear"><div class="ll">YEAR</div><div class="lv"${wi?' id="L_year"':""}>${d.year}</div><div class="lsub"${wi?' id="L_sub"':""}>${d.sub}</div></div>`;
+  h+=econ("BUDGET DEFICIT","% GDP","L_def",d.deficit.toFixed(1),"L_defD",d.deficitD);
+  h+=econ("INFLATION","%","L_infl",d.inflation.toFixed(1),"L_inflD",d.inflationD);
+  h+=econ("10-YEAR YIELD","%","L_yld",d.yield10.toFixed(1),"L_yldD",d.yield10D);
+  h+=`<div class="lrow poll"><div class="ll">VOTING INTENTION</div>`+PARTIES.map(p=>pollRow(d,p[0],p[1],wi)).join("")+`</div>`;
+  h+=`<div class="lrow infra"><div class="ll">CRITICAL INFRASTRUCTURE</div><div class="infra-track"${wi?' id="L_infra"':""}>${infraHTML(d.infra)}</div></div>`;
+  h+=`<div class="lrow loss"><div class="ll">INSURED / UNINSURED LOSSES</div>`+
+     `<div class="lossbar"><span class="ls-ins"${wi?' id="L_insbar"':""} style="width:${lossW(d.ins)}%"></span><span class="ls-unins"${wi?' id="L_uninsbar"':""} style="width:${lossW(d.unins)}%"></span></div>`+
+     `<div class="loss-legend"><span class="lg ins"><i></i>INS&nbsp;<b${wi?' id="L_ins"':""}>${lossFig(d.ins)}</b></span>`+
+     `<span class="lg unins"><i></i>UNINS&nbsp;<b${wi?' id="L_unins"':""}>${lossFig(d.unins)}</b></span></div></div>`;
+  h+=`<div class="ticker"><span class="ticker-tag">LIVE</span><div class="ticker-win"><div class="ticker-track"${wi?' id="L_ticker"':""}>${tickerTrack(ticker)}</div></div></div>`;
+  return h;
+}
 function paintLedger(i){
-  const Lg=D.scenes[i].ledger;
-  $("#ledYear").innerHTML=Lg.year;
-  $("#ledIns").innerHTML=fmtMoney(Lg.ins);
-  $("#ledUnins").innerHTML=fmtMoney(Lg.unins);
-  $("#ledInsBar").style.width=Lg.insBar+"%";
-  $("#ledUninsBar").style.width=Lg.uninsBar+"%";
-  const track=$("#ledInfra");track.innerHTML="";
-  INFRA.forEach((word,idx)=>{
-    const step=idx+1,s=document.createElement("span");
-    if(step<Lg.infra){s.className="infra-step passed";}
-    else if(step===Lg.infra){s.className="infra-step current "+word;}
-    else{s.className="infra-step";}
-    s.textContent=word;track.appendChild(s);
-    if(idx<INFRA.length-1){const a=document.createElement("span");a.className="infra-arrow";a.innerHTML="&rarr;";track.appendChild(a);}
+  const sc=D.scenes[i],Lg=sc.ledger;
+  $("#L_year").textContent=Lg.year;
+  $("#L_sub").textContent=sc.title;
+  $("#L_def").textContent=Lg.deficit.toFixed(1); setDelta("L_defD",Lg.deficitD,1);
+  $("#L_infl").textContent=Lg.inflation.toFixed(1); setDelta("L_inflD",Lg.inflationD,1);
+  $("#L_yld").textContent=Lg.yield10.toFixed(1); setDelta("L_yldD",Lg.yield10D,1);
+  PARTIES.forEach(p=>{const k=p[0],a=Lg.poll[k];
+    $("#poll_"+k).textContent=a[0];
+    $("#poll_"+k+"_bar").style.width=pollW(a[0])+"%";
+    setDelta("poll_"+k+"_d",a[1],0);
   });
+  $("#L_infra").innerHTML=infraHTML(Lg.infra);
+  $("#L_insbar").style.width=lossW(Lg.ins)+"%";
+  $("#L_uninsbar").style.width=lossW(Lg.unins)+"%";
+  $("#L_ins").innerHTML=lossFig(Lg.ins);
+  $("#L_unins").innerHTML=lossFig(Lg.unins);
+  $("#L_ticker").innerHTML=tickerTrack(D.tickers[sc.id]);
   document.querySelectorAll("#railBars .rb").forEach((rb,idx)=>{rb.className="rb"+(idx<i?" done":idx===i?" cur":"");});
   const spBars=$("#spBars");
   if(spBars.children.length===0){
-    D.scenes.forEach((sc,idx)=>{const d=document.createElement("button");d.className="spb";d.title=sc.title;d.addEventListener("click",()=>openScene(idx));spBars.appendChild(d);});
+    D.scenes.forEach((s2,idx)=>{const d=document.createElement("button");d.className="spb";d.title=s2.title;d.addEventListener("click",()=>openScene(idx));spBars.appendChild(d);});
   }
   document.querySelectorAll("#spBars .spb").forEach((spb,idx)=>{spb.className="spb"+(idx<i?" done":idx===i?" cur":"");});
   $("#spCount").innerHTML=`${i+1} of 7`;
@@ -933,6 +1007,7 @@ $("#resourcesBtn").addEventListener("click",()=>showPage("resources"));
 
 buildLanding();
 buildResources();
+$("#ledgerPin").innerHTML=ledgerMarkup(D.scenes[0].ledger,true,D.tickers[D.scenes[0].id]);
 $("#homeBtn").classList.add("active");
 </script>
 <script>
