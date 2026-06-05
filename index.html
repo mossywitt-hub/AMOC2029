@@ -244,6 +244,52 @@ button{font-family:inherit;}
   .news-side{padding-left:0;border-top:1px solid #d4cdba;margin-top:14px;padding-top:14px;}
 }
 
+/* TABLOID front-page inset */
+.tabloid{margin:2rem 0;background:#fbfaf7;border:0.5px solid #d8d2c4;box-shadow:4px 5px 0 rgba(60,55,40,0.10);overflow:hidden;}
+.tab-top{display:flex;align-items:center;justify-content:space-between;background:#b3261b;padding:8px 14px;}
+.tab-flag{font-family:var(--sans);font-weight:600;font-size:27px;line-height:1;letter-spacing:-0.02em;color:#fff;text-transform:uppercase;}
+.tab-price{font-family:var(--mono);font-size:9px;letter-spacing:0.1em;color:#ffd9d4;text-transform:uppercase;}
+.tab-screamer{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:0.18em;color:#b3261b;padding:11px 14px 0;}
+.tab-head{font-family:var(--sans);font-weight:600;font-size:clamp(40px,9vw,72px);line-height:0.92;letter-spacing:-0.03em;color:#16130d;text-transform:uppercase;margin:1px 0 0;padding:0 12px;}
+.tab-deck{font-family:var(--sans);font-weight:600;font-size:clamp(14px,2.6vw,19px);letter-spacing:0.01em;color:#b3261b;text-transform:uppercase;padding:7px 14px 13px;border-bottom:2px solid #16130d;}
+.tab-body{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;padding:14px;}
+.tab-photo{position:relative;height:190px;overflow:hidden;border:0.5px solid #c8c2b2;filter:saturate(0.85);}
+.tab-burst{position:absolute;right:8px;bottom:8px;width:94px;height:94px;border-radius:50%;background:#ffd21e;border:2.5px solid #16130d;color:#16130d;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(-8deg);font-family:var(--sans);font-weight:600;font-size:17px;line-height:0.9;box-shadow:2px 2px 0 rgba(0,0,0,0.16);}
+.tab-burst span{font-size:8px;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;margin-top:3px;}
+.tab-col p{font-family:var(--serif);font-size:13px;line-height:1.5;color:#2a2620;margin:0 0 0.6rem;}
+.tab-dropcap{float:left;font-family:var(--sans);font-weight:600;font-size:40px;line-height:0.78;padding:3px 7px 0 0;color:#b3261b;}
+.tab-pull{font-family:var(--serif);font-style:italic;font-weight:500;font-size:15px;line-height:1.26;color:#16130d;border-left:3px solid #ffd21e;padding-left:10px;margin-top:8px;}
+.tab-fade{height:54px;background:linear-gradient(to bottom,rgba(251,250,247,0),#fbfaf7);margin-top:-40px;position:relative;pointer-events:none;}
+@media(max-width:620px){ .tab-body{grid-template-columns:1fr;} .tab-photo{height:170px;} }
+
+/* CAMPAIGN LEAFLETS inset */
+.leaflets{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:2rem 0;}
+.leaflet{background:#fffdf8;border:0.5px solid #d8d2c4;box-shadow:4px 5px 0 rgba(60,55,40,0.10);overflow:hidden;display:flex;flex-direction:column;transform:rotate(-0.5deg);}
+.leaflet.opp{transform:rotate(0.6deg);}
+.lf-top{display:flex;align-items:center;gap:11px;padding:13px 14px;color:#fff;}
+.leaflet.gov .lf-top{background:#5e3a9e;}
+.leaflet.opp .lf-top{background:#5a626e;}
+.lf-logo{width:46px;height:46px;flex-shrink:0;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;padding:6px;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.05);}
+.leaflet.gov .lf-logo{color:#5e3a9e;}
+.leaflet.opp .lf-logo{color:#5a626e;}
+.lf-party{font-family:var(--sans);font-weight:600;font-size:18px;line-height:1;letter-spacing:-0.01em;}
+.lf-slogan{font-family:var(--mono);font-size:9px;letter-spacing:0.13em;text-transform:uppercase;margin-top:5px;opacity:0.92;}
+.lf-pitch{font-family:var(--serif);font-style:italic;font-size:13.5px;line-height:1.42;padding:12px 14px 8px;}
+.leaflet.gov .lf-pitch{color:#4a2f7a;}
+.leaflet.opp .lf-pitch{color:#3f4854;}
+.lf-promises{list-style:none;margin:0;padding:2px 14px 12px;flex:1;}
+.lf-promises li{font-family:var(--sans);font-size:12px;line-height:1.32;padding:6px 0 6px 21px;position:relative;border-bottom:0.5px dotted #e0dac9;color:#3a352a;}
+.lf-promises li:last-child{border-bottom:none;}
+.lf-promises li::before{position:absolute;left:0;top:5px;font-size:11px;font-weight:700;}
+.leaflet.gov .lf-promises li::before{content:"✓";color:#5e3a9e;}
+.leaflet.opp .lf-promises li::before{content:"✗";color:#5a626e;}
+.lf-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:9px 14px;background:#faf8f3;border-top:0.5px solid #e6e0d2;}
+.lf-vote{font-family:var(--sans);font-weight:600;font-size:12px;letter-spacing:0.04em;color:#fff;padding:3px 11px;}
+.leaflet.gov .lf-vote{background:#5e3a9e;}
+.leaflet.opp .lf-vote{background:#5a626e;}
+.lf-promo{font-family:var(--mono);font-size:7.5px;letter-spacing:0.05em;color:#a89f88;text-align:right;line-height:1.3;}
+@media(max-width:620px){ .leaflets{grid-template-columns:1fr;} .leaflet,.leaflet.opp{transform:none;} }
+
 /* INVITATION inset */
 .invite{margin:2rem 0;display:flex;justify-content:center;}
 .invite-card{position:relative;background:#f7f1e3;border:1px solid #e3d8bf;box-shadow:0 2px 0 #efe6d2,0 3px 14px rgba(60,50,30,0.12);padding:2.6rem 2.4rem 2rem;max-width:430px;width:100%;text-align:center;}
@@ -715,6 +761,124 @@ function stormSVG(){
   </svg>`;
 }
 
+function renderTabloid(){
+  return `<div class="tabloid">
+    <div class="tab-top">
+      <span class="tab-flag">The Clarion</span>
+      <span class="tab-price">Wednesday &middot; 95p</span>
+    </div>
+    <div class="tab-screamer">EXCLUSIVE &middot; YOUR MONEY, THEIR PONDS</div>
+    <h3 class="tab-head">Taxes for Tadpoles</h3>
+    <div class="tab-deck">Farmers&rsquo; handout to build ponds</div>
+    <div class="tab-body">
+      <div class="tab-photo" role="img" aria-label="A muddy farm pond ringed with reeds">
+        ${pondSVG()}
+        <div class="tab-burst">&pound;BILLIONS<span>of your cash</span></div>
+      </div>
+      <div class="tab-col">
+        <p class="tab-lead"><span class="tab-dropcap">M</span>INISTERS were accused of &lsquo;losing the plot&rsquo; last night after it emerged that hard-pressed taxpayers will bankroll a scheme to dig PONDS on private farmland &mdash; all in the name of the weather.</p>
+        <p>Critics rounded on the Department of Climate Resilience, branding its new farm plan a charter for &lsquo;subsidised puddles&rsquo; while families struggle with the weekly shop.</p>
+        <div class="tab-pull">&lsquo;They&rsquo;d flood our wallets to fill a few ditches&rsquo;</div>
+      </div>
+    </div>
+    <div class="tab-fade"></div>
+  </div>`;
+}
+function pondSVG(){
+  return `<svg viewBox="0 0 600 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:100%;">
+    <defs>
+      <linearGradient id="pfield" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#8d8c58"/><stop offset="0.5" stop-color="#6f6f42"/><stop offset="1" stop-color="#55502f"/>
+      </linearGradient>
+      <radialGradient id="pwater" cx="0.5" cy="0.42" r="0.7">
+        <stop offset="0" stop-color="#4b6b63"/><stop offset="1" stop-color="#2c423c"/>
+      </radialGradient>
+    </defs>
+    <rect width="600" height="300" fill="url(#pfield)"/>
+    <ellipse cx="300" cy="192" rx="252" ry="98" fill="url(#pwater)"/>
+    <g stroke="#7d9b92" stroke-width="1.4" opacity="0.5" fill="none">
+      <ellipse cx="300" cy="186" rx="152" ry="48"/>
+      <ellipse cx="300" cy="189" rx="98" ry="30"/>
+      <ellipse cx="300" cy="192" rx="52" ry="16"/>
+    </g>
+    <g fill="#16201d">
+      <path d="M250 176 q11 -6 19 0 q-7 5 -19 6 q-9 -3 0 -6"/>
+      <path d="M332 202 q11 -6 19 0 q-7 5 -19 6 q-9 -3 0 -6"/>
+      <path d="M300 168 q9 -5 16 0 q-6 4 -16 5 q-8 -2 0 -5"/>
+    </g>
+    <g stroke="#3f4422" stroke-width="3" stroke-linecap="round">
+      <line x1="72" y1="252" x2="66" y2="150"/><line x1="86" y1="252" x2="94" y2="166"/>
+      <line x1="540" y1="252" x2="548" y2="158"/><line x1="524" y1="252" x2="516" y2="174"/>
+    </g>
+    <g fill="#5a5326">
+      <ellipse cx="65" cy="150" rx="4" ry="12"/><ellipse cx="95" cy="166" rx="4" ry="12"/>
+      <ellipse cx="549" cy="158" rx="4" ry="12"/><ellipse cx="515" cy="174" rx="4" ry="12"/>
+    </g>
+    <rect width="600" height="300" fill="#241f17" opacity="0.05"/>
+  </svg>`;
+}
+
+function renderLeaflets(){
+  return `<div class="leaflets">
+    <div class="leaflet gov">
+      <div class="lf-top">
+        <div class="lf-logo" role="img" aria-label="Watchful meerkat emblem">${meerkatSVG()}</div>
+        <div class="lf-id"><div class="lf-party">The Government</div><div class="lf-slogan">Resilient &amp; Responsible</div></div>
+      </div>
+      <p class="lf-pitch">Re-elect the grown-ups. We did the maths so you don&rsquo;t have to shiver.</p>
+      <ul class="lf-promises">
+        <li>A permanent National Climate Resilience Centre &mdash; floods, grids &amp; food under one roof</li>
+        <li>Flood defences that make developers actually listen</li>
+        <li>Farm support kept (yes, including the ponds)</li>
+        <li>Batteries on roofs, heat alerts in every school</li>
+        <li>Carbon down, wetlands up, bills held steady</li>
+      </ul>
+      <div class="lf-foot"><span class="lf-vote">VOTE &#10003;</span><span class="lf-promo">Promoted by<br>Sensible Futures Ltd</span></div>
+    </div>
+    <div class="leaflet opp">
+      <div class="lf-top">
+        <div class="lf-logo" role="img" aria-label="Hawk emblem">${hawkSVG()}</div>
+        <div class="lf-id"><div class="lf-party">The Opposition</div><div class="lf-slogan">Decisive &amp; Affordable</div></div>
+      </div>
+      <p class="lf-pitch">Enough of the Department of Constant Cost. Lower bills now &mdash; the weather can wait.</p>
+      <ul class="lf-promises">
+        <li>Scrap the costly new department &mdash; back to basics</li>
+        <li>Bills down today; models and maybes later</li>
+        <li>Stand by our fossil-fuel heartlands (for now)</li>
+        <li>Leave the energy mix to the market</li>
+        <li>Firm borders, firm budgets, no surprises</li>
+        <li>&ldquo;Still uncertain&rdquo; &mdash; so why pay for maybe?</li>
+      </ul>
+      <div class="lf-foot"><span class="lf-vote">VOTE &#10007;</span><span class="lf-promo">Promoted by the<br>Common-Sense Alliance</span></div>
+    </div>
+  </div>`;
+}
+function meerkatSVG(){
+  return `<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:100%;">
+    <g fill="currentColor">
+      <path d="M52 50 q16 6 17 26 -8 0 -12 -8 -4 -8 -5 -18z"/>
+      <path d="M40 20 c-10 0 -15 9 -15 24 0 14 5 24 15 24 10 0 15 -10 15 -24 0 -15 -5 -24 -15 -24z"/>
+      <circle cx="40" cy="16" r="10"/>
+      <circle cx="31" cy="9" r="3.4"/>
+      <circle cx="49" cy="9" r="3.4"/>
+      <path d="M40 16 q9 1 12 6 -5 4 -12 2z"/>
+    </g>
+    <circle cx="36.5" cy="15" r="2" fill="#fff"/>
+    <circle cx="43.5" cy="15" r="2" fill="#fff"/>
+  </svg>`;
+}
+function hawkSVG(){
+  return `<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:100%;">
+    <g fill="currentColor">
+      <path d="M40 34 C30 22 14 18 4 24 C16 26 24 32 33 41 C23 39 15 41 10 47 C21 45 31 45 40 44 C49 45 59 45 70 47 C65 41 57 39 47 41 C56 32 64 26 76 24 C66 18 50 22 40 34z"/>
+      <path d="M40 30 c-4 0 -6 4 -6 11 0 11 2 20 6 27 4 -7 6 -16 6 -27 0 -7 -2 -11 -6 -11z"/>
+      <circle cx="40" cy="26" r="6.5"/>
+      <path d="M40 27 q8 -1 11 3 -5 4 -11 1z"/>
+    </g>
+    <circle cx="40" cy="24.5" r="1.8" fill="#fff"/>
+  </svg>`;
+}
+
 /* ---- memo render ---- */
 function renderInvite(){
   return `<div class="invite">
@@ -856,6 +1020,8 @@ function openScene(i,atBottom){
       if(item.memo){body.insertAdjacentHTML("beforeend",renderMemo());return;}
       if(item.paper){body.insertAdjacentHTML("beforeend",renderNewspaper());return;}
       if(item.invite){body.insertAdjacentHTML("beforeend",renderInvite());return;}
+      if(item.tabloid){body.insertAdjacentHTML("beforeend",renderTabloid());return;}
+      if(item.leaflets){body.insertAdjacentHTML("beforeend",renderLeaflets());return;}
       if(item.italic){const el=document.createElement("p");el.className="italic";el.innerHTML=item.italic;body.appendChild(el);return;}
     }
     const el=document.createElement("p");
@@ -913,7 +1079,7 @@ function retreatScene(){
   if(current>0){openScene(current-1,true);}else{goHome();}
   setTimeout(()=>{scrollAdvancing=false;},150);
 }
-let atBottomSince=0, atTopSince=0;
+let atBottomSince=0, overUp=0, overUpTimer=null;
 function onReaderScroll(){
   if(!$("#reader").classList.contains("active")){hideCue();return;}
   if(scrollAdvancing||!scrollArmed)return;
@@ -929,7 +1095,7 @@ function onWheelIntent(e){
   if(scrollAdvancing||!scrollArmed)return;
   const reader=$("#reader");
   if(e.deltaY>0){
-    atTopSince=0;
+    overUp=0;
     const remaining=reader.getBoundingClientRect().bottom-window.innerHeight;
     if(remaining<4){
       const now=Date.now();
@@ -938,11 +1104,13 @@ function onWheelIntent(e){
     }else{atBottomSince=0;}
   }else if(e.deltaY<0){
     atBottomSince=0;
-    if((window.scrollY||document.documentElement.scrollTop||0)<4){
-      const now=Date.now();
-      if(atTopSince===0){atTopSince=now;return;}
-      if(now-atTopSince>120){retreatScene();atTopSince=0;}
-    }else{atTopSince=0;}
+    if((window.scrollY||document.documentElement.scrollTop||0)<2){
+      var dy=e.deltaY; if(e.deltaMode===1)dy*=16; else if(e.deltaMode===2)dy*=window.innerHeight;
+      overUp+=-dy;                                       // accumulate overscroll past the top
+      if(overUpTimer)clearTimeout(overUpTimer);
+      overUpTimer=setTimeout(function(){overUp=0;},250); // forget the buildup if the reader pauses
+      if(overUp>120){overUp=0;retreatScene();}
+    }else{overUp=0;}
   }
 }
 window.addEventListener("scroll",onReaderScroll,{passive:true});
