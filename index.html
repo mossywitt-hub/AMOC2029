@@ -340,7 +340,9 @@ button{font-family:inherit;}
 
 /* ledger */
 .ledger{width:236px;flex-shrink:0;background:var(--paper-deep);border-left:0.5px solid var(--line);}
-.ledger-pin{position:sticky;top:90px;padding:1.6rem 1.4rem;}
+.ledger-pin{position:sticky;top:90px;padding:1.6rem 1.4rem;max-height:calc(100vh - 104px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--line-2) transparent;}
+.ledger-pin::-webkit-scrollbar{width:6px;}
+.ledger-pin::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:3px;}
 .ledger-head{display:flex;align-items:center;gap:7px;margin-bottom:1rem;}
 .ledger-head i{width:5px;height:5px;background:var(--steel);display:block;font-style:normal;}
 .ledger-head .lk{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;color:var(--muted);}
@@ -374,6 +376,13 @@ button{font-family:inherit;}
 .lfig .u{font-family:var(--mono);font-size:11px;color:var(--faint);}
 .ld{font-family:var(--mono);font-size:9.5px;letter-spacing:0.02em;white-space:nowrap;}
 .ld.up{color:var(--alarm);} .ld.dn{color:var(--sage);} .ld.fl{color:var(--faint);}
+.lsection{font-family:var(--sans);font-size:10px;color:#a89a7a;letter-spacing:0.01em;margin:0.95rem 0 0.55rem;padding-top:0.7rem;border-top:0.5px solid var(--line-2);}
+.ftiles{display:grid;grid-template-columns:1fr 1fr;gap:7px;}
+.ftile{background:var(--paper-card);border:0.5px solid var(--line-2);padding:8px 10px 9px;}
+.ft-k{font-family:var(--mono);font-size:8px;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);margin-bottom:5px;line-height:1.2;}
+.ft-v{font-family:var(--serif);font-size:20px;color:var(--ink);line-height:1;display:flex;align-items:baseline;gap:3px;}
+.ft-u{font-family:var(--mono);font-size:8.5px;color:var(--faint);}
+.ft-d{margin-top:5px;}
 .lrow.poll .ll{margin-bottom:9px;}
 .poll-row{margin-bottom:8px;} .poll-row:last-child{margin-bottom:0;}
 .poll-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:3px;}
@@ -392,7 +401,7 @@ button{font-family:inherit;}
 .loss-legend .lg i{width:8px;height:8px;display:block;flex-shrink:0;}
 .loss-legend .lg.ins i{background:var(--steel);} .loss-legend .lg.unins i{background:var(--clay);}
 .loss-legend .lg b{font-family:var(--serif);font-size:12px;color:var(--ink);margin:0 1px;}
-.ticker{display:flex;align-items:stretch;margin-top:1.1rem;border-top:0.5px solid var(--line);padding-top:0.9rem;}
+.ticker{display:flex;align-items:stretch;}
 .ticker-tag{font-family:var(--mono);font-size:8px;letter-spacing:0.14em;color:#faf7f0;background:var(--alarm);padding:4px 6px;display:flex;align-items:center;flex-shrink:0;}
 .ticker-win{overflow:hidden;flex:1;min-width:0;display:flex;align-items:center;background:var(--paper-card);border:0.5px solid var(--line-2);border-left:none;}
 .ticker-track{display:inline-flex;align-items:center;flex:none;white-space:nowrap;will-change:transform;animation:tickscroll 38s linear infinite;}
@@ -424,9 +433,9 @@ button{font-family:inherit;}
 @media(max-width:880px){
   .read-wrap{flex-direction:column;}
   .ledger{width:100%;border-left:none;border-top:0.5px solid var(--line);order:-1;}
-  .ledger-pin{position:static;display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem;padding:1.3rem 2.5rem;}
+  .ledger-pin{position:static;display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem;padding:1.3rem 2.5rem;max-height:none;overflow:visible;}
   .ledger-head{grid-column:1/-1;margin-bottom:0;} .ledger-spark{grid-column:1/-1;}
-  .lrow.lyear,.lrow.poll,.lrow.infra,.lrow.loss,.ticker{grid-column:1/-1;}
+  .lrow.lyear,.lrow.poll,.lrow.infra,.lrow.loss,.ticker,.lsection,.ftiles{grid-column:1/-1;}
   .read-col{max-width:none;}
   .rail{top:44px;}
 }
@@ -956,32 +965,45 @@ function pollRow(d,key,label,wi){
     `<div class="poll-bar"><span class="pb ${key}"${wi?` id="poll_${key}_bar"`:""} style="width:${pollW(pct)}%"></span></div></div>`;
 }
 function lossFig(v){return v!=null?v.toFixed(1)+"bn":"&mdash;";}
+function fyLabel(y){var n=parseInt(y,10);return n+"/"+String((n+1)%100).padStart(2,"0");}
+function ftile(label,unit,valId,val,dId,dv,wi){
+  return `<div class="ftile"><div class="ft-k">${label}</div>`+
+    `<div class="ft-v"><span${wi?` id="${valId}"`:""}>${val}</span><span class="ft-u">${unit}</span></div>`+
+    `<div class="ft-d">${deltaHTML(dv,1,wi?dId:null)}</div></div>`;
+}
 function ledgerMarkup(d,wi,ticker){
-  function econ(label,unit,valId,val,dId,dv){
-    return `<div class="lrow econ"><div class="ll">${label}</div>`+
-      `<div class="lfig"><span class="lv"${wi?` id="${valId}"`:""}>${val}</span><span class="u">${unit}</span>${deltaHTML(dv,1,wi?dId:null)}</div></div>`;
-  }
   let h=`<div class="ledger-head"><i></i><span class="lk">THE LEDGER</span>${wi?"":'<span class="lpin">BASELINE</span>'}</div>`;
   h+=`<div class="lrow lyear"><div class="ll">YEAR</div><div class="lv"${wi?' id="L_year"':""}>${d.year}</div><div class="lsub"${wi?' id="L_sub"':""}>${d.sub}</div></div>`;
-  h+=econ("BUDGET DEFICIT","% GDP","L_def",d.deficit.toFixed(1),"L_defD",d.deficitD);
-  h+=econ("INFLATION","%","L_infl",d.inflation.toFixed(1),"L_inflD",d.inflationD);
-  h+=econ("10-YEAR YIELD","%","L_yld",d.yield10.toFixed(1),"L_yldD",d.yield10D);
-  h+=`<div class="lrow poll"><div class="ll">VOTING INTENTION</div>`+PARTIES.map(p=>pollRow(d,p[0],p[1],wi)).join("")+`</div>`;
+  /* News — ticker only; self-explanatory, so no section header */
+  h+=`<div class="ticker"><span class="ticker-tag">LIVE</span><div class="ticker-win"><div class="ticker-track"${wi?' id="L_ticker"':""}>${tickerTrack(ticker)}</div></div></div>`;
+  /* Fiscal health */
+  h+=`<div class="lsection">Fiscal health</div>`;
+  h+=`<div class="ftiles">`+
+     ftile("National debt","% GDP","L_debt",d.debt.toFixed(0),"L_debtD",d.debtD,wi)+
+     ftile(`Budget deficit <span${wi?' id="L_defYr"':''}>${fyLabel(d.year)}</span>`,"% GDP","L_def",d.deficit.toFixed(1),"L_defD",d.deficitD,wi)+
+     ftile("10-year yield","%","L_yld",d.yield10.toFixed(1),"L_yldD",d.yield10D,wi)+
+     ftile("Inflation","%","L_infl",d.inflation.toFixed(1),"L_inflD",d.inflationD,wi)+
+     `</div>`;
+  /* Popularity */
+  h+=`<div class="lsection">Popularity</div>`;
+  h+=`<div class="lrow poll">`+PARTIES.map(p=>pollRow(d,p[0],p[1],wi)).join("")+`</div>`;
+  /* Climate impacts */
+  h+=`<div class="lsection">Climate impacts</div>`;
   h+=`<div class="lrow infra"><div class="ll">CRITICAL INFRASTRUCTURE</div><div class="infra-track"${wi?' id="L_infra"':""}>${infraHTML(d.infra)}</div></div>`;
   h+=`<div class="lrow loss"><div class="ll">INSURED / UNINSURED LOSSES</div>`+
      `<div class="lossbar"><span class="ls-ins"${wi?' id="L_insbar"':""} style="width:${lossW(d.ins)}%"></span><span class="ls-unins"${wi?' id="L_uninsbar"':""} style="width:${lossW(d.unins)}%"></span></div>`+
      `<div class="loss-legend"><span class="lg ins"><i></i>INS&nbsp;<b${wi?' id="L_ins"':""}>${lossFig(d.ins)}</b></span>`+
      `<span class="lg unins"><i></i>UNINS&nbsp;<b${wi?' id="L_unins"':""}>${lossFig(d.unins)}</b></span></div></div>`;
-  h+=`<div class="ticker"><span class="ticker-tag">LIVE</span><div class="ticker-win"><div class="ticker-track"${wi?' id="L_ticker"':""}>${tickerTrack(ticker)}</div></div></div>`;
   return h;
 }
 function paintLedger(i){
   const sc=D.scenes[i],Lg=sc.ledger;
   $("#L_year").textContent=Lg.year;
   $("#L_sub").textContent=sc.title;
-  $("#L_def").textContent=Lg.deficit.toFixed(1); setDelta("L_defD",Lg.deficitD,1);
-  $("#L_infl").textContent=Lg.inflation.toFixed(1); setDelta("L_inflD",Lg.inflationD,1);
+  $("#L_debt").textContent=Lg.debt.toFixed(0); setDelta("L_debtD",Lg.debtD,1);
+  $("#L_def").textContent=Lg.deficit.toFixed(1); setDelta("L_defD",Lg.deficitD,1); $("#L_defYr").textContent=fyLabel(Lg.year);
   $("#L_yld").textContent=Lg.yield10.toFixed(1); setDelta("L_yldD",Lg.yield10D,1);
+  $("#L_infl").textContent=Lg.inflation.toFixed(1); setDelta("L_inflD",Lg.inflationD,1);
   PARTIES.forEach(p=>{const k=p[0],a=Lg.poll[k];
     $("#poll_"+k).textContent=a[0];
     $("#poll_"+k+"_bar").style.width=pollW(a[0])+"%";

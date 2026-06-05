@@ -71,7 +71,7 @@ team: [
 ],
 
 baseline:{year:"2029", sub:"The beginning",
-  deficit:3.8, deficitD:0.4, inflation:3.2, inflationD:0.3, yield10:4.2, yield10D:0.2,
+  debt:90, debtD:1.5, deficit:3.8, deficitD:0.4, inflation:3.2, inflationD:0.3, yield10:4.2, yield10D:0.2,
   poll:{gov:[41,-1], opp:[32,1], far:[12,2], left:[7,1]},
   infra:1, ins:null, unins:null},
 
@@ -80,7 +80,7 @@ scenes: [
     id:"department",
     title:"The Department of Climate Resilience",
     ledger:{year:"2029",
-      deficit:4.1, deficitD:0.3, inflation:3.6, inflationD:0.4, yield10:4.4, yield10D:0.2,
+      debt:92, debtD:2, deficit:4.1, deficitD:0.3, inflation:3.6, inflationD:0.4, yield10:4.4, yield10D:0.2,
       poll:{gov:[40,-1], opp:[33,1], far:[13,1], left:[7,0]},
       infra:1, ins:0.4, unins:0.9},
     body:[
@@ -121,7 +121,7 @@ scenes: [
     id:"jobs",
     title:"The Price of Jobs",
     ledger:{year:"2030",
-      deficit:4.9, deficitD:0.8, inflation:4.8, inflationD:1.2, yield10:4.7, yield10D:0.3,
+      debt:96, debtD:4, deficit:4.9, deficitD:0.8, inflation:4.8, inflationD:1.2, yield10:4.7, yield10D:0.3,
       poll:{gov:[37,-3], opp:[34,1], far:[16,3], left:[8,1]},
       infra:1, ins:1.8, unins:3.4},
     body:[
@@ -174,7 +174,7 @@ scenes: [
     id:"sunshade",
     title:"The Sunshade",
     ledger:{year:"2031",
-      deficit:5.6, deficitD:0.7, inflation:4.4, inflationD:-0.4, yield10:5.0, yield10D:0.3,
+      debt:101, debtD:5, deficit:5.6, deficitD:0.7, inflation:4.4, inflationD:-0.4, yield10:5.0, yield10D:0.3,
       poll:{gov:[34,-3], opp:[33,-1], far:[20,4], left:[9,1]},
       infra:2, ins:3.1, unins:6.2},
     body:[
@@ -231,7 +231,7 @@ scenes: [
     id:"seam",
     title:"The Seam Between the Systems",
     ledger:{year:"2032",
-      deficit:6.8, deficitD:1.2, inflation:5.1, inflationD:0.7, yield10:5.6, yield10D:0.6,
+      debt:108, debtD:7, deficit:6.8, deficitD:1.2, inflation:5.1, inflationD:0.7, yield10:5.6, yield10D:0.6,
       poll:{gov:[31,-3], opp:[32,-1], far:[24,4], left:[10,1]},
       infra:2, ins:8.4, unins:19.1},
     body:[
@@ -275,7 +275,7 @@ scenes: [
     id:"grid",
     title:"The New Owners of the Grid",
     ledger:{year:"2033",
-      deficit:7.4, deficitD:0.6, inflation:4.7, inflationD:-0.4, yield10:5.9, yield10D:0.3,
+      debt:114, debtD:6, deficit:7.4, deficitD:0.6, inflation:4.7, inflationD:-0.4, yield10:5.9, yield10D:0.3,
       poll:{gov:[30,-1], opp:[30,-2], far:[26,2], left:[11,1]},
       infra:3, ins:11.6, unins:24.8},
     body:[
@@ -321,7 +321,7 @@ scenes: [
     id:"ground",
     title:"The Ground Gives",
     ledger:{year:"2034",
-      deficit:8.1, deficitD:0.7, inflation:5.9, inflationD:1.2, yield10:6.4, yield10D:0.5,
+      debt:121, debtD:7, deficit:8.1, deficitD:0.7, inflation:5.9, inflationD:1.2, yield10:6.4, yield10D:0.5,
       poll:{gov:[28,-2], opp:[29,-1], far:[29,3], left:[12,1]},
       infra:3, ins:14.2, unins:31.5},
     body:[
@@ -362,7 +362,7 @@ scenes: [
     id:"vote",
     title:"The Vote",
     ledger:{year:"2034",
-      deficit:8.6, deficitD:0.5, inflation:5.5, inflationD:-0.4, yield10:6.8, yield10D:0.4,
+      debt:126, debtD:5, deficit:8.6, deficitD:0.5, inflation:5.5, inflationD:-0.4, yield10:6.8, yield10D:0.4,
       poll:{gov:[29,1], opp:[27,-2], far:[30,1], left:[12,0]},
       infra:3, ins:16.9, unins:38.0},
     body:[
