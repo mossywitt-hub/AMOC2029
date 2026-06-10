@@ -137,7 +137,7 @@ scenes: [
       "“It means,” she said, “we explain the trade-offs before the weather explains them for us.”",
       "That was the next few years in miniature. Keep heat and power working through colder winters without handing the future back to gas. Stop flood losses becoming insurance losses becoming housing losses. Push agriculture toward resilience before another run of bad seasons. The AMOC memo wasn’t just another item on the list anymore. It was now the reason for all the lists.",
       "When the meeting broke up, Tom handed her the rest of her box. On top sat a note about a rural representative complaining that the new government sounded like it was dragging the country into wartime.",
-      "By lunchtime the state office wanted language for a call with Beijing, and home affairs had asked for modeling of the impact on illegal immigration."
+      "By lunchtime the foreign ministry wanted language for a call with Beijing, and home affairs had asked for modeling of the impact on illegal immigration."
     ],
     tech:{title:"", body:[]}
   },
@@ -292,7 +292,7 @@ scenes: [
     tech:{title:"why a flood leads to insurance, lending, and politics", body:[
       "The issue is not that AMOC causes a single flood event directly, but that it changes the climatic context in which tides, rainfall, surge and infrastructure vulnerability interact.",
       "By the early 2030s, major compound floods could be triggered by overlapping Atlantic storm activity, high tides, elevated mean sea level and intense rainfall. Systems designed for one stressor often fail when several occur simultaneously: power outages disabling pumps, saturated drainage networks amplifying runoff, transport disruption slowing emergency response.",
-      "The insurance consequences follow rapidly. By 2032-2033, insurance repricing could accelerate after major losses; some zip codes could become effectively uninsurable. The UK Climate Change Committee's 2026 adaptation assessment warned that the country remained underprepared for escalating flood risks despite rising exposure. By the mid-2030s, repeated flood losses could accelerate insurance withdrawal and create growing numbers of climate mortgage prisoners in exposed areas."
+      "The insurance consequences follow rapidly. By 2032-2033, insurance repricing could accelerate after major losses; some postal codes could become effectively uninsurable. The UK Climate Change Committee's 2026 adaptation assessment warned that the country remained underprepared for escalating flood risks despite rising exposure. By the mid-2030s, repeated flood losses could accelerate insurance withdrawal and create growing numbers of climate mortgage prisoners in exposed areas."
     ]}
   },
   {
@@ -323,7 +323,7 @@ scenes: [
       "Then she watched the provisions be stripped out in the final hours, reduced to a pilot program in three cities.",
       "With impeccable timing, like a bad penny, Daniel Sloane immediately turned up on television to announce that the bill was “a subsidy architecture for homeowners with apps”.",
       "Miriam’s officials had to spend the following week designing provisions for public housing blocks and community halls and small industrial parks. Much weaker. Sloane, with Katie the union organizer by his side, knew that if distributed energy assets became a class symbol rather than a basic utility, he had found the line of attack that could still kill them at the election.",
-      "One Saturday she took Nina to a cooperative open day in the city because she had promised to do something together and because sometimes work was the only part of herself she had reliably available. Nina stood in front of a display battery the size of a wardrobe and said, “This is just a giant phone charger for the borough.”",
+      "One Saturday she took Nina to a cooperative open day in the city because she had promised to do something together and because sometimes work was the only part of herself she had reliably available. Nina stood in front of a display battery the size of a wardrobe and said, “This is just a giant phone charger for the district.”",
       "“That’s sort of right,” Miriam said. “In fact, that’s nearly right.”",
       "“And people can’t be normal about this?”",
       "“No.”",
@@ -409,8 +409,8 @@ scenes: [
       "“What does he want?”",
       "“The same thing everyone wants, you know,” Miriam said, tucking the phone into her bag. “To avoid paying for indecision.”",
       "The count that night took place among folding tables, bundles of ballots, the tired routine pride of civic ceremony. Miriam had always loved counts because they used to feel like a pure machine, orderly input then clean tally. But now they meant something more: her daughter at thirty, forty, sixty, needing systems to keep working.",
-      "Midday, a young woman in work boots had dropped her ballot into the box without looking at her. When Miriam had thanked her for coming out, she had shrugged. “Mom lost her house in the flood. The insurance paid half of what it was worth.” She picked up her jacket. “I’m not sure any of this works anymore. But not voting is probably a vote for the people who broke it.”",
-      "Around midnight the first boxes from the neighborhoods near the ring road came in stronger than expected, but the outer villages were worse. The flood-hit wards split strangely, almost house by house. Streets with active community energy programs moved to her, remembering grid connection dates and local bill relief and local organizers who knew exactly which cul-de-sacs to knock. The early looks at the old marina row houses were ugly.",
+      "Midday, a young woman in work boots had dropped her ballot into the box without looking at her. When Miriam had thanked her for coming out, she had shrugged. “My mother lost her house in the flood. The insurance paid half of what it was worth.” She picked up her jacket. “I’m not sure any of this works anymore. But not voting is probably a vote for the people who broke it.”",
+      "Around midnight the first boxes from the neighborhoods near the ring road came in stronger than expected, but the outer villages were worse. The flood-hit wards split strangely, almost house by house. Streets with active community energy programs moved to her, remembering grid connection dates and local bill relief and local organizers who knew exactly which cul-de-sacs to knock. The early looks at the old marina district were ugly.",
       "At half one the officials asked candidates to remain available.",
       "At two seventeen Nina sent a message from university: Whatever happens, get some sleep.",
       "At two forty-three the final verified bundles were carried over.",
@@ -419,7 +419,7 @@ scenes: [
     tech:{title:"why the election was also a solvency vote", body:[
       "By the point this story reaches its election, the argument is not only environmental or moral; it is explicitly about solvency and state capacity. UNDRR’s 2025 Global Assessment Report says disaster costs now exceed $2.3 trillion annually when cascading and ecosystem costs are included, and describes a destructive cycle of disasters, debt, uninsurability and humanitarian need. Its summary is blunt about the public-finance channel: households lose assets and income, tax revenues shrink, governments borrow more, and as debt becomes riskier the room to fund recovery narrows.",
       "That framing is increasingly echoed in finance-policy institutions. A 2026 Grantham Research Institute analysis argues that early adaptation investment can bolster fiscal stability, reduce borrowing costs and mitigate debt deterioration, while warning that climate damages are already significant and likely underestimated because many analyses still omit cascading and compounding risks, flooding, and the full impacts of tropical cyclones. The report finds economic benefit–cost ratios of around 4:1 and internal rates of return of about 25% for adaptation investment.",
-      "That is why insurance, food systems, flood defenses, borrowing costs, and emissions policy collapse into one political argument. Emergency politics emerge when repeated losses impair insurance and housing markets. By 2032-2033, some zip codes could become effectively uninsurable. By 2034-2036, housing, insurance and mortgage markets could show structural impairment in exposed regions, and the sovereign triple-squeeze – debt, adaptation costs, disaster losses – become acute in many vulnerable states. What elections decide in that context is not simply the direction of travel, but whether institutions adapt before compounding losses start governing for them."
+      "That is why insurance, food systems, flood defenses, borrowing costs, and emissions policy collapse into one political argument. Emergency politics emerge when repeated losses impair insurance and housing markets. By 2032-2033, some postal codes could become effectively uninsurable. By 2034-2036, housing, insurance and mortgage markets could show structural impairment in exposed regions, and the sovereign triple-squeeze – debt, adaptation costs, disaster losses – become acute in many vulnerable states. What elections decide in that context is not simply the direction of travel, but whether institutions adapt before compounding losses start governing for them."
     ]}
   }
 ],
@@ -429,7 +429,7 @@ tickers:{
   home:[
     "AMOC slowdown moves from the journals into cabinet briefings",
     "New government promises “competence, not slogans”",
-    "Treasury warns fiscal headroom is “evaporating”",
+    "Finance ministry warns fiscal headroom is “evaporating”",
     "Insurers quietly redraw their North Atlantic risk maps",
     "PM: “We will explain the trade-offs before the weather does”"
   ],
@@ -490,7 +490,7 @@ tickers:{
     "“Pay early or pay later” dominates the doorstep",
     "Flood-hit wards split street by street",
     "Turnout reported strong in the co-op wards",
-    "Counts begin amid record mail-in voting"
+    "Counts begin amid record postal ballots"
   ]
 },
 
