@@ -147,7 +147,7 @@ scenes: [
     ledger:{year:"2030",
       debt:92, debtD:2, deficit:4.6, deficitD:0.8, inflation:4.1, inflationD:0.7, yield10:4.6, yield10D:0.3,
       poll:{gov:[40,-4], opp:[32,2], far:[11,2], left:[7,1]},
-      infra:2, ins:1.8, unins:3.4},
+      infra:1, ins:1.8, unins:3.4},
     body:[
       "The first real fight Miriam took on, a few months in, was about gas and jobs. It was really about what counted as realism. The science said colder, more volatile winters were coming before the grid could catch up. That left some brutal tradeoffs: how much fossil capacity do we keep online? Which communities will be expected to pay the price?",
       "If she got this wrong, Miriam could lose her government essential support from urban pro-resilience voters and key industrial communities in one muddled bill.",
@@ -200,7 +200,7 @@ scenes: [
     ledger:{year:"2031",
       debt:95, debtD:3, deficit:5.2, deficitD:0.6, inflation:3.7, inflationD:-0.4, yield10:4.8, yield10D:0.2,
       poll:{gov:[35,-5], opp:[34,2], far:[14,3], left:[8,1]},
-      infra:2, ins:3.1, unins:6.2},
+      infra:1, ins:3.1, unins:6.2},
     body:[
       "If the AMOC memo forced the government to think about energy, flood, and food together, it also forced a question most people still preferred not to think about: what happened when adaptation and emissions cuts looked too slow, and somebody offered to buy time by altering the sky?",
       "The invitation came on thick creamy paper, the wording precise and tasteful. A private roundtable on climate intervention research and governance. The sponsors were the defense investment organisation, a large venture capital fund, and of course the Voss Foundation—the main philanthropic vehicle for billionaire Philip Voss.",
@@ -257,7 +257,7 @@ scenes: [
     ledger:{year:"2032",
       debt:99, debtD:4, deficit:6.4, deficitD:1.2, inflation:4.9, inflationD:1.2, yield10:5.4, yield10D:0.6,
       poll:{gov:[32,-3], opp:[33,-1], far:[18,4], left:[9,1]},
-      infra:3, ins:8.4, unins:19.1},
+      infra:2, ins:8.4, unins:19.1},
     body:[
       "The first major flood did not settle any scientific argument. It did something simpler: it drowned the ground floor of a hospital, knocked out power to a pumping station, and trapped two hundred families in homes they could no longer insure or refinance; it did all this before lunch.",
       "For two days the weather had been described on television as erratic, which secretly meant very bad and yet too compound to fit inside a single warning colour.",
