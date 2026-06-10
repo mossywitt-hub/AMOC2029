@@ -1,29 +1,43 @@
 window.WTSS = {
 
 introTop: [
-  "In 2029 politics caught up with the weather.",
-  "The trigger was early warning systems in the North Atlantic. Floods, wildfires, and heatwaves rarely held people’s attention for long. But this was on a different scale. AMOC regulates the weather that keeps nearly half the planet alive, and it was slowing down faster than anyone had predicted.",
+  "By 2029, the AMOC was slowing faster than anyone had predicted.",
+  "Record breaking weather had become normal over the preceding decade. Even the most destructive floods and fires attracted limited coverage. But this was different. The AMOC (Atlantic meridional overturning circulation) regulates the weather that keeps half the planet alive.[1]",
   "Experts debated the details. Some put the probability of collapse at over fifty percent, others pointed to uncertainty in the models. Exact timeframes were contentious. But most agreed that the early impacts of the slowdown would come soon. On the current trajectory longer term, the chances were between a dice roll and a coin flip on large parts of the Northern Hemisphere being uninhabitable.",
   "Governments found themselves facing something none had seriously planned for: an active and accelerating risk to the entire national infrastructure.",
-  "For years politics had treated climate like a storm on the horizon, arguing about its severity and how, or if, to steer round it. Suddenly everyone realised that the storm had arrived and the argument was about how not to sink."
+  "For years politics had treated climate like a storm on the horizon, arguing about its severity and how, or if, to steer round it. Suddenly the storm had arrived and the question was how not to sink."
 ],
 
+/* hover footnotes — [N] markers in introTop/introBelow/whyWeWrote/amoc101 resolve against this map */
+footnotes:{
+  1:"See <a href=\"#fb-amoc\" data-fn-annex=\"fb-amoc\">Annex II</a> for a briefing note on AMOC slowdown.",
+  2:"See <a href=\"#fb-why\" data-fn-annex=\"fb-why\">Annex I</a> on structural shifts in the politics of climate change, and why it matters now.",
+  3:"This dynamic is termed Derailment Risk and has been explored in detail by the Strategic Climate Risks Initiative. See <a href=\"https://www.scri.org.uk/publications/report-derailment-risk\" target=\"_blank\" rel=\"noopener noreferrer\">the SCRI report</a>.",
+  4:"See <a href=\"#fb-team\" data-fn-annex=\"fb-team\">Annex III</a> for full team details.",
+  5:"There is a live discussion about creating new political structures to meet resilience challenges, for example in <a href=\"https://www.sei.org/publications/strategic-resilience/\" target=\"_blank\" rel=\"noopener noreferrer\">this working paper</a> from sei.org.",
+  6:"Several studies show that people tend to underrate the extent to which others care about climate change. That is, they believe that most other people care less than they do, or not at all. This is true of individuals in relation to their wider community and of politicians in relation to their voters. See e.g., <a href=\"https://www.nature.com/articles/s41558-024-01925-3\" target=\"_blank\" rel=\"noopener noreferrer\">Globally representative evidence on the actual and perceived support for climate action</a> (Nature).",
+  7:"Our “Worse Outcome” is not the most extreme version of events that are possible within the stated timeframe. This is intentional — doomerism is not especially decision useful — but to give a flavour, a major population crash is a plausible outcome of AMOC collapse, and in the timeframes of this resource could manifest as an “epistemic snap” in which the knowledge of events to come undermines the function of the financial, political, and social systems that structure our societies. Major conflict spurred by climate migration is another possibility.",
+  8:"Risk thinking differs from primary research in that it is more concerned about false negatives than false positives. I.e., within a given margin, it is more decision-useful to overestimate rather than to underestimate risk. Several people have argued that we are getting the balance wrong when it comes to climate change, see for example <a href=\"https://fivetimesfaster.org/\" target=\"_blank\" rel=\"noopener noreferrer\">“Five Times Faster: Rethinking the Science, Economics, and Diplomacy of Climate Change”</a> by Simon Sharpe."
+},
+
 introBelow: [
-  "We predict that in the near future, escalating climate shocks and looming tipping points will change the politics of climate change from mitigation (solving the cause) to resilience (dealing with the effects).",
-  "The mitigation debate is familiar to most people. It mostly comes down to clean versus fossil energy, and how to transition. The resilience debate is less familiar and broader in scope. It touches almost everything: food, water, flood defences, housing, transport, infrastructure, defense.",
-  "Crisis always gets more attention than strategy. So the debate will become louder and more contentious at the same time as the stakes rise and tradeoffs become more difficult. Crisis also limits attention, diverts strategy, and constrains resources: as the storm becomes more severe, the path through it narrows.",
-  "We are a team of climate risk and policy experts. With the support of an award winning storyteller, we have mapped the actions of a government that chooses to meet the new reality with a new department: the Department of Climate Resilience. We depict the political battles a Minister of Climate Resilience would have to win to fight a war with the weather."
+  "We predict that in the near future, escalating climate shocks and looming tipping points will change the politics of climate change from mitigation (solving the cause) to resilience (dealing with the effects).[2]",
+  "Climate shocks are already more severe and more frequent than models projected. Economic growth is threatened and some areas are becoming uninsurable. There is good reason to believe that this trend will continue.",
+  "The debate about mitigation (net zero) is familiar to most people. It centres on clean versus fossil energy and how to transition.",
+  "The resilience debate is less familiar and broader in scope. It touches almost everything in a society: food, water, jobs, growth, flood defences, housing, transport, infrastructure, defense.",
+  "Crisis gets more attention than strategy. So the debate will become louder and more contentious at the same time as the stakes rise and tradeoffs become more difficult. Crisis also limits attention, diverts strategy, and constrains resources: as the storm becomes more severe, the path through it narrows.[3]",
+  "We are a team of climate risk, system science, and policy experts.[4] With the support of an award winning storyteller we have mapped the actions of a government that chooses to meet the new reality with a new department: the Department of Climate Resilience.[5] We depict a series of political battles that a Minister of Climate Resilience might have to win to fight a war with the weather."
 ],
 
 whyWeWrote: [
   "We created this resource for three reasons:",
   {bullets:[
     "To help people understand a new era of politics around climate change.",
-    "To raise awareness of AMOC slowdown in particular and climate risks in general.",
+    "To raise awareness of underestimated climate risks, with AMOC slowdown as a specific example.",
     "To highlight the positive outcomes that are achievable and suggest ways for individuals to contribute."
   ]},
   "We believe climate politics is entering a new phase around the globe, fuelled by changes in the weather right now and a long term risk picture that is increasingly hard to ignore.",
-  "There is a sense that people have stopped caring about climate change. A lot of evidence suggests that this is not the case. In fact, in many countries, more people report being more worried than ever. Many describe foreboding or even despair about the future. This is telling: it implies that we aren't facing a denial of the problem any more, but instead, a lack of belief that it can be solved.",
+  "There is a sense that people have stopped caring about climate change. A lot of evidence suggests that this is not the case. In fact, in many countries, more people report being more worried than ever.[6] Many describe foreboding or even despair about the future. This is telling: it implies that we aren't facing a denial of the problem any more, but instead, a lack of belief that it can be solved.",
   "This might seem strange at a point when a lot of the technology we need to mitigate climate change is widely available, cheap, being deployed out faster than anyone anticipated, and largely popular. Intentional deny/delay tactics overstating clean downsides are a part of the reason. But so are the four decades in which the climate has been a headline issue again and again, yet limited progress has been made towards a solution.",
   "The politics of climate change are extremely difficult. There is no precedent for solving a collective action problem (or “tragedy of the horizon”) of such complexity. The inertia of our current energy system is huge—it keeps most of us alive every day. Painstaking multilateral decision making processes like COP decay towards localisation: claims that “our country is only y% of global emissions, so it doesn’t matter” on the one side; repositioning renewables as energy resilience on the other.",
   "The politics of resilience are different because resilience is inherently local. It is about individual countries, regions, and communities: local farms, reservoirs, sea defences, food supply, and so on. The trade offs are more complicated, with mitigation and resilience sometimes at odds: should a gas plant be retired, for example, or retained for capacity in extreme heat and cold waves?",
@@ -36,14 +50,22 @@ whyWeWrote: [
 
 amoc101: [
   "The Atlantic Meridional Overturning Circulation, or AMOC is a system of ocean currents that moves water, and the heat carried in that water, around the Atlantic. Warm, salty water flows north near the surface from the tropics, shedding heat to the atmosphere as it travels. Cooled and now denser, it sinks in the seas near Greenland and the North Atlantic, then returns southward at depth.",
-  "The Gulf Stream is one limb of this larger system. Its northward delivery of heat is the main reason north-west Europe has mild winters despite sitting at latitudes shared with Labrador and Siberia.",
-  "It is likely that the AMOC is weakening as a result of climate change, and it is possible that it could collapse entirely. The consequences would be extreme. North-west Europe would face bitter winters and severe cold snaps—a strange phenomenon in a warming world, but the chill follows directly from the loss of that northward heat. Further south, the disruption would be felt as hunger: by shifting the Intertropical Convergence Zone, a weakened AMOC weakens the West African Monsoon and dries the Sahel, while perturbing the monsoon on which much of South Asia depends for its harvests. The same circulation changes deepen drought and fire risk in the Amazon, pushing the rainforest towards its own tipping point of irreversible dieback. In the ocean, nutrient transport falters and marine food webs unravel, even as the sea grows less able to absorb the CO₂ we continue to emit.",
+  "The Gulf Stream is one limb of the system. Its northward delivery of heat is the main reason north-west Europe has mild winters despite sitting at latitudes shared with Siberia.",
+  {h:"Consequences of disruption"},
+  "It is likely that the AMOC is weakening as a result of climate change, and it is possible that it could collapse entirely. The consequences would be extreme. North-west Europe would face bitter winters and severe cold snaps—a strange phenomenon in a warming world, but the chill follows directly from the loss of northward heat.",
+  "Further south, the disruption would be felt as hunger: by shifting the Intertropical Convergence Zone, a weakened AMOC weakens the West African Monsoon and dries the Sahel, while perturbing the monsoon on which much of South Asia depends for its harvests. The same circulation changes deepen drought and fire risk in the Amazon, pushing the rainforest towards its own tipping point of irreversible dieback. In the ocean, nutrient transport falters and marine food webs unravel, even as the sea grows less able to absorb the CO₂ we continue to emit.[7]",
+  {h:"The climate link"},
   "The mechanism behind this weakening sits in the wider context of an Earth that is steadily accumulating heat. The planet's energy imbalance—sunlight arriving minus heat escaping to space—is estimated at 1.1–1.3 W/m². Applied continuously across the planet's whole surface, this is substantial. It is higher than expected and consistent with the 1.5–1.6°C of warming above baseline already observed through the 2020s.",
   "That accumulated heat does not distribute evenly, and the AMOC is one of the major systems it disturbs. Melting Greenland ice and increased rainfall add fresh water to the northern region where sinking occurs. Fresher water is less dense and more reluctant to sink, which is the lever by which warming can slow the circulation.",
+  {h:"Tipping points"},
   "This is where the idea of a tipping point becomes relevant. We tend to assume that a little more cause produces a little more effect. Some systems do not work that way. They absorb stress, then flip into a different state, often abruptly and often without an easy way back. The AMOC is regarded as one such system: there is thought to be a threshold beyond which the circulation reorganises into a much weaker mode, and the freshwater forcing that pushes it there is not readily reversed by removing the forcing.",
-  "Assessments diverge significantly on timing and likelihood. The IPCC's Sixth Assessment Report judged it very likely that the AMOC will weaken during the twenty-first century under all emissions scenarios. It did not make a confident claim about the timing of any abrupt change.",
-  "The decision-relevant point is about how to treat low-probability, high-severity risk. The instinct on hearing that an event is \"uncertain\" or \"only a few per cent likely this century\" is to file it under \"probably won't happen\". For catastrophic, largely irreversible outcomes, that instinct is misapplied. We do not insure our homes because fire is likely; we insure against the size of the loss. Probability and severity have to be weighed together.",
-  "This logic is sharpened by the fact that the AMOC's impacts do not arrive in isolation. They interact with food systems, energy demand, insurance markets, coastal infrastructure and sovereign finance. It is a textbook example of a systemic, compounding risk, in which strain on one system raises the odds of failure in the next."
+  "Moreover, the effects of a slowing AMOC would be likely to compound. The AMOC interacts with food systems, energy demand, insurance markets, coastal infrastructure and sovereign finance, for example. It is a textbook example of a systemic, compounding risk, in which strain on one system raises the odds of failure in the next.",
+  {h:"Probability"},
+  "Assessments diverge significantly on timing and likelihood of AMOC weakening and collapse. The IPCC's Sixth Assessment Report judged it very likely that the AMOC will weaken during the twenty-first century under all emissions scenarios. It did not make a confident claim about the timing of any abrupt change.",
+  {h:"Risk thinking"},
+  "Risk thinkers like insurers have frameworks for understanding low-probability, high-severity risk. The instinct on hearing that an event is \"uncertain\" or \"only a few per cent likely this century\" is to file it under \"probably won't happen\". For catastrophic, largely irreversible outcomes, that instinct is problematic. We do not insure our homes because fire is likely; we insure against the size of the loss. Probability and severity have to be weighed together.[8]",
+  {h:"Further reading"},
+  "There are many excellent resources for further reading on the AMOC, for example <a href=\"https://interactive.carbonbrief.org/amoc-explainer/index.html\" target=\"_blank\" rel=\"noopener noreferrer\">this explainer</a> from Carbon Brief and <a href=\"https://www.noc.ac.uk/discover-the-ocean/oceans-explained/the-atlantic-meridional-overturning-circulation\" target=\"_blank\" rel=\"noopener noreferrer\">this microsite</a> from the UK’s National Oceanography Centre."
 ],
 
 getInvolved: [
@@ -62,17 +84,19 @@ complexSystems: [
   "All of this goes some way to explaining why climate change is such an intractable problem. Hard to measure, hard to predict, hard to even think about. But that same complexity is the key to understanding how we can navigate a safe path forward. This resource is a guide to making effective decisions in light of high uncertainty, and to contributing as individuals to a safe and optimistic future."
 ],
 
+teamIntro:"Planetary Solvency is an association of academics, policymakers, and financial decision makers. It focuses on risk-based approaches to climate shocks and related earth systems challenges.",
+
 team: [
-  {name:"Sandy Trust", bio:"Sandy Trust is Director of Sustainability Risk at Baillie Gifford, Chair of the CFRF Financial Resilience Workstream, former Chair of the Chair of IFOA Sustainability Board and Founder of Planetary Solvency."},
-  {name:"Dr. Mark Trexler", bio:"Dr. Mark Trexler is a climate policy veteran with more than three decades of experience. He has advised governments and businesses around the world, including several US administrations; and has served as a lead author for the Intergovernmental Panel on Climate Change."},
+  {name:"Sandy Trust", bio:"Sandy Trust is Director of Sustainability Risk at Baillie Gifford, Chair of the CFRF Financial Resilience Workstream, former Chair of the Chair of IFOA Sustainability Board, and Founder of Planetary Solvency."},
+  {name:"Dr. Mark Trexler", bio:"Dr. Mark Trexler is a climate policy veteran with more than three decades of experience. He has advised governments and businesses around the world, including several US administrations; and served as a lead author for the Intergovernmental Panel on Climate Change."},
   {name:"Dr Ajay Gambhir", bio:"Dr Ajay Gambhir is a Senior Research Fellow at the Imperial College London Grantham Institute for Climate Change and the Environment."},
   {name:"Amos Wittenberg", bio:"Amos Wittenberg is Co-Founder and former CEO of climate risk platform Unwritten."},
-  {name:"Nadia Mikail", bio:"Nadia Mikail is the lead author of [When the Sea Stops]. Her skill, creativity, and deep research transformed technical scenarios into an engaging and anchored resource. Nadia is a lawyer and award winning novelist whose work centres on family, myth, and climate breakdown.", lead:true}
+  {name:"Nadia Mikail", bio:"Nadia Mikail is the lead author of this resource. She is a lawyer and award winning novelist whose work centres on family, myth, and climate breakdown.", lead:true}
 ],
 
 baseline:{year:"2029", sub:"The beginning",
   debt:90, debtD:1.5, deficit:3.8, deficitD:0.4, inflation:3.2, inflationD:0.3, yield10:4.2, yield10D:0.2,
-  poll:{gov:[41,-1], opp:[32,1], far:[12,2], left:[7,1]},
+  poll:{gov:[44,2], opp:[30,-2], far:[9,1], left:[6,0]},
   infra:1, ins:null, unins:null},
 
 scenes: [
@@ -80,8 +104,8 @@ scenes: [
     id:"department",
     title:"The Department of Climate Resilience",
     ledger:{year:"2029",
-      debt:92, debtD:2, deficit:4.1, deficitD:0.3, inflation:3.6, inflationD:0.4, yield10:4.4, yield10D:0.2,
-      poll:{gov:[40,-1], opp:[33,1], far:[13,1], left:[7,0]},
+      debt:90, debtD:1.5, deficit:3.8, deficitD:0.4, inflation:3.4, inflationD:0.2, yield10:4.3, yield10D:0.1,
+      poll:{gov:[44,0], opp:[30,0], far:[9,0], left:[6,0]},
       infra:1, ins:0.4, unins:0.9},
     body:[
       "Miriam’s chief of staff, Tom Fender, stood in the doorway of her new office with two coffees and the expression of a man who had already watched his schedule collapse before nine.",
@@ -121,9 +145,9 @@ scenes: [
     id:"jobs",
     title:"The Price of Jobs",
     ledger:{year:"2030",
-      debt:96, debtD:4, deficit:4.9, deficitD:0.8, inflation:4.8, inflationD:1.2, yield10:4.7, yield10D:0.3,
-      poll:{gov:[37,-3], opp:[34,1], far:[16,3], left:[8,1]},
-      infra:1, ins:1.8, unins:3.4},
+      debt:92, debtD:2, deficit:4.6, deficitD:0.8, inflation:4.1, inflationD:0.7, yield10:4.6, yield10D:0.3,
+      poll:{gov:[40,-4], opp:[32,2], far:[11,2], left:[7,1]},
+      infra:2, ins:1.8, unins:3.4},
     body:[
       "The first real fight Miriam took on, a few months in, was about gas and jobs. It was really about what counted as realism. The science said colder, more volatile winters were coming before the grid could catch up. That left some brutal tradeoffs: how much fossil capacity do we keep online? Which communities will be expected to pay the price?",
       "If she got this wrong, Miriam could lose her government essential support from urban pro-resilience voters and key industrial communities in one muddled bill.",
@@ -174,8 +198,8 @@ scenes: [
     id:"sunshade",
     title:"The Sunshade",
     ledger:{year:"2031",
-      debt:101, debtD:5, deficit:5.6, deficitD:0.7, inflation:4.4, inflationD:-0.4, yield10:5.0, yield10D:0.3,
-      poll:{gov:[34,-3], opp:[33,-1], far:[20,4], left:[9,1]},
+      debt:95, debtD:3, deficit:5.2, deficitD:0.6, inflation:3.7, inflationD:-0.4, yield10:4.8, yield10D:0.2,
+      poll:{gov:[35,-5], opp:[34,2], far:[14,3], left:[8,1]},
       infra:2, ins:3.1, unins:6.2},
     body:[
       "If the AMOC memo forced the government to think about energy, flood, and food together, it also forced a question most people still preferred not to think about: what happened when adaptation and emissions cuts looked too slow, and somebody offered to buy time by altering the sky?",
@@ -231,9 +255,9 @@ scenes: [
     id:"seam",
     title:"The Seam Between the Systems",
     ledger:{year:"2032",
-      debt:108, debtD:7, deficit:6.8, deficitD:1.2, inflation:5.1, inflationD:0.7, yield10:5.6, yield10D:0.6,
-      poll:{gov:[31,-3], opp:[32,-1], far:[24,4], left:[10,1]},
-      infra:2, ins:8.4, unins:19.1},
+      debt:99, debtD:4, deficit:6.4, deficitD:1.2, inflation:4.9, inflationD:1.2, yield10:5.4, yield10D:0.6,
+      poll:{gov:[32,-3], opp:[33,-1], far:[18,4], left:[9,1]},
+      infra:3, ins:8.4, unins:19.1},
     body:[
       "The first major flood did not settle any scientific argument. It did something simpler: it drowned the ground floor of a hospital, knocked out power to a pumping station, and trapped two hundred families in homes they could no longer insure or refinance; it did all this before lunch.",
       "For two days the weather had been described on television as erratic, which secretly meant very bad and yet too compound to fit inside a single warning colour.",
@@ -275,9 +299,9 @@ scenes: [
     id:"grid",
     title:"The New Owners of the Grid",
     ledger:{year:"2033",
-      debt:114, debtD:6, deficit:7.4, deficitD:0.6, inflation:4.7, inflationD:-0.4, yield10:5.9, yield10D:0.3,
-      poll:{gov:[30,-1], opp:[30,-2], far:[26,2], left:[11,1]},
-      infra:3, ins:11.6, unins:24.8},
+      debt:103, debtD:4, deficit:6.9, deficitD:0.5, inflation:4.4, inflationD:-0.5, yield10:5.6, yield10D:0.2,
+      poll:{gov:[33,1], opp:[30,-3], far:[21,3], left:[11,2]},
+      infra:2, ins:11.6, unins:24.8},
     body:[
       "If the country was going to need more resilience, it wasn’t just going to be big utilities that mattered. Cooperatives that owned panels, batteries and chargers were turning into a bloc, and the bloc was voting.",
       "For years governments had spoken about distributed energy as a small-scale technical feature of the transition: the rooftop solar, the home batteries, the electric vehicles. Then Hormuz happened. And enough people bought the kit, or joined a local scheme, or put money into a community energy share offer, and ownership created political identity very quickly.",
@@ -321,8 +345,8 @@ scenes: [
     id:"ground",
     title:"The Ground Gives",
     ledger:{year:"2034",
-      debt:121, debtD:7, deficit:8.1, deficitD:0.7, inflation:5.9, inflationD:1.2, yield10:6.4, yield10D:0.5,
-      poll:{gov:[28,-2], opp:[29,-1], far:[29,3], left:[12,1]},
+      debt:108, debtD:5, deficit:7.8, deficitD:0.9, inflation:5.8, inflationD:1.4, yield10:6.1, yield10D:0.5,
+      poll:{gov:[30,-3], opp:[27,-3], far:[26,5], left:[13,2]},
       infra:3, ins:14.2, unins:31.5},
     body:[
       "By the fourth year, the government were polling badly and fighting on both flanks. Miriam knew she\u2019d held onto her Ministry less for her successes than because no one else wanted the job. It was conventional wisdom in political circles that the Department was the worst kind of poisoned chalice: unpopular for every measure it passed, yet criticised for doing too little when every crisis hit.",
@@ -362,8 +386,8 @@ scenes: [
     id:"vote",
     title:"The Vote",
     ledger:{year:"2034",
-      debt:126, debtD:5, deficit:8.6, deficitD:0.5, inflation:5.5, inflationD:-0.4, yield10:6.8, yield10D:0.4,
-      poll:{gov:[29,1], opp:[27,-2], far:[30,1], left:[12,0]},
+      debt:108, debtD:5, deficit:7.8, deficitD:0.9, inflation:5.5, inflationD:-0.3, yield10:6.3, yield10D:0.2,
+      poll:{gov:[30,0], opp:[26,-1], far:[30,4], left:[12,-1]},
       infra:3, ins:16.9, unins:38.0},
     body:[
       "By the final fortnight the campaign had simplified itself as campaigns tend to do, with slogans repeated until they no longer sounded like words.",
