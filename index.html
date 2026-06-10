@@ -419,7 +419,6 @@ button{font-family:inherit;}
 .ft-k{font-family:var(--mono);font-size:8px;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);margin-bottom:5px;line-height:1.2;}
 .ft-v{font-family:var(--serif);font-size:20px;color:var(--ink);line-height:1;display:flex;align-items:baseline;gap:3px;}
 .ft-u{font-family:var(--mono);font-size:8.5px;color:var(--faint);}
-.ft-d{margin-top:5px;}
 .lrow.poll .ll{margin-bottom:9px;}
 .poll-row{margin-bottom:9px;} .poll-row:last-child{margin-bottom:0;}
 .poll-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:3px;}
@@ -1036,10 +1035,9 @@ function pollRow(d,key,label,wi){
 }
 function lossFig(v){return v!=null?v.toFixed(1)+"bn":"&mdash;";}
 function fyLabel(y){var n=parseInt(y,10);return n+"/"+String((n+1)%100).padStart(2,"0");}
-function ftile(label,unit,valId,val,dId,dv,wi){
+function ftile(label,unit,valId,val,wi){
   return `<div class="ftile"><div class="ft-k">${label}</div>`+
-    `<div class="ft-v"><span${wi?` id="${valId}"`:""}>${val}</span><span class="ft-u">${unit}</span></div>`+
-    `<div class="ft-d">${deltaHTML(dv,1,wi?dId:null)}</div></div>`;
+    `<div class="ft-v"><span${wi?` id="${valId}"`:""}>${val}</span><span class="ft-u">${unit}</span></div></div>`;
 }
 function ledgerMarkup(d,wi,ticker){
   let h=`<div class="ledger-head"><i></i><span class="lk">THE LEDGER</span>${wi?"":'<span class="lpin">BASELINE</span>'}</div>`;
@@ -1049,10 +1047,10 @@ function ledgerMarkup(d,wi,ticker){
   /* Fiscal health */
   h+=`<div class="lsection">Fiscal health</div>`;
   h+=`<div class="ftiles">`+
-     ftile("National debt","% GDP","L_debt",d.debt.toFixed(0),"L_debtD",d.debtD,wi)+
-     ftile(`Budget deficit <span${wi?' id="L_defYr"':''}>${fyLabel(d.year)}</span>`,"% GDP","L_def",d.deficit.toFixed(1),"L_defD",d.deficitD,wi)+
-     ftile("10-year yield","%","L_yld",d.yield10.toFixed(1),"L_yldD",d.yield10D,wi)+
-     ftile("Inflation","%","L_infl",d.inflation.toFixed(1),"L_inflD",d.inflationD,wi)+
+     ftile("National debt","% GDP","L_debt",d.debt.toFixed(0),wi)+
+     ftile(`Budget deficit <span${wi?' id="L_defYr"':''}>${fyLabel(d.year)}</span>`,"% GDP","L_def",d.deficit.toFixed(1),wi)+
+     ftile("10-year yield","%","L_yld",d.yield10.toFixed(1),wi)+
+     ftile("Inflation","%","L_infl",d.inflation.toFixed(1),wi)+
      `</div>`;
   /* Popularity */
   h+=`<div class="lsection">Popularity</div>`;
@@ -1060,7 +1058,7 @@ function ledgerMarkup(d,wi,ticker){
   /* Climate impacts */
   h+=`<div class="lsection">Climate impacts</div>`;
   h+=`<div class="lrow infra"><div class="ll">CRITICAL INFRASTRUCTURE</div><div class="infra-track"${wi?' id="L_infra"':""}>${infraHTML(d.infra)}</div></div>`;
-  h+=`<div class="lrow loss"><div class="ll">INSURED / UNINSURED LOSSES</div>`+
+  h+=`<div class="lrow loss"><div class="ll">LOSSES SINCE 2029</div>`+
      `<div class="lossbar"><span class="ls-ins"${wi?' id="L_insbar"':""} style="width:${lossW(d.ins)}%"></span><span class="ls-unins"${wi?' id="L_uninsbar"':""} style="width:${lossW(d.unins)}%"></span></div>`+
      `<div class="loss-legend"><span class="lg ins"><i></i>INS&nbsp;<b${wi?' id="L_ins"':""}>${lossFig(d.ins)}</b></span>`+
      `<span class="lg unins"><i></i>UNINS&nbsp;<b${wi?' id="L_unins"':""}>${lossFig(d.unins)}</b></span></div></div>`;
@@ -1070,10 +1068,10 @@ function paintLedger(i){
   const sc=D.scenes[i],Lg=sc.ledger;
   $("#L_year").textContent=Lg.year;
   $("#L_sub").textContent=sc.title;
-  $("#L_debt").textContent=Lg.debt.toFixed(0); setDelta("L_debtD",Lg.debtD,1);
-  $("#L_def").textContent=Lg.deficit.toFixed(1); setDelta("L_defD",Lg.deficitD,1); $("#L_defYr").textContent=fyLabel(Lg.year);
-  $("#L_yld").textContent=Lg.yield10.toFixed(1); setDelta("L_yldD",Lg.yield10D,1);
-  $("#L_infl").textContent=Lg.inflation.toFixed(1); setDelta("L_inflD",Lg.inflationD,1);
+  $("#L_debt").textContent=Lg.debt.toFixed(0);
+  $("#L_def").textContent=Lg.deficit.toFixed(1); $("#L_defYr").textContent=fyLabel(Lg.year);
+  $("#L_yld").textContent=Lg.yield10.toFixed(1);
+  $("#L_infl").textContent=Lg.inflation.toFixed(1);
   PARTIES.forEach(p=>{const k=p[0],a=Lg.poll[k];
     $("#poll_"+k).textContent=a[0];
     $("#poll_"+k+"_bar").style.width=pollW(a[0])+"%";

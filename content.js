@@ -106,7 +106,7 @@ scenes: [
     ledger:{year:"2029",
       debt:90, debtD:1.5, deficit:3.8, deficitD:0.4, inflation:3.4, inflationD:0.2, yield10:4.3, yield10D:0.1,
       poll:{gov:[44,0], opp:[30,0], far:[9,0], left:[6,0]},
-      infra:1, ins:0.4, unins:0.9},
+      infra:1, ins:0.6, unins:1.1},
     body:[
       "Miriam’s chief of staff, Tom Fender, stood in the doorway of her new office with two coffees and the expression of a man who had already watched his schedule collapse before nine.",
       "“Cabinet Office wants you first,” he said. “Treasury after. But there’s a scientist in the outer office who’s saying if you don’t see him immediately he’ll end up briefing the prime minister instead, which sounds like a threat.”",
@@ -147,7 +147,7 @@ scenes: [
     ledger:{year:"2030",
       debt:92, debtD:2, deficit:4.6, deficitD:0.8, inflation:4.1, inflationD:0.7, yield10:4.6, yield10D:0.3,
       poll:{gov:[40,-4], opp:[32,2], far:[11,2], left:[7,1]},
-      infra:1, ins:1.8, unins:3.4},
+      infra:1, ins:2.1, unins:4.0},
     body:[
       "The first real fight Miriam took on, a few months in, was about gas and jobs. It was really about what counted as realism. The science said colder, more volatile winters were coming before the grid could catch up. That left some brutal tradeoffs: how much fossil capacity do we keep online? Which communities will be expected to pay the price?",
       "If she got this wrong, Miriam could lose her government essential support from urban pro-resilience voters and key industrial communities in one muddled bill.",
@@ -200,7 +200,7 @@ scenes: [
     ledger:{year:"2031",
       debt:95, debtD:3, deficit:5.2, deficitD:0.6, inflation:3.7, inflationD:-0.4, yield10:4.8, yield10D:0.2,
       poll:{gov:[35,-5], opp:[34,2], far:[14,3], left:[8,1]},
-      infra:1, ins:3.1, unins:6.2},
+      infra:1, ins:3.9, unins:7.8},
     body:[
       "If the AMOC memo forced the government to think about energy, flood, and food together, it also forced a question most people still preferred not to think about: what happened when adaptation and emissions cuts looked too slow, and somebody offered to buy time by altering the sky?",
       "The invitation came on thick creamy paper, the wording precise and tasteful. A private roundtable on climate intervention research and governance. The sponsors were the defense investment organisation, a large venture capital fund, and of course the Voss Foundation—the main philanthropic vehicle for billionaire Philip Voss.",
@@ -257,7 +257,7 @@ scenes: [
     ledger:{year:"2032",
       debt:99, debtD:4, deficit:6.4, deficitD:1.2, inflation:4.9, inflationD:1.2, yield10:5.4, yield10D:0.6,
       poll:{gov:[32,-3], opp:[33,-1], far:[18,4], left:[9,1]},
-      infra:2, ins:8.4, unins:19.1},
+      infra:2, ins:9.6, unins:20.6},
     body:[
       "The first major flood did not settle any scientific argument. It did something simpler: it drowned the ground floor of a hospital, knocked out power to a pumping station, and trapped two hundred families in homes they could no longer insure or refinance; it did all this before lunch.",
       "For two days the weather had been described on television as erratic, which secretly meant very bad and yet too compound to fit inside a single warning colour.",
@@ -301,7 +301,7 @@ scenes: [
     ledger:{year:"2033",
       debt:103, debtD:4, deficit:6.9, deficitD:0.5, inflation:4.4, inflationD:-0.5, yield10:5.6, yield10D:0.2,
       poll:{gov:[33,1], opp:[30,-3], far:[21,3], left:[11,2]},
-      infra:2, ins:11.6, unins:24.8},
+      infra:2, ins:12.4, unins:28.0},
     body:[
       "If the country was going to need more resilience, it wasn’t just going to be big utilities that mattered. Cooperatives that owned panels, batteries and chargers were turning into a bloc, and the bloc was voting.",
       "For years governments had spoken about distributed energy as a small-scale technical feature of the transition: the rooftop solar, the home batteries, the electric vehicles. Then Hormuz happened. And enough people bought the kit, or joined a local scheme, or put money into a community energy share offer, and ownership created political identity very quickly.",
@@ -347,7 +347,7 @@ scenes: [
     ledger:{year:"2034",
       debt:108, debtD:5, deficit:7.8, deficitD:0.9, inflation:5.8, inflationD:1.4, yield10:6.1, yield10D:0.5,
       poll:{gov:[30,-3], opp:[27,-3], far:[26,5], left:[13,2]},
-      infra:3, ins:14.2, unins:31.5},
+      infra:3, ins:15.3, unins:36.5},
     body:[
       "By the fourth year, the government were polling badly and fighting on both flanks. Miriam knew she\u2019d held onto her Ministry less for her successes than because no one else wanted the job. It was conventional wisdom in political circles that the Department was the worst kind of poisoned chalice: unpopular for every measure it passed, yet criticised for doing too little when every crisis hit.",
       "And suddenly there were empty supermarket shelves. For weeks the news had been filled with South Asian flood losses and droughts across the Americas, and now local production was threatened too. It all came back to the same problem: how do you manage food production when assumptions about planting barely held steady for a single cycle?",
@@ -388,7 +388,7 @@ scenes: [
     ledger:{year:"2034",
       debt:108, debtD:5, deficit:7.8, deficitD:0.9, inflation:5.5, inflationD:-0.3, yield10:6.3, yield10D:0.2,
       poll:{gov:[30,0], opp:[26,-1], far:[30,4], left:[12,-1]},
-      infra:3, ins:16.9, unins:38.0},
+      infra:3, ins:16.1, unins:40.3},
     body:[
       "By the final fortnight the campaign had simplified itself as campaigns tend to do, with slogans repeated until they no longer sounded like words.",
       "“Resilient and responsible” met “uncertain and expensive”. “Decisive strategy” met “out of touch”. “The price of long term growth” met “the price of milk”.",
