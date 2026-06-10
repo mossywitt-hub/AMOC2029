@@ -109,7 +109,7 @@ scenes: [
       infra:1, ins:0.6, unins:1.1},
     body:[
       "Miriam’s chief of staff, Tom Fender, stood in the doorway of her new office with two coffees and the expression of a man who had already watched his schedule collapse before nine.",
-      "“Cabinet Office wants you first,” he said. “Treasury after. But there’s a scientist in the outer office who’s saying if you don’t see him immediately he’ll end up briefing the prime minister instead, which sounds like a threat.”",
+      "“Defense wants you first,” he said. “Finance after. But there’s a scientist in the outer office who’s saying if you don’t see him immediately he’ll end up briefing the prime minister instead, which sounds like a threat.”",
       "“Send him in,” said Miriam.",
       "The scientist was younger than she expected, with a conference lanyard still responsibly around his neck like he needed the comfort of a school uniform. His name was Andres. He put a thin gray document in front of her.",
       "“The probability of complete AMOC collapse within fifty years,” he said, “is by some estimates now greater than 50%. We think it is possible this happens five times faster, or two times slower. In any case, you do not need full collapse for this to matter. A marked slowdown, is enough to foul food planning, flood planning, everything. What you’re looking at is a planning paper.”",
