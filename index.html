@@ -120,6 +120,24 @@ button{font-family:inherit;}
 
 /* footer blocks */
 .footer-stack{background:var(--paper);}
+/* site footer */
+.site-footer{background:var(--navy);border-top:0.5px solid var(--navy-2);}
+.sf-inner{max-width:1040px;margin:0 auto;padding:2.2rem 2.5rem 1.7rem;}
+.sf-top{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;}
+.sf-nav{display:flex;gap:4px;flex-wrap:wrap;}
+.sf-nav button{font-family:var(--mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy-muted);background:none;border:none;cursor:pointer;padding:6px 14px 6px 0;transition:color .2s;}
+.sf-nav button:hover{color:var(--navy-ink);}
+.sf-sponsor{display:inline-flex;flex-direction:column;align-items:flex-end;gap:6px;text-decoration:none;}
+.sf-sponsor-k{font-family:var(--mono);font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy-faint);}
+.sf-lockup{display:inline-flex;align-items:center;gap:11px;transition:opacity .2s;}
+.sf-sponsor:hover .sf-lockup{opacity:0.82;}
+.sf-mark{width:38px;height:38px;flex-shrink:0;}
+.sf-mark svg{display:block;width:100%;height:100%;}
+.sf-name{font-family:var(--sans);font-weight:600;font-size:21px;letter-spacing:-0.01em;color:var(--navy-ink);line-height:1;}
+.sf-bottom{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:1.6rem;padding-top:1.1rem;border-top:0.5px solid var(--navy-2);}
+.sf-legal{font-family:var(--sans);font-size:11.5px;color:var(--navy-muted);}
+.sf-note{font-family:var(--mono);font-size:10px;letter-spacing:0.07em;color:var(--navy-faint);}
+@media(max-width:620px){ .sf-inner{padding:1.8rem 1.4rem 1.5rem;} .sf-top{flex-direction:column;align-items:flex-start;gap:1.3rem;} .sf-sponsor{align-items:flex-start;} .sf-nav button{padding-left:0;} }
 .fblock{border-top:0.5px solid var(--line);}
 .fblock.navy{background:var(--navy);border-top:0.5px solid var(--navy-2);}
 .fblock.deep{background:var(--paper-deep);}
@@ -605,12 +623,14 @@ function buildLanding(){
       <button class="fblock-head" data-fb="fb-team"><span class="fk">ANNEX III</span><span class="ftitle">The team</span><span class="chev">&#8964;</span></button>
       <div class="fblock-body"><div class="fblock-inner"><div class="team-grid">${renderTeam()}</div></div></div>
     </div>
-  </div>`;
+  </div>
+  ${siteFooter()}`;
   L.innerHTML=h;
 
   document.querySelectorAll(".node[data-scene]").forEach(n=>n.addEventListener("click",()=>openScene(parseInt(n.dataset.scene,10))));
   $("#startBtn").addEventListener("click",()=>openScene(0));
   document.querySelectorAll(".onode[data-ending]").forEach(o=>o.addEventListener("click",()=>openEnding(o.dataset.ending)));
+  document.querySelectorAll(".sf-nav button[data-nav]").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.nav)));
   document.querySelectorAll(".fblock-head").forEach(hd=>hd.addEventListener("click",()=>document.getElementById(hd.dataset.fb).classList.toggle("open")));
   drawFlowLinks();
 }
@@ -670,6 +690,26 @@ function renderCS(){
 }
 function renderTeam(){
   return D.team.map(m=>`<div class="member${m.lead?' lead':''}"><div class="m-name">${m.name}</div><div class="m-bio">${m.bio}</div></div>`).join("");
+}
+/* Site footer — repeated nav, copyright, and the (PLACEHOLDER) Planetary Solvency lockup.
+   Swap the <svg> mark + wordmark for the formal logo when it arrives. */
+function siteFooter(){
+  return `<footer class="site-footer"><div class="sf-inner">
+    <div class="sf-top">
+      <nav class="sf-nav" aria-label="Footer">
+        <button data-nav="landing">Home</button>
+        <button data-nav="resources">Resources</button>
+        <button data-nav="resources">Contact</button>
+      </nav>
+      <a class="sf-sponsor" href="https://global-tipping-points.org/planetary-solvency/" target="_blank" rel="noopener noreferrer" aria-label="Planetary Solvency">
+        <span class="sf-lockup"><span class="sf-mark"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="9.5" fill="#5b8fb0"/><ellipse cx="22" cy="22" rx="19" ry="7" fill="none" stroke="#c9d4dc" stroke-width="2.4" transform="rotate(-24 22 22)"/></svg></span><span class="sf-name">Planetary Solvency</span></span>
+      </a>
+    </div>
+    <div class="sf-bottom">
+      <div class="sf-legal">© 2026 Planetary Solvency</div>
+      <div class="sf-note">FILE AMOC-29</div>
+    </div>
+  </div></footer>`;
 }
 
 /* ---- newspaper front page render ---- */
