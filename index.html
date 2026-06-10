@@ -1190,14 +1190,13 @@ function retreatScene(){
   if(current>0){openScene(current-1,true);}else{goHome();}
   setTimeout(()=>{scrollAdvancing=false;},150);
 }
-let atBottomSince=0, overUp=0, overUpTimer=null, overDown=0, overDownTimer=null;
 function landingActive(){return !$("#landing").classList.contains("hidden");}
 function pageBottomRemaining(){return document.documentElement.scrollHeight-window.innerHeight-(window.scrollY||document.documentElement.scrollTop||0);}
 function onReaderScroll(){
   if(landingActive()){
     if(scrollAdvancing){hideCue();return;}
     if(pageBottomRemaining()<150){const c=cueEl();if(c)c.querySelector(".cue-label").textContent="Begin: "+D.scenes[0].title;showCue();}
-    else{hideCue();overDown=0;}
+    else hideCue();
     return;
   }
   if(!$("#reader").classList.contains("active")){hideCue();return;}
@@ -1206,42 +1205,43 @@ function onReaderScroll(){
   const reader=$("#reader");
   const rect=reader.getBoundingClientRect();
   const remaining=rect.bottom-window.innerHeight;
-  if(remaining<150){showCue();}else{hideCue();atBottomSince=0;}
+  if(remaining<150){showCue();}else hideCue();
 }
-// deliberate overscroll intent: down at the bottom -> next scene; up at the top -> previous scene / home.
-// On the homepage, down at the bottom begins Scene I (mirror of scene I's scroll-up returning home).
+/* Deliberate overscroll: down at the bottom -> next scene; up at the top -> previous scene / home;
+   on the homepage, down at the bottom begins Scene I. Two safeguards make it unhurried:
+   the gesture must START at the edge (a momentum tail spilling past the boundary is ignored,
+   because it arrives with no quiet gap), then accumulate OVERSCROLL_PX of fresh travel. */
+const OVERSCROLL_PX=200, FRESH_GAP_MS=160;
+let lastWheelT=0;
+let ovDown={armed:false,acc:0}, ovUp={armed:false,acc:0}, ovHome={armed:false,acc:0};
+function ovReset(st){st.armed=false;st.acc=0;}
+function ovFeed(st,mag,gap,fire){
+  if(gap>FRESH_GAP_MS){st.armed=true;st.acc=0;}
+  if(!st.armed)return;
+  st.acc+=mag;
+  if(st.acc>OVERSCROLL_PX){ovReset(st);fire();}
+}
 function onWheelIntent(e){
+  const now=Date.now(), gap=now-lastWheelT; lastWheelT=now;
+  let dy=e.deltaY; if(e.deltaMode===1)dy*=16; else if(e.deltaMode===2)dy*=window.innerHeight;
   if(landingActive()){
-    if(scrollAdvancing||e.deltaY<=0){if(e.deltaY<0)overDown=0;return;}
-    if(pageBottomRemaining()<4){
-      var dy0=e.deltaY; if(e.deltaMode===1)dy0*=16; else if(e.deltaMode===2)dy0*=window.innerHeight;
-      overDown+=dy0;
-      if(overDownTimer)clearTimeout(overDownTimer);
-      overDownTimer=setTimeout(function(){overDown=0;},250);
-      if(overDown>120){overDown=0;hideCue();openScene(0);}
-    }else{overDown=0;}
+    if(scrollAdvancing)return;
+    if(dy>0 && pageBottomRemaining()<4){ovFeed(ovHome,dy,gap,()=>{hideCue();openScene(0);});}
+    else ovReset(ovHome);
     return;
   }
   if(!$("#reader").classList.contains("active"))return;
   if(scrollAdvancing||!scrollArmed)return;
   const reader=$("#reader");
-  if(e.deltaY>0){
-    overUp=0;
+  if(dy>0){
+    ovReset(ovUp);
     const remaining=reader.getBoundingClientRect().bottom-window.innerHeight;
-    if(remaining<4){
-      const now=Date.now();
-      if(atBottomSince===0){atBottomSince=now;return;}
-      if(now-atBottomSince>120){advanceScene();atBottomSince=0;}
-    }else{atBottomSince=0;}
-  }else if(e.deltaY<0){
-    atBottomSince=0;
-    if((window.scrollY||document.documentElement.scrollTop||0)<2){
-      var dy=e.deltaY; if(e.deltaMode===1)dy*=16; else if(e.deltaMode===2)dy*=window.innerHeight;
-      overUp+=-dy;                                       // accumulate overscroll past the top
-      if(overUpTimer)clearTimeout(overUpTimer);
-      overUpTimer=setTimeout(function(){overUp=0;},250); // forget the buildup if the reader pauses
-      if(overUp>120){overUp=0;retreatScene();}
-    }else{overUp=0;}
+    if(remaining<4){ovFeed(ovDown,dy,gap,advanceScene);}
+    else ovReset(ovDown);
+  }else if(dy<0){
+    ovReset(ovDown);
+    if((window.scrollY||document.documentElement.scrollTop||0)<2){ovFeed(ovUp,-dy,gap,retreatScene);}
+    else ovReset(ovUp);
   }
 }
 window.addEventListener("scroll",onReaderScroll,{passive:true});
