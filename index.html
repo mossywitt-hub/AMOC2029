@@ -1190,8 +1190,16 @@ function retreatScene(){
   if(current>0){openScene(current-1,true);}else{goHome();}
   setTimeout(()=>{scrollAdvancing=false;},150);
 }
-let atBottomSince=0, overUp=0, overUpTimer=null;
+let atBottomSince=0, overUp=0, overUpTimer=null, overDown=0, overDownTimer=null;
+function landingActive(){return !$("#landing").classList.contains("hidden");}
+function pageBottomRemaining(){return document.documentElement.scrollHeight-window.innerHeight-(window.scrollY||document.documentElement.scrollTop||0);}
 function onReaderScroll(){
+  if(landingActive()){
+    if(scrollAdvancing){hideCue();return;}
+    if(pageBottomRemaining()<150){const c=cueEl();if(c)c.querySelector(".cue-label").textContent="Begin: "+D.scenes[0].title;showCue();}
+    else{hideCue();overDown=0;}
+    return;
+  }
   if(!$("#reader").classList.contains("active")){hideCue();return;}
   if(scrollAdvancing||!scrollArmed)return;
   if(current>=D.scenes.length-1){hideCue();return;} // no auto-cue into the endings
@@ -1200,8 +1208,20 @@ function onReaderScroll(){
   const remaining=rect.bottom-window.innerHeight;
   if(remaining<150){showCue();}else{hideCue();atBottomSince=0;}
 }
-// deliberate overscroll intent: down at the bottom -> next scene; up at the top -> previous scene / home
+// deliberate overscroll intent: down at the bottom -> next scene; up at the top -> previous scene / home.
+// On the homepage, down at the bottom begins Scene I (mirror of scene I's scroll-up returning home).
 function onWheelIntent(e){
+  if(landingActive()){
+    if(scrollAdvancing||e.deltaY<=0){if(e.deltaY<0)overDown=0;return;}
+    if(pageBottomRemaining()<4){
+      var dy0=e.deltaY; if(e.deltaMode===1)dy0*=16; else if(e.deltaMode===2)dy0*=window.innerHeight;
+      overDown+=dy0;
+      if(overDownTimer)clearTimeout(overDownTimer);
+      overDownTimer=setTimeout(function(){overDown=0;},250);
+      if(overDown>120){overDown=0;hideCue();openScene(0);}
+    }else{overDown=0;}
+    return;
+  }
   if(!$("#reader").classList.contains("active"))return;
   if(scrollAdvancing||!scrollArmed)return;
   const reader=$("#reader");
@@ -1226,7 +1246,7 @@ function onWheelIntent(e){
 }
 window.addEventListener("scroll",onReaderScroll,{passive:true});
 window.addEventListener("wheel",onWheelIntent,{passive:true});
-document.getElementById("scrollCue").addEventListener("click",advanceScene);
+document.getElementById("scrollCue").addEventListener("click",()=>{ if(landingActive()){hideCue();openScene(0);} else advanceScene(); });
 /* mobile: the scene ledger lives under the chapter title as a collapsible card; desktop: side rail */
 const ledgerMQ=window.matchMedia("(max-width:880px)");
 function placeLedger(){
