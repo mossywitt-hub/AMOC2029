@@ -227,7 +227,11 @@ button{font-family:inherit;}
 /* MEMO inset — looks like the first page of an agency memo */
 .memo{margin:2rem 0;background:#f6f3ea;border:0.5px solid #d8d0bb;box-shadow:4px 5px 0 rgba(60,55,40,0.08);position:relative;overflow:hidden;}
 .memo-top{display:flex;align-items:stretch;border-bottom:1px solid #cfc6ad;background:#efe9d8;}
-.memo-seal{display:flex;align-items:center;gap:9px;padding:12px 16px;border-right:1px solid #cfc6ad;}
+.memo-seal{display:flex;flex-direction:column;justify-content:center;gap:7px;padding:10px 16px;border-right:1px solid #cfc6ad;}
+.memo-seal .ms-row{display:flex;align-items:center;gap:9px;}
+.memo-seal .ms-ps{display:flex;align-items:center;gap:8px;padding-top:7px;border-top:1px solid #ddd5bf;}
+.memo-seal .ms-ps svg{width:17px;height:17px;display:block;flex-shrink:0;}
+.memo-seal .ms-pstxt{font-family:var(--mono);font-size:7.5px;line-height:1.35;letter-spacing:0.1em;color:#8a8268;}
 .memo-seal .ms-mark{width:26px;height:26px;border:1.5px solid #8a8268;border-radius:50%;display:flex;align-items:center;justify-content:center;}
 .memo-seal .ms-mark i{width:9px;height:9px;background:#8a8268;border-radius:50%;display:block;font-style:normal;}
 .memo-seal .ms-txt{font-family:var(--mono);font-size:9px;line-height:1.3;letter-spacing:0.08em;color:#6f6850;}
@@ -380,6 +384,7 @@ button{font-family:inherit;}
 .ledger-pin{position:sticky;top:90px;padding:1.6rem 1.4rem;max-height:calc(100vh - 104px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--line-2) transparent;}
 .ledger-pin::-webkit-scrollbar{width:6px;}
 .ledger-pin::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:3px;}
+.ledger-bar{display:none;}
 .ledger-head{display:flex;align-items:center;gap:7px;margin-bottom:1rem;}
 .ledger-head i{width:5px;height:5px;background:var(--steel);display:block;font-style:normal;}
 .ledger-head .lk{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;color:var(--muted);}
@@ -468,12 +473,23 @@ button{font-family:inherit;}
 
 @media(max-width:880px){
   .read-wrap{flex-direction:column;}
-  .ledger{width:100%;border-left:none;border-top:0.5px solid var(--line);order:-1;}
+  .ledger{width:100%;border-left:none;border-top:0.5px solid var(--line);}
   .ledger-pin{position:static;display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem;padding:1.3rem 2.5rem;max-height:none;overflow:visible;}
   .ledger-head{grid-column:1/-1;margin-bottom:0;} .ledger-spark{grid-column:1/-1;}
   .lrow.lyear,.lrow.poll,.lrow.infra,.lrow.loss,.ticker,.lsection,.ftiles{grid-column:1/-1;}
   .read-col{max-width:none;}
   .rail{top:44px;}
+  /* scene reader: ledger becomes a collapsible card under the chapter title */
+  #reader .ledger{border:0.5px solid var(--line);background:var(--paper-deep);margin:0 0 1.7rem;}
+  #reader .ledger-bar{display:flex;align-items:center;gap:8px;width:100%;background:none;border:none;cursor:pointer;padding:11px 14px;text-align:left;}
+  #reader .ledger-bar i{width:5px;height:5px;background:var(--steel);display:block;font-style:normal;}
+  #reader .ledger-bar .lk{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;color:var(--muted);}
+  #reader .ledger-bar .lb-year{font-family:var(--serif);font-size:16px;color:var(--ink);line-height:1;}
+  #reader .ledger-bar .lb-chev{margin-left:auto;font-size:15px;color:var(--faint);transition:transform .3s;line-height:0.5;}
+  #reader .ledger.open .lb-chev{transform:rotate(180deg);}
+  #reader .ledger-pin{display:none;padding:0.1rem 1.4rem 1.3rem;}
+  #reader .ledger.open .ledger-pin{display:grid;}
+  #reader .ledger .ledger-head{display:none;} /* the bar replaces it */
 }
 @media(max-width:620px){
   .landing,.read-col,.ending{padding-left:1.4rem;padding-right:1.4rem;}
@@ -535,7 +551,8 @@ button{font-family:inherit;}
           <span class="sp-count" id="spCount"></span>
         </div>
       </div>
-      <aside class="ledger">
+      <aside class="ledger" id="sceneLedger">
+        <button class="ledger-bar" id="ledgerBar" aria-expanded="false"><i></i><span class="lk">THE LEDGER</span><span class="lb-year" id="ledgerBarYear">2029</span><span class="lb-chev">&#8964;</span></button>
         <div class="ledger-pin" id="ledgerPin"></div>
       </aside>
     </div>
@@ -982,7 +999,10 @@ function renderMemo(){
   let p=M.paras.map((t,i)=>`<p>${t}</p>`).join("");
   return `<div class="memo">
     <div class="memo-top">
-      <div class="memo-seal"><span class="ms-mark"><i></i></span><span class="ms-txt">OFFICE OF<br>SCIENTIFIC<br>ADVICE</span></div>
+      <div class="memo-seal">
+        <span class="ms-row"><span class="ms-mark"><i></i></span><span class="ms-txt">OFFICE OF<br>SCIENTIFIC<br>ADVICE</span></span>
+        <span class="ms-ps"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="9.5" fill="#8a8268"/><ellipse cx="22" cy="22" rx="19" ry="7" fill="none" stroke="#b0a88e" stroke-width="2.6" transform="rotate(-24 22 22)"/></svg><span class="ms-pstxt">PLANETARY<br>SOLVENCY</span></span>
+      </div>
       <div class="memo-meta">
         <div class="mm"><span class="mk">REF</span><span class="mv">AMOC-51</span></div>
         <div class="mm"><span class="mk">CIRCULATION</span><span class="mv">RESTRICTED</span></div>
@@ -1067,6 +1087,7 @@ function ledgerMarkup(d,wi,ticker){
 function paintLedger(i){
   const sc=D.scenes[i],Lg=sc.ledger;
   $("#L_year").textContent=Lg.year;
+  $("#ledgerBarYear").textContent=Lg.year;
   $("#L_sub").textContent=sc.title;
   $("#L_debt").textContent=Lg.debt.toFixed(0);
   $("#L_def").textContent=Lg.deficit.toFixed(1); $("#L_defYr").textContent=fyLabel(Lg.year);
@@ -1206,6 +1227,19 @@ function onWheelIntent(e){
 window.addEventListener("scroll",onReaderScroll,{passive:true});
 window.addEventListener("wheel",onWheelIntent,{passive:true});
 document.getElementById("scrollCue").addEventListener("click",advanceScene);
+/* mobile: the scene ledger lives under the chapter title as a collapsible card; desktop: side rail */
+const ledgerMQ=window.matchMedia("(max-width:880px)");
+function placeLedger(){
+  const aside=$("#sceneLedger");if(!aside)return;
+  if(ledgerMQ.matches){ $("#sceneTitle").insertAdjacentElement("afterend",aside); }
+  else{ document.querySelector("#reader .read-wrap").appendChild(aside); aside.classList.remove("open"); $("#ledgerBar").setAttribute("aria-expanded","false"); }
+}
+if(ledgerMQ.addEventListener)ledgerMQ.addEventListener("change",placeLedger);else ledgerMQ.addListener(placeLedger);
+placeLedger();
+$("#ledgerBar").addEventListener("click",()=>{
+  const open=$("#sceneLedger").classList.toggle("open");
+  $("#ledgerBar").setAttribute("aria-expanded",open?"true":"false");
+});
 $("#prevBtn").addEventListener("click",()=>{if(current>0)openScene(current-1);});
 $("#nextBtn").addEventListener("click",()=>{if(current<D.scenes.length-1){openScene(current+1);}else{const oc=document.querySelector(".outcome-choose");if(oc)oc.scrollIntoView({behavior:"smooth",block:"center"});}});
 
