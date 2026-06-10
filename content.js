@@ -2,10 +2,10 @@ window.WTSS = {
 
 introTop: [
   "By 2029, the AMOC was slowing faster than anyone had predicted.",
-  "Record breaking weather had become normal over the preceding decade. Even the most destructive floods and fires attracted limited coverage. But this was different. The AMOC (Atlantic meridional overturning circulation) regulates the weather that keeps half the planet alive.[1]",
-  "Experts debated the details. Some put the probability of collapse at over fifty percent, others pointed to uncertainty in the models. Exact timeframes were contentious. But most agreed that the early impacts of the slowdown would come soon. On the current trajectory longer term, the chances were between a dice roll and a coin flip on large parts of the Northern Hemisphere being uninhabitable.",
+  "Record breaking weather had become normal over the preceding decade. Even the most destructive floods and fires were barely covered. But this was different. The Atlantic meridional overturning circulation (AMOC) regulates the weather that keeps half the planet alive.[1]",
+  "Experts debated the details. Some put the probability of collapse at over fifty percent, others pointed to uncertainty in the models. Exact timeframes were contentious. But most agreed that the early impacts of the slowdown would come soon. Longer term, the chances were between a dice roll and a coin flip on large parts of the Northern Hemisphere being uninhabitable.",
   "Governments found themselves facing something none had seriously planned for: an active and accelerating risk to the entire national infrastructure.",
-  "For years politics had treated climate like a storm on the horizon, arguing about its severity and how, or if, to steer around it. Suddenly the storm had arrived and the question was how not to sink."
+  "For years politics treated climate like a storm on the horizon, arguing about its severity and how, or if, to steer around it. Suddenly the storm had arrived and the question was how not to sink."
 ],
 
 /* hover footnotes — [N] markers in introTop/introBelow/whyWeWrote/amoc101 resolve against this map */
