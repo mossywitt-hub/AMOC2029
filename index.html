@@ -375,6 +375,9 @@ button{font-family:inherit;}
 .scroll-cue.show{opacity:0.94;pointer-events:auto;cursor:pointer;}
 .scroll-cue .cue-arrow{font-size:12px;animation:cueBob 1.4s ease-in-out infinite;}
 @keyframes cueBob{0%,100%{transform:translateY(0);}50%{transform:translateY(3px);}}
+.scroll-cue-top{bottom:auto;top:100px;}
+.scroll-cue-top .cue-arrow{animation-name:cueBobUp;}
+@keyframes cueBobUp{0%,100%{transform:translateY(0);}50%{transform:translateY(-3px);}}
 .scene-progress{display:flex;align-items:center;gap:14px;margin-top:1.6rem;}
 .sp-bars{display:flex;gap:6px;flex:1;}
 .sp-bars .spb{flex:1;height:3px;background:var(--line-2);transition:background .3s;}
@@ -535,6 +538,7 @@ button{font-family:inherit;}
   <div id="landing"></div>
   <div class="reader" id="reader">
     <button class="scroll-cue" id="scrollCue"><span class="cue-label">Continue</span><span class="cue-arrow">&darr;</span></button>
+    <button class="scroll-cue scroll-cue-top" id="scrollCueTop"><span class="cue-arrow">&uarr;</span><span class="cue-label">Back</span></button>
     <div class="rail" id="rail">
       <span class="rk">SCENES</span>
       <div class="rail-bars" id="railBars"></div>
@@ -1162,12 +1166,13 @@ function openScene(i,atBottom){
   paintLedger(i);
   if(atBottom){window.scrollTo({top:document.documentElement.scrollHeight,behavior:"instant"});}
   else{window.scrollTo({top:0,behavior:"instant"});}
+  lastScrollYForCue=window.scrollY||document.documentElement.scrollTop||0;
   const rc=document.querySelector(".read-col");
   if(rc){rc.classList.remove("scene-enter");void rc.offsetWidth;rc.classList.add("scene-enter");}
   updateCue(i);
   hideCue();
   scrollArmed=false;
-  setTimeout(()=>{scrollArmed=true;},650);
+  setTimeout(()=>{scrollArmed=true;},450);
 }
 let scrollArmed=true;
 let scrollAdvancing=false;
@@ -1177,8 +1182,12 @@ function updateCue(i){
   const label = i<D.scenes.length-1 ? D.scenes[i+1].title : "The outcomes";
   c.querySelector(".cue-label").textContent="Continue: "+label;
 }
+function cueTopEl(){return document.getElementById("scrollCueTop");}
 function showCue(){const c=cueEl();if(c)c.classList.add("show");}
-function hideCue(){const c=cueEl();if(c)c.classList.remove("show");}
+function hideCueBottom(){const c=cueEl();if(c)c.classList.remove("show");}
+function showTopCue(label){const c=cueTopEl();if(c){c.querySelector(".cue-label").textContent=label;c.classList.add("show");}}
+function hideTopCue(){const c=cueTopEl();if(c)c.classList.remove("show");}
+function hideCue(){hideCueBottom();hideTopCue();} /* transitions clear both pills */
 function advanceScene(){
   if(scrollAdvancing)return;
   if(current>=D.scenes.length-1)return; // last scene: never auto-advance into an ending
@@ -1194,32 +1203,40 @@ function retreatScene(){
 }
 function landingActive(){return !$("#landing").classList.contains("hidden");}
 function pageBottomRemaining(){return document.documentElement.scrollHeight-window.innerHeight-(window.scrollY||document.documentElement.scrollTop||0);}
+let lastScrollYForCue=0;
 function onReaderScroll(){
   if(landingActive()){
     if(scrollAdvancing){hideCue();return;}
     if(pageBottomRemaining()<150){const c=cueEl();if(c)c.querySelector(".cue-label").textContent="Begin: "+D.scenes[0].title;showCue();}
-    else hideCue();
+    else hideCueBottom();
+    hideTopCue();
     return;
   }
   if(!$("#reader").classList.contains("active")){hideCue();return;}
   if(scrollAdvancing||!scrollArmed)return;
-  if(current>=D.scenes.length-1){hideCue();return;} // no auto-cue into the endings
   const reader=$("#reader");
-  const rect=reader.getBoundingClientRect();
-  const remaining=rect.bottom-window.innerHeight;
-  if(remaining<150){showCue();}else hideCue();
+  const remaining=reader.getBoundingClientRect().bottom-window.innerHeight;
+  if(current<D.scenes.length-1 && remaining<150){showCue();}else hideCueBottom(); // no bottom cue into the endings
+  const y=window.scrollY||document.documentElement.scrollTop||0;
+  const goingUp=y<lastScrollYForCue; lastScrollYForCue=y;
+  if(y<150 && goingUp){showTopCue(current>0 ? "Back: "+D.scenes[current-1].title : "Back: The beginning");}
+  else if(y>=150 || !goingUp){hideTopCue();}
 }
 /* Deliberate overscroll: down at the bottom -> next scene; up at the top -> previous scene / home;
-   on the homepage, down at the bottom begins Scene I. Two safeguards make it unhurried:
-   the gesture must START at the edge (a momentum tail spilling past the boundary is ignored,
-   because it arrives with no quiet gap), then accumulate OVERSCROLL_PX of fresh travel. */
-const OVERSCROLL_PX=200, FRESH_GAP_MS=160;
+   on the homepage, down at the bottom begins Scene I. Only the momentum tail of the gesture
+   that brought you to the edge is ignored (suppressed until the first quiet gap). After that
+   beat, every flick and wheel notch accumulates intent toward OVERSCROLL_PX; intent fades
+   only after IDLE_RESET_MS without input, so repeated small nudges add up. */
+const OVERSCROLL_PX=150, QUIET_GAP_MS=160, IDLE_RESET_MS=700;
 let lastWheelT=0;
-let ovDown={armed:false,acc:0}, ovUp={armed:false,acc:0}, ovHome={armed:false,acc:0};
-function ovReset(st){st.armed=false;st.acc=0;}
+/* phase: 0 idle | 1 suppressed (arrival momentum) | 2 counting */
+let ovDown={phase:0,acc:0}, ovUp={phase:0,acc:0}, ovHome={phase:0,acc:0};
+function ovReset(st){st.phase=0;st.acc=0;}
 function ovFeed(st,mag,gap,fire){
-  if(gap>FRESH_GAP_MS){st.armed=true;st.acc=0;}
-  if(!st.armed)return;
+  if(st.phase===0){st.phase=(gap>QUIET_GAP_MS)?2:1;}
+  else if(st.phase===1){if(gap>QUIET_GAP_MS)st.phase=2;}
+  else if(gap>IDLE_RESET_MS){st.acc=0;}
+  if(st.phase!==2)return;
   st.acc+=mag;
   if(st.acc>OVERSCROLL_PX){ovReset(st);fire();}
 }
@@ -1249,6 +1266,7 @@ function onWheelIntent(e){
 window.addEventListener("scroll",onReaderScroll,{passive:true});
 window.addEventListener("wheel",onWheelIntent,{passive:true});
 document.getElementById("scrollCue").addEventListener("click",()=>{ if(landingActive()){hideCue();openScene(0);} else advanceScene(); });
+document.getElementById("scrollCueTop").addEventListener("click",()=>{ if(!landingActive()&&$("#reader").classList.contains("active"))retreatScene(); });
 /* mobile: the scene ledger lives under the chapter title as a collapsible card; desktop: side rail */
 const ledgerMQ=window.matchMedia("(max-width:880px)");
 function placeLedger(){
