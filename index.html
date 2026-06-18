@@ -604,8 +604,8 @@ function buildFnOrder(){
   D.whyWeWrote.forEach(w=>{if(typeof w==="string")scan(w);else if(w.bullets)w.bullets.forEach(scan);});
   D.amoc101.forEach(a=>{if(typeof a==="string")scan(a);});
   D.scenes.forEach(sc=>{
-    sc.body.forEach(item=>{if(typeof item==="string")scan(item);else if(item&&item.italic)scan(item.italic);});
-    if(sc.tech&&sc.tech.body)sc.tech.body.forEach(scan);
+    sc.body.forEach(item=>{if(typeof item==="string")scan(item);else if(item&&item.italic)scan(item.italic);else if(item&&item.technote&&item.technote.body)item.technote.body.forEach(scan);});
+    if(sc.tech){(Array.isArray(sc.tech)?sc.tech:[sc.tech]).forEach(t=>{if(t&&t.body)t.body.forEach(scan);});}
   });
   return keys;
 }
@@ -1135,6 +1135,12 @@ function paintLedger(i){
 }
 
 /* ---- scene ---- */
+function makeTechNote(t){
+  const wrap=document.createElement("div");wrap.className="technote";
+  wrap.innerHTML=`<button class="technote-head"><span class="tk">TECHNICAL DETAIL</span><span class="tt">${t.title}</span><span class="tchev">&#8964;</span></button><div class="technote-body"><div class="technote-inner">${t.body.map(p=>`<p>${fnify(p)}</p>`).join("")}</div></div>`;
+  wrap.querySelector(".technote-head").addEventListener("click",()=>wrap.classList.toggle("open"));
+  return wrap;
+}
 function openScene(i,atBottom){
   current=i;const sc=D.scenes[i];
   $("#resources").classList.remove("active");
@@ -1153,16 +1159,16 @@ function openScene(i,atBottom){
       if(item.tabloid){body.insertAdjacentHTML("beforeend",renderTabloid());return;}
       if(item.leaflets){body.insertAdjacentHTML("beforeend",renderLeaflets());return;}
       if(item.italic){const el=document.createElement("p");el.className="italic";el.innerHTML=fnify(item.italic);body.appendChild(el);return;}
+      if(item.technote){body.appendChild(makeTechNote(item.technote));return;}
     }
     const el=document.createElement("p");
     if(idx===0)el.className="lead";
     el.innerHTML=fnify(item);body.appendChild(el);
   });
-  if(sc.tech&&sc.tech.body&&sc.tech.body.length){
-    const wrap=document.createElement("div");wrap.className="technote";
-    wrap.innerHTML=`<button class="technote-head"><span class="tk">TECHNICAL DETAIL</span><span class="tt">${sc.tech.title}</span><span class="tchev">&#8964;</span></button><div class="technote-body"><div class="technote-inner">${sc.tech.body.map(t=>`<p>${t}</p>`).join("")}</div></div>`;
-    body.appendChild(wrap);
-    wrap.querySelector(".technote-head").addEventListener("click",()=>wrap.classList.toggle("open"));
+  if(sc.tech){
+    (Array.isArray(sc.tech)?sc.tech:[sc.tech]).forEach(t=>{
+      if(t&&t.body&&t.body.length)body.appendChild(makeTechNote(t));
+    });
   }
   if(i===D.scenes.length-1){
     const oc=document.createElement("div");oc.className="outcome-choose";
