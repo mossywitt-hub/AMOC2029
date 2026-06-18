@@ -1,0 +1,92 @@
+WHEN THE SEA SLOWS  —  NEWS TICKER HEADLINES
+Generated from content.js.  50 headlines across 8 sections.
+
+HOW TO EDIT
+  - Change the text after each ID (e.g. "DEPARTMENT-3: ...").
+  - Keep the ID prefixes unchanged; that is how edits map back.
+  - Add a headline by giving it the next free number in that section.
+  - Delete a headline by removing its whole line.
+  - Send the file back and content.js will be updated to match.
+
+
+================================================================
+HOME   ·   ledger key: home
+================================================================
+HOME-1: AMOC slowdown moves from the journals into cabinet briefings
+HOME-2: New government promises “competence, not slogans”
+HOME-3: Finance ministry warns fiscal headroom is “evaporating”
+HOME-4: Insurers quietly redraw their North Atlantic risk maps
+HOME-5: PM: “We will explain the trade-offs before the weather does”
+
+================================================================
+SCENE I  —  THE DEPARTMENT OF CLIMATE RESILIENCE   ·   ledger key: department
+================================================================
+DEPARTMENT-1: Cabinet Office confirms new Department of Climate Resilience
+DEPARTMENT-2: Scientists hand ministers a “planning paper” on AMOC collapse
+DEPARTMENT-3: Markets shrug — one analyst calls it “weather astrology”
+DEPARTMENT-4: Opposition: “a ministry for problems we can’t afford”
+DEPARTMENT-5: Leaked annex flags coastal hospitals at risk within years
+DEPARTMENT-6: Iberian heatwave smashes records — 45°C in southern Spain
+DEPARTMENT-7: Évora grid falters as the heat refuses to break
+DEPARTMENT-8: Hospitals overwhelmed as medics treat heat cases on their feet
+DEPARTMENT-9: Emergency plans built for cooler three-day heatwaves buckle
+
+================================================================
+SCENE II  —  THE PRICE OF JOBS   ·   ledger key: jobs
+================================================================
+JOBS-1: Gas-plant standby deal splits the cabinet
+JOBS-2: Unions warn against “transition by contempt”
+JOBS-3: Sloane: “You can’t decarbonize on an empty stomach”
+JOBS-4: Reserve-margin fears grow as cold-snap forecasts worsen
+JOBS-5: Tabloids christen the ministry “the Department of Constant Cost”
+JOBS-6: Winter heating bills tick up again
+
+================================================================
+SCENE III  —  THE SUNSHADE   ·   ledger key: sunshade
+================================================================
+SUNSHADE-1: SECRET SUN-DIMMING TALKS, claim the morning papers
+SUNSHADE-2: Minister attended Voss Foundation roundtable on geoengineering
+SUNSHADE-3: Backbencher demands resignation “before breakfast”
+SUNSHADE-4: Make Sunsets sells more “cooling credits” without oversight
+SUNSHADE-5: Stardust raises fresh funds for a proprietary aerosol
+SUNSHADE-6: Government line: “research is not deployment”
+
+================================================================
+SCENE IV  —  THE SEAM BETWEEN THE SYSTEMS   ·   ledger key: seam
+================================================================
+SEAM-1: BREAKING: coastal hospital ground floor underwater
+SEAM-2: Two confirmed dead in a basement apartment off the harbor road
+SEAM-3: Barrier closes — the river keeps arriving
+SEAM-4: Insurers pause approvals in flood-hit zip codes
+SEAM-5: “Climate mortgage prisoners” enters the headlines
+SEAM-6: Cabinet split over deferring the adaptation budget
+
+================================================================
+SCENE V  —  THE NEW OWNERS OF THE GRID   ·   ledger key: grid
+================================================================
+GRID-1: Grid Commons Act scrapes through its final reading
+GRID-2: Co-op energy bloc flexes its weight at the ballot box
+GRID-3: Big six lobby to strip co-op connection rights
+GRID-4: Renters’ provisions cut to a three-city pilot
+GRID-5: Sloane: “a subsidy architecture for homeowners with apps”
+GRID-6: Locational-pricing row threatens to split the party
+
+================================================================
+SCENE VI  —  THE GROUND GIVES   ·   ledger key: ground
+================================================================
+GROUND-1: Empty shelves as breadbasket failures stack up
+GROUND-2: Agricultural Resilience Plan draws farmer fury
+GROUND-3: TAXES FOR TADPOLES, screams the front page
+GROUND-4: Subsidy logic shifts from acreage to resilience metrics
+GROUND-5: South Asian floods and American droughts hit imports
+GROUND-6: Emergency grain reserve announced
+
+================================================================
+SCENE VII  —  THE VOTE   ·   ledger key: vote
+================================================================
+VOTE-1: Election day: a referendum on resilience
+VOTE-2: Polls put the far right neck-and-neck with the government
+VOTE-3: “Pay early or pay later” dominates the doorstep
+VOTE-4: Flood-hit wards split street by street
+VOTE-5: Turnout reported strong in the co-op wards
+VOTE-6: Counts begin amid record postal ballots
