@@ -295,16 +295,16 @@ button{font-family:inherit;}
 .tab-ear-p{font-family:var(--mono);font-size:7.5px;letter-spacing:0.12em;color:#55502f;margin-top:2px;}
 .tab-screamer{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:0.18em;color:#b3261b;padding:10px 14px 0;}
 .tab-date{font-size:9px;letter-spacing:0.1em;color:#8a8268;text-transform:uppercase;white-space:nowrap;}
-.tab-head{font-family:var(--sans);font-weight:600;font-size:clamp(40px,9vw,72px);line-height:0.92;letter-spacing:-0.03em;color:#16130d;text-transform:uppercase;margin:1px 0 0;padding:0 12px;}
-.tab-deck{font-family:var(--sans);font-weight:600;font-size:clamp(14px,2.6vw,19px);letter-spacing:0.01em;color:#b3261b;text-transform:uppercase;padding:7px 14px 13px;border-bottom:2px solid #16130d;}
-.tab-body{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;padding:12px 14px;}
-.tab-photo{position:relative;height:165px;overflow:hidden;border:0.5px solid #c8c2b2;filter:saturate(0.85);}
+.tab-head{font-family:var(--sans);font-weight:600;font-size:clamp(54px,14vw,90px);line-height:0.86;letter-spacing:-0.035em;color:#16130d;text-transform:uppercase;margin:2px 0 0;padding:0 12px;}
+.tab-deck{font-family:var(--sans);font-weight:600;font-size:clamp(15px,3vw,21px);letter-spacing:0.02em;color:#b3261b;text-transform:uppercase;padding:8px 14px 13px;border-bottom:2px solid #16130d;}
+.tab-body{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;padding:12px 14px;align-items:stretch;}
+.tab-photo{position:relative;height:100%;min-height:150px;overflow:hidden;border:0.5px solid #c8c2b2;filter:saturate(0.95);}
 .tab-burst{position:absolute;right:8px;bottom:8px;width:94px;height:94px;border-radius:50%;background:#ffd21e;border:2.5px solid #16130d;color:#16130d;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(-8deg);font-family:var(--sans);font-weight:600;font-size:17px;line-height:0.9;box-shadow:2px 2px 0 rgba(0,0,0,0.16);}
 .tab-burst span{font-size:8px;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;margin-top:3px;}
 .tab-col p{font-family:var(--serif);font-size:13px;line-height:1.5;color:#2a2620;margin:0 0 0.6rem;}
 .tab-dropcap{float:left;font-family:var(--sans);font-weight:600;font-size:40px;line-height:0.78;padding:3px 7px 0 0;color:#b3261b;}
 .tab-fade{height:42px;background:linear-gradient(to bottom,rgba(251,250,247,0),#fbfaf7);margin-top:-30px;position:relative;pointer-events:none;}
-@media(max-width:620px){ .tab-body{grid-template-columns:1fr;} .tab-photo{height:150px;} .tab-ear{max-width:170px;} .tab-ear-h{font-size:9.5px;} }
+@media(max-width:620px){ .tab-body{grid-template-columns:1fr;} .tab-photo{min-height:170px;} .tab-ear{max-width:170px;} .tab-ear-h{font-size:9.5px;} }
 
 /* CAMPAIGN LEAFLETS inset */
 .leaflets{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:2rem 0;}
@@ -588,12 +588,35 @@ let current=0;
 
 function esc(s){return s;} /* content is trusted authored text */
 
-/* [N] markers -> hover footnotes (resolved against D.footnotes) */
+/* [key] markers -> hover footnotes; numbers auto-assigned by buildFnOrder() at init */
+let fnOrder=[];
+function buildFnOrder(){
+  const keys=[];
+  function scan(txt){
+    if(typeof txt!=="string")return;
+    const re=/\[([a-z][a-z0-9-]*)\]/g;let m;
+    while((m=re.exec(txt))!==null){
+      const k=m[1];if(!keys.includes(k)&&D.footnotes[k]!==undefined)keys.push(k);
+    }
+  }
+  D.introTop.forEach(scan);
+  D.introBelow.forEach(scan);
+  D.whyWeWrote.forEach(w=>{if(typeof w==="string")scan(w);else if(w.bullets)w.bullets.forEach(scan);});
+  D.amoc101.forEach(a=>{if(typeof a==="string")scan(a);});
+  D.scenes.forEach(sc=>{
+    sc.body.forEach(item=>{if(typeof item==="string")scan(item);else if(item&&item.italic)scan(item.italic);});
+    if(sc.tech&&sc.tech.body)sc.tech.body.forEach(scan);
+  });
+  return keys;
+}
 function fnify(s){
-  if(!D.footnotes) return s;
-  return s.replace(/\[(\d{1,2})\]/g,(m,n)=> D.footnotes[n]
-    ? `<span class="fn" tabindex="0" aria-label="Footnote ${n}"><sup>${n}</sup><span class="fn-pop" role="note"><span class="fn-k">NOTE ${n}</span>${D.footnotes[n]}</span></span>`
-    : m);
+  if(!D.footnotes||!fnOrder.length) return s;
+  return s.replace(/\[([a-z][a-z0-9-]*)\]/g,(m,k)=>{
+    const n=fnOrder.indexOf(k)+1;
+    return (n>0&&D.footnotes[k])
+      ? `<span class="fn" tabindex="0" aria-label="Footnote ${n}"><sup>${n}</sup><span class="fn-pop" role="note"><span class="fn-k">NOTE ${n}</span>${D.footnotes[k]}</span></span>`
+      : m;
+  });
 }
 
 /* ---- build landing ---- */
@@ -870,10 +893,10 @@ function renderTabloid(){
       <div class="tab-ear"><span class="tab-ear-k">SPORT</span><span class="tab-ear-h">Cup final moved to 9pm &mdash; too hot at 3</span><span class="tab-ear-p">Pages 38&ndash;52</span></div>
     </div>
     <div class="tab-screamer"><span>EXCLUSIVE &middot; YOUR MONEY, THEIR PONDS</span><span class="tab-date">Wednesday &middot; 3.10</span></div>
-    <h3 class="tab-head">Taxes for Tadpoles</h3>
+    <h3 class="tab-head">Taxes for<br>Tadpoles</h3>
     <div class="tab-deck">Farmers&rsquo; handout to build ponds</div>
     <div class="tab-body">
-      <div class="tab-photo" role="img" aria-label="A muddy farm pond ringed with reeds">
+      <div class="tab-photo" role="img" aria-label="A bold graphic illustration of a great crested newt in a pond">
         ${pondSVG()}
         <div class="tab-burst">BILLIONS<span>of your cash</span></div>
       </div>
@@ -887,35 +910,25 @@ function renderTabloid(){
 }
 function pondSVG(){
   return `<svg viewBox="0 0 600 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:100%;">
-    <defs>
-      <linearGradient id="pfield" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#8d8c58"/><stop offset="0.5" stop-color="#6f6f42"/><stop offset="1" stop-color="#55502f"/>
-      </linearGradient>
-      <radialGradient id="pwater" cx="0.5" cy="0.42" r="0.7">
-        <stop offset="0" stop-color="#4b6b63"/><stop offset="1" stop-color="#2c423c"/>
-      </radialGradient>
-    </defs>
-    <rect width="600" height="300" fill="url(#pfield)"/>
-    <ellipse cx="300" cy="192" rx="252" ry="98" fill="url(#pwater)"/>
-    <g stroke="#7d9b92" stroke-width="1.4" opacity="0.5" fill="none">
-      <ellipse cx="300" cy="186" rx="152" ry="48"/>
-      <ellipse cx="300" cy="189" rx="98" ry="30"/>
-      <ellipse cx="300" cy="192" rx="52" ry="16"/>
+    <rect width="600" height="300" fill="#1b6253"/>
+    <ellipse cx="280" cy="150" rx="255" ry="120" fill="#267a68"/>
+    <g fill="none" stroke="#3a9079" stroke-width="2" opacity="0.45">
+      <ellipse cx="300" cy="116" rx="210" ry="18"/>
+      <ellipse cx="300" cy="252" rx="240" ry="20"/>
     </g>
-    <g fill="#16201d">
-      <path d="M250 176 q11 -6 19 0 q-7 5 -19 6 q-9 -3 0 -6"/>
-      <path d="M332 202 q11 -6 19 0 q-7 5 -19 6 q-9 -3 0 -6"/>
-      <path d="M300 168 q9 -5 16 0 q-6 4 -16 5 q-8 -2 0 -5"/>
-    </g>
-    <g stroke="#3f4422" stroke-width="3" stroke-linecap="round">
-      <line x1="72" y1="252" x2="66" y2="150"/><line x1="86" y1="252" x2="94" y2="166"/>
-      <line x1="540" y1="252" x2="548" y2="158"/><line x1="524" y1="252" x2="516" y2="174"/>
-    </g>
-    <g fill="#5a5326">
-      <ellipse cx="65" cy="150" rx="4" ry="12"/><ellipse cx="95" cy="166" rx="4" ry="12"/>
-      <ellipse cx="549" cy="158" rx="4" ry="12"/><ellipse cx="515" cy="174" rx="4" ry="12"/>
-    </g>
-    <rect width="600" height="300" fill="#241f17" opacity="0.05"/>
+    <path d="M176 170 L196 172 L172 210 L150 206 Z" fill="#17120b" stroke="#0d0a06" stroke-width="2"/>
+    <g stroke="#17120b" stroke-width="5" stroke-linecap="round"><line x1="158" y1="206" x2="142" y2="220"/><line x1="160" y1="208" x2="154" y2="226"/><line x1="164" y1="208" x2="172" y2="224"/></g>
+    <path d="M384 174 L404 172 L420 210 L398 214 Z" fill="#17120b" stroke="#0d0a06" stroke-width="2"/>
+    <g stroke="#17120b" stroke-width="5" stroke-linecap="round"><line x1="408" y1="210" x2="396" y2="226"/><line x1="412" y1="212" x2="412" y2="230"/><line x1="414" y1="210" x2="428" y2="224"/></g>
+    <path d="M96 150 Q104 130 124 126 Q150 121 200 120 Q270 118 330 124 Q386 130 430 146 Q486 132 524 100 L540 74 Q516 108 484 134 Q452 158 430 168 Q386 178 330 180 Q270 182 200 180 Q150 178 126 172 Q104 166 96 150 Z" fill="#17120b" stroke="#0d0a06" stroke-width="3"/>
+    <path d="M156 121 L168 107 L181 120 L195 105 L210 119 L226 104 L242 118 L260 106 L278 119 L297 108 L316 121 L336 113 L356 124 L376 120 L395 131 L410 140 Q360 130 330 124 Q270 118 200 120 Q168 121 156 121 Z" fill="#241a0f"/>
+    <path d="M140 166 Q280 178 424 158 Q414 172 360 176 Q260 184 168 178 Q150 176 140 166 Z" fill="#e08a1e"/>
+    <g fill="#17120b"><circle cx="196" cy="172" r="4"/><circle cx="246" cy="176" r="4.5"/><circle cx="300" cy="176" r="4.5"/><circle cx="356" cy="170" r="4"/></g>
+    <g fill="#e08a1e"><circle cx="214" cy="134" r="5"/><circle cx="256" cy="131" r="5"/><circle cx="300" cy="133" r="5"/><circle cx="344" cy="137" r="5"/><circle cx="384" cy="142" r="4.5"/></g>
+    <circle cx="132" cy="142" r="10" fill="#fbf7ec"/>
+    <circle cx="135" cy="143" r="5" fill="#17120b"/>
+    <circle cx="103" cy="149" r="2" fill="#fbf7ec" opacity="0.85"/>
+    <path d="M98 158 Q116 164 142 161" fill="none" stroke="#0d0a06" stroke-width="2.5" stroke-linecap="round"/>
   </svg>`;
 }
 
@@ -1139,11 +1152,11 @@ function openScene(i,atBottom){
       if(item.invite){body.insertAdjacentHTML("beforeend",renderInvite());return;}
       if(item.tabloid){body.insertAdjacentHTML("beforeend",renderTabloid());return;}
       if(item.leaflets){body.insertAdjacentHTML("beforeend",renderLeaflets());return;}
-      if(item.italic){const el=document.createElement("p");el.className="italic";el.innerHTML=item.italic;body.appendChild(el);return;}
+      if(item.italic){const el=document.createElement("p");el.className="italic";el.innerHTML=fnify(item.italic);body.appendChild(el);return;}
     }
     const el=document.createElement("p");
     if(idx===0)el.className="lead";
-    el.innerHTML=item;body.appendChild(el);
+    el.innerHTML=fnify(item);body.appendChild(el);
   });
   if(sc.tech&&sc.tech.body&&sc.tech.body.length){
     const wrap=document.createElement("div");wrap.className="technote";
@@ -1223,45 +1236,48 @@ function onReaderScroll(){
   else if(y>=150 || !goingUp){hideTopCue();}
 }
 /* Deliberate overscroll: down at the bottom -> next scene; up at the top -> previous scene / home;
-   on the homepage, down at the bottom begins Scene I. Only the momentum tail of the gesture
-   that brought you to the edge is ignored (suppressed until the first quiet gap). After that
-   beat, every flick and wheel notch accumulates intent toward OVERSCROLL_PX; intent fades
-   only after IDLE_RESET_MS without input, so repeated small nudges add up. */
-const OVERSCROLL_PX=150, QUIET_GAP_MS=160, IDLE_RESET_MS=700;
+   on the homepage, down at the bottom begins Scene I.
+   Robust against trackpad noise: the gesture that coasts you INTO an edge is absorbed (we only
+   start counting after a quiet gap, so arrival inertia never turns the page on its own). Once
+   armed, forward intent accumulates toward OVERSCROLL_PX and SURVIVES the small reverse-sign
+   jitter trackpads emit during inertia/rubber-band — only a decisive reverse flick, or genuinely
+   leaving the edge, cancels it. Intent fades only after a long idle, so a calm push or two works. */
+const OVERSCROLL_PX=150;    // forward intent (px) needed to turn the page
+const ARRIVAL_GAP_MS=140;   // a gap longer than this ends arrival inertia -> arm the counter
+const IDLE_RESET_MS=1200;   // standing intent is forgotten only after this long with no input
+const EDGE_TOL=8;           // px tolerance for "pinned at the edge" (Retina sub-pixel safe)
+const JITTER_PX=30;         // opposite motion smaller than this is inertia jitter -> ignored
 let lastWheelT=0;
-/* phase: 0 idle | 1 suppressed (arrival momentum) | 2 counting */
-let ovDown={phase:0,acc:0}, ovUp={phase:0,acc:0}, ovHome={phase:0,acc:0};
-function ovReset(st){st.phase=0;st.acc=0;}
-function ovFeed(st,mag,gap,fire){
-  if(st.phase===0){st.phase=(gap>QUIET_GAP_MS)?2:1;}
-  else if(st.phase===1){if(gap>QUIET_GAP_MS)st.phase=2;}
-  else if(gap>IDLE_RESET_MS){st.acc=0;}
-  if(st.phase!==2)return;
-  st.acc+=mag;
-  if(st.acc>OVERSCROLL_PX){ovReset(st);fire();}
+let ovDown={acc:0,armed:false}, ovUp={acc:0,armed:false}, ovHome={acc:0,armed:false};
+function ovReset(st){st.acc=0;st.armed=false;}
+/* fwd = signed wheel delta toward the page-turn (+ = firing direction); atEdge = pinned there */
+function ovFeed(st,fwd,gap,atEdge,fire){
+  if(!atEdge){ovReset(st);return;}              // still reading content: no standing intent
+  if(gap>IDLE_RESET_MS)ovReset(st);             // long pause at the edge: start fresh
+  if(!st.armed){                                // absorb the inertia that coasted us in
+    if(gap>ARRIVAL_GAP_MS)st.armed=true;        // a quiet gap marks a fresh, deliberate gesture
+    else return;
+  }
+  if(fwd>0){
+    st.acc+=fwd;
+    if(st.acc>OVERSCROLL_PX){ovReset(st);fire();}
+  }else if(fwd<-JITTER_PX){ovReset(st);}        // decisive reverse cancels; small jitter is kept
 }
 function onWheelIntent(e){
   const now=Date.now(), gap=now-lastWheelT; lastWheelT=now;
   let dy=e.deltaY; if(e.deltaMode===1)dy*=16; else if(e.deltaMode===2)dy*=window.innerHeight;
   if(landingActive()){
     if(scrollAdvancing)return;
-    if(dy>0 && pageBottomRemaining()<4){ovFeed(ovHome,dy,gap,()=>{hideCue();openScene(0);});}
-    else ovReset(ovHome);
+    ovFeed(ovHome,dy,gap,pageBottomRemaining()<EDGE_TOL,()=>{hideCue();openScene(0);});
     return;
   }
   if(!$("#reader").classList.contains("active"))return;
   if(scrollAdvancing||!scrollArmed)return;
   const reader=$("#reader");
-  if(dy>0){
-    ovReset(ovUp);
-    const remaining=reader.getBoundingClientRect().bottom-window.innerHeight;
-    if(remaining<4){ovFeed(ovDown,dy,gap,advanceScene);}
-    else ovReset(ovDown);
-  }else if(dy<0){
-    ovReset(ovDown);
-    if((window.scrollY||document.documentElement.scrollTop||0)<2){ovFeed(ovUp,-dy,gap,retreatScene);}
-    else ovReset(ovUp);
-  }
+  const remaining=reader.getBoundingClientRect().bottom-window.innerHeight;
+  const y=window.scrollY||document.documentElement.scrollTop||0;
+  ovFeed(ovDown, dy,gap, remaining<EDGE_TOL, advanceScene);   // down at the bottom -> next scene
+  ovFeed(ovUp,  -dy,gap, y<EDGE_TOL,         retreatScene);   // up at the top -> prev scene / home
 }
 window.addEventListener("scroll",onReaderScroll,{passive:true});
 window.addEventListener("wheel",onWheelIntent,{passive:true});
@@ -1377,6 +1393,7 @@ document.addEventListener("click",e=>{
   if(document.activeElement)document.activeElement.blur();
 });
 
+fnOrder=buildFnOrder();
 buildLanding();
 buildResources();
 $("#ledgerPin").innerHTML=ledgerMarkup(D.scenes[0].ledger,true,D.tickers[D.scenes[0].id]);
