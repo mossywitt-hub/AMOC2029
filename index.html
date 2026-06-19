@@ -56,13 +56,6 @@ button{font-family:inherit;}
 .title{font-family:var(--serif);font-size:clamp(40px,6vw,58px);line-height:1.05;color:var(--ink);letter-spacing:-0.015em;margin:1.1rem 0 0.5rem;}
 .subtitle{font-family:var(--serif);font-style:italic;font-size:clamp(16px,2vw,20px);color:var(--muted);margin:0 0 1.6rem;}
 .title-row{position:relative;}
-.todo-note{position:absolute;top:-14px;right:240px;width:178px;background:linear-gradient(170deg,#ffe14d 0%,#ffd83a 55%,#fbcf2e 100%);padding:16px 16px 18px;transform:rotate(2.4deg);box-shadow:0 1px 1px rgba(0,0,0,0.04),0 10px 22px rgba(80,66,20,0.18),0 18px 40px rgba(80,66,20,0.10);z-index:30;}
-.todo-note::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.35),rgba(255,255,255,0) 40%);pointer-events:none;}
-.todo-tape{position:absolute;top:-13px;left:50%;transform:translateX(-50%) rotate(-1.5deg);width:78px;height:26px;background:rgba(214,228,201,0.55);border-left:1px dashed rgba(255,255,255,0.5);border-right:1px dashed rgba(255,255,255,0.5);box-shadow:0 1px 2px rgba(0,0,0,0.06);}
-.todo-title{font-family:'Caveat',cursive;font-size:27px;font-weight:700;color:#5b4a12;line-height:1;margin-bottom:9px;letter-spacing:0.01em;}
-.todo-list{list-style:none;margin:0;padding:0;}
-.todo-list li{font-family:'Caveat',cursive;font-size:19px;font-weight:500;color:#6a5715;line-height:1.5;padding-left:22px;position:relative;}
-.todo-list li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:10px;border:1.5px solid #9a8330;border-radius:1px;}
 .cta-row{display:flex;align-items:center;gap:18px;margin-bottom:2.4rem;flex-wrap:wrap;}
 .cta{display:inline-flex;align-items:center;gap:9px;font-family:var(--sans);font-size:15px;font-weight:500;letter-spacing:0.02em;color:var(--paper);background:var(--navy);border:none;cursor:pointer;padding:14px 30px;transition:transform .15s,background .2s;}
 .cta:hover{background:#26384b;transform:translateY(-1px);}
@@ -502,13 +495,13 @@ button{font-family:inherit;}
   .masthead{padding:11px 1.4rem;} .dept{font-size:10px;letter-spacing:0.07em;}
   .fblock-head,.fblock-inner,.rail{padding-left:1.4rem;padding-right:1.4rem;}
   .ledger-pin{padding-left:1.4rem;padding-right:1.4rem;}
-  .home-wrap .ledger{width:100%;margin-left:0;border-left:none;border-top:0.5px solid var(--line);order:2;}
-  .todo-note{position:static;width:auto;max-width:260px;margin:0 0 1.4rem;transform:rotate(-1deg);right:auto;top:auto;}
-  .tier{flex-wrap:wrap;gap:10px;margin-bottom:38px;} .node .n-name{font-size:13.5px;}
+  .home-wrap .ledger{width:100%;margin-left:0;border-left:none;border-top:0.5px solid var(--line);order:2;}  .tier{flex-wrap:wrap;gap:10px;margin-bottom:38px;} .node .n-name{font-size:13.5px;}
   .outcomes-tier{flex-direction:column;} .onode{max-width:none;} .cs p,.cs blockquote{max-width:none;}
   .memo-meta .mm{min-width:50%;}
 }
 </style>
+<!-- analytics: GoatCounter (privacy-first, cookieless, no consent banner) -->
+<script data-goatcounter="https://amoc2029.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <div id="gate" class="gate">
@@ -582,6 +575,10 @@ button{font-family:inherit;}
 const D = window.WTSS;
 const $ = s=>document.querySelector(s);
 const ROMAN=["I","II","III","IV","V","VI","VII"];
+/* analytics: fire a virtual pageview on SPA navigation (GoatCounter; no-ops if blocked, absent, or on localhost) */
+function track(path,title){
+  try{ if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:path,title:title}); }catch(e){}
+}
 const INFRA=["nominal","strained","failing"];
 const STAR_POS=[{x:26,y:20},{x:55,y:15},{x:68,y:38},{x:46,y:64},{x:22,y:46},{x:82,y:26},{x:74,y:72}];
 let current=0;
@@ -626,16 +623,6 @@ function buildLanding(){
     <div class="title-row">
       <h1 class="title">When The Sea Slows</h1>
       <p class="subtitle">Predicting a new era of climate politics.</p>
-      <div class="todo-note" role="note" aria-label="Work in progress to-do list">
-        <div class="todo-tape"></div>
-        <div class="todo-title">To do</div>
-        <ul class="todo-list">
-          <li>Iterate on Ledger</li>
-          <li>Resources page</li>
-          <li>More graphics</li>
-          <li>More tech notes</li>
-        </ul>
-      </div>
     </div>
     <div class="read-wrap home-wrap">
       <div class="read-col home-col">
@@ -1183,6 +1170,7 @@ function openScene(i,atBottom){
   if(i>0){prev.disabled=false;$("#prevLabel").textContent=D.scenes[i-1].title;}else{prev.disabled=true;$("#prevLabel").textContent="\u2014";}
   if(i<D.scenes.length-1){$("#nextLabel").textContent=D.scenes[i+1].title;}else{$("#nextLabel").textContent="The outcomes";}
   paintLedger(i);
+  track("/scene/"+sc.id,"Scene "+ROMAN[i]+" — "+sc.title);
   if(atBottom){window.scrollTo({top:document.documentElement.scrollHeight,behavior:"instant"});}
   else{window.scrollTo({top:0,behavior:"instant"});}
   lastScrollYForCue=window.scrollY||document.documentElement.scrollTop||0;
@@ -1330,6 +1318,7 @@ function openEnding(which){
   const rb=document.createElement("button");rb.className="eswitch-btn restart";
   rb.innerHTML=`<div class="es-cond">START OVER</div><div class="es-name">Return to the file</div>`;
   rb.addEventListener("click",goHome);sw.appendChild(rb);
+  track("/ending/"+which,"Ending — "+E.label);
   window.scrollTo({top:0,behavior:"instant"});
 }
 
@@ -1342,6 +1331,8 @@ function showPage(which){
   });
   $("#homeBtn").classList.toggle("active",which==="landing");
   $("#resourcesBtn").classList.toggle("active",which==="resources");
+  if(which==="resources")track("/resources","Resources");
+  else if(which==="landing")track("/","Home");
   window.scrollTo({top:0,behavior:"instant"});
   if(which==="landing"&&typeof drawFlowLinks==="function"){ setTimeout(drawFlowLinks,30); }
 }
