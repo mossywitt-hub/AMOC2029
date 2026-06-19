@@ -3,10 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://amoc2029.goatcounter.com; connect-src 'self' https://amoc2029.goatcounter.com; base-uri 'self'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.visibility="hidden";}}</script>
 <title>When The Sea Slows</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#faf7f0; --paper-deep:#f2efe6; --paper-card:#fffdf8;
@@ -1390,11 +1393,17 @@ document.addEventListener("click",e=>{
   if(document.activeElement)document.activeElement.blur();
 });
 
-fnOrder=buildFnOrder();
-buildLanding();
-buildResources();
-$("#ledgerPin").innerHTML=ledgerMarkup(D.scenes[0].ledger,true,D.tickers[D.scenes[0].id]);
-$("#homeBtn").classList.add("active");
+try{
+  fnOrder=buildFnOrder();
+  buildLanding();
+  buildResources();
+  $("#ledgerPin").innerHTML=ledgerMarkup(D.scenes[0].ledger,true,D.tickers[D.scenes[0].id]);
+  $("#homeBtn").classList.add("active");
+}catch(err){
+  console.error("WTSS init failed:",err);
+  var f=document.getElementById("frame");
+  if(f)f.innerHTML='<div style="max-width:520px;margin:18vh auto;padding:0 1.5rem;font-family:Georgia,serif;color:#3a352a;text-align:center;line-height:1.6;"><p style="font-size:21px;margin:0 0 .4rem;">This page is temporarily unavailable.</p><p style="font-size:14px;color:#8a8268;margin:0;">Please try again shortly.</p></div>';
+}
 </script>
 <script>
 /* ---- access gate (soft, client-side curtain) ---- */
