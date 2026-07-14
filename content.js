@@ -434,59 +434,54 @@ scenes: [
 /* ---- news ticker: one list of rolling headlines per scene (+ home) ---- */
 tickers:{
   home:[
-    "AMOC slowdown moves from the journals into cabinet briefings",
+    "AMOC slowdown moves from the journals into government briefings",
     "New government promises “competence, not slogans”",
     "Finance ministry warns fiscal headroom is “evaporating”",
     "Insurers quietly redraw their North Atlantic risk maps",
     "PM: “We will explain the trade-offs before the weather does”"
   ],
   department:[
-    "Cabinet Office confirms new Department of Climate Resilience",
-    "Scientists hand ministers a “planning paper” on AMOC collapse",
-    "Markets shrug — one analyst calls it “weather astrology”",
-    "Opposition: “a ministry for problems we can’t afford”",
+    "Government confirms new Department of Climate Resilience",
+    "Scientists hand officials a “planning paper” on AMOC collapse",
+    "Markets shrug about “weather astrology”",
+    "Opposition: “a department for problems we can’t afford”",
     "Leaked annex flags coastal hospitals at risk within years",
-    "Iberian heatwave smashes records — 45°C in southern Spain",
-    "Évora grid falters as the heat refuses to break",
-    "Hospitals overwhelmed as medics treat heat cases on their feet",
-    "Emergency plans built for cooler three-day heatwaves buckle"
+    "Iberian heatwave smashes records — 45°C in southern Spain"
   ],
   jobs:[
-    "Gas-plant standby deal splits the cabinet",
+    "Gas-plant standby deal splits the government",
     "Unions warn against “transition by contempt”",
     "Sloane: “You can’t decarbonize on an empty stomach”",
     "Reserve-margin fears grow as cold-snap forecasts worsen",
-    "Tabloids christen the ministry “the Department of Constant Cost”",
+    "Tabloids christen “Department of Constant Cost”",
     "Winter heating bills tick up again"
   ],
   sunshade:[
     "SECRET SUN-DIMMING TALKS, claim the morning papers",
     "Minister attended Voss Foundation roundtable on geoengineering",
-    "Backbencher demands resignation “before breakfast”",
     "Make Sunsets sells more “cooling credits” without oversight",
-    "Stardust raises fresh funds for a proprietary aerosol",
-    "Government line: “research is not deployment”"
+    "SkyParasol raises fresh funds for a proprietary aerosol",
+    "Government line: “research is not deployment”",
+    "Capital to top 35C for 2 weeks, water rationing across region"
   ],
   seam:[
     "BREAKING: coastal hospital ground floor underwater",
     "Two confirmed dead in a basement apartment off the harbor road",
-    "Barrier closes — the river keeps arriving",
-    "Insurers pause approvals in flood-hit zip codes",
-    "“Climate mortgage prisoners” enters the headlines",
-    "Cabinet split over deferring the adaptation budget"
+    "Barrier closes — river keeps arriving",
+    "Insurers pause approvals in flood-hit areas",
+    "Government split over deferring the adaptation budget"
   ],
   grid:[
     "Grid Commons Act scrapes through its final reading",
     "Co-op energy bloc flexes its weight at the ballot box",
     "Big six lobby to strip co-op connection rights",
     "Renters’ provisions cut to a three-city pilot",
-    "Sloane: “a subsidy architecture for homeowners with apps”",
-    "Locational-pricing row threatens to split the party"
+    "Sloane: “a subsidy architecture for homeowners with apps”"
   ],
   ground:[
     "Empty shelves as breadbasket failures stack up",
     "Agricultural Resilience Plan draws farmer fury",
-    "TAXES FOR TADPOLES, screams the front page",
+    "TAXES FOR TADPOLES, say the front pages",
     "Subsidy logic shifts from acreage to resilience metrics",
     "South Asian floods and American droughts hit imports",
     "Emergency grain reserve announced"
@@ -495,7 +490,6 @@ tickers:{
     "Election day: a referendum on resilience",
     "Polls put the far right neck-and-neck with the government",
     "“Pay early or pay later” dominates the doorstep",
-    "Flood-hit areas split street by street",
     "Turnout reported strong in the co-op areas",
     "Counts begin amid record postal ballots"
   ]

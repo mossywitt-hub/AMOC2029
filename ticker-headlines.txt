@@ -1,5 +1,5 @@
 WHEN THE SEA SLOWS  —  NEWS TICKER HEADLINES
-Generated from content.js.  50 headlines across 8 sections.
+Generated from content.js.  44 headlines across 8 sections.
 
 HOW TO EDIT
   - Change the text after each ID (e.g. "DEPARTMENT-3: ...").
