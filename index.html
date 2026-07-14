@@ -7,9 +7,11 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <script>if(window.top!==window.self){try{window.top.location=window.self.location;}catch(e){document.documentElement.style.visibility="hidden";}}</script>
 <title>When The Sea Slows</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="alternate icon" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Spline+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Spline+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#faf7f0; --paper-deep:#f2efe6; --paper-card:#fffdf8;
@@ -173,9 +175,9 @@ button{font-family:inherit;}
 .fblock.navy .cs p a:hover{color:var(--navy-ink);}
 .fblock.navy .fn sup{color:#9fc2dc;}
 .team-intro{font-family:var(--sans);font-size:14.5px;line-height:1.8;color:var(--ink-3);max-width:760px;margin:0 0 1.6rem;}
-.resources{display:none;background:var(--paper);padding:3rem 2.5rem 3.5rem;}
+.resources{display:none;background:var(--paper);padding:3rem 0 3.5rem;}
 .resources.active{display:block;}
-.res-inner{max-width:960px;margin:0 auto;}
+.res-inner{max-width:1040px;margin:0 auto;padding:0 2.5rem;}
 .res-kicker{font-family:var(--mono);font-size:11px;letter-spacing:0.13em;color:var(--muted);margin-bottom:1rem;}
 .res-title{font-family:var(--serif);font-size:clamp(34px,5vw,46px);line-height:1.06;color:var(--ink);margin:0 0 0.6rem;}
 .res-intro{font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink-2);max-width:720px;margin:0 0 2.5rem;}
@@ -184,6 +186,23 @@ button{font-family:inherit;}
 .res-section p{font-family:var(--sans);font-size:14.5px;line-height:1.8;color:var(--ink-3);margin:0 0 1.1rem;max-width:760px;}
 .res-section blockquote{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.55;color:var(--ink-2);margin:0 0 1.4rem;padding-left:1.2rem;border-left:2px solid #c9bfa3;max-width:700px;}
 .res-placeholder{font-family:var(--mono);font-size:12px;color:var(--faint);background:var(--paper-deep);border:0.5px dashed #cfc8b6;padding:1rem 1.2rem;margin-bottom:1.1rem;}
+.res-subh{font-family:var(--mono);font-size:11px;letter-spacing:0.13em;text-transform:uppercase;color:var(--muted);margin:2rem 0 1rem;}
+.org{display:flex;gap:22px;align-items:flex-start;margin:0 0 1.6rem;}
+.org-logo{flex-shrink:0;width:64px;display:flex;align-items:flex-start;justify-content:center;}
+.org-logo svg{display:block;width:58px;height:58px;}
+.scri-logo{width:132px;flex-shrink:0;background:#e9826b;border-radius:4px;padding:11px 12px 13px;display:flex;flex-direction:column;line-height:0.98;}
+.scri-logo span{font-family:var(--sans);font-weight:700;font-size:19px;letter-spacing:-0.015em;color:#fff;}
+.org-strap{flex:1;font-family:var(--sans);font-size:14.5px;line-height:1.75;color:var(--ink-3);margin:0;}
+.org-strap a,.res-section p a{color:var(--steel);text-decoration:underline;text-underline-offset:2px;}
+.res-btn{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:0.05em;color:var(--faint);background:var(--paper-deep);border:0.5px dashed #cfc8b6;padding:0.7rem 1.2rem;margin-top:0.4rem;}
+.fr-item{margin:0 0 1.4rem;} .fr-item:last-child{margin-bottom:0;}
+.fr-t{font-family:var(--serif);font-size:17px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line-2);}
+.fr-t:hover{border-bottom-color:var(--steel);}
+.fr-d{font-family:var(--sans);font-size:13.5px;line-height:1.7;color:var(--ink-3);margin:0.4rem 0 0;max-width:760px;}
+.res-empty{font-family:var(--sans);font-size:14px;color:var(--faint);font-style:italic;margin:0;}
+.fblock.navy .fr-t{color:var(--navy-ink);border-bottom-color:var(--navy-2);}
+.fblock.navy .fr-t:hover{border-bottom-color:#9fc2dc;}
+.fblock.navy .fr-d{color:#c8d2da;} .fblock.navy .res-empty{color:var(--navy-faint);}
 .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem 2rem;}
 .member .m-name{font-family:var(--serif);font-size:16px;color:var(--ink);margin-bottom:5px;}
 .member .m-bio{font-family:var(--sans);font-size:13px;line-height:1.65;color:var(--ink-4);}
@@ -499,7 +518,7 @@ button{font-family:inherit;}
 @media(max-width:620px){
   .landing,.read-col,.ending{padding-left:1.4rem;padding-right:1.4rem;}
   .masthead{padding:11px 1.4rem;} .dept{font-size:10px;letter-spacing:0.07em;}
-  .fblock-head,.fblock-inner,.rail{padding-left:1.4rem;padding-right:1.4rem;}
+  .fblock-head,.fblock-inner,.rail,.res-inner{padding-left:1.4rem;padding-right:1.4rem;}
   .ledger-pin{padding-left:1.4rem;padding-right:1.4rem;}
   .home-wrap .ledger{width:100%;margin-left:0;border-left:none;border-top:0.5px solid var(--line);order:2;}  .tier{flex-wrap:wrap;gap:10px;margin-bottom:38px;} .node .n-name{font-size:13.5px;}
   .outcomes-tier{flex-direction:column;} .onode{max-width:none;} .cs p,.cs blockquote{max-width:none;}
@@ -1343,47 +1362,57 @@ function showPage(which){
   $("#resourcesBtn").classList.toggle("active",which==="resources");
   if(which==="resources")track("/resources","Resources");
   else if(which==="landing")track("/","Home");
+  if(which==="resources"){ if(location.hash!=="#resources") location.hash="resources"; }
+  else if(which==="landing"){ if(location.hash) history.replaceState(null,"",location.pathname+location.search); }
   window.scrollTo({top:0,behavior:"instant"});
   if(which==="landing"&&typeof drawFlowLinks==="function"){ setTimeout(drawFlowLinks,30); }
 }
 function goHome(){ showPage("landing"); }
+/* deep-link: amoc2029.org/#resources opens the Resources page directly */
+function routeFromHash(){
+  if(location.hash==="#resources"){ if(!$("#resources").classList.contains("active")) showPage("resources"); }
+  else if($("#resources").classList.contains("active")){ showPage("landing"); }
+}
+window.addEventListener("hashchange",routeFromHash);
 
 function buildResources(){
+  const R=D.resources;
+  const psMark=`<svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="9.5" fill="#5b8fb0"/><ellipse cx="22" cy="22" rx="19" ry="7" fill="none" stroke="#c9d4dc" stroke-width="2.4" transform="rotate(-24 22 22)"/></svg>`;
   const csHtml = D.complexSystems.map(item=>{
     if(typeof item==="object"&&item.quote){
       return `<blockquote>${item.quote}<span style="display:block;font-family:var(--mono);font-style:normal;font-size:11px;color:var(--faint);margin-top:0.7rem;letter-spacing:0.05em;">&mdash; Leonard Read, &lsquo;I, Pencil&rsquo;, 1958</span></blockquote>`;
     }
     return `<p>${item}</p>`;
   }).join("");
-  const giHtml = D.getInvolved.map(p=>`<p>${p}</p>`).join("");
+  const frHtml=R.furtherReading.map(x=>`<div class="fr-item"><a class="fr-t" href="${x.u}" target="_blank" rel="noopener noreferrer">${x.t}</a><p class="fr-d">${x.d}</p></div>`).join("");
+  const expander=(id,cls,kicker,title,innerCls,inner)=>`<div class="fblock ${cls}" id="${id}"><button class="fblock-head" data-fb="${id}"><span class="fk">${kicker}</span><span class="ftitle">${title}</span><span class="chev">&#8964;</span></button><div class="fblock-body"><div class="fblock-inner ${innerCls}">${inner}</div></div></div>`;
   $("#resources").innerHTML=`<div class="res-inner">
     <div class="res-kicker">RESOURCES</div>
     <h2 class="res-title">Get involved &amp; learn more</h2>
-    <p class="res-intro">A growing set of resources to go deeper on the science, the politics, and what individuals can do. More to come.</p>
+    <p class="res-intro">A growing set of resources to go deeper on the science, the politics, and what individuals can do.</p>
     <div class="res-section">
-      <h3>Get involved</h3>
-      ${giHtml}
-      <div class="form-grid" style="margin-top:1.25rem;">
-        <div class="field"><label for="cName">NAME</label><input id="cName" type="text" placeholder="Your name"></div>
-        <div class="field"><label for="cEmail">EMAIL</label><input id="cEmail" type="email" placeholder="you@example.com"></div>
-        <div class="field"><label for="cMsg">MESSAGE</label><textarea id="cMsg" rows="4" placeholder="What would you like to tell us?"></textarea></div>
-        <button class="form-submit" id="cSubmit">Send</button>
-        <p class="form-note" id="cNote">Placeholder form &mdash; not yet wired to a backend.</p>
-      </div>
+      <h3>About us</h3>
+      <div class="org"><div class="org-logo">${psMark}</div><p class="org-strap">${R.about}</p></div>
+      <div class="res-subh">In collaboration with</div>
+      <div class="org"><div class="scri-logo" role="img" aria-label="Strategic Climate Risks Initiative"><span>Strategic</span><span>Climate</span><span>Risks</span><span>Initiative</span></div><p class="org-strap">${R.collab}</p></div>
     </div>
     <div class="res-section">
-      <h3>A note on complex systems</h3>
-      ${csHtml}
+      <h3>Donate</h3>
+      <p>${R.donate}</p>
+      <span class="res-btn" role="button" aria-disabled="true">Donate &mdash; link coming soon</span>
     </div>
     <div class="res-section">
-      <h3>Further reading</h3>
-      <div class="res-placeholder">Placeholder &mdash; reading list, data sources, and links to come.</div>
+      <h3>Briefings</h3>
+      <p>${R.briefings}</p>
     </div>
+  </div>
+  <div class="footer-stack">
+    ${expander("fb-res1","deep","RESOURCES I","What you can do","",`<p class="res-empty">Coming soon.</p>`)}
+    ${expander("fb-res2","navy","RESOURCES II","Transition optimism","",`<p class="res-empty">Coming soon.</p>`)}
+    ${expander("fb-res3","deep","RESOURCES III","Note on complex systems","cs",csHtml)}
+    ${expander("fb-res4","navy","RESOURCES IV","Further reading","",frHtml)}
   </div>`;
-  $("#cSubmit").addEventListener("click",()=>{
-    const n=$("#cName").value.trim(),e=$("#cEmail").value.trim();
-    $("#cNote").innerHTML=(n&&e)?"Thanks &mdash; placeholder form; nothing was sent yet.":"Add a name and email. (Placeholder form &mdash; not yet wired to a backend.)";
-  });
+  document.querySelectorAll("#resources .fblock-head").forEach(hd=>hd.addEventListener("click",()=>document.getElementById(hd.dataset.fb).classList.toggle("open")));
 }
 
 $("#homeBtn").addEventListener("click",goHome);
@@ -1406,6 +1435,7 @@ try{
   buildResources();
   $("#ledgerPin").innerHTML=ledgerMarkup(D.scenes[0].ledger,true,D.tickers[D.scenes[0].id]);
   $("#homeBtn").classList.add("active");
+  routeFromHash();
 }catch(err){
   console.error("WTSS init failed:",err);
   var f=document.getElementById("frame");

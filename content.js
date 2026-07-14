@@ -87,6 +87,19 @@ complexSystems: [
   "All of this goes some way to explaining why climate change is such an intractable problem. Hard to measure, hard to predict, hard to even think about. But that same complexity is the key to understanding how we can navigate a safe path forward. This resource is a guide to making effective decisions in light of high uncertainty, and to contributing as individuals to a safe and optimistic future."
 ],
 
+resources:{
+  about:"Planetary Solvency is a research and strategy organisation that brings together an unusual combination of disciplines — actuarial science, Earth system science and policy expertise — in response to systemic climate and nature risks. We develop resources, convene events, conduct <a href=\"https://actuaries.org.uk/news-and-media-releases/news-articles/2025/jan/16-jan-25-planetary-solvency-finding-our-balance-with-nature/\" target=\"_blank\" rel=\"noopener noreferrer\">research</a> and brief business and political leaders on systemic risks and resilience strategies.",
+  collab:"The Strategic Climate Risks Initiative is a think and do tank that builds tools and capabilities to navigate the new climate reality.",
+  donate:"Planetary Solvency is a UK registered charity hosted by the Cambridge Institute of Sustainable Leadership. You can donate to us at the link below. If you are a philanthropic funder, please reach out directly to <a href=\"mailto:funding@planetarysolvency.org\">funding@planetarysolvency.org</a>.",
+  briefings:"Planetary Solvency and SCRI run regular briefings for business leaders, financial services professionals and policymakers in the US, UK, and around the world. If you are interested in a briefing on AMOC or other systemic climate risks and their strategic implications, please reach out to <a href=\"mailto:briefings@planetarysolvency.org\">briefings@planetarysolvency.org</a>.",
+  furtherReading:[
+    {t:"Five Times Faster", u:"https://fivetimesfaster.org/", d:"One of the FT’s Best Books of 2023, with the status practically of a set text in the professional climate risk world. Sharpe pulls at the differences between risk and research thinking and how they have led to dangerous oversights in climate policy."},
+    {t:"Planetary Solvency: finding our balance with nature", u:"https://actuaries.org.uk/news-and-media-releases/news-articles/2025/jan/16-jan-25-planetary-solvency-finding-our-balance-with-nature/", d:"The Institute and Faculty of Actuaries’ flagship report applying risk-management discipline to climate and nature — and the origin of the Planetary Solvency framing."},
+    {t:"Derailment Risk — Strategic Climate Risks Initiative", u:"https://www.scri.org.uk/publications/report-derailment-risk", d:"SCRI’s cornerstone report on how escalating climate shocks can knock the politics of decarbonisation off course: the dynamic dramatised throughout this resource."},
+    {t:"The Ministry for the Future — Kim Stanley Robinson", u:"https://en.wikipedia.org/wiki/The_Ministry_for_the_Future", d:"The definitive novel of climate finance and governance, and a natural companion to a narrative resource — firmly on the decision-useful side of the doomer line."}
+  ]
+},
+
 teamIntro:"Planetary Solvency is an association of academics, policymakers, and financial decision makers. It focuses on risk-based approaches to climate shocks and related earth systems challenges.",
 
 team: [
