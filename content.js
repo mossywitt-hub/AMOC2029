@@ -100,7 +100,7 @@ team: [
 baseline:{year:"2029", sub:"The beginning",
   debt:90, debtD:1.5, deficit:3.8, deficitD:0.4, inflation:3.2, inflationD:0.3, yield10:4.2, yield10D:0.2,
   poll:{gov:[44,2], opp:[30,-2], far:[9,1], left:[6,0]},
-  infra:1, ins:null, unins:null},
+  infra:1, ins:null, unins:null, food:20, water:5},
 
 scenes: [
   {
@@ -109,7 +109,7 @@ scenes: [
     ledger:{year:"2029",
       debt:90, debtD:1.5, deficit:3.8, deficitD:0.4, inflation:3.4, inflationD:0.2, yield10:4.3, yield10D:0.1,
       poll:{gov:[44,0], opp:[30,0], far:[9,0], left:[6,0]},
-      infra:1, ins:0.6, unins:1.1},
+      infra:1, ins:0.6, unins:1.1, food:19, water:18},
     body:[
       "Miriam’s chief of staff, Tom Fender, stood in the doorway of her new office with two coffees and the expression of a man who had already watched his schedule collapse before nine.",
       "“Defense wants you first,” he said. “Finance after. But there’s a scientist in the outer office who’s saying if you don’t see him immediately he’ll end up briefing the prime minister instead, which sounds like a threat.”",
@@ -150,7 +150,7 @@ scenes: [
     ledger:{year:"2030",
       debt:92, debtD:2, deficit:4.6, deficitD:0.8, inflation:4.1, inflationD:0.7, yield10:4.6, yield10D:0.3,
       poll:{gov:[40,-4], opp:[32,2], far:[11,2], left:[7,1]},
-      infra:1, ins:2.1, unins:4.0},
+      infra:1, ins:2.1, unins:4.0, food:17, water:0},
     body:[
       "The first real fight Miriam took on, a few months in, was about gas and jobs. It was really about what counted as realism. The science said colder, more volatile winters were coming before the grid could catch up.[winter-weather] That left some brutal tradeoffs: how much fossil capacity do we keep online? Which communities will be expected to pay the price?",
       "If she got this wrong, Miriam could lose her government essential support from urban pro-resilience voters and key industrial communities in one muddled bill.",
@@ -169,7 +169,7 @@ scenes: [
       "After the last clacking of his boots had faded away, Priya shut the folder with more force than necessary. “If we give them this, they’ll be back in six months with a second version – capacity guarantees, or something.”",
       "“They’re already drafting the briefing,” Tom said. “They have three of our narrowest seats. The jobs argument works because it’s the one people trust,” he went on. “The abstract future doesn’t beat payroll on Friday.”",
       "“I know why it works,” Miriam said, sharper than usual.",
-      "Tom raised his hands, palms out, peace gesture. What she did not say was that she knew the smell of those towns too. She had campaigned in shipbuilding wards where every conversation turned to fathers and sons and the simple humiliation of being told the economy had moved on. For years politics had treated fossil decline as if it were morally self-executing: a good thing, therefore a socially manageable thing.",
+      "Tom raised his hands, palms out, peace gesture. What she did not say was that she knew the smell of those towns too. She had campaigned in shipbuilding districts where every conversation turned to fathers and sons and the simple humiliation of being told the economy had moved on. For years politics had treated fossil decline as if it were morally self-executing: a good thing, therefore a socially manageable thing.",
       {paper:true},
       "That evening the argument moved upstairs.",
       "The finance minister wanted to shrink the proposal and bury it deep enough inside a productivity package to avoid headlines about subsidy. The energy minister wanted the full reserve plan approved before winter modeling worsened again. Meanwhile every evening news segment seemed to contain Daniel Sloane calmly discussing “energy realism” with what felt like all the media outlets in the country, and the first hostile column had started referring to Miriam’s new office as the Department of Constant Cost.",
@@ -203,7 +203,7 @@ scenes: [
     ledger:{year:"2031",
       debt:95, debtD:3, deficit:5.2, deficitD:0.6, inflation:3.7, inflationD:-0.4, yield10:4.8, yield10D:0.2,
       poll:{gov:[35,-5], opp:[34,2], far:[14,3], left:[8,1]},
-      infra:1, ins:3.9, unins:7.8},
+      infra:1, ins:3.9, unins:7.8, food:16, water:35},
     body:[
       "If the AMOC memo forced the government to think about energy, flood, and food together, it also forced a question most people still preferred not to think about: what happened when adaptation and emissions cuts looked too slow, and somebody offered to buy time by altering the sky?",
       "The invitation came on thick creamy paper, the wording precise and tasteful. A private roundtable on climate intervention research and governance. The sponsors were the defense investment organization, a large venture capital fund, and of course the Voss Foundation—the main philanthropic vehicle for billionaire Philip Voss.",
@@ -260,7 +260,7 @@ scenes: [
     ledger:{year:"2032",
       debt:99, debtD:4, deficit:6.4, deficitD:1.2, inflation:4.9, inflationD:1.2, yield10:5.4, yield10D:0.6,
       poll:{gov:[32,-3], opp:[33,-1], far:[18,4], left:[9,1]},
-      infra:2, ins:9.6, unins:20.6},
+      infra:2, ins:9.6, unins:20.6, food:14, water:0},
     body:[
       "The first major flood did not settle any scientific argument. It did something simpler: it drowned the ground floor of a hospital, knocked out power to a pumping station, and trapped two hundred families in homes they could no longer insure or refinance; it did all this before lunch.[flood-hospitals]",
       "For two days the weather had been described on television as erratic, which secretly meant very bad and yet too compound to fit inside a single warning color.",
@@ -304,7 +304,7 @@ scenes: [
     ledger:{year:"2033",
       debt:103, debtD:4, deficit:6.9, deficitD:0.5, inflation:4.4, inflationD:-0.5, yield10:5.6, yield10D:0.2,
       poll:{gov:[33,1], opp:[30,-3], far:[21,3], left:[11,2]},
-      infra:2, ins:12.4, unins:28.0},
+      infra:2, ins:12.4, unins:28.0, food:12, water:12},
     body:[
       "If the country was going to need more resilience, it wasn’t just going to be big utilities that mattered. Cooperatives that owned panels, batteries and chargers were turning into a bloc, and the bloc was voting.",
       "For years governments had spoken about distributed energy as a small-scale technical feature of the transition: the rooftop solar, the home batteries, the electric vehicles. Then Hormuz happened. And enough people bought the equipment, or joined a local program, or put money into a community energy share offer, and ownership created political identity very quickly.",
@@ -350,7 +350,7 @@ scenes: [
     ledger:{year:"2034",
       debt:108, debtD:5, deficit:7.8, deficitD:0.9, inflation:5.8, inflationD:1.4, yield10:6.1, yield10D:0.5,
       poll:{gov:[30,-3], opp:[27,-3], far:[26,5], left:[13,2]},
-      infra:3, ins:15.3, unins:36.5},
+      infra:3, ins:15.3, unins:36.5, food:6, water:65},
     body:[
       "By the fourth year, the government were polling badly and fighting on both flanks. Miriam knew she\u2019d held onto her Ministry less for her successes than because no one else wanted the job. It was conventional wisdom in political circles that the Department was the worst kind of poisoned chalice: unpopular for every measure it passed, yet criticized for doing too little when every crisis hit.",
       "And suddenly there were empty supermarket shelves. For weeks the news had been filled with South Asian flood losses and droughts across the Americas, and now local production was threatened too. It all came back to the same problem: how do you manage food production when assumptions about planting barely held steady for a single cycle?",
@@ -395,7 +395,7 @@ scenes: [
     ledger:{year:"2034",
       debt:108, debtD:5, deficit:7.8, deficitD:0.9, inflation:5.5, inflationD:-0.3, yield10:6.3, yield10D:0.2,
       poll:{gov:[30,0], opp:[26,-1], far:[30,4], left:[12,-1]},
-      infra:3, ins:16.1, unins:40.3},
+      infra:3, ins:16.1, unins:40.3, food:6, water:10},
     body:[
       "By the final two weeks the campaign had simplified itself as campaigns tend to do, with slogans repeated until they no longer sounded like words.",
       "“Resilient and responsible” met “uncertain and expensive”. “Decisive strategy” met “out of touch”. “The price of long term growth” met “the price of milk”.",
@@ -417,7 +417,7 @@ scenes: [
       "“The same thing everyone wants, you know,” Miriam said, tucking the phone into her bag. “To avoid paying for indecision.”",
       "The count that night took place among folding tables, bundles of ballots, the tired routine pride of civic ceremony. Miriam had always loved counts because they used to feel like a pure machine, orderly input then clean tally. But now they meant something more: her daughter at thirty, forty, sixty, needing systems to keep working.",
       "Midday, a young woman in work boots had dropped her ballot into the box without looking at her. When Miriam had thanked her for coming out, she had shrugged. “My mother lost her house in the flood. The insurance paid half of what it was worth.” She picked up her jacket. “I’m not sure any of this works anymore. But not voting is probably a vote for the people who broke it.”",
-      "Around midnight the first boxes from the neighborhoods near the ring road came in stronger than expected, but the outer villages were worse. The flood-hit wards split strangely, almost house by house. Streets with active community energy programs moved to her, remembering grid connection dates and local bill relief and local organizers who knew exactly which cul-de-sacs to knock. The early looks at the old marina district were ugly.",
+      "Around midnight the first boxes from the neighborhoods near the ring road came in stronger than expected, but the outer villages were worse. The flood-hit areas split strangely, almost house by house. Streets with active community energy programs moved to her, remembering grid connection dates and local bill relief and local organizers who knew exactly which cul-de-sacs to knock. The early looks at the old marina district were ugly.",
       "At half one the officials asked candidates to remain available.",
       "At two seventeen Nina sent a message from university: Whatever happens, get some sleep.",
       "At two forty-three the final verified bundles were carried over.",
@@ -495,8 +495,8 @@ tickers:{
     "Election day: a referendum on resilience",
     "Polls put the far right neck-and-neck with the government",
     "“Pay early or pay later” dominates the doorstep",
-    "Flood-hit wards split street by street",
-    "Turnout reported strong in the co-op wards",
+    "Flood-hit areas split street by street",
+    "Turnout reported strong in the co-op areas",
     "Counts begin amid record postal ballots"
   ]
 },

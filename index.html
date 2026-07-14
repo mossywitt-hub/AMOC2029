@@ -409,6 +409,9 @@ button{font-family:inherit;}
 .infra-step.current.strained{color:var(--clay-deep);background:var(--clay-bg);border-color:var(--clay-line);}
 .infra-step.current.failing{color:var(--alarm);background:var(--alarm-bg);border-color:var(--alarm-line);}
 .infra-arrow{color:#d8cdb0;font-size:10px;}
+.lrow.impact{margin-bottom:0.75rem;}
+.lrow.impact .imp-v{font-family:var(--serif);font-size:15px;color:var(--ink);line-height:1;display:flex;align-items:baseline;gap:5px;}
+.lrow.impact .imp-u{font-family:var(--mono);font-size:8.5px;color:var(--faint);letter-spacing:0.02em;}
 .ledger-spark{border-top:0.5px solid var(--line-2);padding-top:0.9rem;margin-top:0.3rem;}
 .spark-k{font-family:var(--mono);font-size:9px;letter-spacing:0.08em;color:#a89a7a;margin-bottom:7px;}
 .spark-bars{display:flex;align-items:flex-end;gap:3px;height:36px;}
@@ -478,7 +481,7 @@ button{font-family:inherit;}
   .ledger{width:100%;border-left:none;border-top:0.5px solid var(--line);}
   .ledger-pin{position:static;display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem;padding:1.3rem 2.5rem;max-height:none;overflow:visible;}
   .ledger-head{grid-column:1/-1;margin-bottom:0;} .ledger-spark{grid-column:1/-1;}
-  .lrow.lyear,.lrow.poll,.lrow.infra,.lrow.loss,.ticker,.lsection,.ftiles{grid-column:1/-1;}
+  .lrow.lyear,.lrow.poll,.lrow.infra,.lrow.impact,.lrow.loss,.ticker,.lsection,.ftiles{grid-column:1/-1;}
   .read-col{max-width:none;}
   .rail{top:44px;}
   /* scene reader: ledger becomes a collapsible card under the chapter title */
@@ -1087,6 +1090,8 @@ function ledgerMarkup(d,wi,ticker){
   /* Climate impacts */
   h+=`<div class="lsection">Climate impacts</div>`;
   h+=`<div class="lrow infra"><div class="ll">CRITICAL INFRASTRUCTURE</div><div class="infra-track"${wi?' id="L_infra"':""}>${infraHTML(d.infra)}</div></div>`;
+  h+=`<div class="lrow impact"><div class="ll">FOOD-BANK RELIANCE</div><div class="imp-v"><span${wi?' id="L_food"':""}>1 in ${d.food}</span><span class="imp-u">households</span></div></div>`;
+  h+=`<div class="lrow impact"><div class="ll">WATER RATIONS</div><div class="imp-v"><span${wi?' id="L_water"':""}>${d.water}%</span><span class="imp-u">of the country</span></div></div>`;
   h+=`<div class="lrow loss"><div class="ll">LOSSES SINCE 2029</div>`+
      `<div class="lossbar"><span class="ls-ins"${wi?' id="L_insbar"':""} style="width:${lossW(d.ins)}%"></span><span class="ls-unins"${wi?' id="L_uninsbar"':""} style="width:${lossW(d.unins)}%"></span></div>`+
      `<div class="loss-legend"><span class="lg ins"><i></i>INS&nbsp;<b${wi?' id="L_ins"':""}>${lossFig(d.ins)}</b></span>`+
@@ -1108,6 +1113,8 @@ function paintLedger(i){
     setDelta("poll_"+k+"_d",a[1],0,k==="gov");
   });
   $("#L_infra").innerHTML=infraHTML(Lg.infra);
+  $("#L_food").textContent="1 in "+Lg.food;
+  $("#L_water").textContent=Lg.water+"%";
   $("#L_insbar").style.width=lossW(Lg.ins)+"%";
   $("#L_uninsbar").style.width=lossW(Lg.unins)+"%";
   $("#L_ins").innerHTML=lossFig(Lg.ins);
