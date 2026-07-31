@@ -112,6 +112,7 @@ button{font-family:inherit;}
 .node.s4{border-left-color:#b0894d;}
 .node.s5{border-left-color:var(--clay);}
 .node.s6{border-left-color:#9a3a2a;}
+.node.s7{border-left-color:#4a7c74;}
 .outcomes-tier{gap:14px;margin-top:6px;}
 .onode{flex:1;max-width:240px;border:1.5px solid;padding:14px 16px;cursor:pointer;text-align:left;background:var(--paper-card);transition:transform .15s,box-shadow .2s;font-family:inherit;}
 .onode:hover{transform:translateY(-2px);box-shadow:3px 4px 0 rgba(60,55,40,0.1);}
@@ -599,7 +600,7 @@ button{font-family:inherit;}
 <script>
 const D = window.WTSS;
 const $ = s=>document.querySelector(s);
-const ROMAN=["I","II","III","IV","V","VI","VII"];
+const ROMAN=["I","II","III","IV","V","VI","VII","VIII"];
 /* analytics: fire a virtual pageview on SPA navigation (GoatCounter; no-ops if blocked, absent, or on localhost) */
 function track(path,title){
   try{ if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:path,title:title}); }catch(e){}
@@ -675,12 +676,13 @@ function buildLanding(){
                 <button class="node s2" data-scene="2"><span class="n-num">SCENE III</span><span class="n-name">${D.scenes[2].title}</span></button>
                 <button class="node s3" data-scene="3"><span class="n-num">SCENE IV</span><span class="n-name">${D.scenes[3].title}</span></button>
                 <button class="node s4" data-scene="4"><span class="n-num">SCENE V</span><span class="n-name">${D.scenes[4].title}</span></button>
-              </div>
-              <div class="tier">
                 <button class="node s5" data-scene="5"><span class="n-num">SCENE VI</span><span class="n-name">${D.scenes[5].title}</span></button>
               </div>
               <div class="tier">
                 <button class="node s6" data-scene="6"><span class="n-num">SCENE VII</span><span class="n-name">${D.scenes[6].title}</span></button>
+              </div>
+              <div class="tier">
+                <button class="node s7" data-scene="7"><span class="n-num">SCENE VIII</span><span class="n-name">${D.scenes[7].title}</span></button>
               </div>
               <div class="tier outcomes-tier">
                 <button class="onode good" data-ending="good"><span class="o-cond">IF IT COMPOUNDS</span><span class="o-name">${D.endings.good.label}</span></button>
@@ -722,10 +724,10 @@ function buildLanding(){
 
 /* ---- story-map connector lines (computed from rendered node positions) ---- */
 const FLOW_EDGES=[
-  [0,1],[0,2],[0,3],[0,4],
-  [1,5],[2,5],[3,5],[4,5],
-  [5,6],
-  [6,"good"],[6,"bad"]
+  [0,1],[0,2],[0,3],[0,4],[0,5],
+  [1,6],[2,6],[3,6],[4,6],[5,6],
+  [6,7],
+  [7,"good"],[7,"bad"]
 ];
 function flowNode(ref){
   if(ref==="good")return document.querySelector('.onode.good');
@@ -1145,7 +1147,7 @@ function paintLedger(i){
     D.scenes.forEach((s2,idx)=>{const d=document.createElement("button");d.className="spb";d.title=s2.title;d.addEventListener("click",()=>openScene(idx));spBars.appendChild(d);});
   }
   document.querySelectorAll("#spBars .spb").forEach((spb,idx)=>{spb.className="spb"+(idx<i?" done":idx===i?" cur":"");});
-  $("#spCount").innerHTML=`${i+1} of 7`;
+  $("#spCount").innerHTML=`${i+1} of ${D.scenes.length}`;
   const nx=D.scenes[i+1];
   $("#railNext").innerHTML=nx?("Next: "+nx.title+" &rarr;"):"Then: the outcomes &rarr;";
 }

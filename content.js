@@ -312,11 +312,49 @@ scenes: [
     ],
   },
   {
+    id:"border",
+    title:"The Hard Border",
+    ledger:{year:"2033",
+      debt:101, debtD:2, deficit:6.6, deficitD:0.2, inflation:4.7, inflationD:-0.2, yield10:5.5, yield10D:0.1,
+      poll:{gov:[32,0], opp:[32,-1], far:[20,2], left:[10,1]},
+      infra:2, ins:11.0, unins:24.0, food:13, water:0},
+    body:[
+      "By January the migration briefs were their own folder, frequently in the centre of Miriam’s desk.",
+      "Andres came back to see her. He had a new paper. He no longer needed a lanyard.",
+      "“Ah, Andres,” Miriam said, sighing. “Old friend. New data.”",
+      "He walked her through what three years of numbers had confirmed: the West African monsoon retreating further south, two failed Sahel rains, a long and violent Indian monsoon. And what this meant for them: ever more endless queues outside processing centres and ever more overcrowded boats making the ever-more difficult crossing.",
+      "No-one really called them AMOC migrants. There were other reasons, the wars and the jobs and the families already living elsewhere. It all still belonged to the same future, Miriam thought again.",
+      "“The numbers?” she asked.",
+      "Andres told her about crossing attempts up sixty-five percent more than last year, with the deaths at sea up more than that. When Tom found her that evening with the results of the latest internal polling, he told her that the flood-hit coastal areas still waiting for compensation were the ones angriest about hotel contracts for asylum claimants.",
+      "“Well,” Miriam said. “It is the same emergency budget, which means it is a competition. We built it that way.”",
+      "She knew it was just a matter of time before Marcus Webb, the home secretary, brought the paper to cabinet. She knew what it was before he started up the slide deck two months later.",
+      "“This is our Emergency Border and Migration Resilience Bill,” Marcus said. He cast a glance at Miriam; he knew her thoughts on it. “Long overdue, as we all know. A quick summary before we get into it: we’re implementing offshore processing. And bringing migrants straight into automatic detention pending determination of status. We’re going to cap family reunification. And something I think will really help: a satellite-assisted monitoring layer to manage flow across the Channel.”",
+      "“Whose satellite.” Miriam somehow already knew.",
+      "“Voss Foundation infrastructure, licensed through a defence contractor.” When she rolled her eyes Marcus sighed and said, “Miriam, the grain reserve, the flood defences, the whole Centre, none of it will survive if its government fails on immigration. You know that.”",
+      "He clicked forward to the capacity analysis. It tracked their system’s collapse point given current arrival trends, things like caseworkers and court queues and beds for the night.",
+      "“But this is only a measure of our current resources,” Miriam said. “We could try requisitioning more buildings and expanding the legal routes — we could process people before they reach the Channel at all.”",
+      "“We could,” the finance minister agreed. Miriam could tell from her tone they wouldn’t.",
+      "“We’re already moving families away from the coast,” Marcus said. “Think about how this will look when they’re already living in temporary accommodation.”",
+      "“Our citizens are in need,” Miriam acknowledged. “These people are too.”",
+      "She knew it was mainly a lost cause when the prime minister looked at her.",
+      "“Yes, but we can reach the point where we’re unable to help both. You were the one who said we should explain the trade-offs before the weather explained them for us.”",
+      "Miriam hadn’t meant like this, or had she? She fought the Bill for eleven days after that. She got the child detention clause struck entirely, and a safe-route quota written in for people displaced by climate disaster specifically. She did not get the offshore centre removed, or Voss’s cameras away from the cliffs.",
+      "The bill passed. On the news that night, the same anchor who had once christened her department the Department of Constant Cost called her a minister “who understands hard choices.”",
+      "She had known hard choices might have been necessary, but she did not feel she understood anything. That night Nina was the one who rang, and even the ring felt accusatory.",
+      "“You told me that panic makes bad policy.”",
+      "“The alternative was a worse bill,” Miriam said. She believed it but wasn’t sure whether it was true. On the muted television on the wall a woman sat with three children and a transparent folder full of papers. One of the children had his eyes downcast, peeling the label from a bottle of water he’d been given. Miriam did not know whether they were waiting to enter the country or leave it.",
+      {technote:{title:"climate displacement and the border", body:[
+        "The World Bank’s Groundswell modelling projects up to 216 million people could be forced to migrate within their own countries by 2050 across six world regions, with hotspots emerging as early as 2030, driven by water scarcity, crop failure and sea-level rise.",
+        "A domestic population already absorbing climate losses (e.g. flood payouts, mortgage stress, insurance repricing) might very well treat new arrivals as competitors for the same finite budget, even when the two are funded through entirely different lines. While the UNHCR’s interpretation of Article 31 of the Refugee Convention opposes penalising qualifying refugees merely for irregular entry, governments could make access much harder, rely more heavily on safe-third-country arrangements, and restrict the statuses granted."
+      ]}}
+    ]
+  },
+  {
     id:"grid",
     title:"The New Owners of the Grid",
     ledger:{year:"2033",
       debt:103, debtD:4, deficit:6.9, deficitD:0.5, inflation:4.4, inflationD:-0.5, yield10:5.6, yield10D:0.2,
-      poll:{gov:[33,1], opp:[30,-3], far:[21,3], left:[11,2]},
+      poll:{gov:[33,1], opp:[30,-2], far:[21,1], left:[11,1]},
       infra:2, ins:12.4, unins:28.0, food:12, water:12},
     body:[
       "If the country was going to need more resilience, it wasn’t just going to be big utilities that mattered. Cooperatives that owned panels, batteries and chargers were turning into a bloc, and the bloc was voting.",
@@ -483,6 +521,14 @@ tickers:{
     "Barrier closes — river keeps arriving",
     "Insurers pause approvals in flood-hit areas",
     "Government split over deferring the adaptation budget"
+  ],
+  border:[
+    "Channel crossings up 65% on the year; sea deaths climbing faster",
+    "Home secretary readies Emergency Border and Migration Resilience Bill",
+    "Bill sets offshore processing and automatic detention pending status",
+    "Voss Foundation satellites to watch the Channel via a defence contractor",
+    "Coastal towns awaiting flood payouts bristle at asylum hotel contracts",
+    "Minister strikes out child detention, wins a climate safe-route quota"
   ],
   grid:[
     "Grid Commons Act scrapes through its final reading",

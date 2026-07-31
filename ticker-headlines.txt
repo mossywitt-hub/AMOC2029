@@ -1,5 +1,5 @@
 WHEN THE SEA SLOWS  —  NEWS TICKER HEADLINES
-Generated from content.js.  44 headlines across 8 sections.
+Generated from content.js.  50 headlines across 9 sections.
 
 HOW TO EDIT
   - Change the text after each ID (e.g. "DEPARTMENT-3: ...").
@@ -58,7 +58,17 @@ SEAM-4: Insurers pause approvals in flood-hit areas
 SEAM-5: Government split over deferring the adaptation budget
 
 ================================================================
-SCENE V  —  THE NEW OWNERS OF THE GRID   ·   ledger key: grid
+SCENE V  —  THE HARD BORDER   ·   ledger key: border
+================================================================
+BORDER-1: Channel crossings up 65% on the year; sea deaths climbing faster
+BORDER-2: Home secretary readies Emergency Border and Migration Resilience Bill
+BORDER-3: Bill sets offshore processing and automatic detention pending status
+BORDER-4: Voss Foundation satellites to watch the Channel via a defence contractor
+BORDER-5: Coastal towns awaiting flood payouts bristle at asylum hotel contracts
+BORDER-6: Minister strikes out child detention, wins a climate safe-route quota
+
+================================================================
+SCENE VI  —  THE NEW OWNERS OF THE GRID   ·   ledger key: grid
 ================================================================
 GRID-1: Grid Commons Act scrapes through its final reading
 GRID-2: Co-op energy bloc flexes its weight at the ballot box
@@ -67,7 +77,7 @@ GRID-4: Renters’ provisions cut to a three-city pilot
 GRID-5: Sloane: “a subsidy architecture for homeowners with apps”
 
 ================================================================
-SCENE VI  —  THE GROUND GIVES   ·   ledger key: ground
+SCENE VII  —  THE GROUND GIVES   ·   ledger key: ground
 ================================================================
 GROUND-1: Empty shelves as breadbasket failures stack up
 GROUND-2: Agricultural Resilience Plan draws farmer fury
@@ -77,7 +87,7 @@ GROUND-5: South Asian floods and American droughts hit imports
 GROUND-6: Emergency grain reserve announced
 
 ================================================================
-SCENE VII  —  THE VOTE   ·   ledger key: vote
+SCENE VIII  —  THE VOTE   ·   ledger key: vote
 ================================================================
 VOTE-1: Election day: a referendum on resilience
 VOTE-2: Polls put the far right neck-and-neck with the government
