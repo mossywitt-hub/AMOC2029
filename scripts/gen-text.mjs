@@ -36,6 +36,7 @@ L.push(
   '  KEY-N |quote|:    a block quote',
   '  KEY-N |tech|:     a Technical-detail note title; its paragraphs follow as KEY-N.1, KEY-N.2 …',
   '  KEY-N |graphic|:  a locked graphic block (tabloid/memo/etc.) — nothing to edit, do not remove',
+  '  KEY-N |figure|:   a figure image — edit the caption after the colon; the image file itself is fixed',
   '  KEY |title| / |label| / |intro| / |section| / |name| / |bio|:  single fields',
 );
 
@@ -105,6 +106,7 @@ D.amoc101.forEach((el, j) => {
   const id = `AMOC-${j + 1}`;
   if (typeof el === 'string') line(id, el);
   else if (el.h) line(`${id} |heading|`, el.h);
+  else if (el.figure) line(`${id} |figure|`, el.figure.caption);
 });
 head('ANNEX III  —  RESEARCH TEAM');
 line('TEAM |intro|', D.teamIntro);

@@ -170,6 +170,11 @@ button{font-family:inherit;}
 .why-list li{font-family:var(--sans);font-size:14.5px;line-height:1.7;color:var(--ink-3);margin-bottom:0.5rem;}
 .cs-h{font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin:1.6rem 0 0.7rem;}
 .fblock.navy .cs-h{color:#9fb2c4;}
+.cs-figure{margin:1.6rem 0;max-width:760px;}
+.cs-figure img{display:block;width:100%;height:auto;border:0.5px solid var(--line-2);background:#fff;}
+.cs-figure figcaption{font-family:var(--serif);font-style:italic;font-size:12.5px;line-height:1.5;color:var(--muted);margin-top:0.5rem;}
+.fblock.navy .cs-figure img{border-color:var(--navy-2);}
+.fblock.navy .cs-figure figcaption{color:var(--navy-faint);}
 .cs p a,.why-list li a{color:var(--steel);text-decoration:underline;text-underline-offset:2px;transition:color .15s;}
 .cs p a:hover,.why-list li a:hover{color:var(--navy);}
 .fblock.navy .cs p a{color:#9fc2dc;}
@@ -766,6 +771,7 @@ function renderWhy(){
 }
 function renderAmoc(){
   return D.amoc101.map(item=>{
+    if(typeof item==="object"&&item.figure)return `<figure class="cs-figure"><img src="${item.figure.src}" alt="${item.figure.alt}" loading="lazy"><figcaption>${item.figure.caption}</figcaption></figure>`;
     if(typeof item==="object"&&item.h)return `<div class="cs-h">${item.h}</div>`;
     return `<p>${fnify(item)}</p>`;
   }).join("");

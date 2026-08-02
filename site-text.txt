@@ -14,6 +14,7 @@ TAG LEGEND
   KEY-N |quote|:    a block quote
   KEY-N |tech|:     a Technical-detail note title; its paragraphs follow as KEY-N.1, KEY-N.2 …
   KEY-N |graphic|:  a locked graphic block (tabloid/memo/etc.) — nothing to edit, do not remove
+  KEY-N |figure|:   a figure image — edit the caption after the colon; the image file itself is fixed
   KEY |title| / |label| / |intro| / |section| / |name| / |bio|:  single fields
 
 ================================================================
@@ -416,12 +417,13 @@ AMOC-8: That accumulated heat does not distribute evenly, and the AMOC is one of
 AMOC-9 |heading|: Tipping points
 AMOC-10: This is where the idea of a tipping point becomes relevant. We tend to assume that a little more cause produces a little more effect. Some systems do not work that way. They absorb stress, then flip into a different state, often abruptly and often without an easy way back. The AMOC is regarded as one such system: there is thought to be a threshold beyond which the circulation reorganizes into a much weaker mode, and the freshwater forcing that pushes it there is not readily reversed by removing the forcing.
 AMOC-11: Moreover, the effects of a slowing AMOC would be likely to compound. The AMOC interacts with food systems, energy demand, insurance markets, coastal infrastructure and sovereign finance, for example. It is a textbook example of a systemic, compounding risk, in which strain on one system raises the odds of failure in the next.
-AMOC-12 |heading|: Probability
-AMOC-13: Assessments diverge significantly on timing and likelihood of AMOC weakening and collapse. The IPCC's Sixth Assessment Report judged it very likely that the AMOC will weaken during the twenty-first century under all emissions scenarios. It did not make a confident claim about the timing of any abrupt change.
-AMOC-14 |heading|: Risk thinking
-AMOC-15: Risk thinkers like insurers have frameworks for understanding low-probability, high-severity risk. The instinct on hearing that an event is "uncertain" or "only a few percent likely this century" is to file it under "probably won't happen". For catastrophic, largely irreversible outcomes, that instinct is problematic. We do not insure our homes because fire is likely; we insure against the size of the loss. Probability and severity have to be weighed together.[risk-thinking]
-AMOC-16 |heading|: Further reading
-AMOC-17: There are many excellent resources for further reading on the AMOC, for example <a href="https://interactive.carbonbrief.org/amoc-explainer/index.html" target="_blank" rel="noopener noreferrer">this explainer</a> from Carbon Brief and <a href="https://www.noc.ac.uk/discover-the-ocean/oceans-explained/the-atlantic-meridional-overturning-circulation" target="_blank" rel="noopener noreferrer">this microsite</a> from the UK’s National Oceanography Centre.
+AMOC-12 |figure|: Map of interactions between climate tipping elements, Wunderling et al 2024.
+AMOC-13 |heading|: Probability
+AMOC-14: Assessments diverge significantly on timing and likelihood of AMOC weakening and collapse. The IPCC's Sixth Assessment Report judged it very likely that the AMOC will weaken during the twenty-first century under all emissions scenarios. It did not make a confident claim about the timing of any abrupt change.
+AMOC-15 |heading|: Risk thinking
+AMOC-16: Risk thinkers like insurers have frameworks for understanding low-probability, high-severity risk. The instinct on hearing that an event is "uncertain" or "only a few percent likely this century" is to file it under "probably won't happen". For catastrophic, largely irreversible outcomes, that instinct is problematic. We do not insure our homes because fire is likely; we insure against the size of the loss. Probability and severity have to be weighed together.[risk-thinking]
+AMOC-17 |heading|: Further reading
+AMOC-18: There are many excellent resources for further reading on the AMOC, for example <a href="https://interactive.carbonbrief.org/amoc-explainer/index.html" target="_blank" rel="noopener noreferrer">this explainer</a> from Carbon Brief, <a href="https://arcinit.substack.com/p/the-drivers-of-amocs-destabilization" target="_blank" rel="noopener noreferrer">this summary</a> from ARC, and <a href="https://www.noc.ac.uk/discover-the-ocean/oceans-explained/the-atlantic-meridional-overturning-circulation" target="_blank" rel="noopener noreferrer">this microsite</a> from the UK’s National Oceanography Centre.
 
 ================================================================
 ANNEX III  —  RESEARCH TEAM
