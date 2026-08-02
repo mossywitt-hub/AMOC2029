@@ -17,7 +17,8 @@ const ROMAN = ['I','II','III','IV','V','VI','VII','VIII'];
 const BAR = '='.repeat(64);
 const L = [];
 const head = (title, key) => { L.push('', BAR, key ? `${title}   ·   key: ${key}` : title, BAR); };
-const line = (id, text) => L.push(text === undefined ? id : `${id}: ${text}`);
+const emU = s => typeof s === 'string' ? s.replace(/<em>(.*?)<\/em>/g, '_$1_') : s;
+const line = (id, text) => L.push(text === undefined ? id : `${id}: ${emU(text)}`);
 
 L.push(
   'WHEN THE SEA SLOWS  —  EDITORIAL TEXT',
@@ -26,6 +27,7 @@ L.push(
   'HOW TO EDIT',
   '  - Change the text after the colon. Keep every ID and |tag| exactly as-is.',
   '  - [bracketed] words in the prose are footnote markers — leave them in place.',
+  '  - Wrap a word in _underscores_ to italicise it (e.g. _absolutely_).',
   '  - Delete an element by removing its whole line (and its .N sub-lines).',
   '  - Add one by giving it the next free number in that section.',
   '',
