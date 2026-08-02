@@ -126,6 +126,16 @@ D.complexSystems.forEach((el, j) => {
   else if (el.quote) line(`${id} |quote|`, el.quote);
 });
 
+/* ---- resources: what you can do ---- */
+if (D.resources && D.resources.whatYouCanDo) {
+  head('RESOURCES  —  WHAT YOU CAN DO', 'what-you-can-do');
+  D.resources.whatYouCanDo.forEach((el, j) => {
+    const id = `WYCD-${j + 1}`;
+    if (typeof el === 'string') line(id, el);
+    else if (el.h) line(`${id} |heading|`, el.h);
+  });
+}
+
 fs.writeFileSync('site-text.txt', L.join('\n') + '\n', 'utf8');
 const ids = L.filter(x => /^[A-Z]/.test(x) && x.includes(':')).length;
 console.log(`Wrote site-text.txt — ${ids} editable lines.`);
