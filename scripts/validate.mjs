@@ -61,6 +61,7 @@ const scan = (t) => {
   });
   if (sc.tech) (Array.isArray(sc.tech) ? sc.tech : [sc.tech]).forEach((t) => { if (t && t.body) t.body.forEach(scan); });
 });
+if (D.memo && Array.isArray(D.memo.paras)) D.memo.paras.forEach(scan); // memo hosts footnotes too
 const dangling = [...used].filter((k) => !keys.has(k));
 if (dangling.length) bad('footnote markers with no entry: ' + dangling.join(', '));
 else ok('footnote markers all resolve (' + used.size + ' in use, ' + keys.size + ' defined)');

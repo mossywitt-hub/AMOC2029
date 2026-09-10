@@ -247,6 +247,9 @@ button{font-family:inherit;}
 .scene-body p{font-family:var(--sans);font-size:16px;line-height:1.82;color:var(--ink-3);margin:0 0 1.2rem;}
 .scene-body p.lead{font-family:var(--serif);font-size:19px;line-height:1.6;color:var(--ink-2);}
 .scene-body p.italic{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--ink-2);padding-left:1.1rem;border-left:2px solid var(--line-2);}
+.scene-dateline{font-family:var(--mono);font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:var(--muted);margin:-0.8rem 0 2rem;display:flex;align-items:center;gap:0.7rem;}
+.scene-dateline::before{content:"";height:1px;width:26px;background:var(--line-2);display:inline-block;}
+.scene-break{text-align:center;letter-spacing:0.7em;color:var(--line-2);margin:2.4rem 0 2.2rem;font-size:13px;}
 
 /* MEMO inset — looks like the first page of an agency memo */
 .memo{margin:2rem 0;background:#f6f3ea;border:0.5px solid #d8d0bb;box-shadow:4px 5px 0 rgba(60,55,40,0.08);position:relative;overflow:hidden;}
@@ -273,6 +276,8 @@ button{font-family:inherit;}
 .memo-fade{height:64px;background:linear-gradient(to bottom,rgba(246,243,234,0),#f6f3ea);margin-top:-64px;position:relative;pointer-events:none;}
 .memo-foot{display:flex;align-items:center;justify-content:space-between;padding:8px 16px;border-top:1px solid #cfc6ad;background:#efe9d8;}
 .memo-foot span{font-family:var(--mono);font-size:9px;letter-spacing:0.08em;color:#8a8268;}
+.memo-stamp{position:absolute;top:88px;right:24px;z-index:3;font-family:var(--mono);font-size:15px;font-weight:700;letter-spacing:0.18em;color:rgba(158,46,34,0.6);border:2.5px solid rgba(158,46,34,0.48);border-radius:4px;padding:4px 11px 3px;transform:rotate(-11deg);pointer-events:none;text-shadow:0 1px 0 rgba(255,255,255,0.35);}
+@media(max-width:640px){.memo-stamp{font-size:12px;top:74px;right:14px;padding:3px 8px;}}
 
 /* NEWSPAPER front-page inset */
 .news{margin:2rem 0;background:#efece2;border:0.5px solid #cfc8b6;box-shadow:4px 5px 0 rgba(60,55,40,0.08);position:relative;overflow:hidden;padding:1.5rem 1.6rem 0;}
@@ -635,7 +640,7 @@ function buildFnOrder(){
   D.whyWeWrote.forEach(w=>{if(typeof w==="string")scan(w);else if(w.bullets)w.bullets.forEach(scan);});
   D.amoc101.forEach(a=>{if(typeof a==="string")scan(a);});
   D.scenes.forEach(sc=>{
-    sc.body.forEach(item=>{if(typeof item==="string")scan(item);else if(item&&item.italic)scan(item.italic);else if(item&&item.technote&&item.technote.body)item.technote.body.forEach(scan);});
+    sc.body.forEach(item=>{if(typeof item==="string")scan(item);else if(item&&item.italic)scan(item.italic);else if(item&&item.technote&&item.technote.body)item.technote.body.forEach(scan);else if(item&&item.memo&&D.memo&&D.memo.paras)D.memo.paras.forEach(scan);});
     if(sc.tech){(Array.isArray(sc.tech)?sc.tech:[sc.tech]).forEach(t=>{if(t&&t.body)t.body.forEach(scan);});}
   });
   return keys;
@@ -1038,8 +1043,9 @@ function renderInvite(){
 }
 function renderMemo(){
   const M=D.memo;
-  let p=M.paras.map((t,i)=>`<p>${t}</p>`).join("");
+  let p=M.paras.map((t,i)=>`<p>${fnify(t)}</p>`).join("");
   return `<div class="memo">
+    <div class="memo-stamp" aria-hidden="true">CLASSIFIED</div>
     <div class="memo-top">
       <div class="memo-seal">
         <span class="ms-row"><span class="ms-mark"><i></i></span><span class="ms-txt">OFFICE OF<br>SCIENTIFIC<br>ADVICE</span></span>
@@ -1178,6 +1184,7 @@ function openScene(i,atBottom){
   $("#sceneNum").innerHTML="SCENE "+ROMAN[i];
   $("#sceneTitle").innerHTML=sc.title;
   const body=$("#sceneBody");body.innerHTML="";
+  if(sc.dateline){body.insertAdjacentHTML("beforeend",`<div class="scene-dateline">${sc.dateline}</div>`);}
   sc.body.forEach((item,idx)=>{
     if(typeof item==="object"){
       if(item.memo){body.insertAdjacentHTML("beforeend",renderMemo());return;}
@@ -1185,6 +1192,7 @@ function openScene(i,atBottom){
       if(item.invite){body.insertAdjacentHTML("beforeend",renderInvite());return;}
       if(item.tabloid){body.insertAdjacentHTML("beforeend",renderTabloid());return;}
       if(item.leaflets){body.insertAdjacentHTML("beforeend",renderLeaflets());return;}
+      if(item.divider){body.insertAdjacentHTML("beforeend",`<div class="scene-break" aria-hidden="true">* * *</div>`);return;}
       if(item.italic){const el=document.createElement("p");el.className="italic";el.innerHTML=fnify(item.italic);body.appendChild(el);return;}
       if(item.technote){body.appendChild(makeTechNote(item.technote));return;}
     }

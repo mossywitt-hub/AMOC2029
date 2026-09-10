@@ -1,18 +1,18 @@
 window.WTSS = {
 
 introTop: [
-  "By 2029, the AMOC was slowing faster than anyone had predicted.",
-  "Record breaking weather had become normal over the preceding decade. Even the most destructive floods and fires were barely covered. But this was different. The Atlantic meridional overturning circulation (AMOC) regulates the weather that keeps half the planet alive.[amoc-annex]",
+  "The Atlantic meridional overturning circulation (AMOC) regulates the weather that keeps half the planet alive.[amoc-annex]",
+  "By 2029 it was slowing faster than anyone had predicted.",
   "Experts debated the details. Some put the probability of collapse at over fifty percent, others pointed to uncertainty in the models. Exact timeframes were contentious. But most agreed that the early impacts of the slowdown would come soon. Longer term, the chances were between a dice roll and a coin flip on large parts of the Northern Hemisphere being uninhabitable.",
   "Governments found themselves facing something none had seriously planned for: an active and accelerating risk to the entire national infrastructure.",
-  "For years politics treated climate like a storm on the horizon, arguing about its severity and how, or if, to steer around it. Suddenly the storm had arrived and the question was how not to sink."
+  "For years, officials treated climate change like a storm on the far horizon, arguing about its severity and the costs of steering round it. Now the storm had arrived and the question was how not to sink."
 ],
 
 /* hover footnotes — [key] markers in any content field resolve against this map; numbers auto-assigned by buildFnOrder() */
 footnotes:{
   "amoc-annex":"See <a href=\"#fb-amoc\" data-fn-annex=\"fb-amoc\">Annex II</a> for a briefing note on AMOC slowdown.",
   "resilience-annex":"See <a href=\"#fb-why\" data-fn-annex=\"fb-why\">Annex I</a> on structural shifts in the politics of climate change, and why it matters now.",
-  "derailment-risk":"This dynamic is termed Derailment Risk and has been explored in detail by the Strategic Climate Risks Initiative. See <a href=\"https://www.scri.org.uk/publications/report-derailment-risk\" target=\"_blank\" rel=\"noopener noreferrer\">the SCRI report</a>.",
+  "derailment-risk":"For detailed coverage of so called Derailment Risks see <a href=\"https://www.scri.org.uk/publications/report-derailment-risk\" target=\"_blank\" rel=\"noopener noreferrer\">this report from the Strategic Climate Risks Initiative</a>.",
   "team-annex":"See <a href=\"#fb-team\" data-fn-annex=\"fb-team\">Annex III</a> for full team details.",
   "resilience-dept":"There is a live discussion about creating new political structures to meet resilience challenges, for example in <a href=\"https://www.sei.org/publications/strategic-resilience/\" target=\"_blank\" rel=\"noopener noreferrer\">this working paper</a> from sei.org.",
   "climate-concern":"Several studies show that people tend to underrate the extent to which others care about climate change. That is, they believe that most other people care less than they do, or not at all. This is true of individuals in relation to their wider community and of politicians in relation to their voters. See e.g., <a href=\"https://www.nature.com/articles/s41558-024-01925-3\" target=\"_blank\" rel=\"noopener noreferrer\">Globally representative evidence on the actual and perceived support for climate action</a> (Nature).",
@@ -21,13 +21,15 @@ footnotes:{
   "hidden-sunshade":"Global temperatures accelerating faster than predicted in the 2010s and 2020s, driven by a loss of aerosol cooling: a hidden sunshade effect created by air pollution that has offset around 0.5°C of warming. The hidden sunshade <a href=\"https://actuaries.org.uk/news-and-media-releases/news-articles/2026/jan/14-jan-26-parasol-lost-recovery-plan-needed/\" target=\"_blank\" rel=\"noopener noreferrer\">reduces</a> as pollution is cut, particularly by shipping regulations.",
   "flood-hospitals":"Flood-associated hospital closures are becoming common in Northern Europe; for example the NHS has reported <a href=\"https://www.carbonbrief.org/revealed-floods-have-forced-at-least-67-closures-at-nhs-hospitals-since-2021/\" target=\"_blank\" rel=\"noopener noreferrer\">67 closures since 2021</a>.",
   "winter-weather":"An AMOC slowdown would lead to more <a href=\"https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2025GL114611\" target=\"_blank\" rel=\"noopener noreferrer\">variable and severe</a> winter weather across the European continent.",
+  "aria-forecasting":"The UK’s ARIA announced a <a href=\"https://aria.org.uk/opportunity-spaces/resilient-climate-and-ecosystems/forecasting-tipping-points\" target=\"_blank\" rel=\"noopener noreferrer\">program</a> to develop such a system in mid 2026.",
+  "eurobarometer":"Roughly <a href=\"https://europa.eu/eurobarometer/surveys/detail/3472\" target=\"_blank\" rel=\"noopener noreferrer\">85% of Europeans</a> currently consider climate change to be a serious problem for the world.",
   "colder-winters":"Starkly colder winters in Northern Europe are a possible symptom of AMOC slowdown, plausibly via the collapse of the North Atlantic subpolar gyre. See <a href=\"https://ippr-org.files.svdcdn.com/production/Downloads/The-security-blind-spot-October-24_2024-10-14-121035_uryr.pdf?dm=1778241499\" target=\"_blank\" rel=\"noopener noreferrer\">“The security blind spot”</a>, pp 17-18."
 },
 
 introBelow: [
   "We predict that in the near future, escalating climate shocks and looming tipping points will change the politics of climate change from mitigation (solving the cause) to resilience (dealing with the effects).[resilience-annex]",
-  "Climate shocks are already more severe and more frequent than models projected. Economic growth is threatened and some areas are becoming uninsurable. There is good reason to believe that this trend will continue.",
-  "The debate about mitigation (net zero) is familiar to most people. It centers on clean versus fossil energy and how to transition.",
+  "Climate shocks are already more severe and more frequent than models projected, driving up costs and devastating regions and industries. Some places are becoming uninsurable. There is good reason to believe that this trend will continue.",
+  "The debate about mitigation (net zero) is familiar to most people: clean versus fossil energy and the cost of transitioning.",
   "The resilience debate is less familiar and broader in scope. It touches almost everything in a society: food, water, jobs, growth, flood defenses, housing, transport, infrastructure, defense.",
   "Crisis gets more attention than strategy. So the debate will become louder and more contentious at the same time as the stakes rise and tradeoffs become more difficult. Crisis also limits attention, diverts strategy, and constrains resources: as the storm becomes more severe, the path through it narrows.[derailment-risk]",
   "We are a team of climate risk, system science, and policy experts.[team-annex] With the support of an award winning storyteller we have mapped the actions of a government that chooses to meet the new reality with a new department: the Department of Climate Resilience.[resilience-dept] We depict a series of political battles that a Minister of Climate Resilience might have to win to fight a war with the weather."
@@ -70,7 +72,7 @@ amoc101: [
   {h:"Risk thinking"},
   "Risk thinkers like insurers have frameworks for understanding low-probability, high-severity risk. The instinct on hearing that an event is \"uncertain\" or \"only a few percent likely this century\" is to file it under \"probably won't happen\". For catastrophic, largely irreversible outcomes, that instinct is problematic. We do not insure our homes because fire is likely; we insure against the size of the loss. Probability and severity have to be weighed together.[risk-thinking]",
   {h:"Further reading"},
-  "There are many excellent resources for further reading on the AMOC, for example <a href=\"https://interactive.carbonbrief.org/amoc-explainer/index.html\" target=\"_blank\" rel=\"noopener noreferrer\">this explainer</a> from Carbon Brief, <a href=\"https://arcinit.substack.com/p/the-drivers-of-amocs-destabilization\" target=\"_blank\" rel=\"noopener noreferrer\">this summary</a> from ARC, and <a href=\"https://www.noc.ac.uk/discover-the-ocean/oceans-explained/the-atlantic-meridional-overturning-circulation\" target=\"_blank\" rel=\"noopener noreferrer\">this microsite</a> from the UK’s National Oceanography Centre."
+  "There are many excellent resources for further reading on the AMOC, for example <a href=\"https://interactive.carbonbrief.org/amoc-explainer/index.html\" target=\"_blank\" rel=\"noopener noreferrer\">this explainer</a> from Carbon Brief, <a href=\"https://arcinit.substack.com/p/the-drivers-of-amocs-destabilization\" target=\"_blank\" rel=\"noopener noreferrer\">this summary</a> from ARC, and <a href=\"https://www.noc.ac.uk/discover-the-ocean/oceans-explained/the-atlantic-meridional-overturning-circulation\" target=\"_blank\" rel=\"noopener noreferrer\">this microsite</a> from the UK’s National Oceanography Center."
 ],
 
 getInvolved: [
@@ -90,25 +92,25 @@ complexSystems: [
 ],
 
 resources:{
-  about:"Planetary Solvency is a research and strategy organisation that brings together an unusual combination of disciplines — actuarial science, Earth system science and policy expertise — in response to systemic climate and nature risks. We develop resources, convene events, conduct <a href=\"https://actuaries.org.uk/news-and-media-releases/news-articles/2025/jan/16-jan-25-planetary-solvency-finding-our-balance-with-nature/\" target=\"_blank\" rel=\"noopener noreferrer\">research</a> and brief business and political leaders on systemic risks and resilience strategies.",
+  about:"Planetary Solvency is a research and strategy organization that brings together an unusual combination of disciplines — actuarial science, Earth system science and policy expertise — in response to systemic climate and nature risks. We develop resources, convene events, conduct <a href=\"https://actuaries.org.uk/news-and-media-releases/news-articles/2025/jan/16-jan-25-planetary-solvency-finding-our-balance-with-nature/\" target=\"_blank\" rel=\"noopener noreferrer\">research</a> and brief business and political leaders on systemic risks and resilience strategies.",
   collab:"The Strategic Climate Risks Initiative is a think and do tank that builds tools and capabilities to navigate the new climate reality.",
   donate:"Planetary Solvency is a UK registered charity hosted by the Cambridge Institute of Sustainable Leadership. You can donate to us at the link below. If you are a philanthropic funder, please reach out directly to <a href=\"mailto:funding@planetarysolvency.org\">funding@planetarysolvency.org</a>.",
   briefings:"Planetary Solvency and SCRI run regular briefings for business leaders, financial services professionals and policymakers in the US, UK, and around the world. If you are interested in a briefing on AMOC or other systemic climate risks and their strategic implications, please reach out to <a href=\"mailto:briefings@planetarysolvency.org\">briefings@planetarysolvency.org</a>.",
   whatYouCanDo:[
     {h:"Talk to the people who represent you"},
-    "Climate resilience only becomes a priority for politicians when they hear that it matters to the people who elect them. That can mean asking a canvasser what their party will do about flooding on your street, writing to your representative at national or state level, turning up to a local planning hearing, or raising it at a neighbourhood meeting. None of these feels dramatic, and the effect of any one of them is small, but elected representatives do count the letters.",
-    {h:"Learn to recognise delay, not just denial"},
+    "Climate resilience only becomes a priority for politicians when they hear that it matters to the people who elect them. That can mean asking a canvasser what their party will do about flooding on your street, writing to your representative at national or state level, turning up to a local planning hearing, or raising it at a neighborhood meeting. None of these feels dramatic, and the effect of any one of them is small, but elected representatives do count the letters.",
+    {h:"Learn to recognize delay, not just denial"},
     "Outright denial has largely faded from mainstream political debate in most wealthy countries. What has replaced it is a set of arguments for postponement: that responsibility lies elsewhere (usually China), that some non-disruptive technology will handle it, that the costs of acting fall unfairly on ordinary people, or that it is now too late to bother. Researchers led by William Lamb catalogued these in a 2020 paper, <a href=\"https://doi.org/10.1017/sus.2020.13\" target=\"_blank\" rel=\"noopener noreferrer\">Discourses of climate delay</a> — worth twenty minutes, because once you can name the four moves you notice them everywhere, including in arguments you agree with.",
     {h:"Give money, ideally regularly"},
-    "There are more resilience causes worth funding than most people realise: ecosystem restoration (peatlands, saltmarsh, mangroves, floodplain reconnection); urban heat resilience, which mostly means shade, trees and cool roofs in the poorest districts of hot cities; clean energy access in low-income countries; policy advocacy and strategic litigation; agricultural resilience and seed diversity; indigenous land stewardship, which has an unusually good record per hectare protected; independent climate science and monitoring; and disaster organisations that work on preparedness rather than only response. It's worth splitting between work you can see and work you can't — restoration is verifiable and satisfying, while advocacy, litigation and research probably carry higher leverage per dollar but will never give you a clear answer about whether it worked. Picking two or three and sticking with them beats spreading thinly.",
-    "A note on how you give. Small restoration trusts and advocacy organisations can only hire people if they can predict next year's income, so a standing order of $10 a month is worth considerably more to them than $120 at Christmas. Most countries offer some form of tax relief on charitable giving, and it is usually worth the ten minutes it takes to claim.",
+    "There are more resilience causes worth funding than most people realize: ecosystem restoration (peatlands, saltmarsh, mangroves, floodplain reconnection); urban heat resilience, which mostly means shade, trees and cool roofs in the poorest districts of hot cities; clean energy access in low-income countries; policy advocacy and strategic litigation; agricultural resilience and seed diversity; indigenous land stewardship, which has an unusually good record per hectare protected; independent climate science and monitoring; and disaster organizations that work on preparedness rather than only response. It's worth splitting between work you can see and work you can't — restoration is verifiable and satisfying, while advocacy, litigation and research probably carry higher leverage per dollar but will never give you a clear answer about whether it worked. Picking two or three and sticking with them beats spreading thinly.",
+    "A note on how you give. Small restoration trusts and advocacy organizations can only hire people if they can predict next year's income, so a standing order of $10 a month is worth considerably more to them than $120 at Christmas. Most countries offer some form of tax relief on charitable giving, and it is usually worth the ten minutes it takes to claim.",
     {h:"Look at where your pension and savings are invested"},
     "For most people of working age, retirement savings are by a wide margin the largest pot of capital they have any influence over — far larger than their household emissions in any plausible accounting. Find out what your default fund actually holds, switch if your plan offers a better option, and if you want to go further, ask your employer's plan trustees or investment committee what their stewardship and voting policy is.",
-    "A technical note, because this field is murkier than it is usually presented. Most mainstream ESG and divestment-oriented funds work by selling shares on secondary markets, which transfers ownership to a less scrupulous buyer without depriving the company of any capital. The evidence that this raises a polluter's cost of capital enough to change behaviour is weak, and the sector has a real greenwashing problem. A small allocation to primary-market impact investing — where your money funds an asset that would not otherwise exist — probably does more per dollar. Platforms such as <a href=\"https://www.energiseafrica.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Energise Africa</a> (UK) and <a href=\"https://www.lendahand.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Lendahand</a> (EU) finance solar home systems in sub-Saharan Africa; in the US, <a href=\"https://calvertimpact.org/\" target=\"_blank\" rel=\"noopener noreferrer\">Calvert Impact</a> offers something structurally similar; community solar and green bond funds exist in most markets. These carry real capital risk, are often illiquid, and are not deposit-protected. None of this is financial advice, and anyone considering it should look at the terms properly or speak to an adviser.",
+    "A technical note, because this field is murkier than it is usually presented. Most mainstream ESG and divestment-oriented funds work by selling shares on secondary markets, which transfers ownership to a less scrupulous buyer without depriving the company of any capital. The evidence that this raises a polluter's cost of capital enough to change behavior is weak, and the sector has a real greenwashing problem. A small allocation to primary-market impact investing — where your money funds an asset that would not otherwise exist — probably does more per dollar. Platforms such as <a href=\"https://www.energiseafrica.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Energise Africa</a> (UK) and <a href=\"https://www.lendahand.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Lendahand</a> (EU) finance solar home systems in sub-Saharan Africa; in the US, <a href=\"https://calvertimpact.org/\" target=\"_blank\" rel=\"noopener noreferrer\">Calvert Impact</a> offers something structurally similar; community solar and green bond funds exist in most markets. These carry real capital risk, are often illiquid, and are not deposit-protected. None of this is financial advice, and anyone considering it should look at the terms properly or speak to an adviser.",
     {h:"Consider the decisions you make at work"},
     "Most of us spend far more hours as a professional than as a consumer, and our professional decisions are the ones we tend not to think of as climate decisions at all. A planning officer, a doctor, a procurement lead, a school board member, a landlord, a structural engineer: each has a set of choices that shapes how well their part of the world copes with heat and water. If you think you might have influence of this kind and would like to talk it through, please get in touch — we want to hear from people in these roles, and we can often help you work out where the real leverage sits.",
     {h:"Find out what your street is exposed to, and who lives on it"},
-    "Most countries publish flood and wildfire hazard maps; find yours and pay particular attention to surface water and stormwater flooding, which catches people out far more often than rivers do. Then do the less obvious half: work out who nearby is elderly, unwell or living alone. Eric Klinenberg's study of the 1995 Chicago heatwave found that neighbourhoods with similar poverty and demographics had very different death rates, and that the difference was largely down to whether people knew one another well enough to knock on a door.",
+    "Most countries publish flood and wildfire hazard maps; find yours and pay particular attention to surface water and stormwater flooding, which catches people out far more often than rivers do. Then do the less obvious half: work out who nearby is elderly, unwell or living alone. Eric Klinenberg's study of the 1995 Chicago heatwave found that neighborhoods with similar poverty and demographics had very different death rates, and that the difference was largely down to whether people knew one another well enough to knock on a door.",
     {h:"Say what you think, because most people assume they are in a minority"},
     "A 2024 study across 125 countries found a large gap between how willing people say they are to act on climate and how willing they believe their fellow citizens are — the average person substantially underestimates everyone else. This means a great many people are staying quiet in the mistaken belief that they are unusual. Mentioning it at work, at the school gate, in the bar or in a group chat is not a soft substitute for real action; it corrects a specific and measurable false belief.",
     {h:"Buy the low-carbon option while it is still slightly too expensive"},
@@ -141,49 +143,49 @@ scenes: [
   {
     id:"department",
     title:"The Department of Climate Resilience",
+    dateline:"November 2029",
     ledger:{year:"2029",
       debt:90, debtD:1.5, deficit:3.8, deficitD:0.4, inflation:3.4, inflationD:0.2, yield10:4.3, yield10D:0.1,
       poll:{gov:[44,0], opp:[30,0], far:[9,0], left:[6,0]},
       infra:1, ins:0.6, unins:1.1, food:19, water:18},
     body:[
-      "Miriam Dutta had been Minister for Climate Resilience for four hours when her chief of staff, Tom Fender, appeared in her office doorway with two coffees and a harried expression.",
-      "“Defense and finance want you ASAP,” he said. “But there’s a scientist waiting in the lobby who’s saying if you don’t see him first he’ll talk to the prime minister instead.”",
-      "“I see.” Miriam said. “Send him in.”",
-      "Miriam was glad to be getting to work after campaigning through another brutal, dry summer. It wasn’t easy to project “renewal” and “momentum” ten hours into door knocking in 35 degree heat. At the same time, she was more than a little daunted by the job she had taken on. Miriam couldn’t recall the exact point in the campaign when her Department had been invented. It felt inevitable in the moment: the only plausible response to a thousand conversations with voters who had lost a friend in last winter’s record breaking cold, or a livelihood in the drought that followed.[colder-winters]",
-      "No one understood the weather any more and people were uneasy. In the party, no one could agree on a set of manifesto commitments that felt like the right credible and proportionate response to such an uncertain problem. And <em>absolutely</em> no one wanted to defend the cost of large scale resilience investments in a run of hostile media interviews. So the Department was born: a catch all for every question, a way to signal seriousness and promise action without quite committing to anything at all.",
-      "In principle, then, Miriam had budget, officials, political momentum, the Prime Minister’s personal backing. In reality, she urgently needed a plan, and she needed a narrative to build it around.",
-      "The scientist was younger than she expected, with a lanyard responsibly around his neck like he needed the comfort of a school uniform. The lanyard gave his name as Andres. He pushed a document across her desk.",
-      "“The probability of complete AMOC collapse within fifty years,” he said, “is by some estimates now greater than 50%. We think it is possible this happens five times faster, or two times slower. In any case, you do not need full collapse for this to matter. A moderate slowdown is enough to foul food planning, flood planning, everything. What you’re looking at is a planning paper.”",
-      "Miriam hooked her glasses on and peered down. Before her there were Atlantic circulation charts and insurance exposure maps and infrastructure modelling and diagrams of cold anomalies pushing across Europe. One graph tracked electricity demand spiking during severe winters. Another showed fishing fleets losing species they had followed for decades. Then the report spelled out the consequences in frighteningly technical language: food shocks under unstable rainfall and import stress; insurance companies refusing to cover climate-vulnerable regions; public systems breaking down like dominoes, one after the other.",
-      "There it was, the acronym that she realised, with immediate clarity, would contain the Department’s future: AMOC.",
+      "Miriam had been Minister for Climate Resilience for five hours when her chief of staff, Tom Lince, appeared in her doorway with coffee and a harried expression.",
+      "“Defense and finance both want you,” he said. “Urgently. There’s also a scientist in the lobby who says if you don’t see him now he will be forced to leak official information to the Press.”",
+      "“Right.” Miriam said. “I suppose you should send him in.”",
+      {divider:true},
+      "Miriam was relieved to be getting to work after campaigning through another brutally hot summer. It was hard to project renewal and momentum seven hours into door knocking in 40 degree heat.",
+      "She was also daunted by the days and weeks ahead. Miriam couldn’t recall the exact point in the campaign when her Department was invented. When it happened it seemed inevitable: the only viable response to ten thousand conversations with voters who had lost a relative in the heat, a livelihood in the drought, property in the flooding that came before.",
+      "No one in the party could agree on a set of commitments that seemed proportionate to such a broad, uncertain problem. And no one wanted to defend large scale resilience spending to a hostile press. So the Department was born: a catch all for every question, a signal of seriousness and a promise of action that committed them to nothing specific at all.",
+      "In theory then Miriam had money, officials, the Prime Minister’s personal backing. In reality, she urgently needed a plan.",
+      {divider:true},
+      "The scientist was younger than she expected, with a lanyard around his neck and an outfit that gave a hint of school uniform. He pushed a document across her desk and started to speak.",
+      "“The probability of complete AMOC collapse within fifty years,” he said, “is by some estimates now greater than 50%. That is the finding of our unpublished assessment, based on data from our own systems and from international partners. We think it is possible this collapse happens several times faster, or two times slower. But anyway we don’t need a full collapse. A marked slowdown is enough to foul food planning, flood planning, everything. The consequences would be devastating here, and even worse in most of the places that grow our food. In short, this is not a research paper. It’s a planning paper.”",
+      "Miriam raised her eyebrows and peered down. There were Atlantic circulation charts and insurance exposure maps; infrastructure modeling and diagrams of cold anomalies pushing across Europe. One graph tracked electricity demand spiking during severe winters. Another showed fishing fleets losing species they had followed for decades. Then the report spelled out the consequences in stark technical language: food shocks under unstable rainfall and import stress; insurance companies refusing to cover climate-vulnerable regions; public systems breaking down like dominoes, one after the other.",
+      "There was the acronym she realized would contain the Department’s future: AMOC.",
       "Miriam knew the basics, of course. A system of currents in the North Atlantic – warm water going north, colder denser water moving south at depth. One of the hidden pieces of machinery that made the land liveable in large swatches of the Northern Hemisphere.",
-      "Andres was tapping the page before she finished reading.",
-      "“My suggestion,” he said, “is that your department starts planning as if the reasonable worst-case outcomes are now a lot worse and more reasonable than anyone has accounted for. You do not have decades left to prepare for an age none of our systems were built for.”",
-      "The previous government had staggered through years of compound shocks: the El Niño summer that had warped harvest forecasts across multiple continents at once; the months when missile strikes and shipping disruptions in the Gulf sent energy traders into a permanent state of nerves and kept prices fluctuating; an AI boom-and-bust that left both the bulls and the bears claiming victory; the strange spectacle of governments trying to accelerate green deployment while households watched bills climb anyway.",
-      "In the end people were less interested in vision than in whether anyone in government could read a briefing and make the numbers add up. The new administration was seen as solid, a bit bloodless, perhaps, but serious. Competent.",
-      "That reputation was apparently about to be thoroughly tested.",
+      "The scientist was tapping the page before she finished reading.",
+      "“My suggestion,” he said, “is that your department starts off by acting as if the reasonable worst-case outcomes are now a lot worse and more likely than anyone has accounted for. You do not have decades left to prepare for an age none of our systems were built for. You have years. If you’re lucky.”",
       {memo:true},
-      "Tom peered over her shoulder. “Finance will ask if any of this is useful.”",
-      "“It is,” Andres said. “But you need to stop planning around the old baselines. The old baselines assume a stable climate, which is now a dangerous assumption.”",
-      "The late 2020s had taught policymakers the wrong question about climate projections. They kept asking what was most likely, then being unprepared when a plausible worst case played out. With the AMOC paper in front of them, the worst case was much worse. The question they had to answer was what kind of response would be politically viable.",
-      "One paragraph had caught in Miriam’s throat: within just a few years, flooding combined with rolling blackouts could put hospitals out of action in several large coastal cities.",
-      "Two weeks later, a heatwave rolled into the Iberian peninsula. The humid, grinding pressure settled over Spain, over Portugal, and stayed longer than any seasonal forecast had predicted. In southern Spain temperatures hit 45 degrees Celsius. In Évora the grid faltered. Miriam watched governments activate emergency protocols designed for three-day heatwaves five degrees cooler. She watched news reports of medical personnel fastening IVs, barely keeping themselves upright.",
-      "She called for a meeting that night. A discussion of the AMOC paper had already been scheduled for the end of the month, but it was increasingly clear time was not something they really had anymore. By ten o’clock the next morning she was in a committee room summarizing the paper to the finance minister, the energy minister, and two officials from the executive office. The prime minister joined late and sat silently near the corner of the table, reading as Miriam spoke.",
-      "Miriam met a still room when she finished, specifically the stillness of people privately calculating what this would do to their overflowing budgets and painstaking manifestos.",
-      "“So,” the prime minister said at last, steepling her tired fingers together. “If we take this seriously, what does this actually mean?”",
-      "The finance minister grimaced. “It means every adaptation scenario costs money we do not currently have.”",
-      "“And politically, what does this mean?”",
-      "Miriam looked through the glass into the government district, where the sky had the raw look of a day that could turn either way. Competence had won them office, but it would not keep them there.",
-      "“It means,” she said, “we explain the trade-offs before the weather explains them for us.”",
-      "That was the next few years in miniature. Keep heat and power working through colder winters without handing the future back to gas. Stop flood losses becoming insurance losses becoming housing losses. Push agriculture toward resilience before another run of bad seasons. The AMOC memo wasn’t just another item on the list anymore. It was now the reason for all the lists.",
-      "When the meeting broke up, Tom handed her the rest of her box. On top sat a note about a rural representative complaining that the new government sounded like it was dragging the country into wartime.",
-      "By lunchtime the foreign ministry wanted language for a call with Beijing, and home affairs had asked for modeling of the impact on illegal migration."
+      "Tom was reading over her shoulder. “Finance will ask if any of this is bankable.”",
+      "“It is,” the scientist said. “But you need to stop planning around the old baselines. The old baselines assume a predictable climate, and that is now a dangerous assumption.”",
+      "In the early 2020s, policymakers had learned to ask the wrong questions of climate projections. They wanted to know what was most likely, not what plausible worst case they needed to consider in planning. With the AMOC paper in front of her, Miriam realized that the worst case was now much, much worse.",
+      "One bullet from the Policy Implications summary caught Miriam’s eye. It began: Once a slowdown takes hold, flooding and blackouts could incapacitate hospitals in several coastal cities.",
+      {divider:true},
+      "Two weeks later, another burning heatwave hit the Iberian peninsula. In southern Spain temperatures rose above 45 degrees Celsius. In Évora the grid faltered. Miriam watched videos of medical personnel fastening IVs, barely keeping themselves upright.",
+      "She called for a meeting. A discussion of the memo had already been scheduled for the following month, but it seemed like time might be in limited supply. A few days later she was in a committee room giving a summary to senior ministers. The prime minister joined late and sat silently near the corner of the table, reading as Miriam spoke. She was met with a brief silence when she finished. “So,” the prime minister said at last, steepling tired fingers together. “If we take this seriously what does that actually look like, in policy terms?”",
+      "The finance minister grimaced but said nothing.",
+      "“And how about the messaging?” said the energy minister. “Governments have spent half a century telling people that climate change means heatwaves and floods. One in six people still aren’t convinced.[eurobarometer] How can we go out now and say it also means Siberian winters?”",
+      "Miriam looked through the glass into the government district, where the sky had the raw look of a day that could turn either way.",
+      "She sighed. “I know. I know that my Department is already the butt of constant jokes from the Right. And I saw the column in the Daily Ledger calling it “late capitalist diversion tactics”. But all I can tell you is that if we don’t make some hard decisions now, the weather will make them for us.”",
+      "“We have to keep power running through cold winters without giving in to the gas companies. We have to stop flood losses becoming insurance losses, because those become housing losses. We have to drag and cajole and pay farmers and importers towards resilience to heat and drought and winter storms. Competence won us this mandate, and I can promise you, it will not survive even a few weeks of empty shelves.”",
+      "When the meeting broke up, Miriam checked her correspondence. Tom had flagged a note from a rural representative complaining that the new government sounded like it was dragging the country into wartime. The state office wanted language for a call with Beijing, and home affairs had asked for modeling of the impact of AMOC on immigration. She’d made her point."
     ],
     tech:{title:"", body:[]}
   },
   {
     id:"jobs",
     title:"The Price of Jobs",
+    dateline:"January 2030",
     ledger:{year:"2030",
       debt:92, debtD:2, deficit:4.6, deficitD:0.8, inflation:4.1, inflationD:0.7, yield10:4.6, yield10D:0.3,
       poll:{gov:[40,-4], opp:[32,2], far:[11,2], left:[7,1]},
@@ -237,6 +239,7 @@ scenes: [
   {
     id:"sunshade",
     title:"The Sunshade",
+    dateline:"April 2031",
     ledger:{year:"2031",
       debt:95, debtD:3, deficit:5.2, deficitD:0.6, inflation:3.7, inflationD:-0.4, yield10:4.8, yield10D:0.2,
       poll:{gov:[35,-5], opp:[34,2], far:[14,3], left:[8,1]},
@@ -294,6 +297,7 @@ scenes: [
   {
     id:"seam",
     title:"The Seam Between the Systems",
+    dateline:"August 2032",
     ledger:{year:"2032",
       debt:99, debtD:4, deficit:6.4, deficitD:1.2, inflation:4.9, inflationD:1.2, yield10:5.4, yield10D:0.6,
       poll:{gov:[32,-3], opp:[33,-1], far:[18,4], left:[9,1]},
@@ -338,15 +342,16 @@ scenes: [
   {
     id:"border",
     title:"The Hard Border",
+    dateline:"January 2033",
     ledger:{year:"2033",
       debt:101, debtD:2, deficit:6.6, deficitD:0.2, inflation:4.7, inflationD:-0.2, yield10:5.5, yield10D:0.1,
       poll:{gov:[32,0], opp:[32,-1], far:[20,2], left:[10,1]},
       infra:2, ins:11.0, unins:24.0, food:13, water:0},
     body:[
-      "By January the migration briefs were their own folder, frequently in the centre of Miriam’s desk.",
+      "By January the migration briefs were their own folder, frequently in the center of Miriam’s desk.",
       "Andres came back to see her. He had a new paper. He no longer needed a lanyard.",
       "“Ah, Andres,” Miriam said, sighing. “Old friend. New data.”",
-      "He walked her through what three years of numbers had confirmed: the West African monsoon retreating further south, two failed Sahel rains, a long and violent Indian monsoon. And what this meant for them: ever more endless queues outside processing centres and ever more overcrowded boats making the ever-more difficult crossing.",
+      "He walked her through what three years of numbers had confirmed: the West African monsoon retreating further south, two failed Sahel rains, a long and violent Indian monsoon. And what this meant for them: ever more endless queues outside processing centers and ever more overcrowded boats making the ever-more difficult crossing.",
       "No-one really called them AMOC migrants. There were other reasons, the wars and the jobs and the families already living elsewhere. It all still belonged to the same future, Miriam thought again.",
       "“The numbers?” she asked.",
       "Andres told her about crossing attempts up sixty-five percent more than last year, with the deaths at sea up more than that. When Tom found her that evening with the results of the latest internal polling, he told her that the flood-hit coastal areas still waiting for compensation were the ones angriest about hotel contracts for asylum claimants.",
@@ -354,21 +359,21 @@ scenes: [
       "She knew it was just a matter of time before Marcus Webb, the home secretary, brought the paper to cabinet. She knew what it was before he started up the slide deck two months later.",
       "“This is our Emergency Border and Migration Resilience Bill,” Marcus said. He cast a glance at Miriam; he knew her thoughts on it. “Long overdue, as we all know. A quick summary before we get into it: we’re implementing offshore processing. And bringing migrants straight into automatic detention pending determination of status. We’re going to cap family reunification. And something I think will really help: a satellite-assisted monitoring layer to manage flow across the Channel.”",
       "“Whose satellite.” Miriam somehow already knew.",
-      "“Voss Foundation infrastructure, licensed through a defence contractor.” When she rolled her eyes Marcus sighed and said, “Miriam, the grain reserve, the flood defences, the whole Centre, none of it will survive if its government fails on immigration. You know that.”",
+      "“Voss Foundation infrastructure, licensed through a defense contractor.” When she rolled her eyes Marcus sighed and said, “Miriam, the grain reserve, the flood defenses, the whole Center, none of it will survive if its government fails on immigration. You know that.”",
       "He clicked forward to the capacity analysis. It tracked their system’s collapse point given current arrival trends, things like caseworkers and court queues and beds for the night.",
       "“But this is only a measure of our current resources,” Miriam said. “We could try requisitioning more buildings and expanding the legal routes — we could process people before they reach the Channel at all.”",
       "“We could,” the finance minister agreed. Miriam could tell from her tone they wouldn’t.",
       "“We’re already moving families away from the coast,” Marcus said. “Think about how this will look when they’re already living in temporary accommodation.”",
       "“Our citizens are in need,” Miriam acknowledged. “These people are too.”",
       "She knew it was mainly a lost cause when the prime minister looked at her.",
-      "“Yes, but we can reach the point where we’re unable to help both. You were the one who said we should explain the trade-offs before the weather explained them for us.”",
-      "Miriam hadn’t meant like this, or had she? She fought the Bill for eleven days after that. She got the child detention clause struck entirely, and a safe-route quota written in for people displaced by climate disaster specifically. She did not get the offshore centre removed, or Voss’s cameras away from the cliffs.",
+      "“Yes, but we can reach the point where we’re unable to help both. You were the one who said that if we didn’t make some hard decisions, the weather would make them for us.”",
+      "Miriam hadn’t meant like this, or had she? She fought the Bill for eleven days after that. She got the child detention clause struck entirely, and a safe-route quota written in for people displaced by climate disaster specifically. She did not get the offshore center removed, or Voss’s cameras away from the cliffs.",
       "The bill passed. On the news that night, the same anchor who had once christened her department the Department of Constant Cost called her a minister “who understands hard choices.”",
       "She had known hard choices might have been necessary, but she did not feel she understood anything. That night Nina was the one who rang, and even the ring felt accusatory.",
       "“You told me that panic makes bad policy.”",
       "“The alternative was a worse bill,” Miriam said. She believed it but wasn’t sure whether it was true. On the muted television on the wall a woman sat with three children and a transparent folder full of papers. One of the children had his eyes downcast, peeling the label from a bottle of water he’d been given. Miriam did not know whether they were waiting to enter the country or leave it.",
       {technote:{title:"climate displacement and the border", body:[
-        "The World Bank’s Groundswell modelling projects up to 216 million people could be forced to migrate within their own countries by 2050 across six world regions, with hotspots emerging as early as 2030, driven by water scarcity, crop failure and sea-level rise.",
+        "The World Bank’s Groundswell modeling projects up to 216 million people could be forced to migrate within their own countries by 2050 across six world regions, with hotspots emerging as early as 2030, driven by water scarcity, crop failure and sea-level rise.",
         "A domestic population already absorbing climate losses (e.g. flood payouts, mortgage stress, insurance repricing) might very well treat new arrivals as competitors for the same finite budget, even when the two are funded through entirely different lines. While the UNHCR’s interpretation of Article 31 of the Refugee Convention opposes penalising qualifying refugees merely for irregular entry, governments could make access much harder, rely more heavily on safe-third-country arrangements, and restrict the statuses granted."
       ]}}
     ]
@@ -376,6 +381,7 @@ scenes: [
   {
     id:"grid",
     title:"The New Owners of the Grid",
+    dateline:"April 2033",
     ledger:{year:"2033",
       debt:103, debtD:4, deficit:6.9, deficitD:0.5, inflation:4.4, inflationD:-0.5, yield10:5.6, yield10D:0.2,
       poll:{gov:[33,1], opp:[30,-2], far:[21,1], left:[11,1]},
@@ -422,6 +428,7 @@ scenes: [
   {
     id:"ground",
     title:"The Ground Gives",
+    dateline:"March 2034",
     ledger:{year:"2034",
       debt:108, debtD:5, deficit:7.8, deficitD:0.9, inflation:5.8, inflationD:1.4, yield10:6.1, yield10D:0.5,
       poll:{gov:[30,-3], opp:[27,-3], far:[26,5], left:[13,2]},
@@ -467,6 +474,7 @@ scenes: [
   {
     id:"vote",
     title:"The Vote",
+    dateline:"September 2034",
     ledger:{year:"2034",
       debt:108, debtD:5, deficit:7.8, deficitD:0.9, inflation:5.5, inflationD:-0.3, yield10:6.3, yield10D:0.2,
       poll:{gov:[30,0], opp:[26,-1], far:[30,4], left:[12,-1]},
@@ -550,7 +558,7 @@ tickers:{
     "Channel crossings up 65% on the year; sea deaths climbing faster",
     "Home secretary readies Emergency Border and Migration Resilience Bill",
     "Bill sets offshore processing and automatic detention pending status",
-    "Voss Foundation satellites to watch the Channel via a defence contractor",
+    "Voss Foundation satellites to watch the Channel via a defense contractor",
     "Coastal towns awaiting flood payouts bristle at asylum hotel contracts",
     "Minister strikes out child detention, wins a climate safe-route quota"
   ],
@@ -582,11 +590,11 @@ memo:{
   title:"The Memo",
   section:"Introduction",
   paras:[
-    "The planet’s energy imbalance – the difference between solar energy in and heat escaping out to space – is estimated at 1.1-1.3 W/m². This is higher than expected and consistent with heating beyond the 1.5-1.6C-above-baseline already observed through the 2020s.",
-    "The Atlantic Meridional Overturning Circulation is one of the major systems affected by this accumulated imbalance. The IPCC's Sixth Assessment Report judged that the AMOC will very likely weaken during the twenty-first century under all scenarios. However, by the late 2020s, emerging evidence suggested that the range of plausible outcomes had widened substantially. New consensus is that AMOC slowdown could be felt by 2030-2031, contributing to bitter winters and severe cold snaps in northwest Europe; and devastating crop failures in the developing world.",
-    "A weakened AMOC disrupts marine food webs by altering nutrient transport, and shifts the Intertropical Convergence Zone, changing precipitation patterns in the Sahel and South Asia, weakening the West African Monsoon and drying the Sahel. In the Amazon, the same circulation changes exacerbate drought and fire risk, pushing the rainforest closer to a tipping point of irreversible dieback. Meanwhile, altered rainfall patterns affect South Asia's monsoon and reduce the ocean's ability to absorb CO₂.",
-    "None of these impacts operate alone. They interact with food systems, energy demand, insurance markets, coastal infrastructure, and sovereign finance, the definition of a systemic compounding risk.",
-    "The impacts for this government are as follows …"
+      "The planet’s energy imbalance – the difference between solar energy in and heat escaping out to space – is estimated at 1.1-1.3 W/m². This is higher than expected and consistent with heating beyond the 1.5-1.6C-above-baseline already observed through the 2020s.",
+      "The Atlantic Meridional Overturning Circulation is one of the major systems affected by this accumulated imbalance. The IPCC's Sixth Assessment Report stated that the AMOC will very likely weaken during the 21st century. However, data from early warning systems deployed by this government and international partners now show that the range of plausible outcomes has widened.[aria-forecasting] In fact, consensus is that AMOC slowdown could be felt as early as 2030-2031, contributing to bitter winters and severe cold snaps in northwest Europe[colder-winters]; and devastating crop failures in the developing world.",
+      "A weakened AMOC disrupts marine food webs by altering nutrient transport, and shifts the Intertropical Convergence Zone, changing precipitation patterns in the Sahel and South Asia, weakening the West African Monsoon and drying the Sahel. In the Amazon, circulation changes make drought and fire risk worse, pushing the rainforest closer to an irreversible tipping point. Altered rainfall patterns affect South Asia's monsoon and reduce the ocean's ability to absorb CO₂.",
+      "None of these impacts operate alone. They interact with food systems, energy demand, insurance markets, coastal infrastructure, and sovereign finance, the definition of a systemic compounding risk.",
+      "The policy implications are as follows ..."
   ]
 },
 

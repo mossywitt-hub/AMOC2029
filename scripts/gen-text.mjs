@@ -38,6 +38,8 @@ L.push(
   '  KEY-N |quote|:    a block quote',
   '  KEY-N |tech|:     a Technical-detail note title; its paragraphs follow as KEY-N.1, KEY-N.2 …',
   '  KEY-N |graphic|:  a locked graphic block (tabloid/memo/etc.) — nothing to edit, do not remove',
+  '  KEY-N |divider|:  a scene section break (* * *) — locked, do not remove',
+  '  KEY |dateline|:   a scene dateline, e.g. November 2029 — editable',
   '  KEY-N |figure|:   a figure image — edit the caption after the colon; the image file itself is fixed',
   '  KEY |title| / |label| / |intro| / |section| / |name| / |bio|:  single fields',
 );
@@ -48,6 +50,7 @@ function emitScene(i) {
   const K = sc.id.toUpperCase();
   head(`SCENE ${ROMAN[i]}  —  ${sc.title.toUpperCase()}`, sc.id);
   line(`${K} |title|`, sc.title);
+  if (sc.dateline) line(`${K} |dateline|`, sc.dateline);
   sc.body.forEach((el, j) => {
     const id = `${K}-${j + 1}`;
     if (typeof el === 'string') line(id, el);
@@ -56,6 +59,7 @@ function emitScene(i) {
       line(`${id} |tech|`, el.technote.title);
       el.technote.body.forEach((p, k) => line(`${id}.${k + 1}`, p));
     }
+    else if (el.divider) line(`${id} |divider|`, 'divider');
     else if (el.tabloid) line(`${id} |graphic|`, 'tabloid');
     else if (el.memo) line(`${id} |graphic|`, 'memo');
     else if (el.paper) line(`${id} |graphic|`, 'paper');
