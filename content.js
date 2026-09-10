@@ -178,7 +178,7 @@ scenes: [
       "Miriam looked through the glass into the government district, where the sky had the raw look of a day that could turn either way.",
       "She sighed. “I know. I know that my Department is already the butt of constant jokes from the Right. And I saw the column in the Daily Ledger calling it “late capitalist diversion tactics”. But all I can tell you is that if we don’t make some hard decisions now, the weather will make them for us.”",
       "“We have to keep power running through cold winters without giving in to the gas companies. We have to stop flood losses becoming insurance losses, because those become housing losses. We have to drag and cajole and pay farmers and importers towards resilience to heat and drought and winter storms. Competence won us this mandate, and I can promise you, it will not survive even a few weeks of empty shelves.”",
-      "When the meeting broke up, Miriam checked her correspondence. Tom had flagged a note from a rural representative complaining that the new government sounded like it was dragging the country into wartime. The state office wanted language for a call with Beijing, and home affairs had asked for modeling of the impact of AMOC on immigration. She’d made her point."
+      "When the meeting broke up, Miriam checked her correspondence. Tom had flagged a note from a rural representative complaining that the new government sounded like it was dragging the country into wartime. The foreign ministry wanted language for a call with Beijing, and home affairs had asked for modeling of the impact of AMOC on immigration. She’d made her point."
     ],
     tech:{title:"", body:[]}
   },
@@ -283,7 +283,7 @@ scenes: [
       "“It’s already being bought,” Voss said, “just not in an accountable way. Every delay decision and underfunded adaptation budget is a decision. You only call my side unilateral because it has a face.”",
       "Miriam could still see that face, glowing under the spotlight as the crowd exhaled adoration, when the scandal broke three days later.",
       "SECRET SUN-DIMMING TALKS, said the morning papers. One of Miriam’s own party called for her resignation before breakfast. The opposition asked why on earth the government was planning to meddle with the weather rather than cut bills.",
-      "In the legislature, she gave the line the foreign ministry and the executive office had agreed on: research governance did not imply deployment; any international discussion of climate intervention would have to be transparent, multilateral, and subordinate to emissions reduction and adaptation.",
+      "In the legislature, she gave the line the foreign ministry and the prime minister’s office had agreed on: research governance did not imply deployment; any international discussion of climate intervention would have to be transparent, multilateral, and subordinate to emissions reduction and adaptation.",
       "It had sounded like a good line earlier. Miriam’s voice sounded tinny in the chamber.",
       "That evening Tom read out the damage from the private polling without saying I told you so: “Your support is dropping with everyone except people who already think the entire century is a systems failure.”",
       "“Comforting.”",
@@ -345,36 +345,39 @@ scenes: [
     dateline:"January 2033",
     ledger:{year:"2033",
       debt:101, debtD:2, deficit:6.6, deficitD:0.2, inflation:4.7, inflationD:-0.2, yield10:5.5, yield10D:0.1,
-      poll:{gov:[32,0], opp:[32,-1], far:[20,2], left:[10,1]},
+      poll:{gov:[29,-3], opp:[34,1], far:[24,6], left:[8,-1]},
       infra:2, ins:11.0, unins:24.0, food:13, water:0},
     body:[
-      "By January the migration briefs were their own folder, frequently in the center of Miriam’s desk.",
-      "Andres came back to see her. He had a new paper. He no longer needed a lanyard.",
-      "“Ah, Andres,” Miriam said, sighing. “Old friend. New data.”",
-      "He walked her through what three years of numbers had confirmed: the West African monsoon retreating further south, two failed Sahel rains, a long and violent Indian monsoon. And what this meant for them: ever more endless queues outside processing centers and ever more overcrowded boats making the ever-more difficult crossing.",
-      "No-one really called them AMOC migrants. There were other reasons, the wars and the jobs and the families already living elsewhere. It all still belonged to the same future, Miriam thought again.",
-      "“The numbers?” she asked.",
-      "Andres told her about crossing attempts up sixty-five percent more than last year, with the deaths at sea up more than that. When Tom found her that evening with the results of the latest internal polling, he told her that the flood-hit coastal areas still waiting for compensation were the ones angriest about hotel contracts for asylum claimants.",
-      "“Well,” Miriam said. “It is the same emergency budget, which means it is a competition. We built it that way.”",
-      "She knew it was just a matter of time before Marcus Webb, the home secretary, brought the paper to cabinet. She knew what it was before he started up the slide deck two months later.",
-      "“This is our Emergency Border and Migration Resilience Bill,” Marcus said. He cast a glance at Miriam; he knew her thoughts on it. “Long overdue, as we all know. A quick summary before we get into it: we’re implementing offshore processing. And bringing migrants straight into automatic detention pending determination of status. We’re going to cap family reunification. And something I think will really help: a satellite-assisted monitoring layer to manage flow across the Channel.”",
-      "“Whose satellite.” Miriam somehow already knew.",
-      "“Voss Foundation infrastructure, licensed through a defense contractor.” When she rolled her eyes Marcus sighed and said, “Miriam, the grain reserve, the flood defenses, the whole Center, none of it will survive if its government fails on immigration. You know that.”",
-      "He clicked forward to the capacity analysis. It tracked their system’s collapse point given current arrival trends, things like caseworkers and court queues and beds for the night.",
-      "“But this is only a measure of our current resources,” Miriam said. “We could try requisitioning more buildings and expanding the legal routes — we could process people before they reach the Channel at all.”",
-      "“We could,” the finance minister agreed. Miriam could tell from her tone they wouldn’t.",
-      "“We’re already moving families away from the coast,” Marcus said. “Think about how this will look when they’re already living in temporary accommodation.”",
+      "In the early hours of the new year, three young men were badly beaten in a city center. They were climate migrants.",
+      "An angry crowd gathered outside the hospital where they were being treated, despite the bitter cold. They hassled staff, yelled, and posted incitements online. They said these people were just a few of the millions who were ruining their own countries with pollution and coal power plants, then running from the consequences. And the government was doing nothing, as usual.",
+      {protest:true},
+      "Miriam felt anxious. Not because of the violence: the police had things under control, more or less, and the crowd would move on. But because she knew the protesters were right about something: this wasn’t sustainable.",
+      "Immigration forces were already short staffed and underfunded. They had to rely on inexperienced recruits and support from the army, which scared Miriam. It was a matter of time before someone made a mistake or was heavy handed with fear. And public services in some border communities were underwater in every sense, after an influx of desperate people over summer and months of violent winter storms.",
+      "The protesters were the fringe, and, being pragmatic, not people who were ever likely to vote for Miriam or her colleagues. But Miriam knew that even her most moderate, reliable voters would start to ask for something to change if the numbers at the border, the snaking queues outside process centers, kept ticking up.",
+      "And they would. The scientist had been back with another year of data. The Sahel rains had failed, the West African monsoon had shifted further south, and the Indian monsoon had been long and violent.",
+      {divider:true},
+      "Markus Miller, the home affairs Minister, apparently had a private group chat where he shared snide commentary about the Department and other ‘limp’ policies with his friends from the right flank of the party. He and Miriam were not natural allies, and there wasn’t much friendly preamble when he came to her to discuss his emergency policy proposal.",
+      "“This is the Emergency Border and Migration Resilience Bill,” he said, as an aide pulled up a presentation. “Long overdue, as we all know.” Markus cast a glance at Miriam. “A quick summary before we get into it: we’re shutting things down. Third country processing, outside of our borders. Automatic detention pending determination of status. We’ll cap family reunification. And a technological foundation to it all: a satellite-plus-AI monitoring layer to manage flows towards our borders.”",
+      "“Whose satellite?” Miriam already knew.",
+      "“Voss Foundation infrastructure, via a defense contractor.” When she rolled her eyes Markus sighed and said, “Miriam, the grain reserve, the flood defenses, none of it will survive if we fail on immigration. You know that.”",
+      "He clicked forward to the capacity analysis. It tracked the collapse point of various local and national systems given current arrival trends: things like caseworkers and court queues and beds for the night.",
+      "“But this is only a measure of our current resources,” Miriam said. “We could requisition more buildings and expand the legal routes. We could create new visas for critical professions from the regions worst affected—it could be a win-win.”",
+      "“We could,” one of Markus’ aides agreed. Miriam knew they wouldn’t.",
+      "“We’re already moving families away from the coast,” Markus said. “Think about how this will look when hundreds of our own citizens are living in temporary accommodation.”",
       "“Our citizens are in need,” Miriam acknowledged. “These people are too.”",
-      "She knew it was mainly a lost cause when the prime minister looked at her.",
-      "“Yes, but we can reach the point where we’re unable to help both. You were the one who said that if we didn’t make some hard decisions, the weather would make them for us.”",
-      "Miriam hadn’t meant like this, or had she? She fought the Bill for eleven days after that. She got the child detention clause struck entirely, and a safe-route quota written in for people displaced by climate disaster specifically. She did not get the offshore center removed, or Voss’s cameras away from the cliffs.",
-      "The bill passed. On the news that night, the same anchor who had once christened her department the Department of Constant Cost called her a minister “who understands hard choices.”",
-      "She had known hard choices might have been necessary, but she did not feel she understood anything. That night Nina was the one who rang, and even the ring felt accusatory.",
-      "“You told me that panic makes bad policy.”",
-      "“The alternative was a worse bill,” Miriam said. She believed it but wasn’t sure whether it was true. On the muted television on the wall a woman sat with three children and a transparent folder full of papers. One of the children had his eyes downcast, peeling the label from a bottle of water he’d been given. Miriam did not know whether they were waiting to enter the country or leave it.",
+      "“Yes, but we will very soon reach—if we haven’t already reached—a point where we’re unable to help both. ‘If we don’t make some hard decisions, the weather will make them for us,’ that was your peroration, wasn’t it?”",
+      "That stung. Miriam hesitated for a moment, then shot back. “You know what? You’re right. We need to make hard decisions, and you aren’t. In fact I’m disappointed. Half of this is just technicalities. Changing processing location. Detention centers we don’t even have. The Voss AI satellite is a great media talking point I’m sure, but it’s hardly going to stop anyone on its own. So actually Markus, you tell the prime minister this has my full support. But on the condition there’s funding for another five thousand full time, fully trained immigration officers at the busiest ports and crossing points.”",
+      "Markus looked stunned. Miriam went on. “Before you tell me there isn’t enough money, we’ll even put up funding from this Department. But only if you’re willing to tell your media contacts that this is a joint initiative.”",
+      "Markus was quiet for a while. “Thank you Miriam,” he said eventually. “I’ll give that some thought.” Then he stood up to leave, smiling at the victory.",
+      "The night the bill passed, the same journalist who coined the “Department of Constant Cost” called Miriam “a politician who understands hard choices.”",
+      "She wondered what she’d have made of the accolade a couple of decades earlier, when she’d organized for earth alliances and other things that had aged badly. There was always the nagging recognition that even if they won every argument at home, the country was a rounding error in the global sum. At least this Department was fighting battles that could actually be won on their own terms. There was a bitter satisfaction, she felt, in looking to your own defenses.",
+      "From that point, Miriam set her inbox to forward and delete anything mentioning “migration”. Tom would handle it.",
       {technote:{title:"climate displacement and the border", body:[
-        "The World Bank’s Groundswell modeling projects up to 216 million people could be forced to migrate within their own countries by 2050 across six world regions, with hotspots emerging as early as 2030, driven by water scarcity, crop failure and sea-level rise.",
-        "A domestic population already absorbing climate losses (e.g. flood payouts, mortgage stress, insurance repricing) might very well treat new arrivals as competitors for the same finite budget, even when the two are funded through entirely different lines. While the UNHCR’s interpretation of Article 31 of the Refugee Convention opposes penalising qualifying refugees merely for irregular entry, governments could make access much harder, rely more heavily on safe-third-country arrangements, and restrict the statuses granted."
+        "Climate-related migration has been recognized and modeled for decades. In 2007, for example, the <a href=\"https://www.lse.ac.uk/granthaminstitute/publication/the-economics-of-climate-change-the-stern-review/\" target=\"_blank\" rel=\"noopener noreferrer\">Stern Review</a> identified “large-scale population movement” as a critical climate-related risk for governments to consider. Estimates of potential numbers are contentious, especially as severe climate impacts continue to manifest faster than many models predicted.",
+        "Recent assessments such as <a href=\"https://www.europarl.europa.eu/RegData/etudes/BRIE/2021/698753/EPRS_BRI(2021)698753_EN.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">this briefing</a> published by the European Parliamentary Research Service, highlight dramatic recent shifts in internal migrations. In 2024, the Internal Displacement Monitoring Centre (IDMC) recorded 65.8 million new displacements of which 45.8 million were the result of floods, windstorms, earthquakes or droughts—the highest annual figure ever recorded by the IDMC.",
+        "Accordingly, the World Bank’s <a href=\"https://www.worldbank.org/en/news/press-release/2021/09/13/climate-change-could-force-216-million-people-to-migrate-within-their-own-countries-by-2050\" target=\"_blank\" rel=\"noopener noreferrer\">Groundswell modeling</a> projects up to 216 million people could be forced to migrate within their own countries by 2050 across six world regions, with hotspots emerging as early as 2030, driven by water scarcity, crop failure and sea-level rise.",
+        "It is therefore reasonable to assume that the very severe effects of a slowing AMOC would lead to mass displacements both intraregionally and globally.",
+        "A domestic population already absorbing climate losses (e.g. flood payouts, mortgage stress, insurance repricing) might very well treat new arrivals as competitors for the same finite budget. While the UNHCR’s interpretation of Article 31 of the Refugee Convention opposes penalizing qualifying refugees merely for irregular entry, governments could make access much harder, rely more heavily on safe-third-country arrangements, and restrict the statuses granted."
       ]}}
     ]
   },
@@ -384,7 +387,7 @@ scenes: [
     dateline:"April 2033",
     ledger:{year:"2033",
       debt:103, debtD:4, deficit:6.9, deficitD:0.5, inflation:4.4, inflationD:-0.5, yield10:5.6, yield10D:0.2,
-      poll:{gov:[33,1], opp:[30,-2], far:[21,1], left:[11,1]},
+      poll:{gov:[33,4], opp:[30,-4], far:[21,-3], left:[11,3]},
       infra:2, ins:12.4, unins:28.0, food:12, water:12},
     body:[
       "If the country was going to need more resilience, it wasn’t just going to be big utilities that mattered. Cooperatives that owned panels, batteries and chargers were turning into a bloc, and the bloc was voting.",
@@ -517,14 +520,14 @@ scenes: [
 /* ---- news ticker: one list of rolling headlines per scene (+ home) ---- */
 tickers:{
   home:[
-    "AMOC slowdown moves from the journals into government briefings",
+    "AMOC slowdown moves from research reports to government briefings",
     "New government promises “competence, not slogans”",
-    "Finance ministry warns fiscal headroom is “evaporating”",
-    "Insurers quietly redraw their North Atlantic risk maps",
-    "PM: “We will explain the trade-offs before the weather does”"
+    "Finance ministry warns headroom is “thin”",
+    "Reinsurers quietly redraw North Atlantic risk maps",
+    "PM confirms new Department of Climate Resilience"
   ],
   department:[
-    "Government confirms new Department of Climate Resilience",
+    "Miriam Dutta confirmed as new Minister for Climate Resilience",
     "Scientists hand officials a “planning paper” on AMOC collapse",
     "Markets shrug about “weather astrology”",
     "Opposition: “a department for problems we can’t afford”",
@@ -555,12 +558,12 @@ tickers:{
     "Government split over deferring the adaptation budget"
   ],
   border:[
-    "Channel crossings up 65% on the year; sea deaths climbing faster",
-    "Home secretary readies Emergency Border and Migration Resilience Bill",
-    "Bill sets offshore processing and automatic detention pending status",
-    "Voss Foundation satellites to watch the Channel via a defense contractor",
-    "Coastal towns awaiting flood payouts bristle at asylum hotel contracts",
-    "Minister strikes out child detention, wins a climate safe-route quota"
+    "Violent scenes on the border",
+    "Three climate migrants critical after city-center beating",
+    "Border communities ‘overwhelmed’ as winter crossings surge",
+    "Migrant hotels spark fury in flood-hit towns",
+    "Take back control: voters demand a border crackdown",
+    "Illegal migrants flee the countries they ruined — and target ours"
   ],
   grid:[
     "Grid Commons Act scrapes through its final reading",

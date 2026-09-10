@@ -12,16 +12,16 @@ HOW TO EDIT
 ================================================================
 HOME   ·   ledger key: home
 ================================================================
-HOME-1: AMOC slowdown moves from the journals into government briefings
+HOME-1: AMOC slowdown moves from research reports to government briefings
 HOME-2: New government promises “competence, not slogans”
-HOME-3: Finance ministry warns fiscal headroom is “evaporating”
-HOME-4: Insurers quietly redraw their North Atlantic risk maps
-HOME-5: PM: “We will explain the trade-offs before the weather does”
+HOME-3: Finance ministry warns headroom is “thin”
+HOME-4: Reinsurers quietly redraw North Atlantic risk maps
+HOME-5: PM confirms new Department of Climate Resilience
 
 ================================================================
 SCENE I  —  THE DEPARTMENT OF CLIMATE RESILIENCE   ·   ledger key: department
 ================================================================
-DEPARTMENT-1: Government confirms new Department of Climate Resilience
+DEPARTMENT-1: Miriam Dutta confirmed as new Minister for Climate Resilience
 DEPARTMENT-2: Scientists hand officials a “planning paper” on AMOC collapse
 DEPARTMENT-3: Markets shrug about “weather astrology”
 DEPARTMENT-4: Opposition: “a department for problems we can’t afford”
@@ -60,12 +60,12 @@ SEAM-5: Government split over deferring the adaptation budget
 ================================================================
 SCENE V  —  THE HARD BORDER   ·   ledger key: border
 ================================================================
-BORDER-1: Channel crossings up 65% on the year; sea deaths climbing faster
-BORDER-2: Home secretary readies Emergency Border and Migration Resilience Bill
-BORDER-3: Bill sets offshore processing and automatic detention pending status
-BORDER-4: Voss Foundation satellites to watch the Channel via a defence contractor
-BORDER-5: Coastal towns awaiting flood payouts bristle at asylum hotel contracts
-BORDER-6: Minister strikes out child detention, wins a climate safe-route quota
+BORDER-1: Violent scenes on the border
+BORDER-2: Three climate migrants critical after city-center beating
+BORDER-3: Border communities ‘overwhelmed’ as winter crossings surge
+BORDER-4: Migrant hotels spark fury in flood-hit towns
+BORDER-5: Take back control: voters demand a border crackdown
+BORDER-6: Illegal migrants flee the countries they ruined — and target ours
 
 ================================================================
 SCENE VI  —  THE NEW OWNERS OF THE GRID   ·   ledger key: grid

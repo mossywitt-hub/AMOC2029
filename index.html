@@ -363,6 +363,19 @@ button{font-family:inherit;}
 .lf-promo{font-family:var(--mono);font-size:7.5px;letter-spacing:0.05em;color:#a89f88;text-align:right;line-height:1.3;}
 @media(max-width:620px){ .leaflets{grid-template-columns:1fr;} .leaflet,.leaflet.opp{transform:none;} }
 
+/* PROTEST handbill inset — a rough, photocopied anti-migration flyer (in-story artifact) */
+.protest{position:relative;max-width:430px;margin:2rem auto;background:#eae6db;color:#141414;border:1.5px solid #141414;box-shadow:5px 6px 0 rgba(20,18,14,0.20);transform:rotate(-1.3deg);overflow:hidden;filter:contrast(1.05);}
+.protest::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,0.045) 0 1px,transparent 1px 4px);mix-blend-mode:multiply;pointer-events:none;z-index:3;}
+.pf-kicker{background:#141414;color:#eae6db;font-family:var(--mono);font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;text-align:center;padding:6px 8px;}
+.pf-art{background:#d7d2c4;border-bottom:1.5px solid #141414;padding-top:8px;}
+.pf-art svg{display:block;width:100%;height:auto;}
+.pf-head{font-family:var(--sans);font-weight:800;font-size:29px;line-height:1.0;letter-spacing:-0.015em;text-transform:uppercase;text-align:center;color:#141414;padding:15px 14px 4px;}
+.pf-head span{display:block;color:#9a1b12;}
+.pf-body{font-family:var(--serif);font-size:13.5px;line-height:1.5;color:#2a2724;padding:6px 22px 14px;text-align:center;}
+.pf-cta{font-family:var(--sans);font-weight:800;font-size:18px;letter-spacing:0.01em;text-transform:uppercase;text-align:center;color:#eae6db;background:#9a1b12;padding:9px 8px;}
+.pf-foot{display:flex;justify-content:space-between;gap:10px;background:#141414;color:#c9c3b4;font-family:var(--mono);font-size:8.5px;letter-spacing:0.1em;padding:6px 12px;}
+@media(max-width:620px){ .protest{transform:none;} .pf-head{font-size:24px;} }
+
 /* INVITATION inset */
 .invite{margin:2rem 0;display:flex;justify-content:center;}
 .invite-card{position:relative;background:#f7f1e3;border:1px solid #e3d8bf;box-shadow:0 2px 0 #efe6d2,0 3px 14px rgba(60,50,30,0.12);padding:2.6rem 2.4rem 2rem;max-width:430px;width:100%;text-align:center;}
@@ -1022,6 +1035,40 @@ function hawkSVG(){
 }
 
 /* ---- memo render ---- */
+function factorySmokeSVG(){
+  return `<svg viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g fill="#1c1c1c">
+      <circle cx="96" cy="74" r="24"/><circle cx="124" cy="52" r="34"/><circle cx="162" cy="38" r="42"/>
+      <circle cx="150" cy="72" r="30"/><circle cx="198" cy="30" r="30"/><circle cx="206" cy="58" r="34"/>
+      <circle cx="240" cy="44" r="30"/><circle cx="262" cy="70" r="24"/><circle cx="286" cy="54" r="20"/>
+    </g>
+    <g fill="#3a3a3a">
+      <circle cx="140" cy="48" r="15"/><circle cx="182" cy="60" r="13"/><circle cx="216" cy="40" r="12"/><circle cx="120" cy="66" r="10"/>
+    </g>
+    <g fill="#141414">
+      <rect x="66" y="118" width="268" height="56"/>
+      <rect x="112" y="84" width="20" height="90"/>
+      <rect x="182" y="66" width="22" height="108"/>
+      <rect x="244" y="96" width="18" height="78"/>
+      <path d="M66 118 l16 -15 v15z M98 118 l16 -15 v15z M130 118 l16 -15 v15z"/>
+    </g>
+    <g fill="#cbc5b6">
+      <rect x="80" y="132" width="11" height="13"/><rect x="100" y="132" width="11" height="13"/>
+      <rect x="228" y="132" width="11" height="13"/><rect x="248" y="132" width="11" height="13"/>
+      <rect x="290" y="132" width="11" height="13"/><rect x="310" y="132" width="11" height="13"/>
+    </g>
+  </svg>`;
+}
+function renderProtest(){
+  return `<div class="protest" role="img" aria-label="A rough, photocopied anti-immigration protest handbill: a factory belching black smoke above the words ‘They burned their skies. Now they want ours.’">
+    <div class="pf-kicker">&#9888; Citizens&rsquo; Border Alliance &#9888;</div>
+    <div class="pf-art">${factorySmokeSVG()}</div>
+    <div class="pf-head">They burned their skies.<span>Now they want ours.</span></div>
+    <div class="pf-body">The coal and smoke that wrecked the global south was theirs. Now its people pour across our borders &mdash; into your towns, your schools, your winter. We didn&rsquo;t cause this. Why should we pay for it?</div>
+    <div class="pf-cta">Stop the migrant surge</div>
+    <div class="pf-foot"><span>RALLY &middot; SAT 7PM &middot; CENTRAL SQUARE</span><span>PRINT &middot; POST &middot; SHARE</span></div>
+  </div>`;
+}
 function renderInvite(){
   return `<div class="invite">
     <div class="invite-card">
@@ -1192,6 +1239,7 @@ function openScene(i,atBottom){
       if(item.invite){body.insertAdjacentHTML("beforeend",renderInvite());return;}
       if(item.tabloid){body.insertAdjacentHTML("beforeend",renderTabloid());return;}
       if(item.leaflets){body.insertAdjacentHTML("beforeend",renderLeaflets());return;}
+      if(item.protest){body.insertAdjacentHTML("beforeend",renderProtest());return;}
       if(item.divider){body.insertAdjacentHTML("beforeend",`<div class="scene-break" aria-hidden="true">* * *</div>`);return;}
       if(item.italic){const el=document.createElement("p");el.className="italic";el.innerHTML=fnify(item.italic);body.appendChild(el);return;}
       if(item.technote){body.appendChild(makeTechNote(item.technote));return;}
