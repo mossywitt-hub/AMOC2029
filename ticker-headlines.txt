@@ -33,7 +33,7 @@ SCENE II  —  THE PRICE OF JOBS   ·   ledger key: jobs
 ================================================================
 JOBS-1: Gas-plant standby deal splits the government
 JOBS-2: Unions warn against “transition by contempt”
-JOBS-3: Sloane: “You can’t decarbonize on an empty stomach”
+JOBS-3: Sloan: “You can’t decarbonize on an empty stomach”
 JOBS-4: Reserve-margin fears grow as cold-snap forecasts worsen
 JOBS-5: Tabloids christen “Department of Constant Cost”
 JOBS-6: Winter heating bills tick up again
@@ -74,7 +74,7 @@ GRID-1: Grid Commons Act scrapes through its final reading
 GRID-2: Co-op energy bloc flexes its weight at the ballot box
 GRID-3: Big six lobby to strip co-op connection rights
 GRID-4: Renters’ provisions cut to a three-city pilot
-GRID-5: Sloane: “a subsidy architecture for homeowners with apps”
+GRID-5: Sloan: “a subsidy architecture for homeowners with apps”
 
 ================================================================
 SCENE VII  —  THE GROUND GIVES   ·   ledger key: ground
