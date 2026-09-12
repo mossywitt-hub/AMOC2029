@@ -26,19 +26,6 @@
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{margin:0;background:#f7f5f0;color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;}
-.gate{position:fixed;inset:0;z-index:1000;background:#1c2b3a;display:flex;align-items:center;justify-content:center;padding:1.5rem;}
-.gate-card{max-width:420px;width:100%;background:#faf7f0;border:0.5px solid #d8d0bb;box-shadow:0 10px 50px rgba(0,0,0,0.35);padding:2.6rem 2.4rem 2.4rem;text-align:center;}
-.gate-seal{width:30px;height:30px;margin:0 auto 1.4rem;border:1.5px solid #2c3e50;display:flex;align-items:center;justify-content:center;}
-.gate-seal span{width:12px;height:12px;background:#5b7fa6;display:block;}
-.gate-kicker{font-family:'Spline Sans Mono',monospace;font-size:10px;letter-spacing:0.18em;color:#9a8f6f;margin-bottom:1rem;}
-.gate-title{font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:30px;line-height:1.05;color:#1f1b14;margin:0 0 1rem;}
-.gate-note{font-family:'Spline Sans',system-ui,sans-serif;font-size:13.5px;line-height:1.6;color:#5a5343;margin:0 0 1.6rem;}
-.gate-row{display:flex;gap:8px;}
-.gate-row input{flex:1;font-family:'Spline Sans',system-ui,sans-serif;font-size:14px;color:#1f1b14;background:#fff;border:0.5px solid #cfc6ad;padding:11px 13px;}
-.gate-row input:focus{outline:none;border-color:#5b7fa6;}
-.gate-row button{font-family:'Spline Sans Mono',monospace;font-size:12px;letter-spacing:0.06em;color:#faf7f0;background:#1c2b3a;border:none;padding:0 18px;cursor:pointer;transition:background .2s;}
-.gate-row button:hover{background:#2c3e50;}
-.gate-err{font-family:'Spline Sans',system-ui,sans-serif;font-size:12.5px;color:#9a3a2a;min-height:1.1em;margin:0.9rem 0 0;}
 .frame{max-width:1180px;margin:0 auto;background:#fff;min-height:100vh;box-shadow:0 0 60px rgba(40,34,26,0.12);}
 .hidden{display:none !important;}
 .kicker{font-family:var(--mono);font-size:11px;letter-spacing:0.13em;color:var(--muted);}
@@ -112,16 +99,8 @@ button{font-family:inherit;}
 .node.s4{border-left-color:#b0894d;}
 .node.s5{border-left-color:var(--clay);}
 .node.s6{border-left-color:#9a3a2a;}
-.node.s7{border-left-color:#4a7c74;}
-.outcomes-tier{gap:14px;margin-top:6px;}
-.onode{flex:1;max-width:240px;border:1.5px solid;padding:14px 16px;cursor:pointer;text-align:left;background:var(--paper-card);transition:transform .15s,box-shadow .2s;font-family:inherit;}
-.onode:hover{transform:translateY(-2px);box-shadow:3px 4px 0 rgba(60,55,40,0.1);}
-.onode .o-cond{display:block;font-family:var(--mono);font-size:9px;letter-spacing:0.14em;margin-bottom:5px;}
-.onode .o-name{display:block;font-family:var(--serif);font-size:19px;font-weight:600;line-height:1.1;}
-.onode.good{border-color:var(--sage-line);background:var(--sage-bg);}
-.onode.good .o-cond{color:var(--sage);} .onode.good .o-name{color:#3f6b48;}
-.onode.bad{border-color:var(--clay-line);background:var(--clay-bg);}
-.onode.bad .o-cond{color:var(--clay-deep);} .onode.bad .o-name{color:#8a4a2a;}
+.node.s7{border-left-color:#4a7c74;border-width:1.5px;border-left-width:3px;padding:14px 16px;}
+.node.s7 .n-name{font-family:var(--serif);font-size:19px;font-weight:600;line-height:1.1;}
 /* baseline ledger rail additions (reuses scene .ledger / .lrow / .ll / .lv / .lbar) */
 .ledger .lstate{display:flex;gap:6px;align-items:center;}
 .ledger .lchip{font-family:var(--mono);font-size:11px;padding:2px 9px;background:var(--sage-bg);border:0.5px solid var(--sage-line);color:#3f6b48;letter-spacing:0.04em;}
@@ -451,7 +430,7 @@ button{font-family:inherit;}
 .infra-step{font-family:var(--sans);font-size:11px;color:#c9bfa3;transition:all .3s;}
 .infra-step.passed{color:#a89a7a;text-decoration:line-through;}
 .infra-step.current{font-size:13px;font-weight:500;padding:2px 8px;border:0.5px solid;}
-.infra-step.current.nominal{color:var(--sage);background:var(--sage-bg);border-color:var(--sage-line);}
+.infra-step.current.normal{color:var(--sage);background:var(--sage-bg);border-color:var(--sage-line);}
 .infra-step.current.strained{color:var(--clay-deep);background:var(--clay-bg);border-color:var(--clay-line);}
 .infra-step.current.failing{color:var(--alarm);background:var(--alarm-bg);border-color:var(--alarm-line);}
 .infra-arrow{color:#d8cdb0;font-size:10px;}
@@ -548,7 +527,7 @@ button{font-family:inherit;}
   .fblock-head,.fblock-inner,.rail,.res-inner{padding-left:1.4rem;padding-right:1.4rem;}
   .ledger-pin{padding-left:1.4rem;padding-right:1.4rem;}
   .home-wrap .ledger{width:100%;margin-left:0;border-left:none;border-top:0.5px solid var(--line);order:2;}  .tier{flex-wrap:wrap;gap:10px;margin-bottom:38px;} .node .n-name{font-size:13.5px;}
-  .outcomes-tier{flex-direction:column;} .onode{max-width:none;} .cs p,.cs blockquote{max-width:none;}
+  .cs p,.cs blockquote{max-width:none;}
   .memo-meta .mm{min-width:50%;}
 }
 </style>
@@ -556,20 +535,7 @@ button{font-family:inherit;}
 <script data-goatcounter="https://amoc2029.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
-<div id="gate" class="gate">
-  <div class="gate-card">
-    <div class="gate-seal"><span></span></div>
-    <div class="gate-kicker">RESTRICTED &middot; FILE AMOC-51</div>
-    <h1 class="gate-title">When The Sea Slows</h1>
-    <p class="gate-note">This resource is not yet public. Please enter the access code to continue.</p>
-    <div class="gate-row">
-      <input id="gateInput" type="password" placeholder="Access code" autocomplete="off" spellcheck="false">
-      <button id="gateBtn">Enter</button>
-    </div>
-    <p class="gate-err" id="gateErr"></p>
-  </div>
-</div>
-<div class="frame" id="frame" style="display:none;">
+<div class="frame" id="frame">
   <div class="masthead">
     <span class="seal"><i></i></span>
     <span class="dept">DEPARTMENT OF CLIMATE RESILIENCE</span>
@@ -631,7 +597,7 @@ const ROMAN=["I","II","III","IV","V","VI","VII","VIII"];
 function track(path,title){
   try{ if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:path,title:title}); }catch(e){}
 }
-const INFRA=["nominal","strained","failing"];
+const INFRA=["normal","strained","failing"];
 const STAR_POS=[{x:26,y:20},{x:55,y:15},{x:68,y:38},{x:46,y:64},{x:22,y:46},{x:82,y:26},{x:74,y:72}];
 let current=0;
 
@@ -674,7 +640,7 @@ function buildLanding(){
   let h=`<div class="landing"><div class="landing-inner">
     <div class="title-row">
       <h1 class="title">When The Sea Slows</h1>
-      <p class="subtitle">Predicting a new era of climate politics.</p>
+      <p class="subtitle">Mapping the new era of climate politics.</p>
     </div>
     <div class="read-wrap home-wrap">
       <div class="read-col home-col">
@@ -710,10 +676,6 @@ function buildLanding(){
               <div class="tier">
                 <button class="node s7" data-scene="7"><span class="n-num">SCENE VIII</span><span class="n-name">${D.scenes[7].title}</span></button>
               </div>
-              <div class="tier outcomes-tier">
-                <button class="onode good" data-ending="good"><span class="o-cond">IF IT COMPOUNDS</span><span class="o-name">${D.endings.good.label}</span></button>
-                <button class="onode bad" data-ending="bad"><span class="o-cond">IF IT UNRAVELS</span><span class="o-name">${D.endings.bad.label}</span></button>
-              </div>
             </div>
           </div>
         </div>
@@ -742,7 +704,6 @@ function buildLanding(){
 
   document.querySelectorAll(".node[data-scene]").forEach(n=>n.addEventListener("click",()=>openScene(parseInt(n.dataset.scene,10))));
   $("#startBtn").addEventListener("click",()=>openScene(0));
-  document.querySelectorAll(".onode[data-ending]").forEach(o=>o.addEventListener("click",()=>openEnding(o.dataset.ending)));
   document.querySelectorAll(".sf-nav button[data-nav]").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.nav)));
   document.querySelectorAll(".fblock-head").forEach(hd=>hd.addEventListener("click",()=>document.getElementById(hd.dataset.fb).classList.toggle("open")));
   drawFlowLinks();
@@ -752,12 +713,9 @@ function buildLanding(){
 const FLOW_EDGES=[
   [0,1],[0,2],[0,3],[0,4],[0,5],
   [1,6],[2,6],[3,6],[4,6],[5,6],
-  [6,7],
-  [7,"good"],[7,"bad"]
+  [6,7]
 ];
 function flowNode(ref){
-  if(ref==="good")return document.querySelector('.onode.good');
-  if(ref==="bad")return document.querySelector('.onode.bad');
   return document.querySelector('.node[data-scene="'+ref+'"]');
 }
 function drawFlowLinks(){
@@ -1509,35 +1467,6 @@ try{
   var f=document.getElementById("frame");
   if(f)f.innerHTML='<div style="max-width:520px;margin:18vh auto;padding:0 1.5rem;font-family:Georgia,serif;color:#3a352a;text-align:center;line-height:1.6;"><p style="font-size:21px;margin:0 0 .4rem;">This page is temporarily unavailable.</p><p style="font-size:14px;color:#8a8268;margin:0;">Please try again shortly.</p></div>';
 }
-</script>
-<script>
-/* ---- access gate (soft, client-side curtain) ---- */
-(function(){
-  var PW = "brine-saline-5991";
-  var KEY = "wtss_gate_ok";
-  var gate = document.getElementById("gate");
-  var frame = document.getElementById("frame");
-  var input = document.getElementById("gateInput");
-  var btn = document.getElementById("gateBtn");
-  var err = document.getElementById("gateErr");
-  function unlock(){
-    try{ sessionStorage.setItem(KEY,"1"); }catch(e){}
-    gate.style.display = "none";
-    frame.style.display = "";
-    if(typeof drawFlowLinks==="function"){ setTimeout(drawFlowLinks,40); }
-  }
-  // already unlocked this session?
-  var ok = false;
-  try{ ok = sessionStorage.getItem(KEY) === "1"; }catch(e){}
-  if(ok){ unlock(); }
-  else { frame.style.display = "none"; gate.style.display = "flex"; setTimeout(function(){ input.focus(); }, 50); }
-  function attempt(){
-    if(input.value === PW){ err.textContent=""; unlock(); }
-    else { err.textContent = "That code isn\u2019t right. Try again."; input.select(); }
-  }
-  btn.addEventListener("click", attempt);
-  input.addEventListener("keydown", function(e){ if(e.key==="Enter") attempt(); });
-})();
 </script>
 </body>
 </html>

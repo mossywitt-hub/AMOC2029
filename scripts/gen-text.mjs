@@ -89,7 +89,7 @@ D.introBelow.forEach((p, i) => line(`INTRO-BELOW-${i + 1}`, p));
 D.scenes.forEach((_, i) => emitScene(i));
 
 /* ---- endings ---- */
-[['good', 'THE BETTER OUTCOME'], ['bad', 'THE WORSE OUTCOME']].forEach(([which, name]) => {
+[['good', 'THE GOVERNMENT RETURNS'], ['bad', 'THE GOVERNMENT FALLS']].forEach(([which, name]) => {
   const E = D.endings[which], K = 'ENDING-' + which.toUpperCase();
   head(`ENDING  —  ${name}`, which);
   line(`${K} |label|`, E.label);
