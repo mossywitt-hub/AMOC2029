@@ -32,11 +32,11 @@ INTRO-TOP-4: For years, officials treated climate change like a storm on the far
 INTRODUCTION  —  BELOW
 ================================================================
 INTRO-BELOW-1: We predict that in the near future, escalating climate shocks and looming tipping points will change the politics of climate change from mitigation (solving the cause) to resilience (dealing with the effects).[resilience-annex]
-INTRO-BELOW-2: Climate shocks are already more severe and more frequent than models projected, driving up costs and devastating regions and industries. Some places are becoming uninsurable. There is good reason to believe that this trend will continue.
+INTRO-BELOW-2: Climate shocks are already more severe and more frequent than models projected, driving up costs and devastating regions and industries. Some places are becoming uninsurable. This trend is likely to accelerate.
 INTRO-BELOW-3: The debate about mitigation (net zero) is familiar to most people: clean versus fossil energy and the cost of transitioning.
-INTRO-BELOW-4: The resilience debate is less familiar and broader in scope. It touches almost everything in a society: food, water, jobs, growth, flood defenses, housing, transport, infrastructure, defense.
-INTRO-BELOW-5: Crisis gets more attention than strategy. So the debate will become louder and more contentious at the same time as the stakes rise and tradeoffs become more difficult. Crisis also limits attention, diverts strategy, and constrains resources: as the storm becomes more severe, the path through it narrows.[derailment-risk]
-INTRO-BELOW-6: We are a team of climate risk, system science, and policy experts.[team-annex] With the support of an award winning storyteller we have mapped the actions of a government that chooses to meet the new reality with a new department: the Department of Climate Resilience.[resilience-dept] We depict a series of political battles that a Minister of Climate Resilience might have to win to fight a war with the weather.
+INTRO-BELOW-4: The resilience debate is less familiar and much broader in scope. It impacts everything: food, water, jobs, growth, flood defenses, housing, transport, infrastructure, defense.
+INTRO-BELOW-5: Crisis gets more coverage than strategy. So the debate will become louder and more contentious at the same time as the stakes rise and tradeoffs become more difficult. Crisis also limits attention, diverts strategy, and constrains resources: as the storm becomes more severe, the path through it narrows.[derailment-risk]
+INTRO-BELOW-6: We are a team of climate risk, system science, and policy experts.[team-annex] With the support of an award winning storyteller we have mapped the actions of a government that chooses to meet the new reality with a new department: the Department of Climate Resilience.[resilience-dept] We depict a series of political battles that a Minister of Climate Resilience might have to fight in a war with the weather.
 
 ================================================================
 SCENE I  —  THE DEPARTMENT OF CLIMATE RESILIENCE   ·   key: department
@@ -44,7 +44,7 @@ SCENE I  —  THE DEPARTMENT OF CLIMATE RESILIENCE   ·   key: department
 DEPARTMENT |title|: The Department of Climate Resilience
 DEPARTMENT |dateline|: November 2029
 DEPARTMENT-1: Miriam had been Minister for Climate Resilience for five hours when her chief of staff, Tom Lince, appeared in her doorway with coffee and a harried expression.
-DEPARTMENT-2: “Defense and finance both want you,” he said. “Urgently. There’s also a scientist in the lobby who says if you don’t see him now he will be forced to leak official information to the Press.”
+DEPARTMENT-2: “Defense and finance both want you,” he said. “Urgently. There’s also a scientist in the lobby who says if you don’t see him now he will be forced to leak official information to the press.”
 DEPARTMENT-3: “Right.” Miriam said. “I suppose you should send him in.”
 DEPARTMENT-4 |divider|: divider
 DEPARTMENT-5: Miriam was relieved to be getting to work after campaigning through another brutally hot summer. It was hard to project renewal and momentum seven hours into door knocking in 40 degree heat.
@@ -402,19 +402,19 @@ ANNEX I  —  WHY THIS EXISTS
 ================================================================
 WHY-1: We created this resource for three reasons:
 WHY-2 |bullets|
-WHY-2.1: To help people understand a new era of politics around climate change.
-WHY-2.2: To raise awareness of underestimated climate risks, with AMOC slowdown as a specific example.
+WHY-2.1: To help people understand a new era of climate change politics.
+WHY-2.2: To raise awareness of underestimated climate risks and tipping points, with AMOC slowdown as a specific example.
 WHY-2.3: To highlight the positive outcomes that are achievable and suggest ways for individuals to contribute.
-WHY-3: We believe climate politics is entering a new phase around the globe, fueled by changes in the weather right now and a long term risk picture that is increasingly hard to ignore.
+WHY-3: We believe climate politics is entering a new phase around the globe, fueled by changes in the weather right now and a long term risk picture that is worsening fast.
 WHY-4: There is a sense that people have stopped caring about climate change. A lot of evidence suggests that this is not the case. In fact, in many countries, more people report being more worried than ever.[climate-concern] Many describe foreboding or even despair about the future. This is telling: it implies that we aren't facing a denial of the problem any more, but instead, a lack of belief that it can be solved.
-WHY-5: This might seem strange at a point when a lot of the technology we need to mitigate climate change is widely available, cheap, being deployed out faster than anyone anticipated, and largely popular. Intentional deny/delay tactics overstating clean downsides are a part of the reason. But so are the four decades in which the climate has been a headline issue again and again, yet limited progress has been made toward a solution.
+WHY-5: This might seem strange at a point when a lot of the technology we need to mitigate climate change is widely available, cheap, being deployed out faster than anyone anticipated, and largely popular. Intentional deny-delay tactics overstating clean downsides are a part of the reason. But so are the decades in which the climate has been a headline issue again and again, yet limited progress has been made toward a solution.
 WHY-6: The politics of climate change are extremely difficult. There is no precedent for solving a collective action problem (or “tragedy of the horizon”) of such complexity. The inertia of our current energy system is huge—it keeps most of us alive every day. Painstaking multilateral decision making processes like COP decay toward localization: claims that “our country is only y% of global emissions, so it doesn’t matter” on the one side; repositioning renewables as energy resilience on the other.
 WHY-7: The politics of resilience are different because resilience is inherently local. It is about individual countries, regions, and communities: local farms, reservoirs, sea defenses, food supply, and so on. The trade offs are more complicated, with mitigation and resilience sometimes at odds: should a gas plant be retired, for example, or retained for capacity in extreme heat and cold waves?
 WHY-8: Mitigation is intangible and long term; resilience is about the crisis in front of us. This resource looks at how this will be likely to play out, once an extreme risk profile forces a democratic government to react.
 WHY-9: AMOC is central to the story and a very real threat, which we want readers to be informed about. But even if we collectively get lucky in relation to AMOC—if we avoid a severe slowdown or collapse—complex and severe climate risks are already here. It is a matter of time before their impacts in cost, disruption, and human suffering rise to a point that forces governments to respond in more coordinated ways.
 WHY-10: Critically, as we depict in the “Good Ending”, the outcomes that remain achievable are not just not bad, but better than the present. They may not be as dramatic as AI futurism but they are more substantive and more definite: cleaner, quieter towns and cities; politics free from energy crises and price shocks; generations that don’t have to live out fundamental anxiety about the future (or at least, not climate-related anxiety).
 WHY-11: Everything we depict is grounded in climate science—we provide technical explainers throughout—and informed by decades of experience at the front line of climate politics.
-WHY-12: That experience has taught us to be careful with predictions and this is not one. It is a framework for thinking about a likely reality and the choices we might get to make.
+WHY-12: That experience has taught us to be careful with predictions. This is not one. It is a framework for thinking about a likely reality and the choices we might get to make.
 
 ================================================================
 ANNEX II  —  AMOC BRIEFING NOTE
