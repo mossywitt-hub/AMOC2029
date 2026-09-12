@@ -79,7 +79,7 @@ SCENE II  —  THE PRICE OF JOBS   ·   key: jobs
 ================================================================
 JOBS |title|: The Price of Jobs
 JOBS |dateline|: January 2030
-JOBS-1: By spring Miriam could identify the lobbyists by their footwear.
+JOBS-1: By January Miriam could identify the lobbyists by their footwear.
 JOBS-2: The NGO people wore sneakers. The clean energy delegations had brogues and Chelsea boots. The oil and gas majors sent representatives with leather loafers that had been polished so recently they squeaked.
 JOBS-3: Daniel Sloan, accordingly, squeaked into her office with a folder in his hand, accompanied by a former union organizer. Smart. But of course: he’d worked in government himself, long enough to understand the choreography.
 JOBS-4: “Minister,” he said, taking the chair opposite her. “Congratulations on becoming the nation’s designated pessimist.”

@@ -189,7 +189,7 @@ scenes: [
       poll:{gov:[40,-4], opp:[32,2], far:[11,2], left:[11,5]},
       infra:1, ins:2.1, unins:4.0, food:17, water:0},
     body:[
-      "By spring Miriam could identify the lobbyists by their footwear.",
+      "By January Miriam could identify the lobbyists by their footwear.",
       "The NGO people wore sneakers. The clean energy delegations had brogues and Chelsea boots. The oil and gas majors sent representatives with leather loafers that had been polished so recently they squeaked.",
       "Daniel Sloan, accordingly, squeaked into her office with a folder in his hand, accompanied by a former union organizer. Smart. But of course: he’d worked in government himself, long enough to understand the choreography.",
       "“Minister,” he said, taking the chair opposite her. “Congratulations on becoming the nation’s designated pessimist.”",
