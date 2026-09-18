@@ -126,9 +126,10 @@ teamIntro:"Planetary Solvency is an association of academics, policymakers, and 
 
 team: [
   {name:"Sandy Trust", bio:"Sandy Trust is Director of Sustainability Risk at Baillie Gifford, Chair of the CFRF Financial Resilience Workstream, former Chair of the Chair of IFOA Sustainability Board, and Founder of Planetary Solvency."},
-  {name:"Dr. Mark Trexler", bio:"Dr. Mark Trexler is a climate policy veteran with more than three decades of experience. He has advised governments and businesses around the world, including several US administrations; and served as a lead author for the Intergovernmental Panel on Climate Change."},
+  {name:"Dr Mark Trexler", bio:"Dr Mark Trexler is a climate policy veteran with more than three decades of experience. He has advised governments and businesses around the world, including several US administrations; and served as a lead author for the Intergovernmental Panel on Climate Change."},
   {name:"Dr Ajay Gambhir", bio:"Dr Ajay Gambhir is a Senior Research Fellow at the Imperial College London Grantham Institute for Climate Change and the Environment."},
-  {name:"Amos Wittenberg", bio:"Amos Wittenberg is Co-Founder and former CEO of climate risk platform Unwritten."},
+  {name:"Dr Jesse Abrams", bio:"Dr Jesse Abrams is an interdisciplinary Earth System Scientist with expertise in climate change, biodiversity, and complex systems."},
+  {name:"Amos Wittenberg", bio:"Amos Wittenberg directed the creation of this resource. Amos is Co-Founder and former CEO of climate risk platform Unwritten.", lead:true},
   {name:"Nadia Mikail", bio:"Nadia Mikail is the lead author of this resource. She is a lawyer and award winning novelist whose work centers on family, myth, and climate breakdown.", lead:true}
 ],
 

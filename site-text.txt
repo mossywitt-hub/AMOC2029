@@ -446,14 +446,16 @@ ANNEX III  —  RESEARCH TEAM
 TEAM |intro|: Planetary Solvency is an association of academics, policymakers, and financial decision makers. It focuses on risk-based approaches to climate shocks and related earth systems challenges.
 TEAM-1 |name|: Sandy Trust
 TEAM-1 |bio|: Sandy Trust is Director of Sustainability Risk at Baillie Gifford, Chair of the CFRF Financial Resilience Workstream, former Chair of the Chair of IFOA Sustainability Board, and Founder of Planetary Solvency.
-TEAM-2 |name|: Dr. Mark Trexler
-TEAM-2 |bio|: Dr. Mark Trexler is a climate policy veteran with more than three decades of experience. He has advised governments and businesses around the world, including several US administrations; and served as a lead author for the Intergovernmental Panel on Climate Change.
+TEAM-2 |name|: Dr Mark Trexler
+TEAM-2 |bio|: Dr Mark Trexler is a climate policy veteran with more than three decades of experience. He has advised governments and businesses around the world, including several US administrations; and served as a lead author for the Intergovernmental Panel on Climate Change.
 TEAM-3 |name|: Dr Ajay Gambhir
 TEAM-3 |bio|: Dr Ajay Gambhir is a Senior Research Fellow at the Imperial College London Grantham Institute for Climate Change and the Environment.
-TEAM-4 |name|: Amos Wittenberg
-TEAM-4 |bio|: Amos Wittenberg is Co-Founder and former CEO of climate risk platform Unwritten.
-TEAM-5 |name|: Nadia Mikail
-TEAM-5 |bio|: Nadia Mikail is the lead author of this resource. She is a lawyer and award winning novelist whose work centers on family, myth, and climate breakdown.
+TEAM-4 |name|: Dr Jesse Abrams
+TEAM-4 |bio|: Dr Jesse Abrams is an interdisciplinary Earth System Scientist with expertise in climate change, biodiversity, and complex systems.
+TEAM-5 |name|: Amos Wittenberg
+TEAM-5 |bio|: Amos Wittenberg directed the creation of this resource. Amos is Co-Founder and former CEO of climate risk platform Unwritten.
+TEAM-6 |name|: Nadia Mikail
+TEAM-6 |bio|: Nadia Mikail is the lead author of this resource. She is a lawyer and award winning novelist whose work centers on family, myth, and climate breakdown.
 
 ================================================================
 THE MEMO
