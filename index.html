@@ -53,6 +53,10 @@ button{font-family:inherit;}
 .cta:hover{background:#26384b;transform:translateY(-1px);}
 .cta i{font-style:normal;font-size:17px;}
 .cta-note{font-family:var(--mono);font-size:11px;color:var(--faint);}
+.cta-row.after-map{margin-top:1.6rem;margin-bottom:0;}
+.cta-row.after-annex{margin-top:2.4rem;margin-bottom:0;}
+.fblock.navy .cta{background:var(--navy-ink);color:var(--navy);}
+.fblock.navy .cta:hover{background:#fff;}
 .lede{margin-bottom:2.4rem;}
 .lede p{font-family:var(--serif);font-size:17px;line-height:1.62;color:var(--ink-3);margin:0 0 1.1rem;}
 .lede p.first{font-size:20px;line-height:1.55;color:var(--ink);}
@@ -630,6 +634,22 @@ function fnify(s){
 }
 
 /* ---- build landing ---- */
+/* Open to the content's real height. A fixed max-height silently clips the end of a long
+   annex -- Annex II already sat within ~140px of the 3000px cap on a phone -- and the end of
+   an annex is exactly where its "Get started" link lives. */
+function setFblockHeight(fb){
+  const body=fb.querySelector(".fblock-body");
+  if(!body)return;
+  if(!fb.classList.contains("open")){body.style.maxHeight="";return;}
+  body.style.maxHeight=body.scrollHeight+"px";
+  body.querySelectorAll("img").forEach(im=>{        // a figure that loads late changes the height
+    if(!im.complete)im.addEventListener("load",()=>setFblockHeight(fb),{once:true});
+  });
+}
+function toggleFblock(fb){fb.classList.toggle("open");setFblockHeight(fb);}
+window.addEventListener("resize",()=>{document.querySelectorAll(".fblock.open").forEach(setFblockHeight);});
+/* The way into the story, repeated wherever a reader might finish reading and look up. */
+const startCTA=mod=>`<div class="cta-row ${mod}"><button class="cta" data-start>Get started <i>&rarr;</i></button></div>`;
 function buildLanding(){
   const L=$("#landing");
   let h=`<div class="landing"><div class="landing-inner">
@@ -646,7 +666,7 @@ function buildLanding(){
   });
   h+=`</div>
         <div class="cta-row">
-          <button class="cta" id="startBtn">Get started <i>&rarr;</i></button>
+          <button class="cta" id="startBtn" data-start>Get started <i>&rarr;</i></button>
         </div>
         <div class="intro-below">`;
   D.introBelow.forEach(p=>{ h+=`<p>${fnify(p)}</p>`; });
@@ -674,6 +694,7 @@ function buildLanding(){
             </div>
           </div>
         </div>
+        ${startCTA("after-map")}
       </div>
       <aside class="ledger">
         <div class="ledger-pin">${ledgerMarkup(D.baseline,false,D.tickers.home)}</div>
@@ -683,24 +704,24 @@ function buildLanding(){
   <div class="footer-stack">
     <div class="fblock deep" id="fb-why">
       <button class="fblock-head" data-fb="fb-why"><span class="fk">ANNEX I</span><span class="ftitle">Why this exists</span><span class="chev">&#8964;</span></button>
-      <div class="fblock-body"><div class="fblock-inner cs">${renderWhy()}</div></div>
+      <div class="fblock-body"><div class="fblock-inner cs">${renderWhy()}${startCTA("after-annex")}</div></div>
     </div>
     <div class="fblock navy" id="fb-amoc">
       <button class="fblock-head" data-fb="fb-amoc"><span class="fk">ANNEX II</span><span class="ftitle">AMOC briefing note</span><span class="chev">&#8964;</span></button>
-      <div class="fblock-body"><div class="fblock-inner cs">${renderAmoc()}</div></div>
+      <div class="fblock-body"><div class="fblock-inner cs">${renderAmoc()}${startCTA("after-annex")}</div></div>
     </div>
     <div class="fblock deep" id="fb-team">
       <button class="fblock-head" data-fb="fb-team"><span class="fk">ANNEX III</span><span class="ftitle">Research team</span><span class="chev">&#8964;</span></button>
-      <div class="fblock-body"><div class="fblock-inner"><p class="team-intro">${D.teamIntro}</p><div class="team-grid">${renderTeam()}</div></div></div>
+      <div class="fblock-body"><div class="fblock-inner"><p class="team-intro">${D.teamIntro}</p><div class="team-grid">${renderTeam()}</div>${startCTA("after-annex")}</div></div>
     </div>
   </div>
   ${siteFooter()}`;
   L.innerHTML=h;
 
   document.querySelectorAll(".node[data-scene]").forEach(n=>n.addEventListener("click",()=>openScene(parseInt(n.dataset.scene,10))));
-  $("#startBtn").addEventListener("click",()=>openScene(0));
+  document.querySelectorAll("[data-start]").forEach(b=>b.addEventListener("click",()=>openScene(0)));
   document.querySelectorAll(".sf-nav button[data-nav]").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.nav)));
-  document.querySelectorAll(".fblock-head").forEach(hd=>hd.addEventListener("click",()=>document.getElementById(hd.dataset.fb).classList.toggle("open")));
+  document.querySelectorAll(".fblock-head").forEach(hd=>hd.addEventListener("click",()=>toggleFblock(document.getElementById(hd.dataset.fb))));
   drawFlowLinks();
 }
 
@@ -1508,7 +1529,7 @@ function buildResources(){
     ${expander("fb-res3","deep","RESOURCES III","Note on complex systems","cs",csHtml)}
     ${expander("fb-res4","navy","RESOURCES IV","Further reading","",frHtml)}
   </div>`;
-  document.querySelectorAll("#resources .fblock-head").forEach(hd=>hd.addEventListener("click",()=>document.getElementById(hd.dataset.fb).classList.toggle("open")));
+  document.querySelectorAll("#resources .fblock-head").forEach(hd=>hd.addEventListener("click",()=>toggleFblock(document.getElementById(hd.dataset.fb))));
 }
 
 $("#homeBtn").addEventListener("click",goHome);
