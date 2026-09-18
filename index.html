@@ -211,18 +211,21 @@ button{font-family:inherit;}
 
 /* reader */
 .reader{display:none;} .reader.active{display:block;}
-.rail{background:var(--navy);padding:0.8rem 2.5rem;display:flex;align-items:center;gap:14px;position:sticky;top:44px;z-index:40;}
-.rail .rk{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--navy-faint);}
-.rail-bars{display:flex;gap:6px;flex:1;}
-.rail-bars .rb{flex:1;height:3px;background:var(--navy-2);cursor:pointer;transition:background .25s;}
+.rail{background:var(--navy);padding:0.8rem 2.5rem;display:flex;align-items:center;gap:14px;position:sticky;top:var(--mast-h,44px);z-index:40;}
+.rail .rk{font-family:var(--mono);font-size:11px;letter-spacing:0.04em;color:var(--navy-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:0 1 auto;min-width:0;}
+.rail-bars{display:flex;gap:6px;flex:1 1 auto;min-width:64px;}
+.rail-bars .rb{flex:1;height:3px;background:var(--navy-2);cursor:pointer;transition:background .25s;border:0;padding:0;appearance:none;-webkit-appearance:none;}
 .rail-bars .rb.done{background:var(--navy-faint);} .rail-bars .rb.cur{background:var(--steel);}
 .rail-bars .rb:hover{background:#c9d4dc;}
-.rail .rnext{font-family:var(--sans);font-size:11px;color:var(--navy-muted);}
+.rail .rnext{font-family:var(--sans);font-size:11px;color:var(--navy-faint);white-space:nowrap;flex:0 0 auto;}
 .read-wrap{display:flex;background:var(--paper);align-items:stretch;}
 .read-col{flex:1;min-width:0;padding:2.75rem 2.5rem 3rem;max-width:760px;}
 .scene-tag{display:flex;align-items:baseline;gap:10px;margin-bottom:0.6rem;}
 .scene-tag .snum{font-family:var(--mono);font-size:11px;letter-spacing:0.12em;color:var(--muted);}
 .scene-title{font-family:var(--serif);font-size:clamp(28px,4vw,38px);line-height:1.12;color:var(--ink);margin:0 0 1.8rem;}
+.chapter+.chapter{border-top:0.5px solid var(--line);margin-top:4rem;padding-top:3.2rem;}
+#stackEnd{height:1px;}
+.chapter+.chapter .scene-tag{margin-bottom:0.5rem;}
 .scene-body p{font-family:var(--sans);font-size:16px;line-height:1.82;color:var(--ink-3);margin:0 0 1.2rem;}
 .scene-body p.lead{font-family:var(--serif);font-size:19px;line-height:1.6;color:var(--ink-2);}
 .scene-body p.italic{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--ink-2);padding-left:1.1rem;border-left:2px solid var(--line-2);}
@@ -510,7 +513,7 @@ button{font-family:inherit;}
   .ledger-head{grid-column:1/-1;margin-bottom:0;} .ledger-spark{grid-column:1/-1;}
   .lrow.lyear,.lrow.poll,.lrow.infra,.lrow.impact,.lrow.loss,.ticker,.lsection,.ftiles{grid-column:1/-1;}
   .read-col{max-width:none;}
-  .rail{top:44px;}
+  #reader .ledger{position:sticky;top:calc(var(--mast-h,44px) + var(--rail-h,43px));z-index:6;}
   /* scene reader: ledger becomes a collapsible card under the chapter title */
   #reader .ledger{border:0.5px solid var(--line);background:var(--paper-deep);margin:0 0 1.7rem;}
   #reader .ledger-bar{display:flex;align-items:center;gap:8px;width:100%;background:none;border:none;cursor:pointer;padding:11px 14px;text-align:left;}
@@ -527,6 +530,7 @@ button{font-family:inherit;}
   .landing,.read-col,.ending{padding-left:1.4rem;padding-right:1.4rem;}
   .masthead{padding:11px 1.4rem;} .dept{font-size:10px;letter-spacing:0.07em;}
   .fblock-head,.fblock-inner,.rail,.res-inner{padding-left:1.4rem;padding-right:1.4rem;}
+  .rail .rnext{display:none;}
   .ledger-pin{padding-left:1.4rem;padding-right:1.4rem;}
   .home-wrap .ledger{width:100%;margin-left:0;border-left:none;border-top:0.5px solid var(--line);order:2;}  .tier{flex-wrap:wrap;gap:10px;margin-bottom:38px;} .node .n-name{font-size:13.5px;}
   .cs p,.cs blockquote{max-width:none;}
@@ -551,25 +555,14 @@ button{font-family:inherit;}
   <div id="landing"></div>
   <div class="reader" id="reader">
     <button class="scroll-cue" id="scrollCue"><span class="cue-label">Continue</span><span class="cue-arrow">&darr;</span></button>
-    <button class="scroll-cue scroll-cue-top" id="scrollCueTop"><span class="cue-arrow">&uarr;</span><span class="cue-label">Back</span></button>
     <div class="rail" id="rail">
-      <span class="rk">SCENES</span>
+      <span class="rk" id="railNow">SCENES</span>
       <div class="rail-bars" id="railBars"></div>
       <span class="rnext" id="railNext"></span>
     </div>
     <div class="read-wrap">
       <div class="read-col">
-        <div class="scene-tag"><span class="snum" id="sceneNum"></span></div>
-        <h2 class="scene-title" id="sceneTitle"></h2>
-        <div class="scene-body" id="sceneBody"></div>
-        <div class="scene-nav">
-          <button class="snav-btn prev" id="prevBtn"><span class="nd">PREVIOUS</span><span id="prevLabel"></span></button>
-          <button class="snav-btn next" id="nextBtn"><span class="nd">NEXT</span><span id="nextLabel"></span></button>
-        </div>
-        <div class="scene-progress" id="sceneProgress">
-          <div class="sp-bars" id="spBars"></div>
-          <span class="sp-count" id="spCount"></span>
-        </div>
+        <div class="scene-stack" id="sceneStack"></div>
       </div>
       <aside class="ledger" id="sceneLedger">
         <button class="ledger-bar" id="ledgerBar" aria-expanded="false"><i></i><span class="lk">THE LEDGER</span><span class="lb-year" id="ledgerBarYear">2029</span><span class="lb-chev">&#8964;</span></button>
@@ -1163,14 +1156,17 @@ function paintLedger(i){
   $("#L_ins").innerHTML=lossFig(Lg.ins);
   $("#L_unins").innerHTML=lossFig(Lg.unins);
   $("#L_ticker").innerHTML=tickerTrack(D.tickers[sc.id]);
-  document.querySelectorAll("#railBars .rb").forEach((rb,idx)=>{rb.className="rb"+(idx<i?" done":idx===i?" cur":"");});
-  const spBars=$("#spBars");
-  if(spBars.children.length===0){
-    D.scenes.forEach((s2,idx)=>{const d=document.createElement("button");d.className="spb";d.title=s2.title;d.addEventListener("click",()=>openScene(idx));spBars.appendChild(d);});
+  const railBars=$("#railBars");
+  if(railBars&&railBars.children.length===0){
+    D.scenes.forEach((s2,idx)=>{
+      const b=document.createElement("button");b.className="rb";b.title=`${ROMAN[idx]}. ${s2.title}`;
+      b.setAttribute("aria-label",`Go to scene ${ROMAN[idx]}: ${s2.title}`);
+      b.addEventListener("click",()=>goToChapter(idx));railBars.appendChild(b);
+    });
   }
-  document.querySelectorAll("#spBars .spb").forEach((spb,idx)=>{spb.className="spb"+(idx<i?" done":idx===i?" cur":"");});
-  $("#spCount").innerHTML=`${i+1} of ${D.scenes.length}`;
+  document.querySelectorAll("#railBars .rb").forEach((rb,idx)=>{rb.className="rb"+(idx<i?" done":idx===i?" cur":"");});
   const nx=D.scenes[i+1];
+  $("#railNow").textContent=sc.title;
   $("#railNext").innerHTML=nx?("Next: "+nx.title+" &rarr;"):"Then: the outcomes &rarr;";
 }
 
@@ -1181,16 +1177,19 @@ function makeTechNote(t){
   wrap.querySelector(".technote-head").addEventListener("click",()=>wrap.classList.toggle("open"));
   return wrap;
 }
-function openScene(i,atBottom){
-  current=i;const sc=D.scenes[i];
-  $("#resources").classList.remove("active");
-  $("#landing").classList.add("hidden");
-  $("#ending").classList.remove("active");
-  $("#reader").classList.add("active");
-  $("#homeBtn").classList.remove("active");$("#resourcesBtn").classList.remove("active");
-  $("#sceneNum").innerHTML="SCENE "+ROMAN[i];
-  $("#sceneTitle").innerHTML=sc.title;
-  const body=$("#sceneBody");body.innerHTML="";
+/* ---- Infinite scroll: chapters are appended below one another and never replaced, so the
+   whole narrative is one continuous document. The next chapter is built while the reader is
+   still more than a screen away from the end, so the scroll never stalls and no click is
+   needed. The ledger repaints from scroll position, so it always matches the prose on screen. ---- */
+let loaded=0;
+const seenChapters=new Set();
+const APPEND_MARGIN=1.5;  // screens of runway kept below the reader at all times
+function buildChapter(i){
+  const sc=D.scenes[i];
+  const sec=document.createElement("section");
+  sec.className="chapter";sec.dataset.idx=i;sec.id="chapter-"+sc.id;
+  sec.innerHTML=`<div class="scene-tag"><span class="snum">SCENE ${ROMAN[i]}</span></div><h2 class="scene-title">${sc.title}</h2><div class="scene-body"></div>`;
+  const body=sec.querySelector(".scene-body");
   if(sc.dateline){body.insertAdjacentHTML("beforeend",`<div class="scene-dateline">${sc.dateline}</div>`);}
   sc.body.forEach((item,idx)=>{
     if(typeof item==="object"){
@@ -1222,48 +1221,123 @@ function openScene(i,atBottom){
     body.appendChild(oc);
     oc.querySelectorAll("[data-ending]").forEach(b=>b.addEventListener("click",()=>openEnding(b.dataset.ending)));
   }
-  const prev=$("#prevBtn"),next=$("#nextBtn");
-  if(i>0){prev.disabled=false;$("#prevLabel").textContent=D.scenes[i-1].title;}else{prev.disabled=true;$("#prevLabel").textContent="\u2014";}
-  if(i<D.scenes.length-1){$("#nextLabel").textContent=D.scenes[i+1].title;}else{$("#nextLabel").textContent="The outcomes";}
+  return sec;
+}
+/* entry point: start a fresh stack at scene i (homepage, flow map, deep link) */
+function openScene(i,atBottom){
+  current=i;loaded=i;seenChapters.clear();
+  $("#resources").classList.remove("active");
+  $("#landing").classList.add("hidden");
+  $("#ending").classList.remove("active");
+  $("#reader").classList.add("active");
+  $("#homeBtn").classList.remove("active");$("#resourcesBtn").classList.remove("active");
+  syncStickyOffsets();
+  ensureObservers();
+  chapterIO.disconnect();
+  const stack=$("#sceneStack");stack.innerHTML="";
+  const first=buildChapter(i);
+  stack.appendChild(first);
+  chapterIO.observe(first);
+  queueTail();
   paintLedger(i);
-  track("/scene/"+sc.id,"Scene "+ROMAN[i]+" — "+sc.title);
+  seenChapters.add(i);
+  track("/scene/"+D.scenes[i].id,"Scene "+ROMAN[i]+" \u2014 "+D.scenes[i].title);
   if(atBottom){window.scrollTo({top:document.documentElement.scrollHeight,behavior:"instant"});}
   else{window.scrollTo({top:0,behavior:"instant"});}
-  lastScrollYForCue=window.scrollY||document.documentElement.scrollTop||0;
-  const rc=document.querySelector(".read-col");
-  if(rc){rc.classList.remove("scene-enter");void rc.offsetWidth;rc.classList.add("scene-enter");}
-  updateCue(i);
+  const sec=stack.firstElementChild;
+  if(sec){sec.classList.remove("scene-enter");void sec.offsetWidth;sec.classList.add("scene-enter");}
   hideCue();
   scrollArmed=false;
   setTimeout(()=>{scrollArmed=true;},450);
 }
+/* no entrance animation here: the reader scrolls into this, and a fade under way reads as a glitch */
+function appendChapter(){
+  if(loaded>=D.scenes.length-1)return false;
+  loaded++;
+  const sec=buildChapter(loaded);
+  $("#sceneStack").appendChild(sec);
+  if(chapterIO)chapterIO.observe(sec);
+  queueTail();
+  return true;
+}
+/* Observers, not scroll arithmetic: scroll events get coalesced during fast or inertial
+   scrolling, and a ledger that lags the prose is worse than no ledger at all. */
+let chapterIO=null,tailIO=null;
+function ensureObservers(){
+  if(!chapterIO){
+    /* A generous trigger band, then exact geometry decides: a thin band can be skipped
+       between frames on a fast scroll, and a zero-height one never intersects at all. */
+    chapterIO=new IntersectionObserver(()=>syncActiveChapter(),{rootMargin:"-30% 0px -30% 0px"});
+  }
+  if(!tailIO){
+    tailIO=new IntersectionObserver(es=>{
+      if(es.some(e=>e.isIntersecting))appendChapter();
+    },{rootMargin:`0px 0px ${Math.round(APPEND_MARGIN*100)}% 0px`}); // runway below the reader
+  }
+}
+function queueTail(){
+  const stack=$("#sceneStack");
+  let t=document.getElementById("stackEnd");
+  if(!t){t=document.createElement("div");t.id="stackEnd";t.setAttribute("aria-hidden","true");}
+  stack.appendChild(t);                    // always the last child
+  if(tailIO){tailIO.unobserve(t);if(loaded<D.scenes.length-1)tailIO.observe(t);}
+}
+function setActiveChapter(idx){
+  if(idx===current)return;
+  current=idx;paintLedger(idx);
+  if(!seenChapters.has(idx)){seenChapters.add(idx);const sc=D.scenes[idx];track("/scene/"+sc.id,"Scene "+ROMAN[idx]+" \u2014 "+sc.title);}
+}
+function maybeAppend(){
+  if(loaded>=D.scenes.length-1)return;
+  if(pageBottomRemaining()<window.innerHeight*APPEND_MARGIN)appendChapter();
+}
+/* how far down the viewport the pinned chrome reaches, so a jumped-to title clears it */
+function chromeBottom(){
+  let b=0;
+  [".masthead","#rail","#reader .ledger"].forEach(sel=>{
+    const e=document.querySelector(sel);
+    if(!e||e.offsetParent===null)return;
+    const cs=getComputedStyle(e);
+    if(cs.position!=="sticky")return;
+    b=Math.max(b,(parseInt(cs.top,10)||0)+e.getBoundingClientRect().height);
+  });
+  return b;
+}
+function scrollToChapter(sec){
+  const y=(window.scrollY||document.documentElement.scrollTop||0)+sec.getBoundingClientRect().top-(chromeBottom()+14);
+  const far=Math.abs(y-(window.scrollY||0))>window.innerHeight*1.8;
+  window.scrollTo({top:y,behavior:far?"instant":"smooth"}); // no multi-second flight across the stack
+  /* Settle the ledger from the destination rather than waiting on scroll events: a jump can
+     produce too few of them to land on the right chapter. */
+  if(far)syncActiveChapter(); else setTimeout(syncActiveChapter,420);
+}
+/* jumping ahead builds what lies between, so the document stays continuous either way */
+function goToChapter(i){
+  if(!$("#reader").classList.contains("active")){openScene(i);return;}
+  while(loaded<i)appendChapter();
+  const sec=document.querySelector('#sceneStack .chapter[data-idx="'+i+'"]');
+  if(!sec){openScene(i);return;}
+  scrollToChapter(sec);
+}
+/* the ledger belongs to whichever chapter is under the reader's eye, not to the last one loaded */
+function syncActiveChapter(){
+  const line=window.innerHeight*0.42;
+  let act=current;
+  document.querySelectorAll("#sceneStack .chapter").forEach(sec=>{
+    if(sec.getBoundingClientRect().top<=line)act=parseInt(sec.dataset.idx,10);
+  });
+  setActiveChapter(act);
+}
+
 let scrollArmed=true;
 let scrollAdvancing=false;
 function cueEl(){return document.getElementById("scrollCue");}
-function updateCue(i){
-  const c=cueEl();if(!c)return;
-  const label = i<D.scenes.length-1 ? D.scenes[i+1].title : "The outcomes";
-  c.querySelector(".cue-label").textContent="Continue: "+label;
-}
 function cueTopEl(){return document.getElementById("scrollCueTop");}
 function showCue(){const c=cueEl();if(c)c.classList.add("show");}
 function hideCueBottom(){const c=cueEl();if(c)c.classList.remove("show");}
 function showTopCue(label){const c=cueTopEl();if(c){c.querySelector(".cue-label").textContent=label;c.classList.add("show");}}
 function hideTopCue(){const c=cueTopEl();if(c)c.classList.remove("show");}
 function hideCue(){hideCueBottom();hideTopCue();} /* transitions clear both pills */
-function advanceScene(){
-  if(scrollAdvancing)return;
-  if(current>=D.scenes.length-1)return; // last scene: never auto-advance into an ending
-  scrollAdvancing=true;hideCue();
-  openScene(current+1);
-  setTimeout(()=>{scrollAdvancing=false;},150);
-}
-function retreatScene(){
-  if(scrollAdvancing)return;
-  scrollAdvancing=true;hideCue();
-  if(current>0){openScene(current-1,true);}else{goHome();}
-  setTimeout(()=>{scrollAdvancing=false;},150);
-}
 function landingActive(){return !$("#landing").classList.contains("hidden");}
 function pageBottomRemaining(){return document.documentElement.scrollHeight-window.innerHeight-(window.scrollY||document.documentElement.scrollTop||0);}
 let lastScrollYForCue=0;
@@ -1276,14 +1350,9 @@ function onReaderScroll(){
     return;
   }
   if(!$("#reader").classList.contains("active")){hideCue();return;}
+  syncActiveChapter();
   if(scrollAdvancing||!scrollArmed)return;
-  const reader=$("#reader");
-  const remaining=reader.getBoundingClientRect().bottom-window.innerHeight;
-  if(current<D.scenes.length-1 && remaining<150){showCue();}else hideCueBottom(); // no bottom cue into the endings
-  const y=window.scrollY||document.documentElement.scrollTop||0;
-  const goingUp=y<lastScrollYForCue; lastScrollYForCue=y;
-  if(y<150 && goingUp){showTopCue(current>0 ? "Back: "+D.scenes[current-1].title : "Back: The beginning");}
-  else if(y>=150 || !goingUp){hideTopCue();}
+  maybeAppend();
 }
 /* Deliberate overscroll: down at the bottom -> next scene; up at the top -> previous scene / home;
    on the homepage, down at the bottom begins Scene I.
@@ -1298,7 +1367,7 @@ const IDLE_RESET_MS=1200;   // standing intent is forgotten only after this long
 const EDGE_TOL=8;           // px tolerance for "pinned at the edge" (Retina sub-pixel safe)
 const JITTER_PX=30;         // opposite motion smaller than this is inertia jitter -> ignored
 let lastWheelT=0;
-let ovDown={acc:0,armed:false}, ovUp={acc:0,armed:false}, ovHome={acc:0,armed:false};
+let ovHome={acc:0,armed:false};
 function ovReset(st){st.acc=0;st.armed=false;}
 /* fwd = signed wheel delta toward the page-turn (+ = firing direction); atEdge = pinned there */
 function ovFeed(st,fwd,gap,atEdge,fire){
@@ -1321,23 +1390,24 @@ function onWheelIntent(e){
     ovFeed(ovHome,dy,gap,pageBottomRemaining()<EDGE_TOL,()=>{hideCue();openScene(0);});
     return;
   }
-  if(!$("#reader").classList.contains("active"))return;
-  if(scrollAdvancing||!scrollArmed)return;
-  const reader=$("#reader");
-  const remaining=reader.getBoundingClientRect().bottom-window.innerHeight;
-  const y=window.scrollY||document.documentElement.scrollTop||0;
-  ovFeed(ovDown, dy,gap, remaining<EDGE_TOL, advanceScene);   // down at the bottom -> next scene
-  ovFeed(ovUp,  -dy,gap, y<EDGE_TOL,         retreatScene);   // up at the top -> prev scene / home
 }
 window.addEventListener("scroll",onReaderScroll,{passive:true});
 window.addEventListener("wheel",onWheelIntent,{passive:true});
-document.getElementById("scrollCue").addEventListener("click",()=>{ if(landingActive()){hideCue();openScene(0);} else advanceScene(); });
-document.getElementById("scrollCueTop").addEventListener("click",()=>{ if(!landingActive()&&$("#reader").classList.contains("active"))retreatScene(); });
+document.getElementById("scrollCue").addEventListener("click",()=>{ if(landingActive()){hideCue();openScene(0);} });
 /* mobile: the scene ledger lives under the chapter title as a collapsible card; desktop: side rail */
+/* The masthead wraps at narrow widths, so everything sticky below it is measured, not assumed. */
+function syncStickyOffsets(){
+  const m=document.querySelector(".masthead"), r=document.getElementById("rail");
+  if(m)document.documentElement.style.setProperty("--mast-h",Math.round(m.getBoundingClientRect().height)+"px");
+  if(r&&r.offsetParent!==null)document.documentElement.style.setProperty("--rail-h",Math.round(r.getBoundingClientRect().height)+"px");
+}
+window.addEventListener("resize",syncStickyOffsets);
+window.addEventListener("load",syncStickyOffsets);
+syncStickyOffsets();
 const ledgerMQ=window.matchMedia("(max-width:880px)");
 function placeLedger(){
   const aside=$("#sceneLedger");if(!aside)return;
-  if(ledgerMQ.matches){ $("#sceneTitle").insertAdjacentElement("afterend",aside); }
+  if(ledgerMQ.matches){ $("#sceneStack").insertAdjacentElement("beforebegin",aside); }
   else{ document.querySelector("#reader .read-wrap").appendChild(aside); aside.classList.remove("open"); $("#ledgerBar").setAttribute("aria-expanded","false"); }
 }
 if(ledgerMQ.addEventListener)ledgerMQ.addEventListener("change",placeLedger);else ledgerMQ.addListener(placeLedger);
@@ -1346,8 +1416,6 @@ $("#ledgerBar").addEventListener("click",()=>{
   const open=$("#sceneLedger").classList.toggle("open");
   $("#ledgerBar").setAttribute("aria-expanded",open?"true":"false");
 });
-$("#prevBtn").addEventListener("click",()=>{if(current>0)openScene(current-1);});
-$("#nextBtn").addEventListener("click",()=>{if(current<D.scenes.length-1){openScene(current+1);}else{const oc=document.querySelector(".outcome-choose");if(oc)oc.scrollIntoView({behavior:"smooth",block:"center"});}});
 
 /* ---- ending ---- */
 function openEnding(which){
