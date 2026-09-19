@@ -173,9 +173,9 @@ scenes: [
       "The finance minister grimaced but said nothing.",
       "“And how about the messaging?” said the energy minister. “Governments have spent half a century telling people that climate change means heatwaves and floods. One in six people still aren’t convinced.[eurobarometer] How can we go out now and say it also means Siberian winters?”",
       "Miriam looked through the glass into the government district, where the sky had the raw look of a day that could turn either way.",
-      "She sighed. “I know. I know that my Department is already the butt of constant jokes from the Right. And I saw the column in the Daily Ledger calling it “late capitalist diversion tactics”. But all I can tell you is that if we don’t make some hard decisions now, the weather will make them for us.”",
+      "She sighed. “I know. I know that my Department is already the butt of constant jokes from the Right. And I saw the meme about “late capitalist diversion tactics”. But all I can tell you is that if we don’t make some hard decisions now, the weather will make them for us.”",
       "“We have to keep power running through cold winters without giving in to the gas companies. We have to stop flood losses becoming insurance losses, because those become housing losses. We have to drag and cajole and pay farmers and importers towards resilience to heat and drought and winter storms. Competence won us this mandate, and I can promise you, it will not survive even a few weeks of empty shelves.”",
-      "When the meeting broke up, Miriam checked her correspondence. Tom had flagged a note from a rural representative complaining that the new government sounded like it was dragging the country into wartime. The foreign ministry wanted language for a call with Beijing, and home affairs had asked for modeling of the impact of AMOC on immigration. She’d made her point."
+      "When the meeting broke up, Miriam checked her correspondence. Tom had flagged a note from a rural representative complaining that the new government sounded like it was dragging the country into wartime. The foreign ministry wanted language for a call with Beijing, and home affairs had asked for modeling on immigration. She’d made her point."
     ],
     tech:{title:"", body:[]}
   },
