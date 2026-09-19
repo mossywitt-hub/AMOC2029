@@ -303,8 +303,8 @@ button{font-family:inherit;}
 .cartoon-deck{font-family:var(--serif);font-style:italic;font-size:14px;line-height:1.45;color:#4d4636;margin:0 0 13px;padding-bottom:12px;border-bottom:1px solid #cfc8b6;}
 .cartoon-figure{margin:0;}
 .cartoon-figure img{display:block;width:100%;height:auto;aspect-ratio:2/1;object-fit:cover;border:0.5px solid #bcb6a4;background:#e6e2d6;filter:sepia(0.12) contrast(1.02);}
-.cartoon-caption{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-family:var(--sans);font-size:10.5px;line-height:1.45;color:#6f6850;font-style:italic;padding-top:7px;}
-.cartoon-credit{font-family:var(--mono);font-style:normal;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap;}
+.cartoon-caption{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-family:var(--sans);font-size:13px;line-height:1.5;color:#5c563f;font-style:italic;padding-top:9px;}
+.cartoon-credit{font-family:var(--mono);font-style:normal;font-size:10.5px;letter-spacing:0.06em;white-space:nowrap;}
 @media(max-width:620px){ .cartoon{padding:1.1rem 1.1rem 1rem;} .cartoon-caption{flex-direction:column;gap:5px;} }
 .news-lead p{font-family:var(--serif);font-size:13.5px;line-height:1.6;color:#332f25;margin:0 0 0.7rem;text-align:justify;}
 .news-drop{margin-top:0;}
@@ -835,10 +835,10 @@ function renderCartoon(){
     <div class="cartoon-rule"><span>The Daily Ledger</span><span>Comment &middot; p.14</span></div>
     <div class="cartoon-kicker">EXCLUSIVE</div>
     <h3 class="cartoon-headline">Secret sun-dimming talks</h3>
-    <p class="cartoon-deck">Ministers met a private foundation and defense investors to discuss dimming the sun, leaked papers show.</p>
+    <p class="cartoon-deck">Ministers met a private foundation and defense investors to discuss dimming the sun, sources say.</p>
     <figure class="cartoon-figure">
       <img src="sun-dimming-cartoon.png" loading="lazy" alt="Editorial cartoon in three panels. Two men in suits confer across a desk; an airliner and a satellite seed particles across the sky; the same two men stand at a railing watching a dimmed sun over a city.">
-      <figcaption class="cartoon-caption"><span>&ldquo;Don&rsquo;t worry, nobody looks up.&rdquo;</span><span class="cartoon-credit">Cartoon</span></figcaption>
+      <figcaption class="cartoon-caption"><span>&ldquo;Don&rsquo;t worry, nobody looks up.&rdquo;</span><span class="cartoon-credit">Dr Not Abot</span></figcaption>
     </figure>
   </div>`;
 }
@@ -1087,7 +1087,7 @@ function renderInvite(){
       <div class="invite-rule"></div>
       <div class="invite-eyebrow">BY INVITATION ONLY</div>
       <div class="invite-host">The Aurent Foundation</div>
-      <div class="invite-host-sub">together with the defense investment organization<br>and a large venture capital fund</div>
+      <div class="invite-host-sub">together with Invest In Defense<br>and Non Linear Returns LLP</div>
       <div class="invite-cordially">request the pleasure of your company at a</div>
       <div class="invite-occasion">Private Roundtable<br>on Climate Intervention<br>Research &amp; Governance</div>
       <div class="invite-divider">&middot; &middot; &middot;</div>

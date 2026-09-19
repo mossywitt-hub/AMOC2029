@@ -127,53 +127,48 @@ SCENE III  —  THE SUNSHADE   ·   key: sunshade
 ================================================================
 SUNSHADE |title|: The Sunshade
 SUNSHADE |dateline|: April 2031
-SUNSHADE-1: If the AMOC memo forced the government to think about energy, flood, and food together, it also forced a question most people still preferred not to think about: what happened when adaptation and emissions cuts looked too slow, and somebody offered to buy time by altering the sky?
-SUNSHADE-2: The invitation came on thick creamy paper, the wording precise and tasteful. A private roundtable on climate intervention research and governance. The sponsors were the defense investment organization, a large venture capital fund, and of course the Aurent Foundation—the main philanthropic vehicle for billionaire Philip Aurent.
-SUNSHADE-3 |graphic|: invite
-SUNSHADE-4: Miriam knew that over the last decade, investor dollars had started to move into solar radiation management and other climate intervention projects—first a trickle, then a steady stream. The Aurent Foundation had quietly match-funded public research projects here and abroad, buying Philip Aurent seats at several important tables without any irritating public scrutiny.
-SUNSHADE-5: Tom wanted her to decline immediately.
-SUNSHADE-6: “Nothing good has ever come from the phrase ‘private roundtable’,” he said.
-SUNSHADE-7: Tom was overcautious of her image and the prime minister wanted eyes in the room, so Miriam left Tom frowning and went.
-SUNSHADE-8: It took place in a paneled hall that still smelled faintly of polish. The tables carried name cards for scientists, diplomats, insurance executives, one retired admiral, two philanthropic advisers and Philip Aurent himself, who wore a black suit without ornament, precise on his wiry frame. Two foreign officials joined by secure link, one from Washington and one from Beijing, both insisting they were interested only in the governance side of things.
-SUNSHADE-9: Miriam had read the profiles. Aurent had made his money in software infrastructure, then in satellite imaging, then by being early enough in the AI boom to become one of those men governments called about it. He had funded epidemiology at first and, more recently, solar radiation modification research. He flew under the radar for the most part; he didn’t own a private jet.
-SUNSHADE-10: “The problem with democratic time,” he was saying now, glowing under the spotlight, “is that it is episodic. You are all smart people; you all know civilization-level risks don’t follow election cycles.”
-SUNSHADE-11: A climate modeller from Zurich gave a talk next about stratospheric aerosol injection in deliberately boring language, pointing out that the planet was losing its current sunshade as fuel mixes changed.[hidden-sunshade] Sulphate particles dispersed high in the stratosphere… she made it sound mundane, like frosting on a skylight. Then a lawyer spoke confidently about governance vacuums, and after a tea break an academic told them at length about how the phrase “last resort” had already become a permission structure.
-SUNSHADE-12 |tech|: solar radiation modification
-SUNSHADE-12.1: Solar radiation modification refers to a family of proposed interventions intended to reflect a small fraction of incoming sunlight back into space in order to reduce warming effects from greenhouse gases. It is not a single technology and remains highly uncertain scientifically, politically and ethically.
-SUNSHADE-12.2: Recent research briefings identify two approaches dominating current discussion. The first is Stratospheric Aerosol Injection, which would disperse aerosols or precursor gases into the upper atmosphere to increase planetary reflectivity. The second is Marine Cloud Brightening, which aims to increase the reflectivity of low marine clouds through sea-salt particle spraying.
-SUNSHADE-12.3: A deliberate multi-decade intervention program would involve continuous management, uncertain regional side effects and major geopolitical consequences. Two private startups, Make Sunsets and Stardust, have begun testing or developing reflective-particle technologies without dedicated regulatory frameworks. Make Sunsets has already released sulfur dioxide balloons without regulatory approval, selling “cooling credits” to customers; Stardust has raised $75 million to develop a new proprietary particle it claims will be safer than sulfur.  The rapid emergence of private actors is forcing governments to confront whether they will ban such activities outright or create controlled research pathways before commercial firms scale their experiments unilaterally.
-SUNSHADE-12.4: This becomes especially relevant under worsening North Atlantic instability. AMOC weakening could alter regional weather patterns, storm tracks and rainfall distributions in ways that are already difficult to model confidently. A large-scale SRM intervention layered on top of those uncertainties could interact unevenly with circulation systems such as the North Atlantic Oscillation and AMOC itself. By the 2034-2036 period, technology, including AI, could be widely used for crisis management but still not governed well enough to function as a full systemic-risk copilot.
-SUNSHADE-13: At their table Aurent turned casually to Miriam.
-SUNSHADE-14: “Minister,” he said, “at what point does precaution become negligence?”
-SUNSHADE-15: Miriam set down her water glass. “Oh, Philip. You’re assuming those are the only categories.”
-SUNSHADE-16: Aurent inclined his head. “I’m assuming that if states cannot coordinate under acute risk, someone else eventually tries.”
-SUNSHADE-17: “What exactly are you telling me?”
-SUNSHADE-18: “We can do research at operational scale,” Aurent said. Miriam noted the polite royal we. “We can have aircraft platforms capable of high-altitude dispersal testing. We can use monitoring systems sophisticated enough to observe atmospheric response in real time. And we can build governance structures that governments could use if they preferred not to begin from zero during an emergency.”
-SUNSHADE-19: “And deployment?”
-SUNSHADE-20: Around the table, people made minute physical adjustments, pretending not to be listening harder.
-SUNSHADE-21: Aurent did not smile. He said, “Not now.”
-SUNSHADE-22: The most unnerving thing was the professionalism. Miriam had expected zealotry or a messiah complex. What she was actually looking at was something legible to her: a well thought-out proposal with annexes.
-SUNSHADE-23: At the next table, a defense consultant made a note on a napkin and slid it into his jacket pocket. Miriam watched him, feeling her unease grow. How soon would it take for countries to start playing wargames with the global thermostat? Because if an intervention could shift rainfall in one region, it could change it somewhere else. Deliberately or otherwise, somebody else’s drought could become part of your climate policy.
-SUNSHADE-24: None of the talks that day mentioned this.
-SUNSHADE-25: At lunch she stood in the cloister with a paper cup of coffee. Aurent joined her again without asking.
-SUNSHADE-26: “Funny how we keep meeting,” Miriam said, stirring.
-SUNSHADE-27: “I’m not trying to corner you,” Aurent said.
-SUNSHADE-28: “Aren’t you?”
-SUNSHADE-29: “No. I’m trying to corner reality.”
-SUNSHADE-30: It was an inane, grandiose sentence. Fit for a billionaire. “That’s the kind of sentence people say before they buy the sky.”
-SUNSHADE-31: “It’s already being bought,” Aurent said, “just not in an accountable way. Every delay decision and underfunded adaptation budget is a decision. You only call my side unilateral because it has a face.”
-SUNSHADE-32: Miriam could still see that face, glowing under the spotlight as the crowd exhaled adoration, when the scandal broke three days later.
-SUNSHADE-33: SECRET SUN-DIMMING TALKS, said the morning papers. One of Miriam’s own party called for her resignation before breakfast. The opposition asked why on earth the government was planning to meddle with the weather rather than cut bills.
-SUNSHADE-34 |graphic|: cartoon
-SUNSHADE-35: In the legislature, she gave the line the foreign ministry and the prime minister’s office had agreed on: research governance did not imply deployment; any international discussion of climate intervention would have to be transparent, multilateral, and subordinate to emissions reduction and adaptation.
-SUNSHADE-36: It had sounded like a good line earlier. Miriam’s voice sounded tinny in the chamber.
-SUNSHADE-37: That evening Tom read out the damage from the private polling without saying I told you so: “Your support is dropping with everyone except people who already think the entire century is a systems failure.”
-SUNSHADE-38: “Comforting.”
-SUNSHADE-39: “In fairness,” he said kindly, “that is a growing demographic.”
-SUNSHADE-40: The trouble did not go away. Scientists who wanted cautious public oversight blamed her for legitimizing the subject and climate campaigners accused the government of searching for a technological excuse. Two think tanks produced serious reports within the week, one arguing that responsible states had a duty to investigate all options, the other arguing that investigation at this stage was already a form of normalization. The prime minister told Miriam privately that some issues arrived before the headlines wanted to understand them, and those were usually the ones that ate political parties alive.
-SUNSHADE-41: One night, driving back from a regional visit, Miriam looked up through the car window and saw an aircraft high over cloud, its vapor trail clean and thin against the evening.
-SUNSHADE-42: It made her unexpectedly sad.
-SUNSHADE-43: That someone somewhere now looked up at the same sky, and saw a system that might soon need adjusting.
+SUNSHADE-1: The invitation came on creamy paper, the wording precise. A private roundtable on climate intervention research and governance. The sponsors were a defense industry body, a large venture fund, and of course the Aurent Foundation—the main philanthropic vehicle for billionaire Philip Aurent.
+SUNSHADE-2 |graphic|: invite
+SUNSHADE-3: Miriam knew that investor dollars had been moving into climate intervention projects for years; first a trickle, then a steady stream. The Aurent Foundation had quietly match-funded public research projects here and abroad, buying Philip Aurent seats at several important tables without any irritating public scrutiny.
+SUNSHADE-4: Tom wanted her to decline immediately.
+SUNSHADE-5: “Nothing good has ever come from the phrase ‘private roundtable’,” he said.
+SUNSHADE-6: Tom was far too sensitive about her image these days, Miriam thought. Anyway, Aurent could be a useful person to know. Miriam left Tom frowning and went.
+SUNSHADE-7: It took place in a beautiful paneled hall. The tables carried name cards for scientists, diplomats, insurance executives, one retired admiral, two philanthropic advisers and Philip Aurent himself, who wore a black suit without ornament, precise on his wiry frame. Two foreign officials joined by secure link, one from Washington and one from Beijing, both insisting they were interested only in the governance side of things.
+SUNSHADE-8: Miriam had read the profiles. Aurent had made his money in cybersecurity, then satellites, then by getting in and out of AI with impeccable timing. He had funded epidemiology at first and, more recently, solar radiation modification research.
+SUNSHADE-9: “The problem with democratic time,” he was saying now, glowing under the spotlight, “is that it is episodic. You are all smart people; you all know civilization-level risks don’t follow election cycles.”
+SUNSHADE-10: A climate modeller from Zurich gave a talk next about stratospheric aerosol injection in deliberately boring language, pointing out that the planet was losing its current sunshade as fuel mixes changed.[hidden-sunshade] Sulphate particles dispersed high in the stratosphere… she made it sound mundane, like frosting on a skylight. Then a lawyer spoke confidently about governance vacuums and how the phrase “last resort” was becoming a permission structure.
+SUNSHADE-11 |tech|: solar radiation modification
+SUNSHADE-11.1: Solar radiation modification refers to a family of proposed interventions intended to reflect a small fraction of incoming sunlight back into space in order to reduce warming effects from greenhouse gases. It is not a single technology and remains highly uncertain scientifically, politically and ethically.
+SUNSHADE-11.2: Recent research briefings identify two approaches dominating current discussion. The first is Stratospheric Aerosol Injection, which would disperse aerosols or precursor gases into the upper atmosphere to increase planetary reflectivity. The second is Marine Cloud Brightening, which aims to increase the reflectivity of low marine clouds through sea-salt particle spraying.
+SUNSHADE-11.3: A deliberate multi-decade intervention program would involve continuous management, uncertain regional side effects and major geopolitical consequences. Two private startups, Make Sunsets and Stardust, have begun testing or developing reflective-particle technologies without dedicated regulatory frameworks. Make Sunsets has already released sulfur dioxide balloons without regulatory approval, selling “cooling credits” to customers; Stardust has raised $75 million to develop a new proprietary particle it claims will be safer than sulfur.  The rapid emergence of private actors is forcing governments to confront whether they will ban such activities outright or create controlled research pathways before commercial firms scale their experiments unilaterally.
+SUNSHADE-11.4: This becomes especially relevant under worsening North Atlantic instability. AMOC weakening could alter regional weather patterns, storm tracks and rainfall distributions in ways that are already difficult to model confidently. A large-scale SRM intervention layered on top of those uncertainties could interact unevenly with circulation systems such as the North Atlantic Oscillation and AMOC itself. By the 2034-2036 period, technology, including AI, could be widely used for crisis management but still not governed well enough to function as a full systemic-risk copilot.
+SUNSHADE-12: At their table Aurent turned casually to Miriam.
+SUNSHADE-13: “Minister,” he said, “at what point does precaution become negligence?”
+SUNSHADE-14: Miriam set down her water glass. “Are those the only categories?”
+SUNSHADE-15: Aurent inclined his head. “I’m assuming that if states can’t coordinate under acute risk, someone else eventually tries.”
+SUNSHADE-16: “What exactly are you telling me?”
+SUNSHADE-17: “We can do research at operational scale,” Aurent said. “We can have aircraft platforms capable of high-altitude dispersal testing. We can use monitoring systems sophisticated enough to observe atmospheric response in real time. And we can build governance structures that governments could use if they preferred not to begin from zero during an emergency.”
+SUNSHADE-18: “And deployment?”
+SUNSHADE-19: Around the table, people made minute physical adjustments, pretending not to be listening harder.
+SUNSHADE-20: Aurent did not smile. He said, “Not now.”
+SUNSHADE-21: The most unnerving thing was the professionalism. Miriam had expected zealotry or a messiah complex. What she was actually looking at was something legible to her: a well thought-out proposal with annexes.
+SUNSHADE-22: At the next table, a defense consultant made a note on a napkin and slid it into his jacket pocket. Miriam watched him, feeling her unease grow. How soon would it take for countries to start playing wargames with the global thermostat? Because if an intervention could shift rainfall in one region, it could change it somewhere else. Deliberately or otherwise, somebody else’s drought could become part of your climate policy.
+SUNSHADE-23: None of the talks that day mentioned this.
+SUNSHADE-24: At lunch she stood in the cloister with a paper cup of coffee. Aurent joined her again without asking.
+SUNSHADE-25: “I’m not trying to corner you,” Aurent said.
+SUNSHADE-26: “Aren’t you?”
+SUNSHADE-27: “No. I’m trying to corner reality.”
+SUNSHADE-28: It was an insane sentence. Fit for a billionaire. “That’s the kind of sentence people say before they buy the sky.”
+SUNSHADE-29: “It’s already being bought,” Aurent said, “just not in an accountable way. Every delay decision and underfunded adaptation budget is a decision. You only call my side unilateral because it has a face.”
+SUNSHADE-30: Miriam could still see that face, glowing under the spotlight as the crowd exhaled adoration, when the scandal broke three days later.
+SUNSHADE-31: SECRET SUN-DIMMING TALKS, said the morning papers. One of Miriam’s own party called for her resignation before breakfast. The opposition asked why the government was planning to meddle with the weather rather than getting inflation under control.
+SUNSHADE-32 |graphic|: cartoon
+SUNSHADE-33: She gave the line the foreign ministry and the prime minister’s office had agreed on: governance did not mean deployment. The government was making sure any future climate intervention would be transparent, safe, and multilateral. This was a chance to lead the global conversation.
+SUNSHADE-34: It had sounded stronger written down. Miriam’s voice felt tinny in the chamber.
+SUNSHADE-35: That evening Tom read out the damage from the private polling without saying I told you so: “Your support is dropping with everyone except people who already think the entire century is a systems failure.”
+SUNSHADE-36: “Comforting.”
+SUNSHADE-37: “In fairness,” he said kindly, “that is a growing demographic.”
+SUNSHADE-38: The trouble did not go away. Two think tanks produced serious reports within the week, one arguing that responsible states had a duty to investigate all options, the other saying that investigation was a form of normalization. The prime minister messaged Miriam to say that some issues arrived before the headlines wanted to understand them, and those were usually the ones that ate politicians alive.
 
 ================================================================
 SCENE IV  —  THE SEAM BETWEEN THE SYSTEMS   ·   key: seam
