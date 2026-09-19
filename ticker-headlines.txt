@@ -39,17 +39,7 @@ JOBS-5: Tabloids christen “Department of Constant Cost”
 JOBS-6: Winter heating bills tick up again
 
 ================================================================
-SCENE III  —  THE SUNSHADE   ·   ledger key: sunshade
-================================================================
-SUNSHADE-1: SECRET SUN DIMMING TALKS, claim the morning papers
-SUNSHADE-2: Minister attended Aurent Foundation roundtable on geoengineering
-SUNSHADE-3: Make Sunsets sells more “cooling credits” without oversight
-SUNSHADE-4: SkyParasol raises fresh funds for a proprietary aerosol
-SUNSHADE-5: Government line: “research is not deployment”
-SUNSHADE-6: Capital to top 35C for 2 weeks, water rationing across region
-
-================================================================
-SCENE IV  —  THE SEAM BETWEEN THE SYSTEMS   ·   ledger key: seam
+SCENE III  —  THE SEAM BETWEEN THE SYSTEMS   ·   ledger key: seam
 ================================================================
 SEAM-1: BREAKING: coastal hospital ground floor underwater
 SEAM-2: Two confirmed dead in a basement apartment off the harbor road
@@ -58,7 +48,7 @@ SEAM-4: Insurers pause approvals in flood-hit areas
 SEAM-5: Government split over deferring the adaptation budget
 
 ================================================================
-SCENE V  —  THE HARD BORDER   ·   ledger key: border
+SCENE IV  —  THE HARD BORDER   ·   ledger key: border
 ================================================================
 BORDER-1: Violent scenes on the border
 BORDER-2: Three climate migrants critical after city-center beating
@@ -66,6 +56,16 @@ BORDER-3: Border communities “overwhelmed” as winter crossings surge
 BORDER-4: Migrant hotels spark fury in flood-hit towns
 BORDER-5: Take back control: voters demand a border crackdown
 BORDER-6: Illegal migrants flee the countries they ruined — and target ours
+
+================================================================
+SCENE V  —  THE SUNSHADE   ·   ledger key: sunshade
+================================================================
+SUNSHADE-1: SECRET SUN DIMMING TALKS, claim the morning papers
+SUNSHADE-2: Minister attended Aurent Foundation roundtable on geoengineering
+SUNSHADE-3: Make Sunsets sells more “cooling credits” without oversight
+SUNSHADE-4: SkyParasol raises fresh funds for a proprietary aerosol
+SUNSHADE-5: Government line: “research is not deployment”
+SUNSHADE-6: Capital to top 35C for 2 weeks, water rationing across region
 
 ================================================================
 SCENE VI  —  THE NEW OWNERS OF THE GRID   ·   ledger key: grid
