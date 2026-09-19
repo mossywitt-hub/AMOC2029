@@ -41,7 +41,7 @@ JOBS-6: Winter heating bills tick up again
 ================================================================
 SCENE III  —  THE SUNSHADE   ·   ledger key: sunshade
 ================================================================
-SUNSHADE-1: SECRET SUN-DIMMING TALKS, claim the morning papers
+SUNSHADE-1: SECRET SUN DIMMING TALKS, claim the morning papers
 SUNSHADE-2: Minister attended Aurent Foundation roundtable on geoengineering
 SUNSHADE-3: Make Sunsets sells more “cooling credits” without oversight
 SUNSHADE-4: SkyParasol raises fresh funds for a proprietary aerosol

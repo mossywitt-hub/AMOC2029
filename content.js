@@ -278,8 +278,8 @@ scenes: [
       "“No. I’m trying to corner reality.”",
       "It was an insane sentence. Fit for a billionaire. “That’s the kind of sentence people say before they buy the sky.”",
       "“It’s already being bought,” Aurent said, “just not in an accountable way. Every delay decision and underfunded adaptation budget is a decision. You only call my side unilateral because it has a face.”",
-      "Miriam could still see that face, glowing under the spotlight as the crowd exhaled adoration, when the scandal broke three days later.",
-      "SECRET SUN-DIMMING TALKS, said the morning papers. One of Miriam’s own party called for her resignation before breakfast. The opposition asked why the government was planning to meddle with the weather rather than getting inflation under control.",
+      "Miriam could still see that face when the scandal broke three days later.",
+      "SECRET SUN DIMMING TALKS, said the morning papers. One of Miriam’s own party called for her resignation before breakfast. The opposition asked why the government was planning to meddle with the weather rather than getting inflation under control.",
       {cartoon:true},
       "She gave the line the foreign ministry and the prime minister’s office had agreed on: governance did not mean deployment. The government was making sure any future climate intervention would be transparent, safe, and multilateral. This was a chance to lead the global conversation.",
       "It had sounded stronger written down. Miriam’s voice felt tinny in the chamber.",
@@ -541,7 +541,7 @@ tickers:{
     "Winter heating bills tick up again"
   ],
   sunshade:[
-    "SECRET SUN-DIMMING TALKS, claim the morning papers",
+    "SECRET SUN DIMMING TALKS, claim the morning papers",
     "Minister attended Aurent Foundation roundtable on geoengineering",
     "Make Sunsets sells more “cooling credits” without oversight",
     "SkyParasol raises fresh funds for a proprietary aerosol",
