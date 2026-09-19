@@ -164,15 +164,16 @@ SUNSHADE-30: It was an inane, grandiose sentence. Fit for a billionaire. “That
 SUNSHADE-31: “It’s already being bought,” Aurent said, “just not in an accountable way. Every delay decision and underfunded adaptation budget is a decision. You only call my side unilateral because it has a face.”
 SUNSHADE-32: Miriam could still see that face, glowing under the spotlight as the crowd exhaled adoration, when the scandal broke three days later.
 SUNSHADE-33: SECRET SUN-DIMMING TALKS, said the morning papers. One of Miriam’s own party called for her resignation before breakfast. The opposition asked why on earth the government was planning to meddle with the weather rather than cut bills.
-SUNSHADE-34: In the legislature, she gave the line the foreign ministry and the prime minister’s office had agreed on: research governance did not imply deployment; any international discussion of climate intervention would have to be transparent, multilateral, and subordinate to emissions reduction and adaptation.
-SUNSHADE-35: It had sounded like a good line earlier. Miriam’s voice sounded tinny in the chamber.
-SUNSHADE-36: That evening Tom read out the damage from the private polling without saying I told you so: “Your support is dropping with everyone except people who already think the entire century is a systems failure.”
-SUNSHADE-37: “Comforting.”
-SUNSHADE-38: “In fairness,” he said kindly, “that is a growing demographic.”
-SUNSHADE-39: The trouble did not go away. Scientists who wanted cautious public oversight blamed her for legitimizing the subject and climate campaigners accused the government of searching for a technological excuse. Two think tanks produced serious reports within the week, one arguing that responsible states had a duty to investigate all options, the other arguing that investigation at this stage was already a form of normalization. The prime minister told Miriam privately that some issues arrived before the headlines wanted to understand them, and those were usually the ones that ate political parties alive.
-SUNSHADE-40: One night, driving back from a regional visit, Miriam looked up through the car window and saw an aircraft high over cloud, its vapor trail clean and thin against the evening.
-SUNSHADE-41: It made her unexpectedly sad.
-SUNSHADE-42: That someone somewhere now looked up at the same sky, and saw a system that might soon need adjusting.
+SUNSHADE-34 |graphic|: cartoon
+SUNSHADE-35: In the legislature, she gave the line the foreign ministry and the prime minister’s office had agreed on: research governance did not imply deployment; any international discussion of climate intervention would have to be transparent, multilateral, and subordinate to emissions reduction and adaptation.
+SUNSHADE-36: It had sounded like a good line earlier. Miriam’s voice sounded tinny in the chamber.
+SUNSHADE-37: That evening Tom read out the damage from the private polling without saying I told you so: “Your support is dropping with everyone except people who already think the entire century is a systems failure.”
+SUNSHADE-38: “Comforting.”
+SUNSHADE-39: “In fairness,” he said kindly, “that is a growing demographic.”
+SUNSHADE-40: The trouble did not go away. Scientists who wanted cautious public oversight blamed her for legitimizing the subject and climate campaigners accused the government of searching for a technological excuse. Two think tanks produced serious reports within the week, one arguing that responsible states had a duty to investigate all options, the other arguing that investigation at this stage was already a form of normalization. The prime minister told Miriam privately that some issues arrived before the headlines wanted to understand them, and those were usually the ones that ate political parties alive.
+SUNSHADE-41: One night, driving back from a regional visit, Miriam looked up through the car window and saw an aircraft high over cloud, its vapor trail clean and thin against the evening.
+SUNSHADE-42: It made her unexpectedly sad.
+SUNSHADE-43: That someone somewhere now looked up at the same sky, and saw a system that might soon need adjusting.
 
 ================================================================
 SCENE IV  —  THE SEAM BETWEEN THE SYSTEMS   ·   key: seam

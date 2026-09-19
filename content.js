@@ -282,6 +282,7 @@ scenes: [
       "“It’s already being bought,” Aurent said, “just not in an accountable way. Every delay decision and underfunded adaptation budget is a decision. You only call my side unilateral because it has a face.”",
       "Miriam could still see that face, glowing under the spotlight as the crowd exhaled adoration, when the scandal broke three days later.",
       "SECRET SUN-DIMMING TALKS, said the morning papers. One of Miriam’s own party called for her resignation before breakfast. The opposition asked why on earth the government was planning to meddle with the weather rather than cut bills.",
+      {cartoon:true},
       "In the legislature, she gave the line the foreign ministry and the prime minister’s office had agreed on: research governance did not imply deployment; any international discussion of climate intervention would have to be transparent, multilateral, and subordinate to emissions reduction and adaptation.",
       "It had sounded like a good line earlier. Miriam’s voice sounded tinny in the chamber.",
       "That evening Tom read out the damage from the private polling without saying I told you so: “Your support is dropping with everyone except people who already think the entire century is a systems failure.”",

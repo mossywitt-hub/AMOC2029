@@ -61,6 +61,7 @@ function emitScene(i) {
     }
     else if (el.divider) line(`${id} |divider|`, 'divider');
     else if (el.protest) line(`${id} |graphic|`, 'protest');
+    else if (el.cartoon) line(`${id} |graphic|`, 'cartoon');
     else if (el.tabloid) line(`${id} |graphic|`, 'tabloid');
     else if (el.memo) line(`${id} |graphic|`, 'memo');
     else if (el.paper) line(`${id} |graphic|`, 'paper');
