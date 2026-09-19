@@ -202,7 +202,7 @@ scenes: [
       "“They’re already drafting the briefing,” Tom said. “But they have three of our closest seats. And people see the reality of the jobs argument. The future is abstract, the cold winters aren’t real until they are. The jobs are real right now.”",
       "“I know how to message this Department,” Miriam said, sharper than usual. “A fossil subsidy from a Department with Climate in its name. It’s suicide with the indy press.”",
       "“The new energy lobby will hate it too quite obviously,” said Priya. “Less vitriolic of course, lots of economists agreeing with podcast hosts and sounding disappointed. But they’re organized, so a legal challenge can’t be ruled out.”",
-      "Tom raised his hands, palms out, peace gesture. “I get it, yes,” he said. “If we get this wrong we alienate urban voters and industrial communities in one muddled bill.”",
+      "Tom raised his hands, palms out, peace gesture. “I get it, yes,” he said. “If we get this wrong we alienate urbanites and industrial towns in one muddled bill.”",
       "Miriam asked him to pull up their demand modeling and they worked their way into the details.",
       "What she did not tell them both was that she knew what the reality was for people in those towns too. She had campaigned in shipbuilding districts in which every conversation arrived at the simple humiliation of being told the economy had moved on. For so long governments had treated fossil decline as if it were morally self-executing: a good thing, therefore a socially manageable thing.",
       {divider:true},
