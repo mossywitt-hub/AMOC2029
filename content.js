@@ -190,7 +190,7 @@ scenes: [
     body:[
       "By January Miriam could identify the lobbyists by their footwear.",
       "The NGO people wore sneakers. The clean energy delegations had brogues and Chelsea boots. The oil and gas majors sent representatives with leather loafers that had been polished so recently they squeaked.",
-      "Daniel Sloan, accordingly, squeaked into her office with a folder in his hand, accompanied by a former union organizer. Smart. But of course: he’d worked in government himself, long enough to understand the choreography.",
+      "Daniel Sloan squeaked into her office with a folder in his hand, accompanied by a former union organizer. Smart. But of course: he’d worked in government himself, long enough to understand the choreography.",
       "“Minister,” he said, taking the chair opposite her. “Congratulations on becoming the nation’s designated pessimist.”",
       "Tom, at Miriam’s right, did not smile. Priya Nair from the finance ministry took out a pencil and wrote the date in the corner of her legal pad.",
       "Sloan’s presentation was practiced. He talked about winter reserve margins lit by the softly shining satellite maps behind him. His slides showed electricity demand surging during cold snaps while grid upgrades lagged years behind, and when the slides ended he started talking about jobs. The industry did not want a handout, he said – just a package for “orderly transition assets”. A limited support mechanism to keep gas plants on standby and extended relief on decommissioning liabilities.",
