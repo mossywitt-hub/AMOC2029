@@ -216,7 +216,7 @@ scenes: [
       "“I just think I’ll like it more blue. Also if we’re going to do it we should do it before Dad starts messing with the windows.”",
       "“What windows?”",
       "“For insulation. He says if we wait until winter it’ll cost more.”",
-      "There it was, another one of those calculations everyone seemed to be doing lately, all these small private negotiations with the future.",
+      "There it was, another one of those calculations everyone seemed to be doing lately, a small private negotiation with the future.",
       "“Are you at work?” Nina asked.",
       "“Yes.”",
       "“Thought so. You always sound like that when you’re at work.”",

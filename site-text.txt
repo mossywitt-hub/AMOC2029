@@ -106,7 +106,7 @@ JOBS-25: “I thought you liked your room.”
 JOBS-26: “I just think I’ll like it more blue. Also if we’re going to do it we should do it before Dad starts messing with the windows.”
 JOBS-27: “What windows?”
 JOBS-28: “For insulation. He says if we wait until winter it’ll cost more.”
-JOBS-29: There it was, another one of those calculations everyone seemed to be doing lately, all these small private negotiations with the future.
+JOBS-29: There it was, another one of those calculations everyone seemed to be doing lately, a small private negotiation with the future.
 JOBS-30: “Are you at work?” Nina asked.
 JOBS-31: “Yes.”
 JOBS-32: “Thought so. You always sound like that when you’re at work.”
