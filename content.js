@@ -199,7 +199,7 @@ scenes: [
       "The organizer gave her a look that suggested politicians often perjured themselves with lines just like that.",
       "Sloan smiled at her as if they were getting along. “Then don’t let my members become the lesson everyone else learns from.”",
       "After they left, Priya flipped the pad closed and pointed her pencil towards the door. “If we give them this, they’ll be back in six months with the extended version – capacity guarantees or something.”",
-      "“They’re already drafting the briefing,” Tom said. “But they have three of our closest seats. And people see the reality of the jobs argument. The future is abstract, the cold winters aren’t real until they are. But the jobs are real right now.”",
+      "“They’re already drafting the briefing,” Tom said. “But they have three of our closest seats. And people see the reality of the jobs argument. The future is abstract, the cold winters aren’t real until they are. The jobs are real right now.”",
       "“I know how to message this Department,” Miriam said, sharper than usual. “Think about how much damage the indy media are going to do with a fossil subsidy from a Department with Climate in its name.”",
       "“The clean energy lobby will hate it too, obviously,” said Priya. “Of course, they get their editorials from center-leaning podcasts, so it will be a little less vitriolic. But better funded. A legal challenge probably can’t be ruled out.”",
       "Tom raised his hands, palms out, peace gesture. “I get it, yes,” he said. “If we get this wrong we alienate urban voters and industrial communities in one muddled bill.”",
