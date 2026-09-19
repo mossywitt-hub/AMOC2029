@@ -2,9 +2,8 @@ window.WTSS = {
 
 introTop: [
   "The Atlantic meridional overturning circulation (AMOC) shapes the climate that billions of us depend on. By 2029 it was slowing faster than anyone had predicted.[amoc-annex]",
-  "Experts debated the details. Some put the probability of collapse at over fifty percent, others pointed to uncertainty in the models. Exact timeframes were contentious. But most agreed that the early impacts of the slowdown would come soon. Longer term, the chances were between a dice roll and a coin flip on profound, perhaps irreversible changes to the climate of the Northern Hemisphere.",
-  "Governments found themselves facing something none had seriously planned for: an active and accelerating risk to the entire national infrastructure.",
-  "For years, officials treated climate change like a storm on the far horizon, arguing about its severity and the costs of steering round it. Now the storm had arrived and the question was how not to sink."
+  "Experts debated the details. Some put the probability of collapse at over fifty percent, others pointed to uncertainty in the models. Exact timeframes were contentious. But most agreed that the early impacts of the slowdown would come soon. Longer term, the chances were between a dice roll and a coin flip on profound changes to the climate of the entire Northern Hemisphere.",
+  "For years, governments treated climate change like a storm on the far horizon, arguing about its severity and the costs of steering round it. Now the storm was here and the question was how not to sink."
 ],
 
 /* hover footnotes — [key] markers in any content field resolve against this map; numbers auto-assigned by buildFnOrder() */
@@ -25,7 +24,7 @@ footnotes:{
 },
 
 introBelow: [
-  "We predict that in the near future, escalating climate shocks and looming tipping points will change the politics of climate change from mitigation (solving the cause) to resilience (dealing with the effects).[resilience-annex]",
+  "Escalating climate shocks and looming tipping points are shifting the politics of climate change from mitigation (solving the cause) to resilience (dealing with the effects).[resilience-annex] We predict that this shift will accelerate.",
   "Climate shocks are already more severe and more frequent than models projected, driving up costs and devastating regions and industries. Some places are becoming uninsurable. This trend is likely to accelerate.",
   "The debate about mitigation (net zero) is familiar to most people: clean versus fossil energy and the cost of transitioning.",
   "The resilience debate is less familiar and much broader in scope. It impacts everything: food, water, jobs, growth, flood defenses, housing, transport, infrastructure, defense.",
