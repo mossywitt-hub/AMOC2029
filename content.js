@@ -208,7 +208,7 @@ scenes: [
       {divider:true},
       "A few days later, in a private conversation, the finance minister thoughtfully suggested burying the proposal inside a productivity package to avoid the subsidy coverage. But when Miriam asked what such a package could look like, he demurred politely and very firmly: it would not be appropriate to discuss anything like that until the new financial year.",
       "The energy minister, on the other hand, was emphatic that the reserve plan had to be law before the modeling worsened again.",
-      "When Miriam turned on the evening news that night, there was Daniel Sloan discussing energy realism with his usual total confidence. And it looked like an unsympathetic political editor had found the opposition their line too: the Department of Constant Cost.",
+      "When Miriam turned on the evening news that night, there was Daniel Sloan discussing energy realism with his usual total confidence. And it looked like an unsympathetic political editor, or probably his copy bot, had found the opposition their line: the Department of Constant Cost.",
       {paper:true},
       "Miriam stayed in her office much later than usual. She listened to the vacuum cleaner approach down the corridor and dialed her daughter, Nina.",
       "“Hi,” Nina said on the tenth ring. “Can I paint my room?”",
