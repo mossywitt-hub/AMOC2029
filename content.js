@@ -189,7 +189,7 @@ scenes: [
       infra:1, ins:2.1, unins:4.0, food:17, water:0},
     body:[
       "By January Miriam could identify the lobbyists by their footwear.",
-      "The NGO people wore sneakers. The clean energy delegations had brogues and Chelsea boots. The oil and gas majors sent representatives with leather loafers that had been polished so recently they squeaked.",
+      "The NGO people wore sneakers. The new energy delegations had brogues and Chelsea boots. The oil and gas majors sent representatives with leather loafers that had been polished so recently they squeaked.",
       "Daniel Sloan squeaked into her office with a folder in his hand, accompanied by a former union organizer. Smart. But of course: he’d worked in government himself, long enough to understand the choreography.",
       "“Minister,” he said, taking the chair opposite her. “Congratulations on becoming the nation’s designated pessimist.”",
       "Tom, at Miriam’s right, did not smile. Priya Nair from the finance ministry took out a pencil and wrote the date in the corner of her legal pad.",
