@@ -62,7 +62,7 @@ SCENE V  —  THE HARD BORDER   ·   ledger key: border
 ================================================================
 BORDER-1: Violent scenes on the border
 BORDER-2: Three climate migrants critical after city-center beating
-BORDER-3: Border communities ‘overwhelmed’ as winter crossings surge
+BORDER-3: Border communities “overwhelmed” as winter crossings surge
 BORDER-4: Migrant hotels spark fury in flood-hit towns
 BORDER-5: Take back control: voters demand a border crackdown
 BORDER-6: Illegal migrants flee the countries they ruined — and target ours
