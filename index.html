@@ -1284,7 +1284,7 @@ function buildChapter(i){
   return sec;
 }
 /* entry point: start a fresh stack at scene i (homepage, flow map, deep link) */
-function openScene(i,atBottom){
+function openScene(i){
   current=i;loaded=i;seenChapters.clear();
   $("#resources").classList.remove("active");
   $("#landing").classList.add("hidden");
@@ -1295,17 +1295,22 @@ function openScene(i,atBottom){
   ensureObservers();
   chapterIO.disconnect();
   const stack=$("#sceneStack");stack.innerHTML="";
-  const first=buildChapter(i);
-  stack.appendChild(first);
-  chapterIO.observe(first);
+  /* Build everything up to the entry point, so arriving at Scene V from the flow map gives the
+     same whole document as jumping there from the rail: you can always read back. */
+  let entry=null;
+  for(let k=0;k<=i;k++){
+    const sec=buildChapter(k);
+    stack.appendChild(sec);
+    chapterIO.observe(sec);
+    if(k===i)entry=sec;
+  }
   queueTail();
   paintLedger(i);
   seenChapters.add(i);
   track("/scene/"+D.scenes[i].id,"Scene "+ROMAN[i]+" \u2014 "+D.scenes[i].title);
-  if(atBottom){window.scrollTo({top:document.documentElement.scrollHeight,behavior:"instant"});}
-  else{window.scrollTo({top:0,behavior:"instant"});}
-  const sec=stack.firstElementChild;
-  if(sec){sec.classList.remove("scene-enter");void sec.offsetWidth;sec.classList.add("scene-enter");}
+  if(i===0){window.scrollTo({top:0,behavior:"instant"});}
+  else{window.scrollTo({top:Math.max(0,entry.offsetTop-(chromeBottom()+14)),behavior:"instant"});}
+  if(entry){entry.classList.remove("scene-enter");void entry.offsetWidth;entry.classList.add("scene-enter");}
   hideCue();
   scrollArmed=false;
   setTimeout(()=>{scrollArmed=true;},450);
