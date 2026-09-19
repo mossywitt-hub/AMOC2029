@@ -110,9 +110,9 @@ JOBS-29: There it was, another one of those calculations everyone seemed to be d
 JOBS-30: “Are you at work?” Nina asked.
 JOBS-31: “Yes.”
 JOBS-32: “Thought so. You always sound like that when you’re at work.”
-JOBS-33: After hanging up, Miriam stared thoughtfully down at her latest draft. Tom came back from briefing the last editions with a Coke Zero for each of them.
-JOBS-34: “We should give the papers a line.”
-JOBS-35: “How about this?” she said, finally. “No permanent bail outs. Limited strategic reserve support to keep backup gas plants available in winter, and nothing more. The worker-transition funding will be protected and ringfenced, geographically ringfenced I mean. And no-one touches the grid resilience money.”
+JOBS-33: After hanging up, Miriam stared thoughtfully down at her latest draft. Tom came back from briefing the last editions with a snack for each of them.
+JOBS-34: “We should give them a line.”
+JOBS-35: “How about this?” she said, hesitantly. “No permanent bail outs. Limited strategic reserve support to keep backup gas plants available in winter, and nothing more. The worker-transition funding will be protected and ringfenced, geographically ringfenced I mean. And no-one touches the grid resilience money.”
 JOBS-36: Tom sat down in the chair she drew out for him. “You’ll annoy everyone.”
 JOBS-37: “Exactly,” said Miriam.
 JOBS-38: The compromise survived, as she’d calculated it would, because it upset everyone just less than they thought it would upset their opponents. Sloan rang her to call it insufficient but responsible, sounding like he could sell it to his board while slating it online.
