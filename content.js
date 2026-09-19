@@ -156,7 +156,7 @@ scenes: [
       "In theory then Miriam had money, officials, the Prime Minister’s personal backing. In reality, she urgently needed a plan.",
       {divider:true},
       "The scientist was younger than she expected, with a lanyard around his neck and an outfit that gave a hint of school uniform. He pushed a document across her desk and started to speak.",
-      "“The probability of complete AMOC collapse within fifty years,” he said, “is by some estimates now greater than 50%. That is the finding of our unpublished assessment, based on data from our own systems and from international partners. We think it is possible this collapse happens several times faster, or two times slower. But anyway we don’t need a full collapse. A marked slowdown is enough to foul food planning, flood planning, everything. The consequences would be devastating here, and even worse in most of the places that grow our food. In short, this is not a research paper. It’s a planning paper.”",
+      "“The probability of complete AMOC collapse within fifty years,” he said, “is by some estimates now greater than 50%. That is the finding of our unpublished assessment, based on data from our own systems and from international partners. We think it is possible this collapse happens several times faster, or two times slower. But anyway we don’t need a full collapse. A marked slowdown is enough to foul food planning, flood planning, everything. The consequences would be devastating here, and even worse in most of the places that grow our food. In short, this is not a research paper. It’s a manifesto.”",
       "Miriam raised her eyebrows and peered down. There were Atlantic circulation charts and insurance exposure maps; infrastructure modeling and diagrams of cold anomalies pushing across Europe. One graph tracked electricity demand spiking during severe winters. Another showed fishing fleets losing species they had followed for decades. Then the report spelled out the consequences in stark technical language: food shocks under unstable rainfall and import stress; insurance companies refusing to cover climate-vulnerable regions; public systems breaking down like dominoes, one after the other.",
       "There was the acronym she realized would contain the Department’s future: AMOC.",
       "Miriam knew the basics, of course. A system of currents in the North Atlantic – warm water going north, colder denser water moving south at depth. One of the hidden pieces of machinery that made the land liveable in large swatches of the Northern Hemisphere.",
@@ -529,7 +529,7 @@ tickers:{
   ],
   department:[
     "Miriam Dutta confirmed as new Minister for Climate Resilience",
-    "Scientists hand officials a “planning paper” on AMOC collapse",
+    "Scientists hand officials a “manifesto” on AMOC collapse",
     "Markets shrug about “weather astrology”",
     "Opposition: “a department for problems we can’t afford”",
     "Leaked annex flags coastal hospitals at risk within years",

@@ -22,7 +22,7 @@ HOME-5: PM confirms new Department of Climate Resilience
 SCENE I  —  THE DEPARTMENT OF CLIMATE RESILIENCE   ·   ledger key: department
 ================================================================
 DEPARTMENT-1: Miriam Dutta confirmed as new Minister for Climate Resilience
-DEPARTMENT-2: Scientists hand officials a “planning paper” on AMOC collapse
+DEPARTMENT-2: Scientists hand officials a “manifesto” on AMOC collapse
 DEPARTMENT-3: Markets shrug about “weather astrology”
 DEPARTMENT-4: Opposition: “a department for problems we can’t afford”
 DEPARTMENT-5: Leaked annex flags coastal hospitals at risk within years
